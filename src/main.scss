@@ -1,7 +1,53 @@
 @import '../node_modules/sh-core/src/base';
 
 body {
-    padding: 20px;
+    color: $color-font;
+
+    .nav {
+        .navItem {
+            width: auto;
+            display: inline-block;
+
+            a {
+                border-right: 1px solid $color-box-dark-background3;
+                padding: 20px 50px;
+                display: block;
+
+                &:hover {
+                    background-color: $color-box-background5;
+                }
+            }
+        }
+    }
+
+    .header {
+        position: relative;
+        line-height: 400px;
+        text-align: center;
+        font-weight: 100;
+        padding: 50px;
+        background-color: $color-box-dark-background3;
+        height: 500px;
+        font-size: 121px;
+        margin-bottom: 40px;
+
+        .subText {
+            width: calc(100% - 50px);
+            text-align: center;
+            position: absolute;
+            font-size: 30px;
+            color: $color-box-background3;
+            top: 160px;
+
+        }
+    }
+
+    .sub {
+        font-weight: 800;
+        font-size: 150px;
+        color: $color-primary;
+        font-family: "Comic Sans MS";
+    }
 
     .example {
         color: $color-font-label;
