@@ -27,7 +27,7 @@ class ShInputSelectExamples extends React.Component {
             <div>
                 <div className="installation">
                     <div className="title">Installation</div>
-                    <pre className="instructions">npm install sh-input-select</pre>
+                    <pre className="instructions">npm install sh-input-text</pre>
                 </div>
                 <div className="subExamples">
                     {examples}
