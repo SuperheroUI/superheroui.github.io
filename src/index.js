@@ -12,8 +12,8 @@ class Homepage extends React.Component {
 
         this.state = {
             examples: [
-                { name: 'ShInputSelect', code: <ShInputSelectExamples /> },
-                { name: 'ShInputText', code: <ShInputTextExamples /> }
+                {name: 'ShInputSelect', code: <ShInputSelectExamples />},
+                {name: 'ShInputText', code: <ShInputTextExamples />}
             ]
         }
     }
