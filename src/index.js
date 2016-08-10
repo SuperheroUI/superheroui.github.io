@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import ShInputSelectExamples from './sh-input-select';
+import ShInputTextExamples from './sh-input-text';
+
+require('./main.scss');
 
 class Homepage extends React.Component {
     constructor() {
@@ -9,7 +12,8 @@ class Homepage extends React.Component {
 
         this.state = {
             examples: [
-                { name: 'ShInputSelect', code: <ShInputSelectExamples /> }
+                { name: 'ShInputSelect', code: <ShInputSelectExamples /> },
+                { name: 'ShInputText', code: <ShInputTextExamples /> }
             ]
         }
     }
