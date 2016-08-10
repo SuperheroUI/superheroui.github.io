@@ -1,54 +1,55 @@
 @import '../node_modules/sh-core/src/base';
 
 body {
-  color: #fff;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
-  padding: 20px;
-  background: linear-gradient(#284D51, #304853) fixed;
-}
-
-.example {
-  font-family: Arial;
-  color:$color-font-label;
-  font-size: 14px;
-  margin-bottom: 30px;
-  padding: 20px;
-  background-color: rgba(255,255,255, .05);
-
-  pre {
-    padding: 10px;
-    background-color: rgba(255,255,255, .03);
-    border-radius: 5px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     margin: 0;
-  }
+    padding: 20px;
+    background: linear-gradient(#284D51, #304853) fixed;
 
-  .title {
-    margin-bottom: 5px;
-    color:$color-primary;
-  }
+    .example {
 
-  .component{
-    margin-bottom: 20px;
-  }
+        font-family: Arial;
+        color: $color-font-label;
+        font-size: 14px;
+        margin-bottom: 30px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, .05);
 
-  .instructions {
-    margin-bottom: 20px;
-  }
+        pre {
+            padding: 10px;
+            background-color: rgba(255, 255, 255, .03);
+            border-radius: 5px;
+            margin: 0;
+        }
 
-  >.title {
-    color: $color-font;
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
+        .title {
+            margin-bottom: 5px;
+            color: $color-primary;
+        }
 
-  .installation {
-    >.title {
+        .component {
+            margin-bottom: 20px;
+        }
 
+        .instructions {
+            margin-bottom: 20px;
+        }
+
+        > .title {
+            color: $color-font;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .installation {
+            > .title {
+
+            }
+        }
     }
-  }
 }
