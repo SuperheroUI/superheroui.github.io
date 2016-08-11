@@ -47,7 +47,7 @@
   \**********************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 	
 	'use strict';
 	
@@ -65,7 +65,7 @@
 	
 	var _shInputSelect2 = _interopRequireDefault(_shInputSelect);
 	
-	var _shInputText = __webpack_require__(/*! ./sh-input-text */ 186);
+	var _shInputText = __webpack_require__(/*! ./sh-input-text */ 189);
 	
 	var _shInputText2 = _interopRequireDefault(_shInputText);
 	
@@ -77,7 +77,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(/*! ./main.scss */ 189);
+	__webpack_require__(/*! ./main.scss */ 192);
 	
 	var Homepage = function (_React$Component) {
 	    _inherits(Homepage, _React$Component);
@@ -88,12 +88,22 @@
 	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Homepage).call(this));
 	
 	        _this.state = {
-	            examples: [{ name: 'ShInputSelect', code: _react2.default.createElement(_shInputSelect2.default, null), github: 'https://github.com/SuperheroUI/shInputSelect' }, { name: 'ShInputText', code: _react2.default.createElement(_shInputText2.default, null), github: 'https://github.com/SuperheroUI/shInputText' }]
+	            examples: [{ name: 'ShInputSelect', code: _react2.default.createElement(_shInputSelect2.default, null), github: 'https://github.com/SuperheroUI/shInputSelect' }, { name: 'ShInputText', code: _react2.default.createElement(_shInputText2.default, null), github: 'https://github.com/SuperheroUI/shInputText' }],
+	            menuState: 'close'
 	        };
+	
+	        _this.toggleMenu = _this.toggleMenu.bind(_this);
 	        return _this;
 	    }
 	
 	    _createClass(Homepage, [{
+	        key: 'toggleMenu',
+	        value: function toggleMenu() {
+	            this.setState({
+	                menuState: this.state.menuState === 'close' ? 'open' : 'close'
+	            });
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            var examples = this.state.examples.map(function (example, index) {
@@ -102,13 +112,13 @@
 	                    githubLink = _react2.default.createElement(
 	                        'a',
 	                        { href: example.github, target: '_blank' },
-	                        _react2.default.createElement('img', { src: '../images/github.svg' })
+	                        _react2.default.createElement('img', { src: 'images/github.svg' })
 	                    );
 	                }
 	
 	                return _react2.default.createElement(
 	                    'div',
-	                    { key: index, className: 'example' },
+	                    { key: index, className: 'example', id: example.name },
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'title' },
@@ -119,6 +129,18 @@
 	                        'div',
 	                        { className: 'code' },
 	                        example.code
+	                    )
+	                );
+	            });
+	
+	            var navLinks = this.state.examples.map(function (example, index) {
+	                return _react2.default.createElement(
+	                    'div',
+	                    { key: index, className: 'navSelectItem' },
+	                    _react2.default.createElement(
+	                        'a',
+	                        { href: '#' + example.name },
+	                        example.name
 	                    )
 	                );
 	            });
@@ -134,8 +156,8 @@
 	                        { className: 'navItem' },
 	                        _react2.default.createElement(
 	                            'a',
-	                            null,
-	                            'Docs'
+	                            { href: '#home' },
+	                            'Home'
 	                        )
 	                    ),
 	                    _react2.default.createElement(
@@ -143,27 +165,27 @@
 	                        { className: 'navItem' },
 	                        _react2.default.createElement(
 	                            'a',
-	                            null,
+	                            { onClick: this.toggleMenu },
 	                            'Components'
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'navItem' },
+	                        ),
 	                        _react2.default.createElement(
-	                            'a',
-	                            null,
-	                            'Github'
+	                            'div',
+	                            { className: 'navSelect ' + this.state.menuState },
+	                            _react2.default.createElement(
+	                                'div',
+	                                { className: 'navSelectList', onClick: this.toggleMenu },
+	                                navLinks
+	                            )
 	                        )
 	                    )
 	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'header' },
+	                    { className: 'header', id: 'home' },
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'subHeader' },
-	                        _react2.default.createElement('img', { className: 'logo', src: '../images/logo.svg' }),
+	                        _react2.default.createElement('img', { className: 'logo', src: 'images/logo.svg' }),
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: 'name' },
@@ -195,7 +217,7 @@
 	
 	_reactDom2.default.render(_react2.default.createElement(Homepage, null), document.getElementById('app'));
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 1 */
@@ -305,13 +327,13 @@
 	};
 	
 	module.exports = React;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 3 */
-/*!**********************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/process/browser.js ***!
-  \**********************************************************/
+/*!******************************!*\
+  !*** ./~/process/browser.js ***!
+  \******************************/
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -478,9 +500,9 @@
 
 /***/ },
 /* 4 */
-/*!******************************************!*\
-  !*** ./~/react/~/object-assign/index.js ***!
-  \******************************************/
+/*!**********************************!*\
+  !*** ./~/object-assign/index.js ***!
+  \**********************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -895,7 +917,7 @@
 	};
 	
 	module.exports = PooledClass;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 7 */
@@ -946,9 +968,9 @@
 
 /***/ },
 /* 8 */
-/*!*****************************************!*\
-  !*** ./~/react/~/fbjs/lib/invariant.js ***!
-  \*****************************************/
+/*!*********************************!*\
+  !*** ./~/fbjs/lib/invariant.js ***!
+  \*********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1000,7 +1022,7 @@
 	}
 	
 	module.exports = invariant;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 9 */
@@ -1369,7 +1391,7 @@
 	ReactElement.REACT_ELEMENT_TYPE = REACT_ELEMENT_TYPE;
 	
 	module.exports = ReactElement;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 10 */
@@ -1412,9 +1434,9 @@
 
 /***/ },
 /* 11 */
-/*!***************************************!*\
-  !*** ./~/react/~/fbjs/lib/warning.js ***!
-  \***************************************/
+/*!*******************************!*\
+  !*** ./~/fbjs/lib/warning.js ***!
+  \*******************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1473,13 +1495,13 @@
 	}
 	
 	module.exports = warning;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 12 */
-/*!*********************************************!*\
-  !*** ./~/react/~/fbjs/lib/emptyFunction.js ***!
-  \*********************************************/
+/*!*************************************!*\
+  !*** ./~/fbjs/lib/emptyFunction.js ***!
+  \*************************************/
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1552,7 +1574,7 @@
 	}
 	
 	module.exports = canDefineProperty;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 14 */
@@ -1728,7 +1750,7 @@
 	}
 	
 	module.exports = traverseAllChildren;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 15 */
@@ -1971,7 +1993,7 @@
 	}
 	
 	module.exports = ReactComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 18 */
@@ -2076,13 +2098,13 @@
 	};
 	
 	module.exports = ReactNoopUpdateQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 19 */
-/*!*******************************************!*\
-  !*** ./~/react/~/fbjs/lib/emptyObject.js ***!
-  \*******************************************/
+/*!***********************************!*\
+  !*** ./~/fbjs/lib/emptyObject.js ***!
+  \***********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2104,7 +2126,7 @@
 	}
 	
 	module.exports = emptyObject;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 20 */
@@ -2895,7 +2917,7 @@
 	};
 	
 	module.exports = ReactClass;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 22 */
@@ -2929,9 +2951,9 @@
 
 /***/ },
 /* 23 */
-/*!*****************************************!*\
-  !*** ./~/react/~/fbjs/lib/keyMirror.js ***!
-  \*****************************************/
+/*!*********************************!*\
+  !*** ./~/fbjs/lib/keyMirror.js ***!
+  \*********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2981,7 +3003,7 @@
 	};
 	
 	module.exports = keyMirror;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 24 */
@@ -3014,13 +3036,13 @@
 	}
 	
 	module.exports = ReactPropTypeLocationNames;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 25 */
-/*!*************************************!*\
-  !*** ./~/react/~/fbjs/lib/keyOf.js ***!
-  \*************************************/
+/*!*****************************!*\
+  !*** ./~/fbjs/lib/keyOf.js ***!
+  \*****************************/
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3241,13 +3263,13 @@
 	}, createDOMFactory);
 	
 	module.exports = ReactDOMFactories;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 27 */
-/*!*****************************************!*\
-  !*** ./~/react/~/fbjs/lib/mapObject.js ***!
-  \*****************************************/
+/*!*********************************!*\
+  !*** ./~/fbjs/lib/mapObject.js ***!
+  \*********************************/
 /***/ function(module, exports) {
 
 	/**
@@ -3534,7 +3556,7 @@
 	};
 	
 	module.exports = ReactElementValidator;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 29 */
@@ -3761,7 +3783,7 @@
 	};
 	
 	module.exports = ReactComponentTreeDevtool;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 30 */
@@ -3857,7 +3879,7 @@
 	}
 	
 	module.exports = checkReactTypeSpec;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 31 */
@@ -4307,7 +4329,7 @@
 	}
 	
 	module.exports = ReactPropTypes;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 33 */
@@ -4376,7 +4398,7 @@
 	}
 	
 	module.exports = onlyChild;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 35 */
@@ -4498,7 +4520,7 @@
 	}
 	
 	module.exports = ReactDOM;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 37 */
@@ -4695,7 +4717,7 @@
 	};
 	
 	module.exports = ReactDOMComponentTree;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 38 */
@@ -4910,7 +4932,7 @@
 	};
 	
 	module.exports = DOMProperty;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 39 */
@@ -5675,7 +5697,7 @@
 	};
 	
 	module.exports = EventPropagators;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 44 */
@@ -5933,7 +5955,7 @@
 	};
 	
 	module.exports = EventPluginHub;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 45 */
@@ -6189,7 +6211,7 @@
 	};
 	
 	module.exports = EventPluginRegistry;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 46 */
@@ -6427,7 +6449,7 @@
 	};
 	
 	module.exports = EventPluginUtils;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 47 */
@@ -6512,7 +6534,7 @@
 	}
 	
 	module.exports = ReactErrorUtils;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 48 */
@@ -6579,7 +6601,7 @@
 	}
 	
 	module.exports = accumulateInto;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 49 */
@@ -6622,9 +6644,9 @@
 
 /***/ },
 /* 50 */
-/*!****************************************************!*\
-  !*** ./~/react/~/fbjs/lib/ExecutionEnvironment.js ***!
-  \****************************************************/
+/*!********************************************!*\
+  !*** ./~/fbjs/lib/ExecutionEnvironment.js ***!
+  \********************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -7118,7 +7140,7 @@
 	    process.env.NODE_ENV !== 'production' ? warning(warningCondition, 'This synthetic event is reused for performance reasons. If you\'re seeing this, ' + 'you\'re %s `%s` on a released/nullified synthetic event. %s. ' + 'If you must keep the original synthetic event around, use event.persist(). ' + 'See https://fb.me/react-event-pooling for more information.', action, propName, result) : void 0;
 	  }
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 55 */
@@ -7756,7 +7778,7 @@
 	};
 	
 	module.exports = ReactUpdates;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 58 */
@@ -7871,7 +7893,7 @@
 	PooledClass.addPoolingTo(CallbackQueue);
 	
 	module.exports = CallbackQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 59 */
@@ -8084,7 +8106,7 @@
 	};
 	
 	module.exports = ReactReconciler;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 61 */
@@ -8275,7 +8297,7 @@
 	};
 	
 	module.exports = ReactOwner;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 63 */
@@ -8305,7 +8327,7 @@
 	}
 	
 	module.exports = { debugTool: debugTool };
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 64 */
@@ -8635,7 +8657,7 @@
 	}
 	
 	module.exports = ReactDebugTool;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 65 */
@@ -8680,7 +8702,7 @@
 	};
 	
 	module.exports = ReactInvalidSetStateWarningDevTool;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 66 */
@@ -8796,13 +8818,13 @@
 	};
 	
 	module.exports = ReactDOMUnknownPropertyDevtool;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 68 */
-/*!**********************************************!*\
-  !*** ./~/react/~/fbjs/lib/performanceNow.js ***!
-  \**********************************************/
+/*!**************************************!*\
+  !*** ./~/fbjs/lib/performanceNow.js ***!
+  \**************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8841,9 +8863,9 @@
 
 /***/ },
 /* 69 */
-/*!*******************************************!*\
-  !*** ./~/react/~/fbjs/lib/performance.js ***!
-  \*******************************************/
+/*!***********************************!*\
+  !*** ./~/fbjs/lib/performance.js ***!
+  \***********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9109,7 +9131,7 @@
 	};
 	
 	module.exports = Transaction;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 71 */
@@ -10127,7 +10149,7 @@
 	};
 	
 	module.exports = DOMChildrenOperations;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 83 */
@@ -10670,13 +10692,13 @@
 	};
 	
 	module.exports = Danger;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 90 */
-/*!*****************************************************!*\
-  !*** ./~/react/~/fbjs/lib/createNodesFromMarkup.js ***!
-  \*****************************************************/
+/*!*********************************************!*\
+  !*** ./~/fbjs/lib/createNodesFromMarkup.js ***!
+  \*********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -10762,13 +10784,13 @@
 	}
 	
 	module.exports = createNodesFromMarkup;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 91 */
-/*!****************************************************!*\
-  !*** ./~/react/~/fbjs/lib/createArrayFromMixed.js ***!
-  \****************************************************/
+/*!********************************************!*\
+  !*** ./~/fbjs/lib/createArrayFromMixed.js ***!
+  \********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -10897,13 +10919,13 @@
 	}
 	
 	module.exports = createArrayFromMixed;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 92 */
-/*!*********************************************!*\
-  !*** ./~/react/~/fbjs/lib/getMarkupWrap.js ***!
-  \*********************************************/
+/*!*************************************!*\
+  !*** ./~/fbjs/lib/getMarkupWrap.js ***!
+  \*************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -11000,7 +11022,7 @@
 	}
 	
 	module.exports = getMarkupWrap;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 93 */
@@ -12116,7 +12138,7 @@
 	_assign(ReactDOMComponent.prototype, ReactDOMComponent.Mixin, ReactMultiChild.Mixin);
 	
 	module.exports = ReactDOMComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 96 */
@@ -12152,9 +12174,9 @@
 
 /***/ },
 /* 97 */
-/*!*****************************************!*\
-  !*** ./~/react/~/fbjs/lib/focusNode.js ***!
-  \*****************************************/
+/*!*********************************!*\
+  !*** ./~/fbjs/lib/focusNode.js ***!
+  \*********************************/
 /***/ function(module, exports) {
 
 	/**
@@ -12396,7 +12418,7 @@
 	};
 	
 	module.exports = CSSPropertyOperations;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 99 */
@@ -12556,9 +12578,9 @@
 
 /***/ },
 /* 100 */
-/*!*************************************************!*\
-  !*** ./~/react/~/fbjs/lib/camelizeStyleName.js ***!
-  \*************************************************/
+/*!*****************************************!*\
+  !*** ./~/fbjs/lib/camelizeStyleName.js ***!
+  \*****************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12603,9 +12625,9 @@
 
 /***/ },
 /* 101 */
-/*!****************************************!*\
-  !*** ./~/react/~/fbjs/lib/camelize.js ***!
-  \****************************************/
+/*!********************************!*\
+  !*** ./~/fbjs/lib/camelize.js ***!
+  \********************************/
 /***/ function(module, exports) {
 
 	"use strict";
@@ -12726,13 +12748,13 @@
 	}
 	
 	module.exports = dangerousStyleValue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 103 */
-/*!**************************************************!*\
-  !*** ./~/react/~/fbjs/lib/hyphenateStyleName.js ***!
-  \**************************************************/
+/*!******************************************!*\
+  !*** ./~/fbjs/lib/hyphenateStyleName.js ***!
+  \******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12776,9 +12798,9 @@
 
 /***/ },
 /* 104 */
-/*!*****************************************!*\
-  !*** ./~/react/~/fbjs/lib/hyphenate.js ***!
-  \*****************************************/
+/*!*********************************!*\
+  !*** ./~/fbjs/lib/hyphenate.js ***!
+  \*********************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -12816,9 +12838,9 @@
 
 /***/ },
 /* 105 */
-/*!*************************************************!*\
-  !*** ./~/react/~/fbjs/lib/memoizeStringOnly.js ***!
-  \*************************************************/
+/*!*****************************************!*\
+  !*** ./~/fbjs/lib/memoizeStringOnly.js ***!
+  \*****************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -13086,7 +13108,7 @@
 	};
 	
 	module.exports = DOMPropertyOperations;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 107 */
@@ -13116,7 +13138,7 @@
 	}
 	
 	module.exports = { debugTool: debugTool };
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 108 */
@@ -13192,7 +13214,7 @@
 	ReactDOMDebugTool.addDevtool(ReactDOMNullInputValuePropDevtool);
 	
 	module.exports = ReactDOMDebugTool;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 109 */
@@ -13244,7 +13266,7 @@
 	};
 	
 	module.exports = ReactDOMUnknownPropertyDevtool;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 110 */
@@ -13365,7 +13387,7 @@
 	};
 	
 	module.exports = ReactDOMUnknownPropertyDevtool;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 111 */
@@ -14220,7 +14242,7 @@
 	}
 	
 	module.exports = ReactDOMInput;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 118 */
@@ -14365,7 +14387,7 @@
 	};
 	
 	module.exports = LinkedValueUtils;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 119 */
@@ -14497,7 +14519,7 @@
 	};
 	
 	module.exports = ReactDOMOption;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 120 */
@@ -14706,7 +14728,7 @@
 	}
 	
 	module.exports = ReactDOMSelect;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 121 */
@@ -14870,7 +14892,7 @@
 	}
 	
 	module.exports = ReactDOMTextarea;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 122 */
@@ -15332,7 +15354,7 @@
 	};
 	
 	module.exports = ReactMultiChild;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 123 */
@@ -15394,7 +15416,7 @@
 	};
 	
 	module.exports = ReactComponentEnvironment;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 124 */
@@ -15610,7 +15632,7 @@
 	};
 	
 	module.exports = ReactChildReconciler;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 126 */
@@ -15765,7 +15787,7 @@
 	}
 	
 	module.exports = instantiateReactComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 127 */
@@ -16718,7 +16740,7 @@
 	};
 	
 	module.exports = ReactCompositeComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 128 */
@@ -16767,13 +16789,13 @@
 	};
 	
 	module.exports = ReactNodeTypes;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 129 */
-/*!********************************************!*\
-  !*** ./~/react/~/fbjs/lib/shallowEqual.js ***!
-  \********************************************/
+/*!************************************!*\
+  !*** ./~/fbjs/lib/shallowEqual.js ***!
+  \************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -17014,7 +17036,7 @@
 	};
 	
 	module.exports = ReactHostComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 133 */
@@ -17097,7 +17119,7 @@
 	}
 	
 	module.exports = flattenChildren;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 134 */
@@ -17196,7 +17218,7 @@
 	PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 	
 	module.exports = ReactServerRenderingTransaction;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 135 */
@@ -17346,7 +17368,7 @@
 	}();
 	
 	module.exports = ReactServerUpdateQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 136 */
@@ -17581,7 +17603,7 @@
 	};
 	
 	module.exports = ReactUpdateQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 137 */
@@ -17959,7 +17981,7 @@
 	}
 	
 	module.exports = validateDOMNesting;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 138 */
@@ -18172,7 +18194,7 @@
 	  traverseTwoPhase: traverseTwoPhase,
 	  traverseEnterLeave: traverseEnterLeave
 	};
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 140 */
@@ -18352,7 +18374,7 @@
 	});
 	
 	module.exports = ReactDOMTextComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 141 */
@@ -18597,9 +18619,9 @@
 
 /***/ },
 /* 143 */
-/*!*********************************************!*\
-  !*** ./~/react/~/fbjs/lib/EventListener.js ***!
-  \*********************************************/
+/*!*************************************!*\
+  !*** ./~/fbjs/lib/EventListener.js ***!
+  \*************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -18685,13 +18707,13 @@
 	};
 	
 	module.exports = EventListener;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 144 */
-/*!**********************************************************!*\
-  !*** ./~/react/~/fbjs/lib/getUnboundedScrollPosition.js ***!
-  \**********************************************************/
+/*!**************************************************!*\
+  !*** ./~/fbjs/lib/getUnboundedScrollPosition.js ***!
+  \**************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -18962,7 +18984,7 @@
 	PooledClass.addPoolingTo(ReactReconcileTransaction);
 	
 	module.exports = ReactReconcileTransaction;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 147 */
@@ -19400,9 +19422,9 @@
 
 /***/ },
 /* 150 */
-/*!********************************************!*\
-  !*** ./~/react/~/fbjs/lib/containsNode.js ***!
-  \********************************************/
+/*!************************************!*\
+  !*** ./~/fbjs/lib/containsNode.js ***!
+  \************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19447,9 +19469,9 @@
 
 /***/ },
 /* 151 */
-/*!******************************************!*\
-  !*** ./~/react/~/fbjs/lib/isTextNode.js ***!
-  \******************************************/
+/*!**********************************!*\
+  !*** ./~/fbjs/lib/isTextNode.js ***!
+  \**********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19479,9 +19501,9 @@
 
 /***/ },
 /* 152 */
-/*!**************************************!*\
-  !*** ./~/react/~/fbjs/lib/isNode.js ***!
-  \**************************************/
+/*!******************************!*\
+  !*** ./~/fbjs/lib/isNode.js ***!
+  \******************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19509,9 +19531,9 @@
 
 /***/ },
 /* 153 */
-/*!************************************************!*\
-  !*** ./~/react/~/fbjs/lib/getActiveElement.js ***!
-  \************************************************/
+/*!****************************************!*\
+  !*** ./~/fbjs/lib/getActiveElement.js ***!
+  \****************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20703,7 +20725,7 @@
 	};
 	
 	module.exports = SimpleEventPlugin;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 157 */
@@ -21814,7 +21836,7 @@
 	};
 	
 	module.exports = ReactMount;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 168 */
@@ -21856,7 +21878,7 @@
 	}
 	
 	module.exports = ReactDOMContainerInfo;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 169 */
@@ -22061,7 +22083,7 @@
 	}
 	
 	module.exports = findDOMNode;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 173 */
@@ -22132,7 +22154,7 @@
   \**************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 	
 	'use strict';
 	
@@ -22150,11 +22172,11 @@
 	
 	var _basic2 = _interopRequireDefault(_basic);
 	
-	var _complex = __webpack_require__(/*! ./complex */ 194);
+	var _complex = __webpack_require__(/*! ./complex */ 187);
 	
 	var _complex2 = _interopRequireDefault(_complex);
 	
-	var _tree = __webpack_require__(/*! ./tree */ 195);
+	var _tree = __webpack_require__(/*! ./tree */ 188);
 	
 	var _tree2 = _interopRequireDefault(_tree);
 	
@@ -22516,7 +22538,7 @@
 	
 	exports.default = ShInputSelectExamples;
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 176 */
@@ -22525,7 +22547,7 @@
   \**************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 	
 	'use strict';
 	
@@ -22675,7 +22697,7 @@
 	
 	exports.default = Basic;
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "basic.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "basic.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 177 */
@@ -40581,7 +40603,7 @@
   \**************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 	
 	'use strict';
 	
@@ -40597,13 +40619,13 @@
 	
 	var _prismjs2 = _interopRequireDefault(_prismjs);
 	
-	var _prismJsx = __webpack_require__(/*! prismjs/components/prism-jsx */ 196);
+	var _prismJsx = __webpack_require__(/*! prismjs/components/prism-jsx */ 182);
 	
 	var _prismJsx2 = _interopRequireDefault(_prismJsx);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	__webpack_require__(/*! ../../~/prismjs/themes/prism-tomorrow.css */ 182);
+	__webpack_require__(/*! ../../~/prismjs/themes/prism-tomorrow.css */ 183);
 	
 	var CodeService = function CodeService(codeString, languageName) {
 	    var codeHighlighted = _prismjs2.default.highlight(codeString, _prismjs2.default.languages[languageName]);
@@ -40616,7 +40638,7 @@
 	
 	exports.default = CodeService;
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "code.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "code.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 181 */
@@ -41411,6 +41433,42 @@
 
 /***/ },
 /* 182 */
+/*!*******************************************!*\
+  !*** ./~/prismjs/components/prism-jsx.js ***!
+  \*******************************************/
+/***/ function(module, exports) {
+
+	(function(Prism) {
+	
+	var javascript = Prism.util.clone(Prism.languages.javascript);
+	
+	Prism.languages.jsx = Prism.languages.extend('markup', javascript);
+	Prism.languages.jsx.tag.pattern= /<\/?[\w\.:-]+\s*(?:\s+[\w\.:-]+(?:=(?:("|')(\\?[\w\W])*?\1|[^\s'">=]+|(\{[\w\W]*?\})))?\s*)*\/?>/i;
+	
+	Prism.languages.jsx.tag.inside['attr-value'].pattern = /=[^\{](?:('|")[\w\W]*?(\1)|[^\s>]+)/i;
+	
+	var jsxExpression = Prism.util.clone(Prism.languages.jsx);
+	
+	delete jsxExpression.punctuation
+	
+	jsxExpression = Prism.languages.insertBefore('jsx', 'operator', {
+	  'punctuation': /=(?={)|[{}[\];(),.:]/
+	}, { jsx: jsxExpression });
+	
+	Prism.languages.insertBefore('inside', 'attr-value',{
+		'script': {
+			// Allow for one level of nesting
+			pattern: /=(\{(?:\{[^}]*\}|[^}])+\})/i,
+			inside: jsxExpression,
+			'alias': 'language-javascript'
+		}
+	}, Prism.languages.jsx.tag);
+	
+	}(Prism));
+
+
+/***/ },
+/* 183 */
 /*!*********************************************!*\
   !*** ./~/prismjs/themes/prism-tomorrow.css ***!
   \*********************************************/
@@ -41419,10 +41477,10 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !./../../css-loader!./../../sass-loader!./prism-tomorrow.css */ 183);
+	var content = __webpack_require__(/*! !./../../css-loader!./../../sass-loader!./prism-tomorrow.css */ 184);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(/*! ./../../style-loader/addStyles.js */ 185)(content, {});
+	var update = __webpack_require__(/*! ./../../style-loader/addStyles.js */ 186)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -41439,13 +41497,13 @@
 	}
 
 /***/ },
-/* 183 */
+/* 184 */
 /*!****************************************************************************!*\
   !*** ./~/css-loader!./~/sass-loader!./~/prismjs/themes/prism-tomorrow.css ***!
   \****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(/*! ./../../css-loader/lib/css-base.js */ 184)();
+	exports = module.exports = __webpack_require__(/*! ./../../css-loader/lib/css-base.js */ 185)();
 	// imports
 	
 	
@@ -41456,7 +41514,7 @@
 
 
 /***/ },
-/* 184 */
+/* 185 */
 /*!**************************************!*\
   !*** ./~/css-loader/lib/css-base.js ***!
   \**************************************/
@@ -41515,7 +41573,7 @@
 
 
 /***/ },
-/* 185 */
+/* 186 */
 /*!*************************************!*\
   !*** ./~/style-loader/addStyles.js ***!
   \*************************************/
@@ -41770,13 +41828,13 @@
 
 
 /***/ },
-/* 186 */
-/*!************************************!*\
-  !*** ./src/sh-input-text/index.js ***!
-  \************************************/
+/* 187 */
+/*!****************************************!*\
+  !*** ./src/sh-input-select/complex.js ***!
+  \****************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 	
 	'use strict';
 	
@@ -41790,7 +41848,337 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _basic = __webpack_require__(/*! ./basic */ 187);
+	var _shInputSelect = __webpack_require__(/*! sh-input-select */ 177);
+	
+	var _shInputSelect2 = _interopRequireDefault(_shInputSelect);
+	
+	var _code = __webpack_require__(/*! ../util/code */ 180);
+	
+	var _code2 = _interopRequireDefault(_code);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var codeText = {};
+	
+	codeText.jsImport = '\nimport ShInputSelect from \'sh-input-select\';\n';
+	
+	codeText.jsState = '\nthis.state = {\n    value: null,\n    options: [\n        {name: \'New\', desc: \'New Contact\', id: 1},\n        {name: \'Contact\', desc: \'Contact already established\', id: 2},\n        {name: \'Customer\', desc: \'Bought Already\', id: 3},\n    ],\n    config: {\n        getDisplay: (option) => {\n            return option.name + \' - \' + option.desc;\n        },\n        idField: \'id\',\n        multiselect: true\n    }\n};\n';
+	
+	codeText.jsHandle = '\nhandleChange(newValue) {\n    this.setState({\n        value: newValue\n    });\n}\n';
+	
+	codeText.html = '\n<ShInputSelect options={this.state.options} value={this.state.value} onChange={this.handleChange} config={this.state.config} />\n';
+	
+	var Complex = function (_React$Component) {
+	    _inherits(Complex, _React$Component);
+	
+	    function Complex() {
+	        _classCallCheck(this, Complex);
+	
+	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Complex).call(this));
+	
+	        _this.options = [{ name: 'New', desc: 'New Contact', id: 1 }, { name: 'Contact', desc: 'Contact already established', id: 2 }, { name: 'Customer', desc: 'Bought Already', id: 3 }];
+	
+	        _this.config = {
+	            getDisplay: function getDisplay(option) {
+	                return option.name + ' - ' + option.desc;
+	            },
+	            idField: 'id',
+	            multiselect: true
+	        };
+	
+	        _this.state = {
+	            value: null
+	        };
+	
+	        _this.handleChange = _this.handleChange.bind(_this);
+	        _this.updateValue = _this.updateValue.bind(_this);
+	        return _this;
+	    }
+	
+	    _createClass(Complex, [{
+	        key: 'handleChange',
+	        value: function handleChange(newValue) {
+	            this.setState({
+	                value: newValue
+	            });
+	        }
+	    }, {
+	        key: 'updateValue',
+	        value: function updateValue() {
+	            this.setState({
+	                value: [3]
+	            });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col code' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Import component'
+	                    ),
+	                    (0, _code2.default)(codeText.jsImport, 'javascript'),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Setup state'
+	                    ),
+	                    (0, _code2.default)(codeText.jsState, 'javascript'),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Handle changes'
+	                    ),
+	                    (0, _code2.default)(codeText.jsHandle, 'javascript'),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'HTML'
+	                    ),
+	                    (0, _code2.default)(codeText.html, 'jsx')
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col component' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Component'
+	                    ),
+	                    _react2.default.createElement(_shInputSelect2.default, { options: this.options, value: this.state.value, onChange: this.handleChange, config: this.config }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Update'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'details' },
+	                        _react2.default.createElement(
+	                            'button',
+	                            { onClick: this.updateValue },
+	                            'Change to \'Customer\''
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'State'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'details' },
+	                        JSON.stringify(this.state)
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return Complex;
+	}(_react2.default.Component);
+	
+	exports.default = Complex;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "complex.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 188 */
+/*!*************************************!*\
+  !*** ./src/sh-input-select/tree.js ***!
+  \*************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _shInputSelect = __webpack_require__(/*! sh-input-select */ 177);
+	
+	var _shInputSelect2 = _interopRequireDefault(_shInputSelect);
+	
+	var _code = __webpack_require__(/*! ../util/code */ 180);
+	
+	var _code2 = _interopRequireDefault(_code);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var codeText = {};
+	
+	codeText.jsImport = '\nimport ShInputSelect from \'sh-input-select\';\n';
+	
+	codeText.jsState = '\nthis.state = {\n    value: null,\n    options: [\n       {name: \'Documents\', id: 1, parentId: null},\n        {name: \'Pictures\', id: 2, parentId: null},\n        {name: \'budget.xls\', id: 3, parentId: null},\n        {name: \'resume.doc\', id: 4, parentId: 1},\n        {name: \'will.doc\', id: 5, parentId: 1},\n        {name: \'selfies\', id: 6, parentId: 2},\n        {name: \'headshot.jpg\', id: 7, parentId: 2},\n        {name: \'car.jpg\', id: 8, parentId: 2},\n        {name: \'vegas.jpg\', id: 9, parentId: 6},\n        {name: \'hawii.jpg\', id: 10, parentId: 6},\n    ],\n    config: {\n        tree: true\n    }\n};\n';
+	
+	codeText.jsHandle = '\nhandleChange(newValue) {\n    this.setState({\n        value: newValue\n    });\n}\n';
+	
+	codeText.html = '\n<ShInputSelect options={this.state.options} value={this.state.value} onChange={this.handleChange} config={this.state.config} />\n';
+	
+	var Tree = function (_React$Component) {
+	    _inherits(Tree, _React$Component);
+	
+	    function Tree() {
+	        _classCallCheck(this, Tree);
+	
+	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Tree).call(this));
+	
+	        _this.options = [{ name: 'Documents', id: 1, parentId: null }, { name: 'Pictures', id: 2, parentId: null }, { name: 'budget.xls', id: 3, parentId: null }, { name: 'resume.doc', id: 4, parentId: 1 }, { name: 'will.doc', id: 5, parentId: 1 }, { name: 'selfies', id: 6, parentId: 2 }, { name: 'headshot.jpg', id: 7, parentId: 2 }, { name: 'car.jpg', id: 8, parentId: 2 }, { name: 'vegas.jpg', id: 9, parentId: 6 }, { name: 'hawii.jpg', id: 10, parentId: 6 }];
+	
+	        _this.config = {
+	            tree: true
+	        };
+	
+	        _this.state = {
+	            value: null
+	        };
+	
+	        _this.handleChange = _this.handleChange.bind(_this);
+	        _this.updateValue = _this.updateValue.bind(_this);
+	        return _this;
+	    }
+	
+	    _createClass(Tree, [{
+	        key: 'handleChange',
+	        value: function handleChange(newValue) {
+	            this.setState({
+	                value: newValue
+	            });
+	        }
+	    }, {
+	        key: 'updateValue',
+	        value: function updateValue() {
+	            this.setState({
+	                value: this.options[2]
+	            });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col code' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Import component'
+	                    ),
+	                    (0, _code2.default)(codeText.jsImport, 'javascript'),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Setup state'
+	                    ),
+	                    (0, _code2.default)(codeText.jsState, 'javascript'),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Handle changes'
+	                    ),
+	                    (0, _code2.default)(codeText.jsHandle, 'javascript'),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'HTML'
+	                    ),
+	                    (0, _code2.default)(codeText.html, 'jsx')
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col component' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Component'
+	                    ),
+	                    _react2.default.createElement(_shInputSelect2.default, { options: this.options, value: this.state.value, onChange: this.handleChange, config: this.config }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Update'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'details' },
+	                        _react2.default.createElement(
+	                            'button',
+	                            { onClick: this.updateValue },
+	                            'Change to \'budget.xls\''
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'State'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'details' },
+	                        JSON.stringify(this.state)
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return Tree;
+	}(_react2.default.Component);
+	
+	exports.default = Tree;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "tree.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 189 */
+/*!************************************!*\
+  !*** ./src/sh-input-text/index.js ***!
+  \************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _basic = __webpack_require__(/*! ./basic */ 190);
 	
 	var _basic2 = _interopRequireDefault(_basic);
 	
@@ -41867,16 +42255,16 @@
 	
 	exports.default = ShInputSelectExamples;
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 187 */
+/* 190 */
 /*!************************************!*\
   !*** ./src/sh-input-text/basic.js ***!
   \************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 	
 	'use strict';
 	
@@ -41890,7 +42278,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _shInputText = __webpack_require__(/*! sh-input-text */ 188);
+	var _shInputText = __webpack_require__(/*! sh-input-text */ 191);
 	
 	var _shInputText2 = _interopRequireDefault(_shInputText);
 	
@@ -42001,10 +42389,10 @@
 	
 	exports.default = Basic;
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "basic.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "basic.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 188 */
+/* 191 */
 /*!**********************************************!*\
   !*** ./~/sh-input-text/bin/sh-input-text.js ***!
   \**********************************************/
@@ -42243,7 +42631,7 @@
 		
 		
 		// module
-		exports.push([module.id, ".sh-input-text {\n  display: inline-block;\n  height: 50px;\n  width: 100%; }\n  .sh-input-text label {\n    position: relative;\n    display: block;\n    height: 25px;\n    width: 100%; }\n  .sh-input-text .label {\n    position: absolute;\n    top: 5px;\n    left: 5px;\n    right: 5px;\n    font-size: 12px;\n    color: rgba(255, 255, 255, 0.4);\n    text-transform: uppercase;\n    z-index: 1;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n  .sh-input-text.empty input {\n    background: rgba(255, 255, 255, 0.1); }\n  .sh-input-text input {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 100%;\n    padding: 25px 5px 5px 5px;\n    color: white;\n    border: 0;\n    border-radius: 2px;\n    background: transparent;\n    transition: background 0.25s ease-in-out;\n    outline: 0; }\n    .sh-input-text input:focus {\n      -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6);\n      box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6); }\n    .sh-input-text input:hover {\n      background: rgba(255, 255, 255, 0.1); }\n    .sh-input-text input::-moz-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-text input:-ms-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-text input::-webkit-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n", ""]);
+		exports.push([module.id, ".sh-input-text {\n  display: inline-block;\n  height: 50px;\n  width: 100%; }\n  .sh-input-text label {\n    position: relative;\n    display: block;\n    height: 25px;\n    width: 100%; }\n  .sh-input-text .label {\n    position: absolute;\n    top: 5px;\n    left: 5px;\n    right: 5px;\n    font-size: 12px;\n    color: rgba(255, 255, 255, 0.4);\n    text-transform: uppercase;\n    z-index: 1;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n  .sh-input-text.empty input {\n    background: rgba(255, 255, 255, 0.1); }\n  .sh-input-text input {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: calc(100% - 10px);\n    padding: 25px 5px 5px 5px;\n    color: white;\n    border: 0;\n    border-radius: 2px;\n    background: transparent;\n    transition: background 0.25s ease-in-out;\n    outline: 0; }\n    .sh-input-text input:focus {\n      -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6);\n      box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6); }\n    .sh-input-text input:hover {\n      background: rgba(255, 255, 255, 0.1); }\n    .sh-input-text input::-moz-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-text input:-ms-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-text input::-webkit-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n", ""]);
 		
 		// exports
 	
@@ -42569,7 +42957,7 @@
 	//# sourceMappingURL=sh-input-text.js.map
 
 /***/ },
-/* 189 */
+/* 192 */
 /*!***********************!*\
   !*** ./src/main.scss ***!
   \***********************/
@@ -42578,10 +42966,10 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !./../~/css-loader!./../~/sass-loader!./main.scss */ 190);
+	var content = __webpack_require__(/*! !./../~/css-loader!./../~/sass-loader!./main.scss */ 193);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(/*! ./../~/style-loader/addStyles.js */ 185)(content, {});
+	var update = __webpack_require__(/*! ./../~/style-loader/addStyles.js */ 186)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -42598,389 +42986,20 @@
 	}
 
 /***/ },
-/* 190 */
+/* 193 */
 /*!******************************************************!*\
   !*** ./~/css-loader!./~/sass-loader!./src/main.scss ***!
   \******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(/*! ./../~/css-loader/lib/css-base.js */ 184)();
+	exports = module.exports = __webpack_require__(/*! ./../~/css-loader/lib/css-base.js */ 185)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, "body {\n  color: white; }\n  body #app {\n    height: 100%;\n    width: 100%;\n    overflow-y: auto; }\n  body .nav .navItem {\n    width: auto;\n    display: inline-block; }\n    body .nav .navItem a {\n      border-right: 1px solid rgba(0, 0, 0, 0.4);\n      padding: 20px 50px;\n      display: block; }\n      body .nav .navItem a:hover {\n        background-color: rgba(255, 255, 255, 0.1); }\n  body .header {\n    position: relative;\n    height: 500px;\n    margin-bottom: 40px;\n    background-color: rgba(0, 0, 0, 0.4); }\n    body .header .subHeader {\n      position: absolute;\n      top: calc(50% - 87.5px);\n      left: calc(50% - 325px);\n      height: 175px;\n      width: 650px; }\n      body .header .subHeader .logo {\n        position: absolute;\n        top: 0;\n        left: 0;\n        height: 175px;\n        max-width: 150px; }\n      body .header .subHeader .name {\n        position: absolute;\n        top: 20px;\n        left: 140px;\n        font-family: \"Roboto Condensed\", \"Open Sans\";\n        font-size: 100px;\n        font-weight: 800;\n        font-style: italic; }\n        body .header .subHeader .name .sub {\n          text-transform: uppercase;\n          color: #00d8ff; }\n      body .header .subHeader .subText {\n        position: absolute;\n        top: 116px;\n        left: 270px;\n        font-size: 16.5px;\n        font-weight: 300; }\n  body .example {\n    color: rgba(255, 255, 255, 0.4);\n    margin-bottom: 30px;\n    padding: 20px;\n    background-color: rgba(255, 255, 255, 0.1); }\n    body .example pre {\n      margin: 0;\n      padding: 10px;\n      background-color: rgba(255, 255, 255, 0.1);\n      border-radius: 4px; }\n    body .example .title {\n      margin-bottom: 5px;\n      color: #3ab676; }\n    body .example > .title {\n      color: white;\n      font-size: 24px;\n      margin-bottom: 10px; }\n      body .example > .title a {\n        margin-left: 10px;\n        vertical-align: middle; }\n        body .example > .title a img {\n          max-height: 25px;\n          max-width: 25px;\n          fill: blue; }\n    body .example .section:not(:first-child) {\n      margin-top: 20px; }\n    body .example .options {\n      width: 100%;\n      color: rgba(255, 255, 255, 0.6);\n      border-collapse: collapse;\n      line-height: 1.5; }\n      body .example .options thead th {\n        padding: 10px;\n        border-top: solid 2px rgba(255, 255, 255, 0.1);\n        border-bottom: solid 2px rgba(255, 255, 255, 0.1); }\n        body .example .options thead th.colName {\n          width: 150px; }\n        body .example .options thead th.colType {\n          width: 75px; }\n        body .example .options thead th.colDefault {\n          width: 150px; }\n      body .example .options tbody td {\n        padding: 10px;\n        border-bottom: solid 1px rgba(255, 255, 255, 0.1);\n        vertical-align: top; }\n    body .example .subExampleWrapper:not(:first-child) {\n      margin-top: 30px; }\n  body .subExample > div {\n    display: flex;\n    align-items: stretch;\n    justify-content: space-between; }\n  body .subExample .title:not(:first-child) {\n    margin-top: 20px; }\n  body .subExample .col {\n    width: calc(50% - 30px);\n    padding: 10px;\n    background: rgba(255, 255, 255, 0.1); }\n  body .subExample .code pre {\n    overflow: auto; }\n  body .subExample .code code {\n    display: inline-block;\n    margin-top: -10px;\n    overflow-x: auto;\n    overflow-y: hidden;\n    line-height: 1; }\n  body .subExample .code .token.attr-name {\n    color: #76c696; }\n", ""]);
+	exports.push([module.id, ".navSelect {\n  position: absolute;\n  overflow: hidden;\n  transition: height .5s ease; }\n  .navSelect.close {\n    height: 0; }\n  .navSelect.open {\n    height: 800px; }\n  .navSelect .navSelectList {\n    top: 5px;\n    position: relative;\n    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }\n    .navSelect .navSelectList .navSelectItem {\n      min-width: 250px;\n      text-align: center;\n      border-bottom: 1px solid rgba(0, 0, 0, 0.4);\n      background-color: #284D51;\n      position: relative;\n      transition: height 1s ease; }\n      .navSelect .navSelectList .navSelectItem:last-child {\n        border-top: 3px transparent rgba(0, 0, 0, 0.4); }\n      .navSelect .navSelectList .navSelectItem a {\n        border-right: 0; }\n\nbody {\n  color: white;\n  top: 53px; }\n  body #app {\n    height: 100%;\n    width: 100%;\n    overflow-y: auto; }\n  body .nav {\n    position: fixed;\n    height: 53px;\n    top: 0;\n    width: 100%;\n    z-index: 1001;\n    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);\n    background-color: #284D51; }\n    body .nav .navItem {\n      width: auto;\n      display: inline-block; }\n      body .nav .navItem a {\n        border-right: 1px solid rgba(0, 0, 0, 0.4);\n        padding: 20px 50px;\n        display: block; }\n        body .nav .navItem a:hover {\n          background-color: rgba(255, 255, 255, 0.1); }\n  body .header {\n    position: relative;\n    height: 500px;\n    margin-bottom: 40px;\n    background-color: rgba(0, 0, 0, 0.4); }\n    body .header .subHeader {\n      position: absolute;\n      top: calc(50% - 87.5px);\n      left: calc(50% - 325px);\n      height: 175px;\n      width: 650px; }\n      body .header .subHeader .logo {\n        position: absolute;\n        top: 0;\n        left: 0;\n        height: 175px;\n        max-width: 150px; }\n      body .header .subHeader .name {\n        position: absolute;\n        top: 20px;\n        left: 140px;\n        font-family: \"Roboto Condensed\", \"Open Sans\";\n        font-size: 100px;\n        font-weight: 800;\n        font-style: italic; }\n        body .header .subHeader .name .sub {\n          text-transform: uppercase;\n          color: #00d8ff; }\n      body .header .subHeader .subText {\n        position: absolute;\n        top: 116px;\n        left: 270px;\n        font-size: 16.5px;\n        font-weight: 300; }\n  body .example {\n    color: rgba(255, 255, 255, 0.4);\n    margin-bottom: 30px;\n    padding: 20px;\n    background-color: rgba(255, 255, 255, 0.1); }\n    body .example pre {\n      margin: 0;\n      padding: 10px;\n      background-color: rgba(255, 255, 255, 0.1);\n      border-radius: 4px; }\n    body .example .title {\n      margin-bottom: 5px;\n      color: #3ab676; }\n    body .example > .title {\n      color: white;\n      font-size: 24px;\n      margin-bottom: 10px; }\n      body .example > .title a {\n        margin-left: 10px;\n        vertical-align: middle; }\n        body .example > .title a img {\n          max-height: 25px;\n          max-width: 25px;\n          fill: blue; }\n    body .example .section:not(:first-child) {\n      margin-top: 20px; }\n    body .example .options {\n      width: 100%;\n      color: rgba(255, 255, 255, 0.6);\n      border-collapse: collapse;\n      line-height: 1.5; }\n      body .example .options thead th {\n        padding: 10px;\n        border-top: solid 2px rgba(255, 255, 255, 0.1);\n        border-bottom: solid 2px rgba(255, 255, 255, 0.1); }\n        body .example .options thead th.colName {\n          width: 150px; }\n        body .example .options thead th.colType {\n          width: 75px; }\n        body .example .options thead th.colDefault {\n          width: 150px; }\n      body .example .options tbody td {\n        padding: 10px;\n        border-bottom: solid 1px rgba(255, 255, 255, 0.1);\n        vertical-align: top; }\n    body .example .subExampleWrapper:not(:first-child) {\n      margin-top: 30px; }\n  body .subExample > div {\n    display: flex;\n    align-items: stretch;\n    justify-content: space-between; }\n  body .subExample .title:not(:first-child) {\n    margin-top: 20px; }\n  body .subExample .col {\n    width: calc(50% - 30px);\n    padding: 10px;\n    background: rgba(255, 255, 255, 0.1); }\n  body .subExample .code pre {\n    overflow: auto; }\n  body .subExample .code code {\n    display: inline-block;\n    margin-top: -10px;\n    overflow-x: auto;\n    overflow-y: hidden;\n    line-height: 1; }\n  body .subExample .code .token.attr-name {\n    color: #76c696; }\n", ""]);
 	
 	// exports
-
-
-/***/ },
-/* 191 */,
-/* 192 */,
-/* 193 */,
-/* 194 */
-/*!****************************************!*\
-  !*** ./src/sh-input-select/complex.js ***!
-  \****************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-	
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _shInputSelect = __webpack_require__(/*! sh-input-select */ 177);
-	
-	var _shInputSelect2 = _interopRequireDefault(_shInputSelect);
-	
-	var _code = __webpack_require__(/*! ../util/code */ 180);
-	
-	var _code2 = _interopRequireDefault(_code);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var codeText = {};
-	
-	codeText.jsImport = '\nimport ShInputSelect from \'sh-input-select\';\n';
-	
-	codeText.jsState = '\nthis.state = {\n    value: null,\n    options: [\n        {name: \'New\', desc: \'New Contact\', id: 1},\n        {name: \'Contact\', desc: \'Contact already established\', id: 2},\n        {name: \'Customer\', desc: \'Bought Already\', id: 3},\n    ],\n    config: {\n        getDisplay: (option) => {\n            return option.name + \' - \' + option.desc;\n        },\n        idField: \'id\',\n        multiselect: true\n    }\n};\n';
-	
-	codeText.jsHandle = '\nhandleChange(newValue) {\n    this.setState({\n        value: newValue\n    });\n}\n';
-	
-	codeText.html = '\n<ShInputSelect options={this.state.options} value={this.state.value} onChange={this.handleChange} config={this.state.config} />\n';
-	
-	var Complex = function (_React$Component) {
-	    _inherits(Complex, _React$Component);
-	
-	    function Complex() {
-	        _classCallCheck(this, Complex);
-	
-	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Complex).call(this));
-	
-	        _this.options = [{ name: 'New', desc: 'New Contact', id: 1 }, { name: 'Contact', desc: 'Contact already established', id: 2 }, { name: 'Customer', desc: 'Bought Already', id: 3 }];
-	
-	        _this.config = {
-	            getDisplay: function getDisplay(option) {
-	                return option.name + ' - ' + option.desc;
-	            },
-	            idField: 'id',
-	            multiselect: true
-	        };
-	
-	        _this.state = {
-	            value: null
-	        };
-	
-	        _this.handleChange = _this.handleChange.bind(_this);
-	        _this.updateValue = _this.updateValue.bind(_this);
-	        return _this;
-	    }
-	
-	    _createClass(Complex, [{
-	        key: 'handleChange',
-	        value: function handleChange(newValue) {
-	            this.setState({
-	                value: newValue
-	            });
-	        }
-	    }, {
-	        key: 'updateValue',
-	        value: function updateValue() {
-	            this.setState({
-	                value: [3]
-	            });
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'col code' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Import component'
-	                    ),
-	                    (0, _code2.default)(codeText.jsImport, 'javascript'),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Setup state'
-	                    ),
-	                    (0, _code2.default)(codeText.jsState, 'javascript'),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Handle changes'
-	                    ),
-	                    (0, _code2.default)(codeText.jsHandle, 'javascript'),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'HTML'
-	                    ),
-	                    (0, _code2.default)(codeText.html, 'jsx')
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'col component' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Component'
-	                    ),
-	                    _react2.default.createElement(_shInputSelect2.default, { options: this.options, value: this.state.value, onChange: this.handleChange, config: this.config }),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Update'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'details' },
-	                        _react2.default.createElement(
-	                            'button',
-	                            { onClick: this.updateValue },
-	                            'Change to \'Customer\''
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'State'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'details' },
-	                        JSON.stringify(this.state)
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return Complex;
-	}(_react2.default.Component);
-	
-	exports.default = Complex;
-	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "complex.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ },
-/* 195 */
-/*!*************************************!*\
-  !*** ./src/sh-input-select/tree.js ***!
-  \*************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-	
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _shInputSelect = __webpack_require__(/*! sh-input-select */ 177);
-	
-	var _shInputSelect2 = _interopRequireDefault(_shInputSelect);
-	
-	var _code = __webpack_require__(/*! ../util/code */ 180);
-	
-	var _code2 = _interopRequireDefault(_code);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var codeText = {};
-	
-	codeText.jsImport = '\nimport ShInputSelect from \'sh-input-select\';\n';
-	
-	codeText.jsState = '\nthis.state = {\n    value: null,\n    options: [\n       {name: \'Documents\', id: 1, parentId: null},\n        {name: \'Pictures\', id: 2, parentId: null},\n        {name: \'budget.xls\', id: 3, parentId: null},\n        {name: \'resume.doc\', id: 4, parentId: 1},\n        {name: \'will.doc\', id: 5, parentId: 1},\n        {name: \'selfies\', id: 6, parentId: 2},\n        {name: \'headshot.jpg\', id: 7, parentId: 2},\n        {name: \'car.jpg\', id: 8, parentId: 2},\n        {name: \'vegas.jpg\', id: 9, parentId: 6},\n        {name: \'hawii.jpg\', id: 10, parentId: 6},\n    ],\n    config: {\n        tree: true\n    }\n};\n';
-	
-	codeText.jsHandle = '\nhandleChange(newValue) {\n    this.setState({\n        value: newValue\n    });\n}\n';
-	
-	codeText.html = '\n<ShInputSelect options={this.state.options} value={this.state.value} onChange={this.handleChange} config={this.state.config} />\n';
-	
-	var Tree = function (_React$Component) {
-	    _inherits(Tree, _React$Component);
-	
-	    function Tree() {
-	        _classCallCheck(this, Tree);
-	
-	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Tree).call(this));
-	
-	        _this.options = [{ name: 'Documents', id: 1, parentId: null }, { name: 'Pictures', id: 2, parentId: null }, { name: 'budget.xls', id: 3, parentId: null }, { name: 'resume.doc', id: 4, parentId: 1 }, { name: 'will.doc', id: 5, parentId: 1 }, { name: 'selfies', id: 6, parentId: 2 }, { name: 'headshot.jpg', id: 7, parentId: 2 }, { name: 'car.jpg', id: 8, parentId: 2 }, { name: 'vegas.jpg', id: 9, parentId: 6 }, { name: 'hawii.jpg', id: 10, parentId: 6 }];
-	
-	        _this.config = {
-	            tree: true
-	        };
-	
-	        _this.state = {
-	            value: null
-	        };
-	
-	        _this.handleChange = _this.handleChange.bind(_this);
-	        _this.updateValue = _this.updateValue.bind(_this);
-	        return _this;
-	    }
-	
-	    _createClass(Tree, [{
-	        key: 'handleChange',
-	        value: function handleChange(newValue) {
-	            this.setState({
-	                value: newValue
-	            });
-	        }
-	    }, {
-	        key: 'updateValue',
-	        value: function updateValue() {
-	            this.setState({
-	                value: this.options[2]
-	            });
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'col code' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Import component'
-	                    ),
-	                    (0, _code2.default)(codeText.jsImport, 'javascript'),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Setup state'
-	                    ),
-	                    (0, _code2.default)(codeText.jsState, 'javascript'),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Handle changes'
-	                    ),
-	                    (0, _code2.default)(codeText.jsHandle, 'javascript'),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'HTML'
-	                    ),
-	                    (0, _code2.default)(codeText.html, 'jsx')
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'col component' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Component'
-	                    ),
-	                    _react2.default.createElement(_shInputSelect2.default, { options: this.options, value: this.state.value, onChange: this.handleChange, config: this.config }),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Update'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'details' },
-	                        _react2.default.createElement(
-	                            'button',
-	                            { onClick: this.updateValue },
-	                            'Change to \'budget.xls\''
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'State'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'details' },
-	                        JSON.stringify(this.state)
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return Tree;
-	}(_react2.default.Component);
-	
-	exports.default = Tree;
-	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "tree.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ },
-/* 196 */
-/*!*******************************************!*\
-  !*** ./~/prismjs/components/prism-jsx.js ***!
-  \*******************************************/
-/***/ function(module, exports) {
-
-	(function(Prism) {
-	
-	var javascript = Prism.util.clone(Prism.languages.javascript);
-	
-	Prism.languages.jsx = Prism.languages.extend('markup', javascript);
-	Prism.languages.jsx.tag.pattern= /<\/?[\w\.:-]+\s*(?:\s+[\w\.:-]+(?:=(?:("|')(\\?[\w\W])*?\1|[^\s'">=]+|(\{[\w\W]*?\})))?\s*)*\/?>/i;
-	
-	Prism.languages.jsx.tag.inside['attr-value'].pattern = /=[^\{](?:('|")[\w\W]*?(\1)|[^\s>]+)/i;
-	
-	var jsxExpression = Prism.util.clone(Prism.languages.jsx);
-	
-	delete jsxExpression.punctuation
-	
-	jsxExpression = Prism.languages.insertBefore('jsx', 'operator', {
-	  'punctuation': /=(?={)|[{}[\];(),.:]/
-	}, { jsx: jsxExpression });
-	
-	Prism.languages.insertBefore('inside', 'attr-value',{
-		'script': {
-			// Allow for one level of nesting
-			pattern: /=(\{(?:\{[^}]*\}|[^}])+\})/i,
-			inside: jsxExpression,
-			'alias': 'language-javascript'
-		}
-	}, Prism.languages.jsx.tag);
-	
-	}(Prism));
 
 
 /***/ }

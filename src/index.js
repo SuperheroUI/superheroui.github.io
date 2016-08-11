@@ -11,24 +11,43 @@ class Homepage extends React.Component {
         super();
 
         this.state = {
-            examples: [
+            examples:  [
                 {name: 'ShInputSelect', code: <ShInputSelectExamples />, github: 'https://github.com/SuperheroUI/shInputSelect'},
                 {name: 'ShInputText', code: <ShInputTextExamples />, github: 'https://github.com/SuperheroUI/shInputText'}
-            ]
-        }
+            ],
+            menuState:'close'
+        };
+
+        this.toggleMenu = this.toggleMenu.bind(this);
+    }
+
+    toggleMenu(){
+        this.setState({
+            menuState: this.state.menuState === 'close' ? 'open' : 'close'
+        });
     }
 
     render() {
         let examples = this.state.examples.map((example, index) => {
             let githubLink = null;
             if (example.github) {
-                githubLink = <a href={example.github} target="_blank"><img src="../images/github.svg" /></a>;
+                githubLink = <a href={example.github} target="_blank"><img src="images/github.svg" /></a>;
             }
 
             return (
-                <div key={index} className="example">
+                <div key={index} className="example" id={example.name}>
                     <div className="title">{example.name}{githubLink}</div>
                     <div className="code">{example.code}</div>
+                </div>
+            )
+        });
+
+        let navLinks = this.state.examples.map((example, index) => {
+            return (
+                <div key={index} className="navSelectItem">
+                    <a href={'#'+example.name}>
+                        {example.name}
+                    </a>
                 </div>
             )
         });
@@ -36,13 +55,21 @@ class Homepage extends React.Component {
         return (
             <div className="pageWrapper">
                 <div className="nav">
-                    <div className="navItem"><a>Docs</a></div>
-                    <div className="navItem"><a>Components</a></div>
-                    <div className="navItem"><a>Github</a></div>
+                    <div className="navItem">
+                        <a href="#home">Home</a>
+                    </div>
+                    <div className="navItem">
+                        <a onClick={this.toggleMenu}>Components</a>
+                        <div className={'navSelect '+this.state.menuState} >
+                            <div className="navSelectList" onClick={this.toggleMenu}>
+                                {navLinks}
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="header">
+                <div className="header" id="home">
                     <div className="subHeader">
-                        <img className="logo" src="../images/logo.svg" />
+                        <img className="logo" src="images/logo.svg" />
                         <div className="name">Superhero<span className="sub">UI</span></div>
                         <div className="subText">React components that are really super awesome</div>
                     </div>

@@ -1,9 +1,46 @@
 @import '../node_modules/sh-core/src/base';
-
 $color-react: rgba(0, 216, 255, 1);
+$nav-height: 53px;
+
+.navSelect {
+    position: absolute;
+    overflow: hidden;
+    transition: height .5s ease;
+    &.close {
+        height: 0;
+    }
+    &.open {
+        height: 800px;
+    }
+
+    .navSelectList {
+        top: 5px;
+        position: relative;
+        box-shadow: 0 1px 1px $color-box-dark-background3;
+
+        .navSelectItem {
+            min-width:250px;
+            text-align: center;
+            border-bottom: 1px solid $color-box-dark-background3;
+            background-color: $color-secondary;
+            position: relative;
+            transition: height 1s ease;
+
+            &:last-child{
+                border-top: 3px transparent $color-box-dark-background3;
+            }
+
+            a {
+                border-right: 0;
+            }
+
+        }
+    }
+}
 
 body {
     color: $color-font;
+    top:$nav-height;
 
     #app {
         height: 100%;
@@ -13,6 +50,14 @@ body {
     }
 
     .nav {
+        position: fixed;
+        height: $nav-height;
+        top:0;
+        width: 100%;
+        z-index: 1001;
+        box-shadow: 0 1px 1px $color-box-dark-background2;
+        background-color: $color-secondary;
+
         .navItem {
             width: auto;
             display: inline-block;
