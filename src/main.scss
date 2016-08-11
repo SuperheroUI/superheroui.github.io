@@ -68,7 +68,8 @@ body {
                 display: block;
 
                 &:hover {
-                    background-color: $color-box-background5;
+                    color: $color-font;
+                    background-color: $color-primary;
                 }
             }
         }
