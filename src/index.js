@@ -74,6 +74,18 @@ class Homepage extends React.Component {
                         <div className="subText">React components that are really super awesome</div>
                     </div>
                 </div>
+                <div className="description">
+                    <div className="title">Description</div>
+                    <div className="details">SuperheroUI is a set of UI components built using React. The goal is to make independent components that do not rely on each other for versions. This makes updating one component easy to update.</div>
+                    <div className="details">Dependencies:
+                        <ul>
+                            <li><span className="depName">react</span> - core for any react component</li>
+                            <li><span className="depName">react-dom</span> - needed for some of the dom manipulation we do</li>
+                            <li><span className="depName">lodash</span> - we use this has a great base for more functional programming</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div>{examples}</div>
             </div>
         );

@@ -123,6 +123,36 @@ body {
         }
     }
 
+    .description {
+        margin-bottom: 30px;
+        padding: 20px;
+
+        font-size: 18px;
+        background-color: $color-box-background5;
+
+        .title {
+            font-size: 24px;
+            color: $color-font;
+        }
+
+        .details {
+            margin-top: 15px;
+            font-weight: 300;
+            color: $color-line1;
+        }
+
+        li {
+            display: list-item;
+            margin-left: 25px;
+        }
+
+        .depName {
+            font-weight: 400;
+            color: $color-font;
+        }
+
+    }
+
     .example {
         color: $color-font-label;
         margin-bottom: 30px;
