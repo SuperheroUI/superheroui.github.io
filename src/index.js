@@ -13,7 +13,7 @@ class Homepage extends React.Component {
         this.state = {
             examples: [
                 {name: 'ShInputSelect', code: <ShInputSelectExamples />, github: 'https://github.com/SuperheroUI/shInputSelect'},
-                {name: 'ShInputText', code: <ShInputTextExamples />}
+                {name: 'ShInputText', code: <ShInputTextExamples />, github: 'https://github.com/SuperheroUI/shInputText'}
             ]
         }
     }

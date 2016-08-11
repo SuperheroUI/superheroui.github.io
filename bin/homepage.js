@@ -88,7 +88,7 @@
 	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Homepage).call(this));
 	
 	        _this.state = {
-	            examples: [{ name: 'ShInputSelect', code: _react2.default.createElement(_shInputSelect2.default, null), github: 'https://github.com/SuperheroUI/shInputSelect' }, { name: 'ShInputText', code: _react2.default.createElement(_shInputText2.default, null) }]
+	            examples: [{ name: 'ShInputSelect', code: _react2.default.createElement(_shInputSelect2.default, null), github: 'https://github.com/SuperheroUI/shInputSelect' }, { name: 'ShInputText', code: _react2.default.createElement(_shInputText2.default, null), github: 'https://github.com/SuperheroUI/shInputText' }]
 	        };
 	        return _this;
 	    }
@@ -41841,7 +41841,7 @@
 	                null,
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'installation' },
+	                    { className: 'section' },
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'title' },
@@ -41855,7 +41855,7 @@
 	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'subExamples' },
+	                    { className: 'section' },
 	                    examples
 	                )
 	            );

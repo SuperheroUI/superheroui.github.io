@@ -25,11 +25,11 @@ class ShInputSelectExamples extends React.Component {
 
         return (
             <div>
-                <div className="installation">
+                <div className="section">
                     <div className="title">Installation</div>
                     <pre className="instructions">npm install sh-input-text</pre>
                 </div>
-                <div className="subExamples">
+                <div className="section">
                     {examples}
                 </div>
             </div>
