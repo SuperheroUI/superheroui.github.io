@@ -35,7 +35,7 @@
     "prismjs": "^1.5.1",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
-    "sh-core": "0.1.4",
+    "sh-core": "0.1.6",
     "sh-input-select": "0.1.4",
     "sh-input-text": "0.1.6"
   }

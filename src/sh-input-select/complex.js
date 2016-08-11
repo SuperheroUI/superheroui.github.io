@@ -16,7 +16,14 @@ this.state = {
         {name: 'New', desc: 'New Contact', id: 1},
         {name: 'Contact', desc: 'Contact already established', id: 2},
         {name: 'Customer', desc: 'Bought Already', id: 3},
-    ]
+    ],
+    config: {
+        getDisplay: (option) => {
+            return option.name + ' - ' + option.desc;
+        },
+        idField: 'id',
+        multiselect: true
+    }
 };
 `;
 
@@ -29,10 +36,10 @@ handleChange(newValue) {
 `;
 
 codeText.html = `
-<ShInputSelect options={this.state.options} value={this.state.value} onChange={this.handleChange} />
+<ShInputSelect options={this.state.options} value={this.state.value} onChange={this.handleChange} config={this.state.config} />
 `;
 
-class Basic extends React.Component {
+class Complex extends React.Component {
     constructor() {
         super();
 
@@ -41,6 +48,14 @@ class Basic extends React.Component {
             {name: 'Contact', desc: 'Contact already established', id: 2},
             {name: 'Customer', desc: 'Bought Already', id: 3},
         ];
+
+        this.config = {
+            getDisplay: (option) => {
+                return option.name + ' - ' + option.desc;
+            },
+            idField: 'id',
+            multiselect: true
+        };
 
         this.state = {
             value: null
@@ -58,7 +73,7 @@ class Basic extends React.Component {
 
     updateValue() {
         this.setState({
-            value: this.options[2]
+            value: [3]
         });
     }
 
@@ -77,7 +92,7 @@ class Basic extends React.Component {
                 </div>
                 <div className="col component">
                     <div className="title">Component</div>
-                    <ShInputSelect options={this.options} value={this.state.value} onChange={this.handleChange} />
+                    <ShInputSelect options={this.options} value={this.state.value} onChange={this.handleChange} config={this.config} />
                     <div className="title">Update</div>
                     <div className="details"><button onClick={this.updateValue}>Change to 'Customer'</button></div>
                     <div className="title">State</div>
@@ -88,4 +103,4 @@ class Basic extends React.Component {
     }
 }
 
-export default Basic;
+export default Complex;
