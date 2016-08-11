@@ -88,7 +88,7 @@
 	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Homepage).call(this));
 	
 	        _this.state = {
-	            examples: [{ name: 'ShInputSelect', code: _react2.default.createElement(_shInputSelect2.default, null) }, { name: 'ShInputText', code: _react2.default.createElement(_shInputText2.default, null) }],
+	            examples: [{ name: 'ShInputSelect', code: _react2.default.createElement(_shInputSelect2.default, null), github: 'https://github.com/SuperheroUI/shInputSelect' }, { name: 'ShInputText', code: _react2.default.createElement(_shInputText2.default, null), github: 'https://github.com/SuperheroUI/shInputText' }],
 	            menuState: 'close'
 	        };
 	
@@ -99,12 +99,9 @@
 	    _createClass(Homepage, [{
 	        key: 'toggleMenu',
 	        value: function toggleMenu() {
-	            if (this.state.menuState === 'close') {
-	                this.state.menuState = 'open';
-	            } else {
-	                this.state.menuState = 'close';
-	            }
-	            this.setState(this.state);
+	            this.setState({
+	                menuState: this.state.menuState === 'close' ? 'open' : 'close'
+	            });
 	        }
 	    }, {
 	        key: 'render',
@@ -115,13 +112,13 @@
 	                    githubLink = _react2.default.createElement(
 	                        'a',
 	                        { href: example.github, target: '_blank' },
-	                        _react2.default.createElement('img', { src: '../images/github.svg' })
+	                        _react2.default.createElement('img', { src: 'images/github.svg' })
 	                    );
 	                }
 	
 	                return _react2.default.createElement(
 	                    'div',
-	                    { key: index, className: 'example' },
+	                    { key: index, className: 'example', id: example.name },
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'title' },
@@ -185,16 +182,25 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'header', id: 'home' },
-	                    'Superhero',
-	                    _react2.default.createElement(
-	                        'span',
-	                        { className: 'sub' },
-	                        'UI'
-	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 'subText' },
-	                        'react components that are really super awesome'
+	                        { className: 'subHeader' },
+	                        _react2.default.createElement('img', { className: 'logo', src: 'images/logo.svg' }),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'name' },
+	                            'Superhero',
+	                            _react2.default.createElement(
+	                                'span',
+	                                { className: 'sub' },
+	                                'UI'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'subText' },
+	                            'React components that are really super awesome'
+	                        )
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -42960,7 +42966,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./main.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var content = __webpack_require__(/*! !./../~/css-loader!./../~/sass-loader!./main.scss */ 193);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(/*! ./../~/style-loader/addStyles.js */ 186)(content, {});
@@ -42978,6 +42984,23 @@
 		// When the module is disposed, remove the <style> tags
 		module.hot.dispose(function() { update(); });
 	}
+
+/***/ },
+/* 193 */
+/*!******************************************************!*\
+  !*** ./~/css-loader!./~/sass-loader!./src/main.scss ***!
+  \******************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(/*! ./../~/css-loader/lib/css-base.js */ 185)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".navSelect {\n  position: absolute;\n  overflow: hidden;\n  transition: height .5s ease; }\n  .navSelect.close {\n    height: 0; }\n  .navSelect.open {\n    height: 800px; }\n  .navSelect .navSelectList {\n    top: 5px;\n    position: relative;\n    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }\n    .navSelect .navSelectList .navSelectItem {\n      min-width: 250px;\n      text-align: center;\n      border-bottom: 1px solid rgba(0, 0, 0, 0.4);\n      background-color: #284D51;\n      position: relative;\n      transition: height 1s ease; }\n      .navSelect .navSelectList .navSelectItem:last-child {\n        border-top: 3px transparent rgba(0, 0, 0, 0.4); }\n      .navSelect .navSelectList .navSelectItem a {\n        border-right: 0; }\n\nbody {\n  color: white;\n  top: 52px; }\n  body #app {\n    height: 100%;\n    width: 100%;\n    overflow-y: auto; }\n  body .nav {\n    position: fixed;\n    top: 0;\n    width: 100%;\n    z-index: 1001;\n    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);\n    background-color: #284D51; }\n    body .nav .navItem {\n      width: auto;\n      display: inline-block; }\n      body .nav .navItem a {\n        border-right: 1px solid rgba(0, 0, 0, 0.4);\n        padding: 20px 50px;\n        display: block; }\n        body .nav .navItem a:hover {\n          background-color: rgba(255, 255, 255, 0.1); }\n  body .header {\n    position: relative;\n    height: 500px;\n    margin-bottom: 40px;\n    background-color: rgba(0, 0, 0, 0.4); }\n    body .header .subHeader {\n      position: absolute;\n      top: calc(50% - 87.5px);\n      left: calc(50% - 325px);\n      height: 175px;\n      width: 650px; }\n      body .header .subHeader .logo {\n        position: absolute;\n        top: 0;\n        left: 0;\n        height: 175px;\n        max-width: 150px; }\n      body .header .subHeader .name {\n        position: absolute;\n        top: 20px;\n        left: 140px;\n        font-family: \"Roboto Condensed\", \"Open Sans\";\n        font-size: 100px;\n        font-weight: 800;\n        font-style: italic; }\n        body .header .subHeader .name .sub {\n          text-transform: uppercase;\n          color: #00d8ff; }\n      body .header .subHeader .subText {\n        position: absolute;\n        top: 116px;\n        left: 270px;\n        font-size: 16.5px;\n        font-weight: 300; }\n  body .example {\n    color: rgba(255, 255, 255, 0.4);\n    margin-bottom: 30px;\n    padding: 20px;\n    background-color: rgba(255, 255, 255, 0.1); }\n    body .example pre {\n      margin: 0;\n      padding: 10px;\n      background-color: rgba(255, 255, 255, 0.1);\n      border-radius: 4px; }\n    body .example .title {\n      margin-bottom: 5px;\n      color: #3ab676; }\n    body .example > .title {\n      color: white;\n      font-size: 24px;\n      margin-bottom: 10px; }\n      body .example > .title a {\n        margin-left: 10px;\n        vertical-align: middle; }\n        body .example > .title a img {\n          max-height: 25px;\n          max-width: 25px;\n          fill: blue; }\n    body .example .section:not(:first-child) {\n      margin-top: 20px; }\n    body .example .options {\n      width: 100%;\n      color: rgba(255, 255, 255, 0.6);\n      border-collapse: collapse;\n      line-height: 1.5; }\n      body .example .options thead th {\n        padding: 10px;\n        border-top: solid 2px rgba(255, 255, 255, 0.1);\n        border-bottom: solid 2px rgba(255, 255, 255, 0.1); }\n        body .example .options thead th.colName {\n          width: 150px; }\n        body .example .options thead th.colType {\n          width: 75px; }\n        body .example .options thead th.colDefault {\n          width: 150px; }\n      body .example .options tbody td {\n        padding: 10px;\n        border-bottom: solid 1px rgba(255, 255, 255, 0.1);\n        vertical-align: top; }\n    body .example .subExampleWrapper:not(:first-child) {\n      margin-top: 30px; }\n  body .subExample > div {\n    display: flex;\n    align-items: stretch;\n    justify-content: space-between; }\n  body .subExample .title:not(:first-child) {\n    margin-top: 20px; }\n  body .subExample .col {\n    width: calc(50% - 30px);\n    padding: 10px;\n    background: rgba(255, 255, 255, 0.1); }\n  body .subExample .code pre {\n    overflow: auto; }\n  body .subExample .code code {\n    display: inline-block;\n    margin-top: -10px;\n    overflow-x: auto;\n    overflow-y: hidden;\n    line-height: 1; }\n  body .subExample .code .token.attr-name {\n    color: #76c696; }\n", ""]);
+	
+	// exports
+
 
 /***/ }
 /******/ ]);

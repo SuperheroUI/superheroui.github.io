@@ -11,9 +11,9 @@ class Homepage extends React.Component {
         super();
 
         this.state = {
-            examples: [
-                {name: 'ShInputSelect', code: <ShInputSelectExamples />},
-                {name: 'ShInputText', code: <ShInputTextExamples />}
+            examples:  [
+                {name: 'ShInputSelect', code: <ShInputSelectExamples />, github: 'https://github.com/SuperheroUI/shInputSelect'},
+                {name: 'ShInputText', code: <ShInputTextExamples />, github: 'https://github.com/SuperheroUI/shInputText'}
             ],
             menuState:'close'
         };
@@ -22,23 +22,20 @@ class Homepage extends React.Component {
     }
 
     toggleMenu(){
-        if(this.state.menuState === 'close'){
-            this.state.menuState = 'open'
-        } else{
-            this.state.menuState = 'close'
-        }
-        this.setState(this.state);
+        this.setState({
+            menuState: this.state.menuState === 'close' ? 'open' : 'close'
+        });
     }
 
     render() {
         let examples = this.state.examples.map((example, index) => {
             let githubLink = null;
             if (example.github) {
-                githubLink = <a href={example.github} target="_blank"><img src="../images/github.svg" /></a>;
+                githubLink = <a href={example.github} target="_blank"><img src="images/github.svg" /></a>;
             }
 
             return (
-                <div key={index} className="example">
+                <div key={index} className="example" id={example.name}>
                     <div className="title">{example.name}{githubLink}</div>
                     <div className="code">{example.code}</div>
                 </div>
@@ -71,8 +68,11 @@ class Homepage extends React.Component {
                     </div>
                 </div>
                 <div className="header" id="home">
-                    Superhero<span className="sub">UI</span>
-                    <div className="subText">react components that are really super awesome</div>
+                    <div className="subHeader">
+                        <img className="logo" src="images/logo.svg" />
+                        <div className="name">Superhero<span className="sub">UI</span></div>
+                        <div className="subText">React components that are really super awesome</div>
+                    </div>
                 </div>
                 <div>{examples}</div>
             </div>

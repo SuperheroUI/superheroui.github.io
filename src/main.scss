@@ -1,4 +1,5 @@
 @import '../node_modules/sh-core/src/base';
+$color-react: rgba(0, 216, 255, 1);
 
 .navSelect {
     position: absolute;
@@ -12,16 +13,20 @@
     }
 
     .navSelectList {
+        top: 5px;
         position: relative;
+        box-shadow: 0 1px 1px $color-box-dark-background3;
 
         .navSelectItem {
+            min-width:250px;
+            text-align: center;
             border-bottom: 1px solid $color-box-dark-background3;
             background-color: $color-secondary;
             position: relative;
             transition: height 1s ease;
 
-            &:first-child{
-                border-top: 1px transparent $color-box-dark-background3;
+            &:last-child{
+                border-top: 3px transparent $color-box-dark-background3;
             }
 
             a {
@@ -34,6 +39,7 @@
 
 body {
     color: $color-font;
+    top:52px;
 
     #app {
         height: 100%;
@@ -44,10 +50,11 @@ body {
 
     .nav {
         position: fixed;
+        top:0;
         width: 100%;
         z-index: 1001;
+        box-shadow: 0 1px 1px $color-box-dark-background2;
         background-color: $color-secondary;
-        //top:0;
 
         .navItem {
             width: auto;
