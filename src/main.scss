@@ -3,6 +3,13 @@
 body {
     color: $color-font;
 
+    #app {
+        height: 100%;
+        width: 100%;
+
+        overflow-y: auto;
+    }
+
     .nav {
         .navItem {
             width: auto;
@@ -31,6 +38,13 @@ body {
         font-size: 121px;
         margin-bottom: 40px;
 
+        .sub {
+            font-weight: 800;
+            font-size: 150px;
+            color: $color-primary;
+            font-family: "Comic Sans MS";
+        }
+
         .subText {
             width: calc(100% - 50px);
             text-align: center;
@@ -42,34 +56,24 @@ body {
         }
     }
 
-    .sub {
-        font-weight: 800;
-        font-size: 150px;
-        color: $color-primary;
-        font-family: "Comic Sans MS";
-    }
-
     .example {
         color: $color-font-label;
-        font-size: 14px;
         margin-bottom: 30px;
         padding: 20px;
-        background-color: rgba(255, 255, 255, .05);
+
+        background-color: $color-box-background5;
 
         pre {
-            padding: 10px;
-            background-color: rgba(255, 255, 255, .03);
-            border-radius: 5px;
             margin: 0;
+            padding: 10px;
+
+            background-color: $color-box-background5;
+            border-radius: $size-border-radius;
         }
 
         .title {
             margin-bottom: 5px;
             color: $color-primary;
-        }
-
-        .component {
-            margin-bottom: 20px;
         }
 
         .instructions {
@@ -81,10 +85,37 @@ body {
             font-size: 24px;
             margin-bottom: 10px;
         }
+    }
 
-        .installation {
-            > .title {
+    .subExample {
+        > div {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+        }
 
+        .title:not(:first-child) {
+            margin-top: 20px;
+        }
+
+        .col {
+            width: calc(50% - 30px);
+            padding: 10px;
+
+            background: $color-box-background5;
+        }
+
+        .code {
+            pre {
+                overflow: auto;
+            }
+
+            code {
+                display: inline-block;
+                margin-top: -10px;
+                overflow-x: auto;
+                overflow-y: hidden;
+                line-height: 1;
             }
         }
     }

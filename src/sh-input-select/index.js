@@ -8,7 +8,7 @@ class ShInputSelectExamples extends React.Component {
 
         this.state = {
             examples: [
-                { name: 'Basic', code: <Basic /> }
+                { name: 'Basic Example', code: <Basic /> }
             ]
         }
     }
@@ -16,9 +16,9 @@ class ShInputSelectExamples extends React.Component {
     render() {
         let examples = this.state.examples.map((example, index) => {
             return (
-                <div key={index} className="subExample">
+                <div key={index} className="subExampleWrapper">
                     <div className="title">{example.name}</div>
-                    <div className="code">{example.code}</div>
+                    <div className="subExample">{example.code}</div>
                 </div>
             )
         });
@@ -27,7 +27,7 @@ class ShInputSelectExamples extends React.Component {
             <div>
                 <div className="installation">
                     <div className="title">Installation</div>
-                    <pre className="instructions">npm install sh-input-select</pre>
+                    <pre className="instructions">npm install sh-input-select --save</pre>
                 </div>
                 <div className="subExamples">
                     {examples}
