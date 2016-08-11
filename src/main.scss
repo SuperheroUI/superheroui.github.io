@@ -1,6 +1,36 @@
 @import '../node_modules/sh-core/src/base';
 
-$color-react: rgba(0, 216, 255, 1);
+.navSelect {
+    position: absolute;
+    overflow: hidden;
+    transition: height .5s ease;
+    &.close {
+        height: 0;
+    }
+    &.open {
+        height: 800px;
+    }
+
+    .navSelectList {
+        position: relative;
+
+        .navSelectItem {
+            border-bottom: 1px solid $color-box-dark-background3;
+            background-color: $color-secondary;
+            position: relative;
+            transition: height 1s ease;
+
+            &:first-child{
+                border-top: 1px transparent $color-box-dark-background3;
+            }
+
+            a {
+                border-right: 0;
+            }
+
+        }
+    }
+}
 
 body {
     color: $color-font;
@@ -13,6 +43,12 @@ body {
     }
 
     .nav {
+        position: fixed;
+        width: 100%;
+        z-index: 1001;
+        background-color: $color-secondary;
+        //top:0;
+
         .navItem {
             width: auto;
             display: inline-block;
