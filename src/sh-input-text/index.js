@@ -16,9 +16,9 @@ class ShInputSelectExamples extends React.Component {
     render() {
         let examples = this.state.examples.map((example, index) => {
             return (
-                <div key={index} className="subExample">
+                <div key={index} className="subExampleWrapper">
                     <div className="title">{example.name}</div>
-                    <div className="code">{example.code}</div>
+                    <div className="subExample">{example.code}</div>
                 </div>
             )
         });
