@@ -1,5 +1,6 @@
 @import '../node_modules/sh-core/src/base';
 $color-react: rgba(0, 216, 255, 1);
+$nav-height: 53px;
 
 .navSelect {
     position: absolute;
@@ -39,7 +40,7 @@ $color-react: rgba(0, 216, 255, 1);
 
 body {
     color: $color-font;
-    top:52px;
+    top:$nav-height;
 
     #app {
         height: 100%;
@@ -50,6 +51,7 @@ body {
 
     .nav {
         position: fixed;
+        height: $nav-height;
         top:0;
         width: 100%;
         z-index: 1001;
