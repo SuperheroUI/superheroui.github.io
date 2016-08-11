@@ -96,13 +96,13 @@ class ShInputSelectExamples extends React.Component {
                             <tr>
                                 <td>config.treeHasChildren</td>
                                 <td>function</td>
-                                <td title="(options, option) => { return !!_.find(options, {parentId: option.id}); }">{'(options, option) => { }'}</td>
+                                <td title="(options, option) => { return !!_.find(options, {parentId: option.id}); }">{'(options, option) => {...}'}</td>
                                 <td>Function to call when checking to see if an option has any children. Default checks the 'id' against a 'parentId'. Only used when config.tree == true.</td>
                             </tr>
                             <tr>
                                 <td>config.treeGetChildren</td>
                                 <td>function</td>
-                                <td title="(options, option) => { return _.filter(options, {parentId: (option ? option.id : null)}); }">{'(options, option) => { }'}</td>
+                                <td title="(options, option) => { return _.filter(options, {parentId: (option ? option.id : null)}); }">{'(options, option) => {...}'}</td>
                                 <td>Function to call when getting the children from a parent. Default checks the 'id' against a 'parentId'. Only used when config.tree == true.</td>
                             </tr>
                         </tbody>
