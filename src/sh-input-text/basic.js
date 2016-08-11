@@ -53,7 +53,7 @@ class Basic extends React.Component {
                     <div className="title">Handle changes</div>
                     {Code(codeText.jsHandle, 'javascript')}
                     <div className="title">HTML</div>
-                    {Code(codeText.html, 'markup')}
+                    {Code(codeText.html, 'jsx')}
                 </div>
                 <div className="col component">
                     <div className="title">Component</div>

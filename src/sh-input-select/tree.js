@@ -13,10 +13,20 @@ codeText.jsState = `
 this.state = {
     value: null,
     options: [
-        {name: 'New', desc: 'New Contact', id: 1},
-        {name: 'Contact', desc: 'Contact already established', id: 2},
-        {name: 'Customer', desc: 'Bought Already', id: 3},
-    ]
+       {name: 'Documents', id: 1, parentId: null},
+        {name: 'Pictures', id: 2, parentId: null},
+        {name: 'budget.xls', id: 3, parentId: null},
+        {name: 'resume.doc', id: 4, parentId: 1},
+        {name: 'will.doc', id: 5, parentId: 1},
+        {name: 'selfies', id: 6, parentId: 2},
+        {name: 'headshot.jpg', id: 7, parentId: 2},
+        {name: 'car.jpg', id: 8, parentId: 2},
+        {name: 'vegas.jpg', id: 9, parentId: 6},
+        {name: 'hawii.jpg', id: 10, parentId: 6},
+    ],
+    config: {
+        tree: true
+    }
 };
 `;
 
@@ -29,18 +39,29 @@ handleChange(newValue) {
 `;
 
 codeText.html = `
-<ShInputSelect options={this.state.options} value={this.state.value} onChange={this.handleChange} />
+<ShInputSelect options={this.state.options} value={this.state.value} onChange={this.handleChange} config={this.state.config} />
 `;
 
-class Basic extends React.Component {
+class Tree extends React.Component {
     constructor() {
         super();
 
         this.options = [
-            {name: 'New', desc: 'New Contact', id: 1},
-            {name: 'Contact', desc: 'Contact already established', id: 2},
-            {name: 'Customer', desc: 'Bought Already', id: 3},
+            {name: 'Documents', id: 1, parentId: null},
+            {name: 'Pictures', id: 2, parentId: null},
+            {name: 'budget.xls', id: 3, parentId: null},
+            {name: 'resume.doc', id: 4, parentId: 1},
+            {name: 'will.doc', id: 5, parentId: 1},
+            {name: 'selfies', id: 6, parentId: 2},
+            {name: 'headshot.jpg', id: 7, parentId: 2},
+            {name: 'car.jpg', id: 8, parentId: 2},
+            {name: 'vegas.jpg', id: 9, parentId: 6},
+            {name: 'hawii.jpg', id: 10, parentId: 6},
         ];
+
+        this.config = {
+            tree: true
+        };
 
         this.state = {
             value: null
@@ -77,9 +98,11 @@ class Basic extends React.Component {
                 </div>
                 <div className="col component">
                     <div className="title">Component</div>
-                    <ShInputSelect options={this.options} value={this.state.value} onChange={this.handleChange} />
+                    <ShInputSelect options={this.options} value={this.state.value} onChange={this.handleChange} config={this.config} />
                     <div className="title">Update</div>
-                    <div className="details"><button onClick={this.updateValue}>Change to 'Customer'</button></div>
+                    <div className="details">
+                        <button onClick={this.updateValue}>Change to 'budget.xls'</button>
+                    </div>
                     <div className="title">State</div>
                     <div className="details">{JSON.stringify(this.state)}</div>
                 </div>
@@ -88,4 +111,4 @@ class Basic extends React.Component {
     }
 }
 
-export default Basic;
+export default Tree;

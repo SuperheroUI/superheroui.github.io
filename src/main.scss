@@ -1,5 +1,7 @@
 @import '../node_modules/sh-core/src/base';
 
+$color-react: rgba(0, 216, 255, 1);
+
 body {
     color: $color-font;
 
@@ -29,30 +31,50 @@ body {
 
     .header {
         position: relative;
-        line-height: 400px;
-        text-align: center;
-        font-weight: 100;
-        padding: 50px;
-        background-color: $color-box-dark-background3;
         height: 500px;
-        font-size: 121px;
         margin-bottom: 40px;
 
-        .sub {
-            font-weight: 800;
-            font-size: 150px;
-            color: $color-primary;
-            font-family: "Comic Sans MS";
-        }
+        background-color: $color-box-dark-background3;
 
-        .subText {
-            width: calc(100% - 50px);
-            text-align: center;
+        .subHeader {
             position: absolute;
-            font-size: 30px;
-            color: $color-box-background3;
-            top: 160px;
+            top: calc(50% - 87.5px);
+            left: calc(50% - 325px);
+            height: 175px;
+            width: 650px;
 
+            .logo {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 175px;
+                max-width: 150px;
+            }
+
+            .name {
+                position: absolute;
+                top: 20px;
+                left: 140px;
+
+                font-family: $font-family-condensed;
+                font-size: 100px;
+                font-weight: 800;
+                font-style: italic;
+
+                .sub {
+                    text-transform: uppercase;
+                    color: $color-react;
+                }
+            }
+
+            .subText {
+                position: absolute;
+                top: 116px;
+                left: 270px;
+
+                font-size: 16.5px;
+                font-weight: 300;
+            }
         }
     }
 
@@ -76,14 +98,63 @@ body {
             color: $color-primary;
         }
 
-        .instructions {
-            margin-bottom: 20px;
-        }
-
         > .title {
             color: $color-font;
             font-size: 24px;
             margin-bottom: 10px;
+
+            a {
+                margin-left: 10px;
+                vertical-align: middle;
+
+                img {
+                    max-height: 25px;
+                    max-width: 25px;
+
+                    fill: blue;
+                }
+            }
+        }
+
+        .section:not(:first-child) {
+            margin-top: 20px;
+        }
+
+        .options {
+            width: 100%;
+
+            color: $color-line2;
+            border-collapse: collapse;
+            line-height: 1.5;
+
+            thead th {
+                padding: 10px;
+                border-top: solid 2px $color-line5;
+                border-bottom: solid 2px $color-line5;
+
+                &.colName {
+                    width: 150px;
+                }
+
+                &.colType {
+                    width: 75px;
+                }
+
+                &.colDefault {
+                    width: 150px;
+                }
+            }
+
+            tbody td {
+                padding: 10px;
+
+                border-bottom: solid 1px $color-line5;
+                vertical-align: top;
+            }
+        }
+
+        .subExampleWrapper:not(:first-child) {
+            margin-top: 30px;
         }
     }
 
@@ -116,6 +187,10 @@ body {
                 overflow-x: auto;
                 overflow-y: hidden;
                 line-height: 1;
+            }
+
+            .token.attr-name {
+                color: #76c696;
             }
         }
     }
