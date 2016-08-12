@@ -1,0 +1,37 @@
+@import '../../node_modules/sh-core/src/base';
+
+.specialScssUsage {
+    .background1 {
+        padding: 20px;
+        color: $color-line2;
+        background: $color-primary;
+        border-radius: $size-border-radius;
+    }
+
+    .ellipse1 {
+        width: 200px;
+        @include ellipsis;
+    }
+
+    .font1 {
+        font-family: $font-family-condensed;
+        font-size: $size-font4;
+        font-weight: $font-weight-light;
+        color: $color-font;
+    }
+
+    .transition1 {
+        width: 100px;
+        padding: 20px;
+        background: $color-box-background4;
+        transition: width $transition, background $transition-hover;
+
+        &:hover {
+            background: $color-box-background2;
+        }
+
+        &.wide {
+            width: 200px;
+        }
+    }
+}
