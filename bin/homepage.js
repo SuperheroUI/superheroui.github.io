@@ -22532,7 +22532,7 @@
 	                    _react2.default.createElement(
 	                        'p',
 	                        null,
-	                        'isCore comes with several default colors use stick to this color pallet to keep your app consistent with design standards. Use color variable, do not hard code any colors in to your app. Explore the _bases.scss file for a full list of sass variables. (node_modules/sh-core/src/_base.scss)'
+	                        'isCore comes with several default colors. Stick to this color pallet and keep your app consistent with design standards. Use color variables, do not hard code any colors into your app. Explore the _bases.scss file for a full list of sass variables. (node_modules/sh-core/src/_base.scss)'
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
@@ -22551,7 +22551,19 @@
 	                        { className: 'title' },
 	                        '$color-thrirdary'
 	                    ),
-	                    _react2.default.createElement('div', { className: 'thirdary-block' })
+	                    _react2.default.createElement('div', { className: 'thirdary-block' }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        '$color-neural'
+	                    ),
+	                    _react2.default.createElement('div', { className: 'neural-block' }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        '$color-error'
+	                    ),
+	                    _react2.default.createElement('div', { className: 'error-block' })
 	                )
 	            );
 	        }
@@ -23909,7 +23921,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".specialScssUsage .background1 {\n  padding: 20px;\n  color: rgba(255, 255, 255, 0.6);\n  background: #3ab676;\n  border-radius: 4px; }\n\n.specialScssUsage .ellipse1 {\n  width: 200px;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis; }\n\n.specialScssUsage .font1 {\n  font-family: \"Roboto Condensed\", \"Open Sans\";\n  font-size: 20px;\n  font-weight: 300;\n  color: white; }\n\n.specialScssUsage .transition1 {\n  width: 100px;\n  padding: 20px;\n  background: rgba(255, 255, 255, 0.2);\n  transition: width 0.5s ease-in-out, background 0.25s ease-in-out; }\n  .specialScssUsage .transition1:hover {\n    background: rgba(255, 255, 255, 0.6); }\n  .specialScssUsage .transition1.wide {\n    width: 200px; }\n\n.specialScssUsage .primary-block {\n  width: 100%;\n  height: 50px;\n  background-color: #3ab676; }\n\n.specialScssUsage .secondary-block {\n  width: 100%;\n  height: 50px;\n  background-color: #284D51; }\n\n.specialScssUsage .thirdary-block {\n  width: 100%;\n  height: 50px;\n  background-color: #304853; }\n", ""]);
+	exports.push([module.id, ".specialScssUsage .background1 {\n  padding: 20px;\n  color: rgba(255, 255, 255, 0.6);\n  background: #3ab676;\n  border-radius: 4px; }\n\n.specialScssUsage .ellipse1 {\n  width: 200px;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis; }\n\n.specialScssUsage .font1 {\n  font-family: \"Roboto Condensed\", \"Open Sans\";\n  font-size: 20px;\n  font-weight: 300;\n  color: white; }\n\n.specialScssUsage .transition1 {\n  width: 100px;\n  padding: 20px;\n  background: rgba(255, 255, 255, 0.2);\n  transition: width 0.5s ease-in-out, background 0.25s ease-in-out; }\n  .specialScssUsage .transition1:hover {\n    background: rgba(255, 255, 255, 0.6); }\n  .specialScssUsage .transition1.wide {\n    width: 200px; }\n\n.specialScssUsage .primary-block {\n  width: 100%;\n  height: 50px;\n  background-color: #3ab676; }\n\n.specialScssUsage .secondary-block {\n  width: 100%;\n  height: 50px;\n  background-color: #284D51; }\n\n.specialScssUsage .thirdary-block {\n  width: 100%;\n  height: 50px;\n  background-color: #304853; }\n\n.specialScssUsage .neural-block {\n  width: 100%;\n  height: 50px;\n  background-color: #304853; }\n\n.specialScssUsage .neural-block {\n  width: 100%;\n  height: 50px;\n  background-color: #90c0d4; }\n\n.specialScssUsage .error-block {\n  width: 100%;\n  height: 50px;\n  background-color: #b25245; }\n", ""]);
 	
 	// exports
 
