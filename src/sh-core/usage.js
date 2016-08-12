@@ -11,8 +11,8 @@ require('../node_modules/sh-core/bin/main.css');
 `;
 codeText.cssMain2 = `
 {
-    test: /\\.(ttf|eot|svg|jpg|png)(\\?v=[0-9]\\.[0-9]\\.[0-9])?$/,
-    loader: "file-loader"
+    test: /\\.(ttf)$/,
+    loader: "url-loader"
 },
 `;
 
@@ -87,7 +87,7 @@ class Usage extends React.Component {
                         standard &lt;body&gt; style. This includes the fonts.
                     </div>
                     <div className="details">Install a new loader to handle the font files.</div>
-                    <pre className="instructions">npm install file-loader --save-dev</pre>
+                    <pre className="instructions">npm install url-loader --save-dev</pre>
                     <div className="details">Add the new loader to your list of loaders in webpack.config.js</div>
                     {Code(codeText.cssMain2, 'javascript')}
                     <div className="details">Add this line to your entry JS file.</div>
