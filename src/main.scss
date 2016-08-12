@@ -241,6 +241,10 @@ body {
             justify-content: space-between;
         }
 
+        .title {
+            color: $color-font
+        }
+
         .title:not(:first-child) {
             margin-top: 20px;
         }

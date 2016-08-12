@@ -83,7 +83,9 @@ class Usage extends React.Component {
             <div>
                 <div className="col code">
                     <div className="title">Include Main CSS</div>
-                    <div className="details">This CSS file includes a minimal CSS reset for browsers. It also has a standard &lt;body&gt; style. This includes the fonts.</div>
+                    <div className="details">This CSS file includes a minimal CSS reset for browsers. It also has a
+                        standard &lt;body&gt; style. This includes the fonts.
+                    </div>
                     <div className="details">Install a new loader to handle the font files.</div>
                     <pre className="instructions">npm install file-loader --save-dev</pre>
                     <div className="details">Add the new loader to your list of loaders in webpack.config.js</div>
@@ -91,7 +93,9 @@ class Usage extends React.Component {
                     <div className="details">Add this line to your entry JS file.</div>
                     {Code(codeText.cssMain, 'javascript')}
                     <div className="title">Include Base SCSS</div>
-                    <div className="details">This SCSS file can be included on your SCSS files to provide mixins for standard processes and variables for colors.</div>
+                    <div className="details">This SCSS file can be included on your SCSS files to provide mixins for
+                        standard processes and variables for colors.
+                    </div>
                     {Code(codeText.scssBase, 'scss')}
                     <div className="title">Set Color</div>
                     {Code(codeText.scssColor, 'scss')}
@@ -101,7 +105,9 @@ class Usage extends React.Component {
                     <div className="title">Change Font</div>
                     {Code(codeText.scssFont, 'scss')}
                     <div className="title">Using Transitions</div>
-                    <div className="details">We have some defaults for transitions for hover and standard, specifically time and ease.</div>
+                    <div className="details">We have some defaults for transitions for hover and standard, specifically
+                        time and ease.
+                    </div>
                     {Code(codeText.scssTransition, 'scss')}
                 </div>
                 <div className="col component specialScssUsage">
@@ -122,12 +128,26 @@ class Usage extends React.Component {
                         <div className={'transition1 ' + this.state.clickMe} onClick={this.clickMe}>Click Me</div>
                     </div>
 
+                    <div className="title">Default Colors</div>
+                    <p>isCore comes with several default colors. Stick to this color pallet and keep your app
+                        consistent with design standards. Use color variables, do not hard code any colors into your app.
+                        Explore the _bases.scss file for a full list of sass variables. (node_modules/sh-core/src/_base.scss)
+                    </p>
+
+                    <div className="title">$color-primary</div>
+                    <div className="primary-block"></div>
+                    <div className="title">$color-secondary</div>
+                    <div className="secondary-block"></div>
+                    <div className="title">$color-thrirdary</div>
+                    <div className="thirdary-block"></div>
+                    <div className="title">$color-neural</div>
+                    <div className="neural-block"></div>
+                    <div className="title">$color-error</div>
+                    <div className="error-block"></div>
+
                 </div>
             </div>
         )
     }
 }
-
-
-
 export default Usage;
