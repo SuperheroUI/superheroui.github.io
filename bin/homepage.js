@@ -24646,6 +24646,14 @@
 		    }
 		};
 		
+		var hotKeys = {
+		    esc: 27,
+		    space: 32,
+		    up: 38,
+		    down: 40
+		};
+		hotKeys.list = _.values(hotKeys);
+		
 		var ShInputSelect = function (_React$Component) {
 		    _inherits(ShInputSelect, _React$Component);
 		
@@ -24661,6 +24669,7 @@
 		        _this.state = {
 		            value: null,
 		            dropdownOpen: false,
+		            dropdownDirection: 'down',
 		            config: _.cloneDeep(defaultConfig),
 		            treePath: [],
 		            treeCurrentIndex: -1
@@ -24704,9 +24713,7 @@
 		        key: 'checkDocumentEvent',
 		        value: function checkDocumentEvent(event) {
 		            if (this.state.dropdownOpen && !_.includes(event.path, this.refs.mainElement)) {
-		                this.setState({
-		                    dropdownOpen: false
-		                });
+		                this.closeDropdown();
 		            }
 		        }
 		    }, {
@@ -24731,33 +24738,63 @@
 		    }, {
 		        key: 'inputKeyUp',
 		        value: function inputKeyUp(event) {
+		            if (_.includes(hotKeys, event.keyCode)) {
+		                event.preventDefault();
+		                event.stopPropagation();
+		            }
+		
 		            switch (event.keyCode) {
-		                case 32:
+		                case hotKeys.space:
 		                    {
-		                        // Space
 		                        this.toggleDropdown();
 		                        break;
 		                    }
-		                case 27:
+		                case hotKeys.esc:
 		                    {
-		                        // Esc
-		                        this.setState({
-		                            dropdownOpen: false
-		                        });
+		                        this.closeDropdown();
 		                        break;
 		                    }
-		                case 40:
+		                case hotKeys.down:
 		                    {
-		                        // Down Arrow
 		                        this.navigateTab(-1, -2);
 		                    }
 		            }
 		        }
 		    }, {
+		        key: 'inputKeyDown',
+		        value: function inputKeyDown(event) {
+		            if (_.includes(hotKeys, event.keyCode)) {
+		                event.preventDefault();
+		                event.stopPropagation();
+		            }
+		        }
+		    }, {
 		        key: 'toggleDropdown',
 		        value: function toggleDropdown() {
+		            if (this.state.dropdownOpen) {
+		                this.closeDropdown();
+		            } else {
+		                this.openDropdown();
+		            }
+		        }
+		    }, {
+		        key: 'closeDropdown',
+		        value: function closeDropdown() {
 		            this.setState({
-		                dropdownOpen: !this.state.dropdownOpen
+		                dropdownOpen: false
+		            });
+		        }
+		    }, {
+		        key: 'openDropdown',
+		        value: function openDropdown() {
+		            var dropdownDirection = 'down';
+		            if (this.refs.mainElement && window.innerHeight - this.refs.mainElement.getBoundingClientRect().bottom < 300) {
+		                dropdownDirection = 'up';
+		            }
+		
+		            this.setState({
+		                dropdownOpen: true,
+		                dropdownDirection: dropdownDirection
 		            });
 		        }
 		    }, {
@@ -24766,6 +24803,9 @@
 		            var _this3 = this;
 		
 		            return function (event) {
+		                event.stopPropagation();
+		                event.preventDefault();
+		
 		                switch (event.keyCode) {
 		                    case 32:
 		                        {
@@ -24776,9 +24816,7 @@
 		                    case 27:
 		                        {
 		                            // Esc
-		                            _this3.setState({
-		                                dropdownOpen: false
-		                            });
+		                            _this3.closeDropdown();
 		                            break;
 		                        }
 		                    case 38:
@@ -24797,12 +24835,19 @@
 		            };
 		        }
 		    }, {
+		        key: 'optionKeyDown',
+		        value: function optionKeyDown(event) {
+		            console.log('event', event);
+		            if (_.includes(hotKeys, event.keyCode)) {
+		                event.preventDefault();
+		                event.stopPropagation();
+		            }
+		        }
+		    }, {
 		        key: 'navigateTab',
 		        value: function navigateTab(direction, index) {
 		            if (!this.state.dropdownOpen) {
-		                this.setState({
-		                    dropdownOpen: true
-		                });
+		                this.openDropdown();
 		            }
 		
 		            var minIndex = this.state.treePath.length > 0 ? -1 : 0;
@@ -24894,8 +24939,8 @@
 		                        _this4.props.onChange(_newValue2);
 		                    }
 		
+		                    _this4.closeDropdown();
 		                    _this4.setState({
-		                        dropdownOpen: false,
 		                        value: _newValue2
 		                    });
 		                }
@@ -24970,16 +25015,11 @@
 		
 		            var mainClasses = {
 		                shInputSelect: true,
-		                openDown: true,
-		                openUp: false,
+		                openDown: this.state.dropdownDirection === 'down',
+		                openUp: this.state.dropdownDirection !== 'down',
 		                closed: !this.state.dropdownOpen,
 		                opened: this.state.dropdownOpen
 		            };
-		
-		            if (this.refs.mainElement && window.innerHeight - this.refs.mainElement.getBoundingClientRect().bottom < 300) {
-		                mainClasses.openDown = false;
-		                mainClasses.openUp = true;
-		            }
 		
 		            var inputSelected = 'Select';
 		            if (this.isMulti()) {
@@ -24997,7 +25037,7 @@
 		            }
 		            var input = _react2.default.createElement(
 		                'div',
-		                { className: 'input', ref: 'inputElement', tabIndex: '0', onClick: this.toggleDropdown, onKeyUp: this.inputKeyUp },
+		                { className: 'input', ref: 'inputElement', tabIndex: '0', onClick: this.toggleDropdown, onKeyUp: this.inputKeyUp, onKeyDown: this.inputKeyDown },
 		                _react2.default.createElement(
 		                    'div',
 		                    { className: 'inputSelected' },
@@ -25035,7 +25075,7 @@
 		
 		                    return _react2.default.createElement(
 		                        'div',
-		                        { key: index, className: 'option', tabIndex: _this5.state.dropdownOpen ? 0 : -1, onClick: _this5.optionSelect(current), onKeyUp: _this5.optionKeyUp(current, index) },
+		                        { key: index, className: 'option', tabIndex: _this5.state.dropdownOpen ? 0 : -1, onClick: _this5.optionSelect(current), onKeyUp: _this5.optionKeyUp(current, index), onKeyDown: _this5.optionKeyDown },
 		                        showSelected,
 		                        _react2.default.createElement(
 		                            'div',
@@ -25070,7 +25110,7 @@
 		                    var parentOption = this.state.treePath[i];
 		                    var treeBack = _react2.default.createElement(
 		                        'div',
-		                        { key: 'back', className: 'option back', tabIndex: this.state.dropdownOpen ? 0 : -1, onClick: this.optionSelect(parentOption), onKeyUp: this.optionKeyUp(parentOption, -1) },
+		                        { key: 'back', className: 'option back', tabIndex: this.state.dropdownOpen ? 0 : -1, onClick: this.optionSelect(parentOption), onKeyUp: this.optionKeyUp(parentOption, -1), onKeyDown: this.optionKeyDown },
 		                        _react2.default.createElement(
 		                            'div',
 		                            { className: 'treeBackIcon' },
@@ -43320,7 +43360,7 @@
 		
 		
 		// module
-		exports.push([module.id, ".sh-input-text {\n  display: inline-block;\n  height: 50px;\n  width: 100%; }\n  .sh-input-text label {\n    position: relative;\n    display: block;\n    height: 25px;\n    width: 100%; }\n  .sh-input-text .label {\n    position: absolute;\n    top: 5px;\n    left: 5px;\n    right: 5px;\n    font-size: 12px;\n    color: rgba(255, 255, 255, 0.4);\n    text-transform: uppercase;\n    z-index: 1;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n  .sh-input-text.empty input {\n    background: rgba(255, 255, 255, 0.1); }\n  .sh-input-text input {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 100%;\n    padding: 25px 5px 5px 5px;\n    color: white;\n    border: 0;\n    border-radius: 2px;\n    background: transparent;\n    transition: background 0.25s ease-in-out;\n    outline: 0; }\n    .sh-input-text input:focus {\n      -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6);\n      box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6); }\n    .sh-input-text input:hover {\n      background: rgba(255, 255, 255, 0.1); }\n    .sh-input-text input::-moz-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-text input:-ms-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-text input::-webkit-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n", ""]);
+		exports.push([module.id, ".sh-input-text {\n  display: inline-block;\n  height: 50px;\n  width: 100%; }\n  .sh-input-text label {\n    position: relative;\n    display: block;\n    height: 25px;\n    width: 100%; }\n  .sh-input-text .label {\n    position: absolute;\n    top: 5px;\n    left: 5px;\n    right: 5px;\n    font-size: 12px;\n    color: rgba(255, 255, 255, 0.4);\n    text-transform: uppercase;\n    z-index: 1;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n  .sh-input-text.empty input {\n    background: rgba(255, 255, 255, 0.1); }\n  .sh-input-text input {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: calc(100% - 10px);\n    padding: 25px 5px 5px 5px;\n    color: white;\n    border: 0;\n    border-radius: 2px;\n    background: transparent;\n    transition: background 0.25s ease-in-out;\n    outline: 0; }\n    .sh-input-text input:focus {\n      -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6);\n      box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6); }\n    .sh-input-text input:hover {\n      background: rgba(255, 255, 255, 0.1); }\n    .sh-input-text input::-moz-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-text input:-ms-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-text input::-webkit-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n", ""]);
 		
 		// exports
 	
