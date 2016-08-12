@@ -47,7 +47,7 @@
   \**********************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 	
 	'use strict';
 	
@@ -61,15 +61,15 @@
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
-	var _shCore = __webpack_require__(/*! ./sh-core */ 202);
+	var _shCore = __webpack_require__(/*! ./sh-core */ 175);
 	
 	var _shCore2 = _interopRequireDefault(_shCore);
 	
-	var _shInputSelect = __webpack_require__(/*! ./sh-input-select */ 175);
+	var _shInputSelect = __webpack_require__(/*! ./sh-input-select */ 187);
 	
 	var _shInputSelect2 = _interopRequireDefault(_shInputSelect);
 	
-	var _shInputText = __webpack_require__(/*! ./sh-input-text */ 189);
+	var _shInputText = __webpack_require__(/*! ./sh-input-text */ 194);
 	
 	var _shInputText2 = _interopRequireDefault(_shInputText);
 	
@@ -81,8 +81,8 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(/*! ../~/sh-core/bin/main.css */ 194);
-	__webpack_require__(/*! ./main.scss */ 192);
+	__webpack_require__(/*! ../~/sh-core/bin/main.css */ 197);
+	__webpack_require__(/*! ./main.scss */ 205);
 	
 	var Homepage = function (_React$Component) {
 	    _inherits(Homepage, _React$Component);
@@ -275,7 +275,7 @@
 	
 	_reactDom2.default.render(_react2.default.createElement(Homepage, null), document.getElementById('app'));
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
 /* 1 */
@@ -385,13 +385,13 @@
 	};
 	
 	module.exports = React;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 3 */
-/*!**********************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/process/browser.js ***!
-  \**********************************************************/
+/*!******************************!*\
+  !*** ./~/process/browser.js ***!
+  \******************************/
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -558,9 +558,9 @@
 
 /***/ },
 /* 4 */
-/*!******************************************!*\
-  !*** ./~/react/~/object-assign/index.js ***!
-  \******************************************/
+/*!**********************************!*\
+  !*** ./~/object-assign/index.js ***!
+  \**********************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -975,7 +975,7 @@
 	};
 	
 	module.exports = PooledClass;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 7 */
@@ -1026,9 +1026,9 @@
 
 /***/ },
 /* 8 */
-/*!*****************************************!*\
-  !*** ./~/react/~/fbjs/lib/invariant.js ***!
-  \*****************************************/
+/*!*********************************!*\
+  !*** ./~/fbjs/lib/invariant.js ***!
+  \*********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1080,7 +1080,7 @@
 	}
 	
 	module.exports = invariant;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 9 */
@@ -1449,7 +1449,7 @@
 	ReactElement.REACT_ELEMENT_TYPE = REACT_ELEMENT_TYPE;
 	
 	module.exports = ReactElement;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 10 */
@@ -1492,9 +1492,9 @@
 
 /***/ },
 /* 11 */
-/*!***************************************!*\
-  !*** ./~/react/~/fbjs/lib/warning.js ***!
-  \***************************************/
+/*!*******************************!*\
+  !*** ./~/fbjs/lib/warning.js ***!
+  \*******************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1553,13 +1553,13 @@
 	}
 	
 	module.exports = warning;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 12 */
-/*!*********************************************!*\
-  !*** ./~/react/~/fbjs/lib/emptyFunction.js ***!
-  \*********************************************/
+/*!*************************************!*\
+  !*** ./~/fbjs/lib/emptyFunction.js ***!
+  \*************************************/
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1632,7 +1632,7 @@
 	}
 	
 	module.exports = canDefineProperty;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 14 */
@@ -1808,7 +1808,7 @@
 	}
 	
 	module.exports = traverseAllChildren;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 15 */
@@ -2051,7 +2051,7 @@
 	}
 	
 	module.exports = ReactComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 18 */
@@ -2156,13 +2156,13 @@
 	};
 	
 	module.exports = ReactNoopUpdateQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 19 */
-/*!*******************************************!*\
-  !*** ./~/react/~/fbjs/lib/emptyObject.js ***!
-  \*******************************************/
+/*!***********************************!*\
+  !*** ./~/fbjs/lib/emptyObject.js ***!
+  \***********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2184,7 +2184,7 @@
 	}
 	
 	module.exports = emptyObject;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 20 */
@@ -2975,7 +2975,7 @@
 	};
 	
 	module.exports = ReactClass;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 22 */
@@ -3009,9 +3009,9 @@
 
 /***/ },
 /* 23 */
-/*!*****************************************!*\
-  !*** ./~/react/~/fbjs/lib/keyMirror.js ***!
-  \*****************************************/
+/*!*********************************!*\
+  !*** ./~/fbjs/lib/keyMirror.js ***!
+  \*********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -3061,7 +3061,7 @@
 	};
 	
 	module.exports = keyMirror;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 24 */
@@ -3094,13 +3094,13 @@
 	}
 	
 	module.exports = ReactPropTypeLocationNames;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 25 */
-/*!*************************************!*\
-  !*** ./~/react/~/fbjs/lib/keyOf.js ***!
-  \*************************************/
+/*!*****************************!*\
+  !*** ./~/fbjs/lib/keyOf.js ***!
+  \*****************************/
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3321,13 +3321,13 @@
 	}, createDOMFactory);
 	
 	module.exports = ReactDOMFactories;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 27 */
-/*!*****************************************!*\
-  !*** ./~/react/~/fbjs/lib/mapObject.js ***!
-  \*****************************************/
+/*!*********************************!*\
+  !*** ./~/fbjs/lib/mapObject.js ***!
+  \*********************************/
 /***/ function(module, exports) {
 
 	/**
@@ -3614,7 +3614,7 @@
 	};
 	
 	module.exports = ReactElementValidator;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 29 */
@@ -3841,7 +3841,7 @@
 	};
 	
 	module.exports = ReactComponentTreeDevtool;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 30 */
@@ -3937,7 +3937,7 @@
 	}
 	
 	module.exports = checkReactTypeSpec;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 31 */
@@ -4387,7 +4387,7 @@
 	}
 	
 	module.exports = ReactPropTypes;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 33 */
@@ -4456,7 +4456,7 @@
 	}
 	
 	module.exports = onlyChild;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 35 */
@@ -4578,7 +4578,7 @@
 	}
 	
 	module.exports = ReactDOM;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 37 */
@@ -4775,7 +4775,7 @@
 	};
 	
 	module.exports = ReactDOMComponentTree;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 38 */
@@ -4990,7 +4990,7 @@
 	};
 	
 	module.exports = DOMProperty;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 39 */
@@ -5755,7 +5755,7 @@
 	};
 	
 	module.exports = EventPropagators;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 44 */
@@ -6013,7 +6013,7 @@
 	};
 	
 	module.exports = EventPluginHub;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 45 */
@@ -6269,7 +6269,7 @@
 	};
 	
 	module.exports = EventPluginRegistry;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 46 */
@@ -6507,7 +6507,7 @@
 	};
 	
 	module.exports = EventPluginUtils;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 47 */
@@ -6592,7 +6592,7 @@
 	}
 	
 	module.exports = ReactErrorUtils;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 48 */
@@ -6659,7 +6659,7 @@
 	}
 	
 	module.exports = accumulateInto;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 49 */
@@ -6702,9 +6702,9 @@
 
 /***/ },
 /* 50 */
-/*!****************************************************!*\
-  !*** ./~/react/~/fbjs/lib/ExecutionEnvironment.js ***!
-  \****************************************************/
+/*!********************************************!*\
+  !*** ./~/fbjs/lib/ExecutionEnvironment.js ***!
+  \********************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -7198,7 +7198,7 @@
 	    process.env.NODE_ENV !== 'production' ? warning(warningCondition, 'This synthetic event is reused for performance reasons. If you\'re seeing this, ' + 'you\'re %s `%s` on a released/nullified synthetic event. %s. ' + 'If you must keep the original synthetic event around, use event.persist(). ' + 'See https://fb.me/react-event-pooling for more information.', action, propName, result) : void 0;
 	  }
 	}
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 55 */
@@ -7836,7 +7836,7 @@
 	};
 	
 	module.exports = ReactUpdates;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 58 */
@@ -7951,7 +7951,7 @@
 	PooledClass.addPoolingTo(CallbackQueue);
 	
 	module.exports = CallbackQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 59 */
@@ -8164,7 +8164,7 @@
 	};
 	
 	module.exports = ReactReconciler;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 61 */
@@ -8355,7 +8355,7 @@
 	};
 	
 	module.exports = ReactOwner;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 63 */
@@ -8385,7 +8385,7 @@
 	}
 	
 	module.exports = { debugTool: debugTool };
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 64 */
@@ -8715,7 +8715,7 @@
 	}
 	
 	module.exports = ReactDebugTool;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 65 */
@@ -8760,7 +8760,7 @@
 	};
 	
 	module.exports = ReactInvalidSetStateWarningDevTool;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 66 */
@@ -8876,13 +8876,13 @@
 	};
 	
 	module.exports = ReactDOMUnknownPropertyDevtool;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 68 */
-/*!**********************************************!*\
-  !*** ./~/react/~/fbjs/lib/performanceNow.js ***!
-  \**********************************************/
+/*!**************************************!*\
+  !*** ./~/fbjs/lib/performanceNow.js ***!
+  \**************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8921,9 +8921,9 @@
 
 /***/ },
 /* 69 */
-/*!*******************************************!*\
-  !*** ./~/react/~/fbjs/lib/performance.js ***!
-  \*******************************************/
+/*!***********************************!*\
+  !*** ./~/fbjs/lib/performance.js ***!
+  \***********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9189,7 +9189,7 @@
 	};
 	
 	module.exports = Transaction;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 71 */
@@ -10207,7 +10207,7 @@
 	};
 	
 	module.exports = DOMChildrenOperations;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 83 */
@@ -10750,13 +10750,13 @@
 	};
 	
 	module.exports = Danger;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 90 */
-/*!*****************************************************!*\
-  !*** ./~/react/~/fbjs/lib/createNodesFromMarkup.js ***!
-  \*****************************************************/
+/*!*********************************************!*\
+  !*** ./~/fbjs/lib/createNodesFromMarkup.js ***!
+  \*********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -10842,13 +10842,13 @@
 	}
 	
 	module.exports = createNodesFromMarkup;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 91 */
-/*!****************************************************!*\
-  !*** ./~/react/~/fbjs/lib/createArrayFromMixed.js ***!
-  \****************************************************/
+/*!********************************************!*\
+  !*** ./~/fbjs/lib/createArrayFromMixed.js ***!
+  \********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -10977,13 +10977,13 @@
 	}
 	
 	module.exports = createArrayFromMixed;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 92 */
-/*!*********************************************!*\
-  !*** ./~/react/~/fbjs/lib/getMarkupWrap.js ***!
-  \*********************************************/
+/*!*************************************!*\
+  !*** ./~/fbjs/lib/getMarkupWrap.js ***!
+  \*************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -11080,7 +11080,7 @@
 	}
 	
 	module.exports = getMarkupWrap;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 93 */
@@ -12196,7 +12196,7 @@
 	_assign(ReactDOMComponent.prototype, ReactDOMComponent.Mixin, ReactMultiChild.Mixin);
 	
 	module.exports = ReactDOMComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 96 */
@@ -12232,9 +12232,9 @@
 
 /***/ },
 /* 97 */
-/*!*****************************************!*\
-  !*** ./~/react/~/fbjs/lib/focusNode.js ***!
-  \*****************************************/
+/*!*********************************!*\
+  !*** ./~/fbjs/lib/focusNode.js ***!
+  \*********************************/
 /***/ function(module, exports) {
 
 	/**
@@ -12476,7 +12476,7 @@
 	};
 	
 	module.exports = CSSPropertyOperations;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 99 */
@@ -12636,9 +12636,9 @@
 
 /***/ },
 /* 100 */
-/*!*************************************************!*\
-  !*** ./~/react/~/fbjs/lib/camelizeStyleName.js ***!
-  \*************************************************/
+/*!*****************************************!*\
+  !*** ./~/fbjs/lib/camelizeStyleName.js ***!
+  \*****************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12683,9 +12683,9 @@
 
 /***/ },
 /* 101 */
-/*!****************************************!*\
-  !*** ./~/react/~/fbjs/lib/camelize.js ***!
-  \****************************************/
+/*!********************************!*\
+  !*** ./~/fbjs/lib/camelize.js ***!
+  \********************************/
 /***/ function(module, exports) {
 
 	"use strict";
@@ -12806,13 +12806,13 @@
 	}
 	
 	module.exports = dangerousStyleValue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 103 */
-/*!**************************************************!*\
-  !*** ./~/react/~/fbjs/lib/hyphenateStyleName.js ***!
-  \**************************************************/
+/*!******************************************!*\
+  !*** ./~/fbjs/lib/hyphenateStyleName.js ***!
+  \******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12856,9 +12856,9 @@
 
 /***/ },
 /* 104 */
-/*!*****************************************!*\
-  !*** ./~/react/~/fbjs/lib/hyphenate.js ***!
-  \*****************************************/
+/*!*********************************!*\
+  !*** ./~/fbjs/lib/hyphenate.js ***!
+  \*********************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -12896,9 +12896,9 @@
 
 /***/ },
 /* 105 */
-/*!*************************************************!*\
-  !*** ./~/react/~/fbjs/lib/memoizeStringOnly.js ***!
-  \*************************************************/
+/*!*****************************************!*\
+  !*** ./~/fbjs/lib/memoizeStringOnly.js ***!
+  \*****************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -13166,7 +13166,7 @@
 	};
 	
 	module.exports = DOMPropertyOperations;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 107 */
@@ -13196,7 +13196,7 @@
 	}
 	
 	module.exports = { debugTool: debugTool };
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 108 */
@@ -13272,7 +13272,7 @@
 	ReactDOMDebugTool.addDevtool(ReactDOMNullInputValuePropDevtool);
 	
 	module.exports = ReactDOMDebugTool;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 109 */
@@ -13324,7 +13324,7 @@
 	};
 	
 	module.exports = ReactDOMUnknownPropertyDevtool;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 110 */
@@ -13445,7 +13445,7 @@
 	};
 	
 	module.exports = ReactDOMUnknownPropertyDevtool;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 111 */
@@ -14300,7 +14300,7 @@
 	}
 	
 	module.exports = ReactDOMInput;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 118 */
@@ -14445,7 +14445,7 @@
 	};
 	
 	module.exports = LinkedValueUtils;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 119 */
@@ -14577,7 +14577,7 @@
 	};
 	
 	module.exports = ReactDOMOption;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 120 */
@@ -14786,7 +14786,7 @@
 	}
 	
 	module.exports = ReactDOMSelect;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 121 */
@@ -14950,7 +14950,7 @@
 	}
 	
 	module.exports = ReactDOMTextarea;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 122 */
@@ -15412,7 +15412,7 @@
 	};
 	
 	module.exports = ReactMultiChild;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 123 */
@@ -15474,7 +15474,7 @@
 	};
 	
 	module.exports = ReactComponentEnvironment;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 124 */
@@ -15690,7 +15690,7 @@
 	};
 	
 	module.exports = ReactChildReconciler;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 126 */
@@ -15845,7 +15845,7 @@
 	}
 	
 	module.exports = instantiateReactComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 127 */
@@ -16798,7 +16798,7 @@
 	};
 	
 	module.exports = ReactCompositeComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 128 */
@@ -16847,13 +16847,13 @@
 	};
 	
 	module.exports = ReactNodeTypes;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 129 */
-/*!********************************************!*\
-  !*** ./~/react/~/fbjs/lib/shallowEqual.js ***!
-  \********************************************/
+/*!************************************!*\
+  !*** ./~/fbjs/lib/shallowEqual.js ***!
+  \************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -17094,7 +17094,7 @@
 	};
 	
 	module.exports = ReactHostComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 133 */
@@ -17177,7 +17177,7 @@
 	}
 	
 	module.exports = flattenChildren;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 134 */
@@ -17276,7 +17276,7 @@
 	PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 	
 	module.exports = ReactServerRenderingTransaction;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 135 */
@@ -17426,7 +17426,7 @@
 	}();
 	
 	module.exports = ReactServerUpdateQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 136 */
@@ -17661,7 +17661,7 @@
 	};
 	
 	module.exports = ReactUpdateQueue;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 137 */
@@ -18039,7 +18039,7 @@
 	}
 	
 	module.exports = validateDOMNesting;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 138 */
@@ -18252,7 +18252,7 @@
 	  traverseTwoPhase: traverseTwoPhase,
 	  traverseEnterLeave: traverseEnterLeave
 	};
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 140 */
@@ -18432,7 +18432,7 @@
 	});
 	
 	module.exports = ReactDOMTextComponent;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 141 */
@@ -18677,9 +18677,9 @@
 
 /***/ },
 /* 143 */
-/*!*********************************************!*\
-  !*** ./~/react/~/fbjs/lib/EventListener.js ***!
-  \*********************************************/
+/*!*************************************!*\
+  !*** ./~/fbjs/lib/EventListener.js ***!
+  \*************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -18765,13 +18765,13 @@
 	};
 	
 	module.exports = EventListener;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 144 */
-/*!**********************************************************!*\
-  !*** ./~/react/~/fbjs/lib/getUnboundedScrollPosition.js ***!
-  \**********************************************************/
+/*!**************************************************!*\
+  !*** ./~/fbjs/lib/getUnboundedScrollPosition.js ***!
+  \**************************************************/
 /***/ function(module, exports) {
 
 	/**
@@ -19042,7 +19042,7 @@
 	PooledClass.addPoolingTo(ReactReconcileTransaction);
 	
 	module.exports = ReactReconcileTransaction;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 147 */
@@ -19480,9 +19480,9 @@
 
 /***/ },
 /* 150 */
-/*!********************************************!*\
-  !*** ./~/react/~/fbjs/lib/containsNode.js ***!
-  \********************************************/
+/*!************************************!*\
+  !*** ./~/fbjs/lib/containsNode.js ***!
+  \************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19527,9 +19527,9 @@
 
 /***/ },
 /* 151 */
-/*!******************************************!*\
-  !*** ./~/react/~/fbjs/lib/isTextNode.js ***!
-  \******************************************/
+/*!**********************************!*\
+  !*** ./~/fbjs/lib/isTextNode.js ***!
+  \**********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19559,9 +19559,9 @@
 
 /***/ },
 /* 152 */
-/*!**************************************!*\
-  !*** ./~/react/~/fbjs/lib/isNode.js ***!
-  \**************************************/
+/*!******************************!*\
+  !*** ./~/fbjs/lib/isNode.js ***!
+  \******************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19589,9 +19589,9 @@
 
 /***/ },
 /* 153 */
-/*!************************************************!*\
-  !*** ./~/react/~/fbjs/lib/getActiveElement.js ***!
-  \************************************************/
+/*!****************************************!*\
+  !*** ./~/fbjs/lib/getActiveElement.js ***!
+  \****************************************/
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20783,7 +20783,7 @@
 	};
 	
 	module.exports = SimpleEventPlugin;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 157 */
@@ -21894,7 +21894,7 @@
 	};
 	
 	module.exports = ReactMount;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 168 */
@@ -21936,7 +21936,7 @@
 	}
 	
 	module.exports = ReactDOMContainerInfo;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 169 */
@@ -22141,7 +22141,7 @@
 	}
 	
 	module.exports = findDOMNode;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./~/process/browser.js */ 3)))
 
 /***/ },
 /* 173 */
@@ -22207,12 +22207,12 @@
 
 /***/ },
 /* 175 */
-/*!**************************************!*\
-  !*** ./src/sh-input-select/index.js ***!
-  \**************************************/
+/*!******************************!*\
+  !*** ./src/sh-core/index.js ***!
+  \******************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 	
 	'use strict';
 	
@@ -22226,15 +22226,1724 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _basic = __webpack_require__(/*! ./basic */ 176);
+	var _usage = __webpack_require__(/*! ./usage */ 176);
+	
+	var _usage2 = _interopRequireDefault(_usage);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var ShCoreExamples = function (_React$Component) {
+	    _inherits(ShCoreExamples, _React$Component);
+	
+	    function ShCoreExamples() {
+	        _classCallCheck(this, ShCoreExamples);
+	
+	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ShCoreExamples).call(this));
+	
+	        _this.state = {
+	            examples: [{ name: 'Usage', code: _react2.default.createElement(_usage2.default, null) }]
+	        };
+	        return _this;
+	    }
+	
+	    _createClass(ShCoreExamples, [{
+	        key: 'render',
+	        value: function render() {
+	            var examples = this.state.examples.map(function (example, index) {
+	                return _react2.default.createElement(
+	                    'div',
+	                    { key: index, className: 'subExampleWrapper' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        example.name
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'subExample' },
+	                        example.code
+	                    )
+	                );
+	            });
+	
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'section' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Installation'
+	                    ),
+	                    _react2.default.createElement(
+	                        'pre',
+	                        { className: 'instructions' },
+	                        'npm install sh-core --save'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'section' },
+	                    examples
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return ShCoreExamples;
+	}(_react2.default.Component);
+	
+	exports.default = ShCoreExamples;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 176 */
+/*!******************************!*\
+  !*** ./src/sh-core/usage.js ***!
+  \******************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _code = __webpack_require__(/*! ../util/code */ 177);
+	
+	var _code2 = _interopRequireDefault(_code);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	__webpack_require__(/*! ./example.scss */ 185);
+	
+	var codeText = {};
+	
+	codeText.cssMain = '\nrequire(\'../node_modules/sh-core/bin/main.css\');\n';
+	codeText.cssMain2 = '\n{\n    test: /\\.(ttf|eot|svg|jpg|png)(\\?v=[0-9]\\.[0-9]\\.[0-9])?$/,\n    loader: "file-loader"\n},\n';
+	
+	codeText.scssBase = '\n@import \'../node_modules/sh-core/src/base\';\n';
+	
+	codeText.scssColor = '\n.background1 {\n    padding: 20px;\n    color: $color-font;\n    background: $color-primary;\n    border-radius: $size-border-radius;\n}\n';
+	
+	codeText.scssEllipse = '\n.ellipse1 {\n    width: 200px;\n    @include ellipsis;\n}\n';
+	
+	codeText.scssFont = '\n.font1 {\n    font-family: $font-family-condensed;\n    font-size: $size-font4;\n    font-weight: $font-weight-light;\n    color: $color-font;\n}\n';
+	
+	codeText.scssTransition = '\n.transition1 {\n    width: 100px;\n    padding: 20px;\n    background: $color-box-background4;\n    transition: width $transition, background $transition-hover;\n\n    &:hover {\n        background: $color-box-background2;\n    }\n\n    &.wide {\n        width: 200px;\n    }\n}\n';
+	
+	var Usage = function (_React$Component) {
+	    _inherits(Usage, _React$Component);
+	
+	    function Usage() {
+	        _classCallCheck(this, Usage);
+	
+	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Usage).call(this));
+	
+	        _this.state = {
+	            clickMe: 'wide'
+	        };
+	
+	        _this.clickMe = _this.clickMe.bind(_this);
+	        return _this;
+	    }
+	
+	    _createClass(Usage, [{
+	        key: 'clickMe',
+	        value: function clickMe() {
+	            this.setState({
+	                clickMe: this.state.clickMe === 'wide' ? 'small' : 'wide'
+	            });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            return _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col code' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Include Main CSS'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'details' },
+	                        'This CSS file includes a minimal CSS reset for browsers. It also has a standard <body> style. This includes the fonts.'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'details' },
+	                        'Install a new loader to handle the font files.'
+	                    ),
+	                    _react2.default.createElement(
+	                        'pre',
+	                        { className: 'instructions' },
+	                        'npm install file-loader --save-dev'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'details' },
+	                        'Add the new loader to your list of loaders in webpack.config.js'
+	                    ),
+	                    (0, _code2.default)(codeText.cssMain2, 'javascript'),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'details' },
+	                        'Add this line to your entry JS file.'
+	                    ),
+	                    (0, _code2.default)(codeText.cssMain, 'javascript'),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Include Base SCSS'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'details' },
+	                        'This SCSS file can be included on your SCSS files to provide mixins for standard processes and variables for colors.'
+	                    ),
+	                    (0, _code2.default)(codeText.scssBase, 'scss'),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Set Color'
+	                    ),
+	                    (0, _code2.default)(codeText.scssColor, 'scss'),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Add Ellipse'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'details' },
+	                        'For ellipse to work they need to have a width, either a % or static.'
+	                    ),
+	                    (0, _code2.default)(codeText.scssEllipse, 'scss'),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Change Font'
+	                    ),
+	                    (0, _code2.default)(codeText.scssFont, 'scss'),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Using Transitions'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'details' },
+	                        'We have some defaults for transitions for hover and standard, specifically time and ease.'
+	                    ),
+	                    (0, _code2.default)(codeText.scssTransition, 'scss')
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'col component specialScssUsage' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Set Color'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'details' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'background1' },
+	                            'Using color variables'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Add Ellipse'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'details' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'ellipse1' },
+	                            'This is some really long text. See how long it is.'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Font Changes'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'details' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'font1' },
+	                            'This font has standard changes.'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Using Transitions'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'details' },
+	                        _react2.default.createElement(
+	                            'div',
+	                            { className: 'transition1 ' + this.state.clickMe, onClick: this.clickMe },
+	                            'Click Me'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Default Colors'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        'isCore comes with several default colors use stick to this color pallet to keep your app consistent with design standards. Use color variable, do not hard code any colors in to your app. Explore the _bases.scss file for a full list of sass variables. (node_modules/sh-core/src/_base.scss)'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        '$color-primary'
+	                    ),
+	                    _react2.default.createElement('div', { className: 'primary-block' }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        '$color-secondary'
+	                    ),
+	                    _react2.default.createElement('div', { className: 'secondary-block' }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        '$color-thrirdary'
+	                    ),
+	                    _react2.default.createElement('div', { className: 'thirdary-block' })
+	                )
+	            );
+	        }
+	    }]);
+	
+	    return Usage;
+	}(_react2.default.Component);
+	
+	exports.default = Usage;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "usage.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 177 */
+/*!**************************!*\
+  !*** ./src/util/code.js ***!
+  \**************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _prismjs = __webpack_require__(/*! prismjs */ 178);
+	
+	var _prismjs2 = _interopRequireDefault(_prismjs);
+	
+	var _prismJsx = __webpack_require__(/*! prismjs/components/prism-jsx */ 179);
+	
+	var _prismJsx2 = _interopRequireDefault(_prismJsx);
+	
+	var _prismScss = __webpack_require__(/*! prismjs/components/prism-scss */ 180);
+	
+	var _prismScss2 = _interopRequireDefault(_prismScss);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	// Include additional language formatting
+	__webpack_require__(/*! ../../~/prismjs/themes/prism-tomorrow.css */ 181);
+	
+	var CodeService = function CodeService(codeString, languageName) {
+	    var codeHighlighted = _prismjs2.default.highlight(codeString, _prismjs2.default.languages[languageName]);
+	    return _react2.default.createElement(
+	        'pre',
+	        null,
+	        _react2.default.createElement('code', { className: 'language-' + languageName, dangerouslySetInnerHTML: { __html: codeHighlighted } })
+	    );
+	};
+	
+	exports.default = CodeService;
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "code.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+
+/***/ },
+/* 178 */
+/*!****************************!*\
+  !*** ./~/prismjs/prism.js ***!
+  \****************************/
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {
+	/* **********************************************
+	     Begin prism-core.js
+	********************************************** */
+	
+	var _self = (typeof window !== 'undefined')
+		? window   // if in browser
+		: (
+			(typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope)
+			? self // if in worker
+			: {}   // if in node js
+		);
+	
+	/**
+	 * Prism: Lightweight, robust, elegant syntax highlighting
+	 * MIT license http://www.opensource.org/licenses/mit-license.php/
+	 * @author Lea Verou http://lea.verou.me
+	 */
+	
+	var Prism = (function(){
+	
+	// Private helper vars
+	var lang = /\blang(?:uage)?-(\w+)\b/i;
+	var uniqueId = 0;
+	
+	var _ = _self.Prism = {
+		util: {
+			encode: function (tokens) {
+				if (tokens instanceof Token) {
+					return new Token(tokens.type, _.util.encode(tokens.content), tokens.alias);
+				} else if (_.util.type(tokens) === 'Array') {
+					return tokens.map(_.util.encode);
+				} else {
+					return tokens.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\u00a0/g, ' ');
+				}
+			},
+	
+			type: function (o) {
+				return Object.prototype.toString.call(o).match(/\[object (\w+)\]/)[1];
+			},
+	
+			objId: function (obj) {
+				if (!obj['__id']) {
+					Object.defineProperty(obj, '__id', { value: ++uniqueId });
+				}
+				return obj['__id'];
+			},
+	
+			// Deep clone a language definition (e.g. to extend it)
+			clone: function (o) {
+				var type = _.util.type(o);
+	
+				switch (type) {
+					case 'Object':
+						var clone = {};
+	
+						for (var key in o) {
+							if (o.hasOwnProperty(key)) {
+								clone[key] = _.util.clone(o[key]);
+							}
+						}
+	
+						return clone;
+	
+					case 'Array':
+						// Check for existence for IE8
+						return o.map && o.map(function(v) { return _.util.clone(v); });
+				}
+	
+				return o;
+			}
+		},
+	
+		languages: {
+			extend: function (id, redef) {
+				var lang = _.util.clone(_.languages[id]);
+	
+				for (var key in redef) {
+					lang[key] = redef[key];
+				}
+	
+				return lang;
+			},
+	
+			/**
+			 * Insert a token before another token in a language literal
+			 * As this needs to recreate the object (we cannot actually insert before keys in object literals),
+			 * we cannot just provide an object, we need anobject and a key.
+			 * @param inside The key (or language id) of the parent
+			 * @param before The key to insert before. If not provided, the function appends instead.
+			 * @param insert Object with the key/value pairs to insert
+			 * @param root The object that contains `inside`. If equal to Prism.languages, it can be omitted.
+			 */
+			insertBefore: function (inside, before, insert, root) {
+				root = root || _.languages;
+				var grammar = root[inside];
+	
+				if (arguments.length == 2) {
+					insert = arguments[1];
+	
+					for (var newToken in insert) {
+						if (insert.hasOwnProperty(newToken)) {
+							grammar[newToken] = insert[newToken];
+						}
+					}
+	
+					return grammar;
+				}
+	
+				var ret = {};
+	
+				for (var token in grammar) {
+	
+					if (grammar.hasOwnProperty(token)) {
+	
+						if (token == before) {
+	
+							for (var newToken in insert) {
+	
+								if (insert.hasOwnProperty(newToken)) {
+									ret[newToken] = insert[newToken];
+								}
+							}
+						}
+	
+						ret[token] = grammar[token];
+					}
+				}
+	
+				// Update references in other language definitions
+				_.languages.DFS(_.languages, function(key, value) {
+					if (value === root[inside] && key != inside) {
+						this[key] = ret;
+					}
+				});
+	
+				return root[inside] = ret;
+			},
+	
+			// Traverse a language definition with Depth First Search
+			DFS: function(o, callback, type, visited) {
+				visited = visited || {};
+				for (var i in o) {
+					if (o.hasOwnProperty(i)) {
+						callback.call(o, i, o[i], type || i);
+	
+						if (_.util.type(o[i]) === 'Object' && !visited[_.util.objId(o[i])]) {
+							visited[_.util.objId(o[i])] = true;
+							_.languages.DFS(o[i], callback, null, visited);
+						}
+						else if (_.util.type(o[i]) === 'Array' && !visited[_.util.objId(o[i])]) {
+							visited[_.util.objId(o[i])] = true;
+							_.languages.DFS(o[i], callback, i, visited);
+						}
+					}
+				}
+			}
+		},
+		plugins: {},
+	
+		highlightAll: function(async, callback) {
+			var env = {
+				callback: callback,
+				selector: 'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'
+			};
+	
+			_.hooks.run("before-highlightall", env);
+	
+			var elements = env.elements || document.querySelectorAll(env.selector);
+	
+			for (var i=0, element; element = elements[i++];) {
+				_.highlightElement(element, async === true, env.callback);
+			}
+		},
+	
+		highlightElement: function(element, async, callback) {
+			// Find language
+			var language, grammar, parent = element;
+	
+			while (parent && !lang.test(parent.className)) {
+				parent = parent.parentNode;
+			}
+	
+			if (parent) {
+				language = (parent.className.match(lang) || [,''])[1].toLowerCase();
+				grammar = _.languages[language];
+			}
+	
+			// Set language on the element, if not present
+			element.className = element.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
+	
+			// Set language on the parent, for styling
+			parent = element.parentNode;
+	
+			if (/pre/i.test(parent.nodeName)) {
+				parent.className = parent.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
+			}
+	
+			var code = element.textContent;
+	
+			var env = {
+				element: element,
+				language: language,
+				grammar: grammar,
+				code: code
+			};
+	
+			_.hooks.run('before-sanity-check', env);
+	
+			if (!env.code || !env.grammar) {
+				_.hooks.run('complete', env);
+				return;
+			}
+	
+			_.hooks.run('before-highlight', env);
+	
+			if (async && _self.Worker) {
+				var worker = new Worker(_.filename);
+	
+				worker.onmessage = function(evt) {
+					env.highlightedCode = evt.data;
+	
+					_.hooks.run('before-insert', env);
+	
+					env.element.innerHTML = env.highlightedCode;
+	
+					callback && callback.call(env.element);
+					_.hooks.run('after-highlight', env);
+					_.hooks.run('complete', env);
+				};
+	
+				worker.postMessage(JSON.stringify({
+					language: env.language,
+					code: env.code,
+					immediateClose: true
+				}));
+			}
+			else {
+				env.highlightedCode = _.highlight(env.code, env.grammar, env.language);
+	
+				_.hooks.run('before-insert', env);
+	
+				env.element.innerHTML = env.highlightedCode;
+	
+				callback && callback.call(element);
+	
+				_.hooks.run('after-highlight', env);
+				_.hooks.run('complete', env);
+			}
+		},
+	
+		highlight: function (text, grammar, language) {
+			var tokens = _.tokenize(text, grammar);
+			return Token.stringify(_.util.encode(tokens), language);
+		},
+	
+		tokenize: function(text, grammar, language) {
+			var Token = _.Token;
+	
+			var strarr = [text];
+	
+			var rest = grammar.rest;
+	
+			if (rest) {
+				for (var token in rest) {
+					grammar[token] = rest[token];
+				}
+	
+				delete grammar.rest;
+			}
+	
+			tokenloop: for (var token in grammar) {
+				if(!grammar.hasOwnProperty(token) || !grammar[token]) {
+					continue;
+				}
+	
+				var patterns = grammar[token];
+				patterns = (_.util.type(patterns) === "Array") ? patterns : [patterns];
+	
+				for (var j = 0; j < patterns.length; ++j) {
+					var pattern = patterns[j],
+						inside = pattern.inside,
+						lookbehind = !!pattern.lookbehind,
+						greedy = !!pattern.greedy,
+						lookbehindLength = 0,
+						alias = pattern.alias;
+	
+					pattern = pattern.pattern || pattern;
+	
+					for (var i=0; i<strarr.length; i++) { // Don’t cache length as it changes during the loop
+	
+						var str = strarr[i];
+	
+						if (strarr.length > text.length) {
+							// Something went terribly wrong, ABORT, ABORT!
+							break tokenloop;
+						}
+	
+						if (str instanceof Token) {
+							continue;
+						}
+	
+						pattern.lastIndex = 0;
+	
+						var match = pattern.exec(str),
+						    delNum = 1;
+	
+						// Greedy patterns can override/remove up to two previously matched tokens
+						if (!match && greedy && i != strarr.length - 1) {
+							// Reconstruct the original text using the next two tokens
+							var nextToken = strarr[i + 1].matchedStr || strarr[i + 1],
+							    combStr = str + nextToken;
+	
+							if (i < strarr.length - 2) {
+								combStr += strarr[i + 2].matchedStr || strarr[i + 2];
+							}
+	
+							// Try the pattern again on the reconstructed text
+							pattern.lastIndex = 0;
+							match = pattern.exec(combStr);
+							if (!match) {
+								continue;
+							}
+	
+							var from = match.index + (lookbehind ? match[1].length : 0);
+							// To be a valid candidate, the new match has to start inside of str
+							if (from >= str.length) {
+								continue;
+							}
+							var to = match.index + match[0].length,
+							    len = str.length + nextToken.length;
+	
+							// Number of tokens to delete and replace with the new match
+							delNum = 3;
+	
+							if (to <= len) {
+								if (strarr[i + 1].greedy) {
+									continue;
+								}
+								delNum = 2;
+								combStr = combStr.slice(0, len);
+							}
+							str = combStr;
+						}
+	
+						if (!match) {
+							continue;
+						}
+	
+						if(lookbehind) {
+							lookbehindLength = match[1].length;
+						}
+	
+						var from = match.index + lookbehindLength,
+						    match = match[0].slice(lookbehindLength),
+						    to = from + match.length,
+						    before = str.slice(0, from),
+						    after = str.slice(to);
+	
+						var args = [i, delNum];
+	
+						if (before) {
+							args.push(before);
+						}
+	
+						var wrapped = new Token(token, inside? _.tokenize(match, inside) : match, alias, match, greedy);
+	
+						args.push(wrapped);
+	
+						if (after) {
+							args.push(after);
+						}
+	
+						Array.prototype.splice.apply(strarr, args);
+					}
+				}
+			}
+	
+			return strarr;
+		},
+	
+		hooks: {
+			all: {},
+	
+			add: function (name, callback) {
+				var hooks = _.hooks.all;
+	
+				hooks[name] = hooks[name] || [];
+	
+				hooks[name].push(callback);
+			},
+	
+			run: function (name, env) {
+				var callbacks = _.hooks.all[name];
+	
+				if (!callbacks || !callbacks.length) {
+					return;
+				}
+	
+				for (var i=0, callback; callback = callbacks[i++];) {
+					callback(env);
+				}
+			}
+		}
+	};
+	
+	var Token = _.Token = function(type, content, alias, matchedStr, greedy) {
+		this.type = type;
+		this.content = content;
+		this.alias = alias;
+		// Copy of the full string this token was created from
+		this.matchedStr = matchedStr || null;
+		this.greedy = !!greedy;
+	};
+	
+	Token.stringify = function(o, language, parent) {
+		if (typeof o == 'string') {
+			return o;
+		}
+	
+		if (_.util.type(o) === 'Array') {
+			return o.map(function(element) {
+				return Token.stringify(element, language, o);
+			}).join('');
+		}
+	
+		var env = {
+			type: o.type,
+			content: Token.stringify(o.content, language, parent),
+			tag: 'span',
+			classes: ['token', o.type],
+			attributes: {},
+			language: language,
+			parent: parent
+		};
+	
+		if (env.type == 'comment') {
+			env.attributes['spellcheck'] = 'true';
+		}
+	
+		if (o.alias) {
+			var aliases = _.util.type(o.alias) === 'Array' ? o.alias : [o.alias];
+			Array.prototype.push.apply(env.classes, aliases);
+		}
+	
+		_.hooks.run('wrap', env);
+	
+		var attributes = '';
+	
+		for (var name in env.attributes) {
+			attributes += (attributes ? ' ' : '') + name + '="' + (env.attributes[name] || '') + '"';
+		}
+	
+		return '<' + env.tag + ' class="' + env.classes.join(' ') + '" ' + attributes + '>' + env.content + '</' + env.tag + '>';
+	
+	};
+	
+	if (!_self.document) {
+		if (!_self.addEventListener) {
+			// in Node.js
+			return _self.Prism;
+		}
+	 	// In worker
+		_self.addEventListener('message', function(evt) {
+			var message = JSON.parse(evt.data),
+			    lang = message.language,
+			    code = message.code,
+			    immediateClose = message.immediateClose;
+	
+			_self.postMessage(_.highlight(code, _.languages[lang], lang));
+			if (immediateClose) {
+				_self.close();
+			}
+		}, false);
+	
+		return _self.Prism;
+	}
+	
+	//Get current script and highlight
+	var script = document.currentScript || [].slice.call(document.getElementsByTagName("script")).pop();
+	
+	if (script) {
+		_.filename = script.src;
+	
+		if (document.addEventListener && !script.hasAttribute('data-manual')) {
+			if(document.readyState !== "loading") {
+				requestAnimationFrame(_.highlightAll, 0);
+			}
+			else {
+				document.addEventListener('DOMContentLoaded', _.highlightAll);
+			}
+		}
+	}
+	
+	return _self.Prism;
+	
+	})();
+	
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = Prism;
+	}
+	
+	// hack for components to work correctly in node.js
+	if (typeof global !== 'undefined') {
+		global.Prism = Prism;
+	}
+	
+	
+	/* **********************************************
+	     Begin prism-markup.js
+	********************************************** */
+	
+	Prism.languages.markup = {
+		'comment': /<!--[\w\W]*?-->/,
+		'prolog': /<\?[\w\W]+?\?>/,
+		'doctype': /<!DOCTYPE[\w\W]+?>/,
+		'cdata': /<!\[CDATA\[[\w\W]*?]]>/i,
+		'tag': {
+			pattern: /<\/?(?!\d)[^\s>\/=.$<]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\\1|\\?(?!\1)[\w\W])*\1|[^\s'">=]+))?)*\s*\/?>/i,
+			inside: {
+				'tag': {
+					pattern: /^<\/?[^\s>\/]+/i,
+					inside: {
+						'punctuation': /^<\/?/,
+						'namespace': /^[^\s>\/:]+:/
+					}
+				},
+				'attr-value': {
+					pattern: /=(?:('|")[\w\W]*?(\1)|[^\s>]+)/i,
+					inside: {
+						'punctuation': /[=>"']/
+					}
+				},
+				'punctuation': /\/?>/,
+				'attr-name': {
+					pattern: /[^\s>\/]+/,
+					inside: {
+						'namespace': /^[^\s>\/:]+:/
+					}
+				}
+	
+			}
+		},
+		'entity': /&#?[\da-z]{1,8};/i
+	};
+	
+	// Plugin to make entity title show the real entity, idea by Roman Komarov
+	Prism.hooks.add('wrap', function(env) {
+	
+		if (env.type === 'entity') {
+			env.attributes['title'] = env.content.replace(/&amp;/, '&');
+		}
+	});
+	
+	Prism.languages.xml = Prism.languages.markup;
+	Prism.languages.html = Prism.languages.markup;
+	Prism.languages.mathml = Prism.languages.markup;
+	Prism.languages.svg = Prism.languages.markup;
+	
+	
+	/* **********************************************
+	     Begin prism-css.js
+	********************************************** */
+	
+	Prism.languages.css = {
+		'comment': /\/\*[\w\W]*?\*\//,
+		'atrule': {
+			pattern: /@[\w-]+?.*?(;|(?=\s*\{))/i,
+			inside: {
+				'rule': /@[\w-]+/
+				// See rest below
+			}
+		},
+		'url': /url\((?:(["'])(\\(?:\r\n|[\w\W])|(?!\1)[^\\\r\n])*\1|.*?)\)/i,
+		'selector': /[^\{\}\s][^\{\};]*?(?=\s*\{)/,
+		'string': /("|')(\\(?:\r\n|[\w\W])|(?!\1)[^\\\r\n])*\1/,
+		'property': /(\b|\B)[\w-]+(?=\s*:)/i,
+		'important': /\B!important\b/i,
+		'function': /[-a-z0-9]+(?=\()/i,
+		'punctuation': /[(){};:]/
+	};
+	
+	Prism.languages.css['atrule'].inside.rest = Prism.util.clone(Prism.languages.css);
+	
+	if (Prism.languages.markup) {
+		Prism.languages.insertBefore('markup', 'tag', {
+			'style': {
+				pattern: /(<style[\w\W]*?>)[\w\W]*?(?=<\/style>)/i,
+				lookbehind: true,
+				inside: Prism.languages.css,
+				alias: 'language-css'
+			}
+		});
+		
+		Prism.languages.insertBefore('inside', 'attr-value', {
+			'style-attr': {
+				pattern: /\s*style=("|').*?\1/i,
+				inside: {
+					'attr-name': {
+						pattern: /^\s*style/i,
+						inside: Prism.languages.markup.tag.inside
+					},
+					'punctuation': /^\s*=\s*['"]|['"]\s*$/,
+					'attr-value': {
+						pattern: /.+/i,
+						inside: Prism.languages.css
+					}
+				},
+				alias: 'language-css'
+			}
+		}, Prism.languages.markup.tag);
+	}
+	
+	/* **********************************************
+	     Begin prism-clike.js
+	********************************************** */
+	
+	Prism.languages.clike = {
+		'comment': [
+			{
+				pattern: /(^|[^\\])\/\*[\w\W]*?\*\//,
+				lookbehind: true
+			},
+			{
+				pattern: /(^|[^\\:])\/\/.*/,
+				lookbehind: true
+			}
+		],
+		'string': {
+			pattern: /(["'])(\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
+			greedy: true
+		},
+		'class-name': {
+			pattern: /((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,
+			lookbehind: true,
+			inside: {
+				punctuation: /(\.|\\)/
+			}
+		},
+		'keyword': /\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,
+		'boolean': /\b(true|false)\b/,
+		'function': /[a-z0-9_]+(?=\()/i,
+		'number': /\b-?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)\b/i,
+		'operator': /--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,
+		'punctuation': /[{}[\];(),.:]/
+	};
+	
+	
+	/* **********************************************
+	     Begin prism-javascript.js
+	********************************************** */
+	
+	Prism.languages.javascript = Prism.languages.extend('clike', {
+		'keyword': /\b(as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|var|void|while|with|yield)\b/,
+		'number': /\b-?(0x[\dA-Fa-f]+|0b[01]+|0o[0-7]+|\d*\.?\d+([Ee][+-]?\d+)?|NaN|Infinity)\b/,
+		// Allow for all non-ASCII characters (See http://stackoverflow.com/a/2008444)
+		'function': /[_$a-zA-Z\xA0-\uFFFF][_$a-zA-Z0-9\xA0-\uFFFF]*(?=\()/i
+	});
+	
+	Prism.languages.insertBefore('javascript', 'keyword', {
+		'regex': {
+			pattern: /(^|[^/])\/(?!\/)(\[.+?]|\\.|[^/\\\r\n])+\/[gimyu]{0,5}(?=\s*($|[\r\n,.;})]))/,
+			lookbehind: true,
+			greedy: true
+		}
+	});
+	
+	Prism.languages.insertBefore('javascript', 'string', {
+		'template-string': {
+			pattern: /`(?:\\\\|\\?[^\\])*?`/,
+			greedy: true,
+			inside: {
+				'interpolation': {
+					pattern: /\$\{[^}]+\}/,
+					inside: {
+						'interpolation-punctuation': {
+							pattern: /^\$\{|\}$/,
+							alias: 'punctuation'
+						},
+						rest: Prism.languages.javascript
+					}
+				},
+				'string': /[\s\S]+/
+			}
+		}
+	});
+	
+	if (Prism.languages.markup) {
+		Prism.languages.insertBefore('markup', 'tag', {
+			'script': {
+				pattern: /(<script[\w\W]*?>)[\w\W]*?(?=<\/script>)/i,
+				lookbehind: true,
+				inside: Prism.languages.javascript,
+				alias: 'language-javascript'
+			}
+		});
+	}
+	
+	Prism.languages.js = Prism.languages.javascript;
+	
+	/* **********************************************
+	     Begin prism-file-highlight.js
+	********************************************** */
+	
+	(function () {
+		if (typeof self === 'undefined' || !self.Prism || !self.document || !document.querySelector) {
+			return;
+		}
+	
+		self.Prism.fileHighlight = function() {
+	
+			var Extensions = {
+				'js': 'javascript',
+				'py': 'python',
+				'rb': 'ruby',
+				'ps1': 'powershell',
+				'psm1': 'powershell',
+				'sh': 'bash',
+				'bat': 'batch',
+				'h': 'c',
+				'tex': 'latex'
+			};
+	
+			if(Array.prototype.forEach) { // Check to prevent error in IE8
+				Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+					var src = pre.getAttribute('data-src');
+	
+					var language, parent = pre;
+					var lang = /\blang(?:uage)?-(?!\*)(\w+)\b/i;
+					while (parent && !lang.test(parent.className)) {
+						parent = parent.parentNode;
+					}
+	
+					if (parent) {
+						language = (pre.className.match(lang) || [, ''])[1];
+					}
+	
+					if (!language) {
+						var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+						language = Extensions[extension] || extension;
+					}
+	
+					var code = document.createElement('code');
+					code.className = 'language-' + language;
+	
+					pre.textContent = '';
+	
+					code.textContent = 'Loading…';
+	
+					pre.appendChild(code);
+	
+					var xhr = new XMLHttpRequest();
+	
+					xhr.open('GET', src, true);
+	
+					xhr.onreadystatechange = function () {
+						if (xhr.readyState == 4) {
+	
+							if (xhr.status < 400 && xhr.responseText) {
+								code.textContent = xhr.responseText;
+	
+								Prism.highlightElement(code);
+							}
+							else if (xhr.status >= 400) {
+								code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+							}
+							else {
+								code.textContent = '✖ Error: File does not exist or is empty';
+							}
+						}
+					};
+	
+					xhr.send(null);
+				});
+			}
+	
+		};
+	
+		document.addEventListener('DOMContentLoaded', self.Prism.fileHighlight);
+	
+	})();
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 179 */
+/*!*******************************************!*\
+  !*** ./~/prismjs/components/prism-jsx.js ***!
+  \*******************************************/
+/***/ function(module, exports) {
+
+	(function(Prism) {
+	
+	var javascript = Prism.util.clone(Prism.languages.javascript);
+	
+	Prism.languages.jsx = Prism.languages.extend('markup', javascript);
+	Prism.languages.jsx.tag.pattern= /<\/?[\w\.:-]+\s*(?:\s+[\w\.:-]+(?:=(?:("|')(\\?[\w\W])*?\1|[^\s'">=]+|(\{[\w\W]*?\})))?\s*)*\/?>/i;
+	
+	Prism.languages.jsx.tag.inside['attr-value'].pattern = /=[^\{](?:('|")[\w\W]*?(\1)|[^\s>]+)/i;
+	
+	var jsxExpression = Prism.util.clone(Prism.languages.jsx);
+	
+	delete jsxExpression.punctuation
+	
+	jsxExpression = Prism.languages.insertBefore('jsx', 'operator', {
+	  'punctuation': /=(?={)|[{}[\];(),.:]/
+	}, { jsx: jsxExpression });
+	
+	Prism.languages.insertBefore('inside', 'attr-value',{
+		'script': {
+			// Allow for one level of nesting
+			pattern: /=(\{(?:\{[^}]*\}|[^}])+\})/i,
+			inside: jsxExpression,
+			'alias': 'language-javascript'
+		}
+	}, Prism.languages.jsx.tag);
+	
+	}(Prism));
+
+
+/***/ },
+/* 180 */
+/*!********************************************!*\
+  !*** ./~/prismjs/components/prism-scss.js ***!
+  \********************************************/
+/***/ function(module, exports) {
+
+	Prism.languages.scss = Prism.languages.extend('css', {
+		'comment': {
+			pattern: /(^|[^\\])(?:\/\*[\w\W]*?\*\/|\/\/.*)/,
+			lookbehind: true
+		},
+		'atrule': {
+			pattern: /@[\w-]+(?:\([^()]+\)|[^(])*?(?=\s+[{;])/,
+			inside: {
+				'rule': /@[\w-]+/
+				// See rest below
+			}
+		},
+		// url, compassified
+		'url': /(?:[-a-z]+-)*url(?=\()/i,
+		// CSS selector regex is not appropriate for Sass
+		// since there can be lot more things (var, @ directive, nesting..)
+		// a selector must start at the end of a property or after a brace (end of other rules or nesting)
+		// it can contain some characters that aren't used for defining rules or end of selector, & (parent selector), or interpolated variable
+		// the end of a selector is found when there is no rules in it ( {} or {\s}) or if there is a property (because an interpolated var
+		// can "pass" as a selector- e.g: proper#{$erty})
+		// this one was hard to do, so please be careful if you edit this one :)
+		'selector': {
+			// Initial look-ahead is used to prevent matching of blank selectors
+			pattern: /(?=\S)[^@;\{\}\(\)]?([^@;\{\}\(\)]|&|#\{\$[-_\w]+\})+(?=\s*\{(\}|\s|[^\}]+(:|\{)[^\}]+))/m,
+			inside: {
+				'placeholder': /%[-_\w]+/
+			}
+		}
+	});
+	
+	Prism.languages.insertBefore('scss', 'atrule', {
+		'keyword': [
+			/@(?:if|else(?: if)?|for|each|while|import|extend|debug|warn|mixin|include|function|return|content)/i,
+			{
+				pattern: /( +)(?:from|through)(?= )/,
+				lookbehind: true
+			}
+		]
+	});
+	
+	Prism.languages.insertBefore('scss', 'property', {
+		// var and interpolated vars
+		'variable': /\$[-_\w]+|#\{\$[-_\w]+\}/
+	});
+	
+	Prism.languages.insertBefore('scss', 'function', {
+		'placeholder': {
+			pattern: /%[-_\w]+/,
+			alias: 'selector'
+		},
+		'statement': /\B!(?:default|optional)\b/i,
+		'boolean': /\b(?:true|false)\b/,
+		'null': /\bnull\b/,
+		'operator': {
+			pattern: /(\s)(?:[-+*\/%]|[=!]=|<=?|>=?|and|or|not)(?=\s)/,
+			lookbehind: true
+		}
+	});
+	
+	Prism.languages.scss['atrule'].inside.rest = Prism.util.clone(Prism.languages.scss);
+
+/***/ },
+/* 181 */
+/*!*********************************************!*\
+  !*** ./~/prismjs/themes/prism-tomorrow.css ***!
+  \*********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(/*! !./../../css-loader!./../../sass-loader!./prism-tomorrow.css */ 182);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(/*! ./../../style-loader/addStyles.js */ 184)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../css-loader/index.js!./../../sass-loader/index.js!./prism-tomorrow.css", function() {
+				var newContent = require("!!./../../css-loader/index.js!./../../sass-loader/index.js!./prism-tomorrow.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 182 */
+/*!****************************************************************************!*\
+  !*** ./~/css-loader!./~/sass-loader!./~/prismjs/themes/prism-tomorrow.css ***!
+  \****************************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(/*! ./../../css-loader/lib/css-base.js */ 183)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "/**\n * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML\n * Based on https://github.com/chriskempson/tomorrow-theme\n * @author Rose Pritchard\n */\ncode[class*=\"language-\"],\npre[class*=\"language-\"] {\n  color: #ccc;\n  background: none;\n  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;\n  text-align: left;\n  white-space: pre;\n  word-spacing: normal;\n  word-break: normal;\n  word-wrap: normal;\n  line-height: 1.5;\n  -moz-tab-size: 4;\n  -o-tab-size: 4;\n  tab-size: 4;\n  -webkit-hyphens: none;\n  -moz-hyphens: none;\n  -ms-hyphens: none;\n  hyphens: none; }\n\n/* Code blocks */\npre[class*=\"language-\"] {\n  padding: 1em;\n  margin: .5em 0;\n  overflow: auto; }\n\n:not(pre) > code[class*=\"language-\"],\npre[class*=\"language-\"] {\n  background: #2d2d2d; }\n\n/* Inline code */\n:not(pre) > code[class*=\"language-\"] {\n  padding: .1em;\n  border-radius: .3em;\n  white-space: normal; }\n\n.token.comment,\n.token.block-comment,\n.token.prolog,\n.token.doctype,\n.token.cdata {\n  color: #999; }\n\n.token.punctuation {\n  color: #ccc; }\n\n.token.tag,\n.token.attr-name,\n.token.namespace,\n.token.deleted {\n  color: #e2777a; }\n\n.token.function-name {\n  color: #6196cc; }\n\n.token.boolean,\n.token.number,\n.token.function {\n  color: #f08d49; }\n\n.token.property,\n.token.class-name,\n.token.constant,\n.token.symbol {\n  color: #f8c555; }\n\n.token.selector,\n.token.important,\n.token.atrule,\n.token.keyword,\n.token.builtin {\n  color: #cc99cd; }\n\n.token.string,\n.token.char,\n.token.attr-value,\n.token.regex,\n.token.variable {\n  color: #7ec699; }\n\n.token.operator,\n.token.entity,\n.token.url {\n  color: #67cdcc; }\n\n.token.important,\n.token.bold {\n  font-weight: bold; }\n\n.token.italic {\n  font-style: italic; }\n\n.token.entity {\n  cursor: help; }\n\n.token.inserted {\n  color: green; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 183 */
+/*!**************************************!*\
+  !*** ./~/css-loader/lib/css-base.js ***!
+  \**************************************/
+/***/ function(module, exports) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function() {
+		var list = [];
+	
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+	
+		// import a list of modules into the list
+		list.i = function(modules, mediaQuery) {
+			if(typeof modules === "string")
+				modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for(var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if(typeof id === "number")
+					alreadyImportedModules[id] = true;
+			}
+			for(i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if(mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if(mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
+
+
+/***/ },
+/* 184 */
+/*!*************************************!*\
+  !*** ./~/style-loader/addStyles.js ***!
+  \*************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	var stylesInDom = {},
+		memoize = function(fn) {
+			var memo;
+			return function () {
+				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+				return memo;
+			};
+		},
+		isOldIE = memoize(function() {
+			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+		}),
+		getHeadElement = memoize(function () {
+			return document.head || document.getElementsByTagName("head")[0];
+		}),
+		singletonElement = null,
+		singletonCounter = 0,
+		styleElementsInsertedAtTop = [];
+	
+	module.exports = function(list, options) {
+		if(true) {
+			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+		}
+	
+		options = options || {};
+		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+		// tags it will allow on a page
+		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
+	
+		// By default, add <style> tags to the bottom of <head>.
+		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
+	
+		var styles = listToStyles(list);
+		addStylesToDom(styles, options);
+	
+		return function update(newList) {
+			var mayRemove = [];
+			for(var i = 0; i < styles.length; i++) {
+				var item = styles[i];
+				var domStyle = stylesInDom[item.id];
+				domStyle.refs--;
+				mayRemove.push(domStyle);
+			}
+			if(newList) {
+				var newStyles = listToStyles(newList);
+				addStylesToDom(newStyles, options);
+			}
+			for(var i = 0; i < mayRemove.length; i++) {
+				var domStyle = mayRemove[i];
+				if(domStyle.refs === 0) {
+					for(var j = 0; j < domStyle.parts.length; j++)
+						domStyle.parts[j]();
+					delete stylesInDom[domStyle.id];
+				}
+			}
+		};
+	}
+	
+	function addStylesToDom(styles, options) {
+		for(var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+			if(domStyle) {
+				domStyle.refs++;
+				for(var j = 0; j < domStyle.parts.length; j++) {
+					domStyle.parts[j](item.parts[j]);
+				}
+				for(; j < item.parts.length; j++) {
+					domStyle.parts.push(addStyle(item.parts[j], options));
+				}
+			} else {
+				var parts = [];
+				for(var j = 0; j < item.parts.length; j++) {
+					parts.push(addStyle(item.parts[j], options));
+				}
+				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+			}
+		}
+	}
+	
+	function listToStyles(list) {
+		var styles = [];
+		var newStyles = {};
+		for(var i = 0; i < list.length; i++) {
+			var item = list[i];
+			var id = item[0];
+			var css = item[1];
+			var media = item[2];
+			var sourceMap = item[3];
+			var part = {css: css, media: media, sourceMap: sourceMap};
+			if(!newStyles[id])
+				styles.push(newStyles[id] = {id: id, parts: [part]});
+			else
+				newStyles[id].parts.push(part);
+		}
+		return styles;
+	}
+	
+	function insertStyleElement(options, styleElement) {
+		var head = getHeadElement();
+		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
+		if (options.insertAt === "top") {
+			if(!lastStyleElementInsertedAtTop) {
+				head.insertBefore(styleElement, head.firstChild);
+			} else if(lastStyleElementInsertedAtTop.nextSibling) {
+				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
+			} else {
+				head.appendChild(styleElement);
+			}
+			styleElementsInsertedAtTop.push(styleElement);
+		} else if (options.insertAt === "bottom") {
+			head.appendChild(styleElement);
+		} else {
+			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
+		}
+	}
+	
+	function removeStyleElement(styleElement) {
+		styleElement.parentNode.removeChild(styleElement);
+		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
+		if(idx >= 0) {
+			styleElementsInsertedAtTop.splice(idx, 1);
+		}
+	}
+	
+	function createStyleElement(options) {
+		var styleElement = document.createElement("style");
+		styleElement.type = "text/css";
+		insertStyleElement(options, styleElement);
+		return styleElement;
+	}
+	
+	function createLinkElement(options) {
+		var linkElement = document.createElement("link");
+		linkElement.rel = "stylesheet";
+		insertStyleElement(options, linkElement);
+		return linkElement;
+	}
+	
+	function addStyle(obj, options) {
+		var styleElement, update, remove;
+	
+		if (options.singleton) {
+			var styleIndex = singletonCounter++;
+			styleElement = singletonElement || (singletonElement = createStyleElement(options));
+			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
+			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
+		} else if(obj.sourceMap &&
+			typeof URL === "function" &&
+			typeof URL.createObjectURL === "function" &&
+			typeof URL.revokeObjectURL === "function" &&
+			typeof Blob === "function" &&
+			typeof btoa === "function") {
+			styleElement = createLinkElement(options);
+			update = updateLink.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+				if(styleElement.href)
+					URL.revokeObjectURL(styleElement.href);
+			};
+		} else {
+			styleElement = createStyleElement(options);
+			update = applyToTag.bind(null, styleElement);
+			remove = function() {
+				removeStyleElement(styleElement);
+			};
+		}
+	
+		update(obj);
+	
+		return function updateStyle(newObj) {
+			if(newObj) {
+				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
+					return;
+				update(obj = newObj);
+			} else {
+				remove();
+			}
+		};
+	}
+	
+	var replaceText = (function () {
+		var textStore = [];
+	
+		return function (index, replacement) {
+			textStore[index] = replacement;
+			return textStore.filter(Boolean).join('\n');
+		};
+	})();
+	
+	function applyToSingletonTag(styleElement, index, remove, obj) {
+		var css = remove ? "" : obj.css;
+	
+		if (styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = replaceText(index, css);
+		} else {
+			var cssNode = document.createTextNode(css);
+			var childNodes = styleElement.childNodes;
+			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
+			if (childNodes.length) {
+				styleElement.insertBefore(cssNode, childNodes[index]);
+			} else {
+				styleElement.appendChild(cssNode);
+			}
+		}
+	}
+	
+	function applyToTag(styleElement, obj) {
+		var css = obj.css;
+		var media = obj.media;
+	
+		if(media) {
+			styleElement.setAttribute("media", media)
+		}
+	
+		if(styleElement.styleSheet) {
+			styleElement.styleSheet.cssText = css;
+		} else {
+			while(styleElement.firstChild) {
+				styleElement.removeChild(styleElement.firstChild);
+			}
+			styleElement.appendChild(document.createTextNode(css));
+		}
+	}
+	
+	function updateLink(linkElement, obj) {
+		var css = obj.css;
+		var sourceMap = obj.sourceMap;
+	
+		if(sourceMap) {
+			// http://stackoverflow.com/a/26603875
+			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+		}
+	
+		var blob = new Blob([css], { type: "text/css" });
+	
+		var oldSrc = linkElement.href;
+	
+		linkElement.href = URL.createObjectURL(blob);
+	
+		if(oldSrc)
+			URL.revokeObjectURL(oldSrc);
+	}
+
+
+/***/ },
+/* 185 */
+/*!**********************************!*\
+  !*** ./src/sh-core/example.scss ***!
+  \**********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(/*! !./../../~/css-loader!./../../~/sass-loader!./example.scss */ 186);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(/*! ./../../~/style-loader/addStyles.js */ 184)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./example.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./example.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 186 */
+/*!*****************************************************************!*\
+  !*** ./~/css-loader!./~/sass-loader!./src/sh-core/example.scss ***!
+  \*****************************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(/*! ./../../~/css-loader/lib/css-base.js */ 183)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".specialScssUsage .background1 {\n  padding: 20px;\n  color: rgba(255, 255, 255, 0.6);\n  background: #3ab676;\n  border-radius: 4px; }\n\n.specialScssUsage .ellipse1 {\n  width: 200px;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis; }\n\n.specialScssUsage .font1 {\n  font-family: \"Roboto Condensed\", \"Open Sans\";\n  font-size: 20px;\n  font-weight: 300;\n  color: white; }\n\n.specialScssUsage .transition1 {\n  width: 100px;\n  padding: 20px;\n  background: rgba(255, 255, 255, 0.2);\n  transition: width 0.5s ease-in-out, background 0.25s ease-in-out; }\n  .specialScssUsage .transition1:hover {\n    background: rgba(255, 255, 255, 0.6); }\n  .specialScssUsage .transition1.wide {\n    width: 200px; }\n\n.specialScssUsage .primary-block {\n  width: 100%;\n  height: 50px;\n  background-color: #3ab676; }\n\n.specialScssUsage .secondary-block {\n  width: 100%;\n  height: 50px;\n  background-color: #284D51; }\n\n.specialScssUsage .thirdary-block {\n  width: 100%;\n  height: 50px;\n  background-color: #304853; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 187 */
+/*!**************************************!*\
+  !*** ./src/sh-input-select/index.js ***!
+  \**************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _basic = __webpack_require__(/*! ./basic */ 188);
 	
 	var _basic2 = _interopRequireDefault(_basic);
 	
-	var _complex = __webpack_require__(/*! ./complex */ 187);
+	var _complex = __webpack_require__(/*! ./complex */ 192);
 	
 	var _complex2 = _interopRequireDefault(_complex);
 	
-	var _tree = __webpack_require__(/*! ./tree */ 188);
+	var _tree = __webpack_require__(/*! ./tree */ 193);
 	
 	var _tree2 = _interopRequireDefault(_tree);
 	
@@ -22596,16 +24305,16 @@
 	
 	exports.default = ShInputSelectExamples;
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 176 */
+/* 188 */
 /*!**************************************!*\
   !*** ./src/sh-input-select/basic.js ***!
   \**************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 	
 	'use strict';
 	
@@ -22619,11 +24328,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _shInputSelect = __webpack_require__(/*! sh-input-select */ 177);
+	var _shInputSelect = __webpack_require__(/*! sh-input-select */ 189);
 	
 	var _shInputSelect2 = _interopRequireDefault(_shInputSelect);
 	
-	var _code = __webpack_require__(/*! ../util/code */ 180);
+	var _code = __webpack_require__(/*! ../util/code */ 177);
 	
 	var _code2 = _interopRequireDefault(_code);
 	
@@ -22755,10 +24464,10 @@
 	
 	exports.default = Basic;
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "basic.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "basic.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 177 */
+/* 189 */
 /*!**************************************************!*\
   !*** ./~/sh-input-select/bin/sh-input-select.js ***!
   \**************************************************/
@@ -22766,7 +24475,7 @@
 
 	(function webpackUniversalModuleDefinition(root, factory) {
 		if(true)
-			module.exports = factory(__webpack_require__(/*! react */ 1), __webpack_require__(/*! lodash */ 178));
+			module.exports = factory(__webpack_require__(/*! react */ 1), __webpack_require__(/*! lodash */ 190));
 		else if(typeof define === 'function' && define.amd)
 			define(["react", "lodash"], factory);
 		else if(typeof exports === 'object')
@@ -24018,7 +25727,7 @@
 	//# sourceMappingURL=sh-input-select.js.map
 
 /***/ },
-/* 178 */
+/* 190 */
 /*!****************************!*\
   !*** ./~/lodash/lodash.js ***!
   \****************************/
@@ -40633,10 +42342,10 @@
 	  }
 	}.call(this));
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(/*! ./../webpack/buildin/module.js */ 179)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(/*! ./../webpack/buildin/module.js */ 191)(module)))
 
 /***/ },
-/* 179 */
+/* 191 */
 /*!***********************************!*\
   !*** (webpack)/buildin/module.js ***!
   \***********************************/
@@ -40655,1249 +42364,13 @@
 
 
 /***/ },
-/* 180 */
-/*!**************************!*\
-  !*** ./src/util/code.js ***!
-  \**************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-	
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _prismjs = __webpack_require__(/*! prismjs */ 181);
-	
-	var _prismjs2 = _interopRequireDefault(_prismjs);
-	
-	var _prismJsx = __webpack_require__(/*! prismjs/components/prism-jsx */ 182);
-	
-	var _prismJsx2 = _interopRequireDefault(_prismJsx);
-	
-	var _prismScss = __webpack_require__(/*! prismjs/components/prism-scss */ 205);
-	
-	var _prismScss2 = _interopRequireDefault(_prismScss);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	// Include additional language formatting
-	__webpack_require__(/*! ../../~/prismjs/themes/prism-tomorrow.css */ 183);
-	
-	var CodeService = function CodeService(codeString, languageName) {
-	    var codeHighlighted = _prismjs2.default.highlight(codeString, _prismjs2.default.languages[languageName]);
-	    return _react2.default.createElement(
-	        'pre',
-	        null,
-	        _react2.default.createElement('code', { className: 'language-' + languageName, dangerouslySetInnerHTML: { __html: codeHighlighted } })
-	    );
-	};
-	
-	exports.default = CodeService;
-	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "code.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ },
-/* 181 */
-/*!****************************!*\
-  !*** ./~/prismjs/prism.js ***!
-  \****************************/
-/***/ function(module, exports) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {
-	/* **********************************************
-	     Begin prism-core.js
-	********************************************** */
-	
-	var _self = (typeof window !== 'undefined')
-		? window   // if in browser
-		: (
-			(typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope)
-			? self // if in worker
-			: {}   // if in node js
-		);
-	
-	/**
-	 * Prism: Lightweight, robust, elegant syntax highlighting
-	 * MIT license http://www.opensource.org/licenses/mit-license.php/
-	 * @author Lea Verou http://lea.verou.me
-	 */
-	
-	var Prism = (function(){
-	
-	// Private helper vars
-	var lang = /\blang(?:uage)?-(\w+)\b/i;
-	var uniqueId = 0;
-	
-	var _ = _self.Prism = {
-		util: {
-			encode: function (tokens) {
-				if (tokens instanceof Token) {
-					return new Token(tokens.type, _.util.encode(tokens.content), tokens.alias);
-				} else if (_.util.type(tokens) === 'Array') {
-					return tokens.map(_.util.encode);
-				} else {
-					return tokens.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\u00a0/g, ' ');
-				}
-			},
-	
-			type: function (o) {
-				return Object.prototype.toString.call(o).match(/\[object (\w+)\]/)[1];
-			},
-	
-			objId: function (obj) {
-				if (!obj['__id']) {
-					Object.defineProperty(obj, '__id', { value: ++uniqueId });
-				}
-				return obj['__id'];
-			},
-	
-			// Deep clone a language definition (e.g. to extend it)
-			clone: function (o) {
-				var type = _.util.type(o);
-	
-				switch (type) {
-					case 'Object':
-						var clone = {};
-	
-						for (var key in o) {
-							if (o.hasOwnProperty(key)) {
-								clone[key] = _.util.clone(o[key]);
-							}
-						}
-	
-						return clone;
-	
-					case 'Array':
-						// Check for existence for IE8
-						return o.map && o.map(function(v) { return _.util.clone(v); });
-				}
-	
-				return o;
-			}
-		},
-	
-		languages: {
-			extend: function (id, redef) {
-				var lang = _.util.clone(_.languages[id]);
-	
-				for (var key in redef) {
-					lang[key] = redef[key];
-				}
-	
-				return lang;
-			},
-	
-			/**
-			 * Insert a token before another token in a language literal
-			 * As this needs to recreate the object (we cannot actually insert before keys in object literals),
-			 * we cannot just provide an object, we need anobject and a key.
-			 * @param inside The key (or language id) of the parent
-			 * @param before The key to insert before. If not provided, the function appends instead.
-			 * @param insert Object with the key/value pairs to insert
-			 * @param root The object that contains `inside`. If equal to Prism.languages, it can be omitted.
-			 */
-			insertBefore: function (inside, before, insert, root) {
-				root = root || _.languages;
-				var grammar = root[inside];
-	
-				if (arguments.length == 2) {
-					insert = arguments[1];
-	
-					for (var newToken in insert) {
-						if (insert.hasOwnProperty(newToken)) {
-							grammar[newToken] = insert[newToken];
-						}
-					}
-	
-					return grammar;
-				}
-	
-				var ret = {};
-	
-				for (var token in grammar) {
-	
-					if (grammar.hasOwnProperty(token)) {
-	
-						if (token == before) {
-	
-							for (var newToken in insert) {
-	
-								if (insert.hasOwnProperty(newToken)) {
-									ret[newToken] = insert[newToken];
-								}
-							}
-						}
-	
-						ret[token] = grammar[token];
-					}
-				}
-	
-				// Update references in other language definitions
-				_.languages.DFS(_.languages, function(key, value) {
-					if (value === root[inside] && key != inside) {
-						this[key] = ret;
-					}
-				});
-	
-				return root[inside] = ret;
-			},
-	
-			// Traverse a language definition with Depth First Search
-			DFS: function(o, callback, type, visited) {
-				visited = visited || {};
-				for (var i in o) {
-					if (o.hasOwnProperty(i)) {
-						callback.call(o, i, o[i], type || i);
-	
-						if (_.util.type(o[i]) === 'Object' && !visited[_.util.objId(o[i])]) {
-							visited[_.util.objId(o[i])] = true;
-							_.languages.DFS(o[i], callback, null, visited);
-						}
-						else if (_.util.type(o[i]) === 'Array' && !visited[_.util.objId(o[i])]) {
-							visited[_.util.objId(o[i])] = true;
-							_.languages.DFS(o[i], callback, i, visited);
-						}
-					}
-				}
-			}
-		},
-		plugins: {},
-	
-		highlightAll: function(async, callback) {
-			var env = {
-				callback: callback,
-				selector: 'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'
-			};
-	
-			_.hooks.run("before-highlightall", env);
-	
-			var elements = env.elements || document.querySelectorAll(env.selector);
-	
-			for (var i=0, element; element = elements[i++];) {
-				_.highlightElement(element, async === true, env.callback);
-			}
-		},
-	
-		highlightElement: function(element, async, callback) {
-			// Find language
-			var language, grammar, parent = element;
-	
-			while (parent && !lang.test(parent.className)) {
-				parent = parent.parentNode;
-			}
-	
-			if (parent) {
-				language = (parent.className.match(lang) || [,''])[1].toLowerCase();
-				grammar = _.languages[language];
-			}
-	
-			// Set language on the element, if not present
-			element.className = element.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
-	
-			// Set language on the parent, for styling
-			parent = element.parentNode;
-	
-			if (/pre/i.test(parent.nodeName)) {
-				parent.className = parent.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
-			}
-	
-			var code = element.textContent;
-	
-			var env = {
-				element: element,
-				language: language,
-				grammar: grammar,
-				code: code
-			};
-	
-			_.hooks.run('before-sanity-check', env);
-	
-			if (!env.code || !env.grammar) {
-				_.hooks.run('complete', env);
-				return;
-			}
-	
-			_.hooks.run('before-highlight', env);
-	
-			if (async && _self.Worker) {
-				var worker = new Worker(_.filename);
-	
-				worker.onmessage = function(evt) {
-					env.highlightedCode = evt.data;
-	
-					_.hooks.run('before-insert', env);
-	
-					env.element.innerHTML = env.highlightedCode;
-	
-					callback && callback.call(env.element);
-					_.hooks.run('after-highlight', env);
-					_.hooks.run('complete', env);
-				};
-	
-				worker.postMessage(JSON.stringify({
-					language: env.language,
-					code: env.code,
-					immediateClose: true
-				}));
-			}
-			else {
-				env.highlightedCode = _.highlight(env.code, env.grammar, env.language);
-	
-				_.hooks.run('before-insert', env);
-	
-				env.element.innerHTML = env.highlightedCode;
-	
-				callback && callback.call(element);
-	
-				_.hooks.run('after-highlight', env);
-				_.hooks.run('complete', env);
-			}
-		},
-	
-		highlight: function (text, grammar, language) {
-			var tokens = _.tokenize(text, grammar);
-			return Token.stringify(_.util.encode(tokens), language);
-		},
-	
-		tokenize: function(text, grammar, language) {
-			var Token = _.Token;
-	
-			var strarr = [text];
-	
-			var rest = grammar.rest;
-	
-			if (rest) {
-				for (var token in rest) {
-					grammar[token] = rest[token];
-				}
-	
-				delete grammar.rest;
-			}
-	
-			tokenloop: for (var token in grammar) {
-				if(!grammar.hasOwnProperty(token) || !grammar[token]) {
-					continue;
-				}
-	
-				var patterns = grammar[token];
-				patterns = (_.util.type(patterns) === "Array") ? patterns : [patterns];
-	
-				for (var j = 0; j < patterns.length; ++j) {
-					var pattern = patterns[j],
-						inside = pattern.inside,
-						lookbehind = !!pattern.lookbehind,
-						greedy = !!pattern.greedy,
-						lookbehindLength = 0,
-						alias = pattern.alias;
-	
-					pattern = pattern.pattern || pattern;
-	
-					for (var i=0; i<strarr.length; i++) { // Don’t cache length as it changes during the loop
-	
-						var str = strarr[i];
-	
-						if (strarr.length > text.length) {
-							// Something went terribly wrong, ABORT, ABORT!
-							break tokenloop;
-						}
-	
-						if (str instanceof Token) {
-							continue;
-						}
-	
-						pattern.lastIndex = 0;
-	
-						var match = pattern.exec(str),
-						    delNum = 1;
-	
-						// Greedy patterns can override/remove up to two previously matched tokens
-						if (!match && greedy && i != strarr.length - 1) {
-							// Reconstruct the original text using the next two tokens
-							var nextToken = strarr[i + 1].matchedStr || strarr[i + 1],
-							    combStr = str + nextToken;
-	
-							if (i < strarr.length - 2) {
-								combStr += strarr[i + 2].matchedStr || strarr[i + 2];
-							}
-	
-							// Try the pattern again on the reconstructed text
-							pattern.lastIndex = 0;
-							match = pattern.exec(combStr);
-							if (!match) {
-								continue;
-							}
-	
-							var from = match.index + (lookbehind ? match[1].length : 0);
-							// To be a valid candidate, the new match has to start inside of str
-							if (from >= str.length) {
-								continue;
-							}
-							var to = match.index + match[0].length,
-							    len = str.length + nextToken.length;
-	
-							// Number of tokens to delete and replace with the new match
-							delNum = 3;
-	
-							if (to <= len) {
-								if (strarr[i + 1].greedy) {
-									continue;
-								}
-								delNum = 2;
-								combStr = combStr.slice(0, len);
-							}
-							str = combStr;
-						}
-	
-						if (!match) {
-							continue;
-						}
-	
-						if(lookbehind) {
-							lookbehindLength = match[1].length;
-						}
-	
-						var from = match.index + lookbehindLength,
-						    match = match[0].slice(lookbehindLength),
-						    to = from + match.length,
-						    before = str.slice(0, from),
-						    after = str.slice(to);
-	
-						var args = [i, delNum];
-	
-						if (before) {
-							args.push(before);
-						}
-	
-						var wrapped = new Token(token, inside? _.tokenize(match, inside) : match, alias, match, greedy);
-	
-						args.push(wrapped);
-	
-						if (after) {
-							args.push(after);
-						}
-	
-						Array.prototype.splice.apply(strarr, args);
-					}
-				}
-			}
-	
-			return strarr;
-		},
-	
-		hooks: {
-			all: {},
-	
-			add: function (name, callback) {
-				var hooks = _.hooks.all;
-	
-				hooks[name] = hooks[name] || [];
-	
-				hooks[name].push(callback);
-			},
-	
-			run: function (name, env) {
-				var callbacks = _.hooks.all[name];
-	
-				if (!callbacks || !callbacks.length) {
-					return;
-				}
-	
-				for (var i=0, callback; callback = callbacks[i++];) {
-					callback(env);
-				}
-			}
-		}
-	};
-	
-	var Token = _.Token = function(type, content, alias, matchedStr, greedy) {
-		this.type = type;
-		this.content = content;
-		this.alias = alias;
-		// Copy of the full string this token was created from
-		this.matchedStr = matchedStr || null;
-		this.greedy = !!greedy;
-	};
-	
-	Token.stringify = function(o, language, parent) {
-		if (typeof o == 'string') {
-			return o;
-		}
-	
-		if (_.util.type(o) === 'Array') {
-			return o.map(function(element) {
-				return Token.stringify(element, language, o);
-			}).join('');
-		}
-	
-		var env = {
-			type: o.type,
-			content: Token.stringify(o.content, language, parent),
-			tag: 'span',
-			classes: ['token', o.type],
-			attributes: {},
-			language: language,
-			parent: parent
-		};
-	
-		if (env.type == 'comment') {
-			env.attributes['spellcheck'] = 'true';
-		}
-	
-		if (o.alias) {
-			var aliases = _.util.type(o.alias) === 'Array' ? o.alias : [o.alias];
-			Array.prototype.push.apply(env.classes, aliases);
-		}
-	
-		_.hooks.run('wrap', env);
-	
-		var attributes = '';
-	
-		for (var name in env.attributes) {
-			attributes += (attributes ? ' ' : '') + name + '="' + (env.attributes[name] || '') + '"';
-		}
-	
-		return '<' + env.tag + ' class="' + env.classes.join(' ') + '" ' + attributes + '>' + env.content + '</' + env.tag + '>';
-	
-	};
-	
-	if (!_self.document) {
-		if (!_self.addEventListener) {
-			// in Node.js
-			return _self.Prism;
-		}
-	 	// In worker
-		_self.addEventListener('message', function(evt) {
-			var message = JSON.parse(evt.data),
-			    lang = message.language,
-			    code = message.code,
-			    immediateClose = message.immediateClose;
-	
-			_self.postMessage(_.highlight(code, _.languages[lang], lang));
-			if (immediateClose) {
-				_self.close();
-			}
-		}, false);
-	
-		return _self.Prism;
-	}
-	
-	//Get current script and highlight
-	var script = document.currentScript || [].slice.call(document.getElementsByTagName("script")).pop();
-	
-	if (script) {
-		_.filename = script.src;
-	
-		if (document.addEventListener && !script.hasAttribute('data-manual')) {
-			if(document.readyState !== "loading") {
-				requestAnimationFrame(_.highlightAll, 0);
-			}
-			else {
-				document.addEventListener('DOMContentLoaded', _.highlightAll);
-			}
-		}
-	}
-	
-	return _self.Prism;
-	
-	})();
-	
-	if (typeof module !== 'undefined' && module.exports) {
-		module.exports = Prism;
-	}
-	
-	// hack for components to work correctly in node.js
-	if (typeof global !== 'undefined') {
-		global.Prism = Prism;
-	}
-	
-	
-	/* **********************************************
-	     Begin prism-markup.js
-	********************************************** */
-	
-	Prism.languages.markup = {
-		'comment': /<!--[\w\W]*?-->/,
-		'prolog': /<\?[\w\W]+?\?>/,
-		'doctype': /<!DOCTYPE[\w\W]+?>/,
-		'cdata': /<!\[CDATA\[[\w\W]*?]]>/i,
-		'tag': {
-			pattern: /<\/?(?!\d)[^\s>\/=.$<]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\\1|\\?(?!\1)[\w\W])*\1|[^\s'">=]+))?)*\s*\/?>/i,
-			inside: {
-				'tag': {
-					pattern: /^<\/?[^\s>\/]+/i,
-					inside: {
-						'punctuation': /^<\/?/,
-						'namespace': /^[^\s>\/:]+:/
-					}
-				},
-				'attr-value': {
-					pattern: /=(?:('|")[\w\W]*?(\1)|[^\s>]+)/i,
-					inside: {
-						'punctuation': /[=>"']/
-					}
-				},
-				'punctuation': /\/?>/,
-				'attr-name': {
-					pattern: /[^\s>\/]+/,
-					inside: {
-						'namespace': /^[^\s>\/:]+:/
-					}
-				}
-	
-			}
-		},
-		'entity': /&#?[\da-z]{1,8};/i
-	};
-	
-	// Plugin to make entity title show the real entity, idea by Roman Komarov
-	Prism.hooks.add('wrap', function(env) {
-	
-		if (env.type === 'entity') {
-			env.attributes['title'] = env.content.replace(/&amp;/, '&');
-		}
-	});
-	
-	Prism.languages.xml = Prism.languages.markup;
-	Prism.languages.html = Prism.languages.markup;
-	Prism.languages.mathml = Prism.languages.markup;
-	Prism.languages.svg = Prism.languages.markup;
-	
-	
-	/* **********************************************
-	     Begin prism-css.js
-	********************************************** */
-	
-	Prism.languages.css = {
-		'comment': /\/\*[\w\W]*?\*\//,
-		'atrule': {
-			pattern: /@[\w-]+?.*?(;|(?=\s*\{))/i,
-			inside: {
-				'rule': /@[\w-]+/
-				// See rest below
-			}
-		},
-		'url': /url\((?:(["'])(\\(?:\r\n|[\w\W])|(?!\1)[^\\\r\n])*\1|.*?)\)/i,
-		'selector': /[^\{\}\s][^\{\};]*?(?=\s*\{)/,
-		'string': /("|')(\\(?:\r\n|[\w\W])|(?!\1)[^\\\r\n])*\1/,
-		'property': /(\b|\B)[\w-]+(?=\s*:)/i,
-		'important': /\B!important\b/i,
-		'function': /[-a-z0-9]+(?=\()/i,
-		'punctuation': /[(){};:]/
-	};
-	
-	Prism.languages.css['atrule'].inside.rest = Prism.util.clone(Prism.languages.css);
-	
-	if (Prism.languages.markup) {
-		Prism.languages.insertBefore('markup', 'tag', {
-			'style': {
-				pattern: /(<style[\w\W]*?>)[\w\W]*?(?=<\/style>)/i,
-				lookbehind: true,
-				inside: Prism.languages.css,
-				alias: 'language-css'
-			}
-		});
-		
-		Prism.languages.insertBefore('inside', 'attr-value', {
-			'style-attr': {
-				pattern: /\s*style=("|').*?\1/i,
-				inside: {
-					'attr-name': {
-						pattern: /^\s*style/i,
-						inside: Prism.languages.markup.tag.inside
-					},
-					'punctuation': /^\s*=\s*['"]|['"]\s*$/,
-					'attr-value': {
-						pattern: /.+/i,
-						inside: Prism.languages.css
-					}
-				},
-				alias: 'language-css'
-			}
-		}, Prism.languages.markup.tag);
-	}
-	
-	/* **********************************************
-	     Begin prism-clike.js
-	********************************************** */
-	
-	Prism.languages.clike = {
-		'comment': [
-			{
-				pattern: /(^|[^\\])\/\*[\w\W]*?\*\//,
-				lookbehind: true
-			},
-			{
-				pattern: /(^|[^\\:])\/\/.*/,
-				lookbehind: true
-			}
-		],
-		'string': {
-			pattern: /(["'])(\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
-			greedy: true
-		},
-		'class-name': {
-			pattern: /((?:\b(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,
-			lookbehind: true,
-			inside: {
-				punctuation: /(\.|\\)/
-			}
-		},
-		'keyword': /\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,
-		'boolean': /\b(true|false)\b/,
-		'function': /[a-z0-9_]+(?=\()/i,
-		'number': /\b-?(?:0x[\da-f]+|\d*\.?\d+(?:e[+-]?\d+)?)\b/i,
-		'operator': /--?|\+\+?|!=?=?|<=?|>=?|==?=?|&&?|\|\|?|\?|\*|\/|~|\^|%/,
-		'punctuation': /[{}[\];(),.:]/
-	};
-	
-	
-	/* **********************************************
-	     Begin prism-javascript.js
-	********************************************** */
-	
-	Prism.languages.javascript = Prism.languages.extend('clike', {
-		'keyword': /\b(as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|var|void|while|with|yield)\b/,
-		'number': /\b-?(0x[\dA-Fa-f]+|0b[01]+|0o[0-7]+|\d*\.?\d+([Ee][+-]?\d+)?|NaN|Infinity)\b/,
-		// Allow for all non-ASCII characters (See http://stackoverflow.com/a/2008444)
-		'function': /[_$a-zA-Z\xA0-\uFFFF][_$a-zA-Z0-9\xA0-\uFFFF]*(?=\()/i
-	});
-	
-	Prism.languages.insertBefore('javascript', 'keyword', {
-		'regex': {
-			pattern: /(^|[^/])\/(?!\/)(\[.+?]|\\.|[^/\\\r\n])+\/[gimyu]{0,5}(?=\s*($|[\r\n,.;})]))/,
-			lookbehind: true,
-			greedy: true
-		}
-	});
-	
-	Prism.languages.insertBefore('javascript', 'string', {
-		'template-string': {
-			pattern: /`(?:\\\\|\\?[^\\])*?`/,
-			greedy: true,
-			inside: {
-				'interpolation': {
-					pattern: /\$\{[^}]+\}/,
-					inside: {
-						'interpolation-punctuation': {
-							pattern: /^\$\{|\}$/,
-							alias: 'punctuation'
-						},
-						rest: Prism.languages.javascript
-					}
-				},
-				'string': /[\s\S]+/
-			}
-		}
-	});
-	
-	if (Prism.languages.markup) {
-		Prism.languages.insertBefore('markup', 'tag', {
-			'script': {
-				pattern: /(<script[\w\W]*?>)[\w\W]*?(?=<\/script>)/i,
-				lookbehind: true,
-				inside: Prism.languages.javascript,
-				alias: 'language-javascript'
-			}
-		});
-	}
-	
-	Prism.languages.js = Prism.languages.javascript;
-	
-	/* **********************************************
-	     Begin prism-file-highlight.js
-	********************************************** */
-	
-	(function () {
-		if (typeof self === 'undefined' || !self.Prism || !self.document || !document.querySelector) {
-			return;
-		}
-	
-		self.Prism.fileHighlight = function() {
-	
-			var Extensions = {
-				'js': 'javascript',
-				'py': 'python',
-				'rb': 'ruby',
-				'ps1': 'powershell',
-				'psm1': 'powershell',
-				'sh': 'bash',
-				'bat': 'batch',
-				'h': 'c',
-				'tex': 'latex'
-			};
-	
-			if(Array.prototype.forEach) { // Check to prevent error in IE8
-				Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
-					var src = pre.getAttribute('data-src');
-	
-					var language, parent = pre;
-					var lang = /\blang(?:uage)?-(?!\*)(\w+)\b/i;
-					while (parent && !lang.test(parent.className)) {
-						parent = parent.parentNode;
-					}
-	
-					if (parent) {
-						language = (pre.className.match(lang) || [, ''])[1];
-					}
-	
-					if (!language) {
-						var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
-						language = Extensions[extension] || extension;
-					}
-	
-					var code = document.createElement('code');
-					code.className = 'language-' + language;
-	
-					pre.textContent = '';
-	
-					code.textContent = 'Loading…';
-	
-					pre.appendChild(code);
-	
-					var xhr = new XMLHttpRequest();
-	
-					xhr.open('GET', src, true);
-	
-					xhr.onreadystatechange = function () {
-						if (xhr.readyState == 4) {
-	
-							if (xhr.status < 400 && xhr.responseText) {
-								code.textContent = xhr.responseText;
-	
-								Prism.highlightElement(code);
-							}
-							else if (xhr.status >= 400) {
-								code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
-							}
-							else {
-								code.textContent = '✖ Error: File does not exist or is empty';
-							}
-						}
-					};
-	
-					xhr.send(null);
-				});
-			}
-	
-		};
-	
-		document.addEventListener('DOMContentLoaded', self.Prism.fileHighlight);
-	
-	})();
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 182 */
-/*!*******************************************!*\
-  !*** ./~/prismjs/components/prism-jsx.js ***!
-  \*******************************************/
-/***/ function(module, exports) {
-
-	(function(Prism) {
-	
-	var javascript = Prism.util.clone(Prism.languages.javascript);
-	
-	Prism.languages.jsx = Prism.languages.extend('markup', javascript);
-	Prism.languages.jsx.tag.pattern= /<\/?[\w\.:-]+\s*(?:\s+[\w\.:-]+(?:=(?:("|')(\\?[\w\W])*?\1|[^\s'">=]+|(\{[\w\W]*?\})))?\s*)*\/?>/i;
-	
-	Prism.languages.jsx.tag.inside['attr-value'].pattern = /=[^\{](?:('|")[\w\W]*?(\1)|[^\s>]+)/i;
-	
-	var jsxExpression = Prism.util.clone(Prism.languages.jsx);
-	
-	delete jsxExpression.punctuation
-	
-	jsxExpression = Prism.languages.insertBefore('jsx', 'operator', {
-	  'punctuation': /=(?={)|[{}[\];(),.:]/
-	}, { jsx: jsxExpression });
-	
-	Prism.languages.insertBefore('inside', 'attr-value',{
-		'script': {
-			// Allow for one level of nesting
-			pattern: /=(\{(?:\{[^}]*\}|[^}])+\})/i,
-			inside: jsxExpression,
-			'alias': 'language-javascript'
-		}
-	}, Prism.languages.jsx.tag);
-	
-	}(Prism));
-
-
-/***/ },
-/* 183 */
-/*!*********************************************!*\
-  !*** ./~/prismjs/themes/prism-tomorrow.css ***!
-  \*********************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(/*! !./../../css-loader!./../../sass-loader!./prism-tomorrow.css */ 184);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(/*! ./../../style-loader/addStyles.js */ 186)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../css-loader/index.js!./../../sass-loader/index.js!./prism-tomorrow.css", function() {
-				var newContent = require("!!./../../css-loader/index.js!./../../sass-loader/index.js!./prism-tomorrow.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 184 */
-/*!****************************************************************************!*\
-  !*** ./~/css-loader!./~/sass-loader!./~/prismjs/themes/prism-tomorrow.css ***!
-  \****************************************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(/*! ./../../css-loader/lib/css-base.js */ 185)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "/**\n * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML\n * Based on https://github.com/chriskempson/tomorrow-theme\n * @author Rose Pritchard\n */\ncode[class*=\"language-\"],\npre[class*=\"language-\"] {\n  color: #ccc;\n  background: none;\n  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;\n  text-align: left;\n  white-space: pre;\n  word-spacing: normal;\n  word-break: normal;\n  word-wrap: normal;\n  line-height: 1.5;\n  -moz-tab-size: 4;\n  -o-tab-size: 4;\n  tab-size: 4;\n  -webkit-hyphens: none;\n  -moz-hyphens: none;\n  -ms-hyphens: none;\n  hyphens: none; }\n\n/* Code blocks */\npre[class*=\"language-\"] {\n  padding: 1em;\n  margin: .5em 0;\n  overflow: auto; }\n\n:not(pre) > code[class*=\"language-\"],\npre[class*=\"language-\"] {\n  background: #2d2d2d; }\n\n/* Inline code */\n:not(pre) > code[class*=\"language-\"] {\n  padding: .1em;\n  border-radius: .3em;\n  white-space: normal; }\n\n.token.comment,\n.token.block-comment,\n.token.prolog,\n.token.doctype,\n.token.cdata {\n  color: #999; }\n\n.token.punctuation {\n  color: #ccc; }\n\n.token.tag,\n.token.attr-name,\n.token.namespace,\n.token.deleted {\n  color: #e2777a; }\n\n.token.function-name {\n  color: #6196cc; }\n\n.token.boolean,\n.token.number,\n.token.function {\n  color: #f08d49; }\n\n.token.property,\n.token.class-name,\n.token.constant,\n.token.symbol {\n  color: #f8c555; }\n\n.token.selector,\n.token.important,\n.token.atrule,\n.token.keyword,\n.token.builtin {\n  color: #cc99cd; }\n\n.token.string,\n.token.char,\n.token.attr-value,\n.token.regex,\n.token.variable {\n  color: #7ec699; }\n\n.token.operator,\n.token.entity,\n.token.url {\n  color: #67cdcc; }\n\n.token.important,\n.token.bold {\n  font-weight: bold; }\n\n.token.italic {\n  font-style: italic; }\n\n.token.entity {\n  cursor: help; }\n\n.token.inserted {\n  color: green; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 185 */
-/*!**************************************!*\
-  !*** ./~/css-loader/lib/css-base.js ***!
-  \**************************************/
-/***/ function(module, exports) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function() {
-		var list = [];
-	
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-	
-		// import a list of modules into the list
-		list.i = function(modules, mediaQuery) {
-			if(typeof modules === "string")
-				modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for(var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if(typeof id === "number")
-					alreadyImportedModules[id] = true;
-			}
-			for(i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if(mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if(mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
-
-
-/***/ },
-/* 186 */
-/*!*************************************!*\
-  !*** ./~/style-loader/addStyles.js ***!
-  \*************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	var stylesInDom = {},
-		memoize = function(fn) {
-			var memo;
-			return function () {
-				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
-				return memo;
-			};
-		},
-		isOldIE = memoize(function() {
-			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
-		}),
-		getHeadElement = memoize(function () {
-			return document.head || document.getElementsByTagName("head")[0];
-		}),
-		singletonElement = null,
-		singletonCounter = 0,
-		styleElementsInsertedAtTop = [];
-	
-	module.exports = function(list, options) {
-		if(true) {
-			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
-		}
-	
-		options = options || {};
-		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-		// tags it will allow on a page
-		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
-	
-		// By default, add <style> tags to the bottom of <head>.
-		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
-	
-		var styles = listToStyles(list);
-		addStylesToDom(styles, options);
-	
-		return function update(newList) {
-			var mayRemove = [];
-			for(var i = 0; i < styles.length; i++) {
-				var item = styles[i];
-				var domStyle = stylesInDom[item.id];
-				domStyle.refs--;
-				mayRemove.push(domStyle);
-			}
-			if(newList) {
-				var newStyles = listToStyles(newList);
-				addStylesToDom(newStyles, options);
-			}
-			for(var i = 0; i < mayRemove.length; i++) {
-				var domStyle = mayRemove[i];
-				if(domStyle.refs === 0) {
-					for(var j = 0; j < domStyle.parts.length; j++)
-						domStyle.parts[j]();
-					delete stylesInDom[domStyle.id];
-				}
-			}
-		};
-	}
-	
-	function addStylesToDom(styles, options) {
-		for(var i = 0; i < styles.length; i++) {
-			var item = styles[i];
-			var domStyle = stylesInDom[item.id];
-			if(domStyle) {
-				domStyle.refs++;
-				for(var j = 0; j < domStyle.parts.length; j++) {
-					domStyle.parts[j](item.parts[j]);
-				}
-				for(; j < item.parts.length; j++) {
-					domStyle.parts.push(addStyle(item.parts[j], options));
-				}
-			} else {
-				var parts = [];
-				for(var j = 0; j < item.parts.length; j++) {
-					parts.push(addStyle(item.parts[j], options));
-				}
-				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
-			}
-		}
-	}
-	
-	function listToStyles(list) {
-		var styles = [];
-		var newStyles = {};
-		for(var i = 0; i < list.length; i++) {
-			var item = list[i];
-			var id = item[0];
-			var css = item[1];
-			var media = item[2];
-			var sourceMap = item[3];
-			var part = {css: css, media: media, sourceMap: sourceMap};
-			if(!newStyles[id])
-				styles.push(newStyles[id] = {id: id, parts: [part]});
-			else
-				newStyles[id].parts.push(part);
-		}
-		return styles;
-	}
-	
-	function insertStyleElement(options, styleElement) {
-		var head = getHeadElement();
-		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
-		if (options.insertAt === "top") {
-			if(!lastStyleElementInsertedAtTop) {
-				head.insertBefore(styleElement, head.firstChild);
-			} else if(lastStyleElementInsertedAtTop.nextSibling) {
-				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
-			} else {
-				head.appendChild(styleElement);
-			}
-			styleElementsInsertedAtTop.push(styleElement);
-		} else if (options.insertAt === "bottom") {
-			head.appendChild(styleElement);
-		} else {
-			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
-		}
-	}
-	
-	function removeStyleElement(styleElement) {
-		styleElement.parentNode.removeChild(styleElement);
-		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
-		if(idx >= 0) {
-			styleElementsInsertedAtTop.splice(idx, 1);
-		}
-	}
-	
-	function createStyleElement(options) {
-		var styleElement = document.createElement("style");
-		styleElement.type = "text/css";
-		insertStyleElement(options, styleElement);
-		return styleElement;
-	}
-	
-	function createLinkElement(options) {
-		var linkElement = document.createElement("link");
-		linkElement.rel = "stylesheet";
-		insertStyleElement(options, linkElement);
-		return linkElement;
-	}
-	
-	function addStyle(obj, options) {
-		var styleElement, update, remove;
-	
-		if (options.singleton) {
-			var styleIndex = singletonCounter++;
-			styleElement = singletonElement || (singletonElement = createStyleElement(options));
-			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
-			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
-		} else if(obj.sourceMap &&
-			typeof URL === "function" &&
-			typeof URL.createObjectURL === "function" &&
-			typeof URL.revokeObjectURL === "function" &&
-			typeof Blob === "function" &&
-			typeof btoa === "function") {
-			styleElement = createLinkElement(options);
-			update = updateLink.bind(null, styleElement);
-			remove = function() {
-				removeStyleElement(styleElement);
-				if(styleElement.href)
-					URL.revokeObjectURL(styleElement.href);
-			};
-		} else {
-			styleElement = createStyleElement(options);
-			update = applyToTag.bind(null, styleElement);
-			remove = function() {
-				removeStyleElement(styleElement);
-			};
-		}
-	
-		update(obj);
-	
-		return function updateStyle(newObj) {
-			if(newObj) {
-				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
-					return;
-				update(obj = newObj);
-			} else {
-				remove();
-			}
-		};
-	}
-	
-	var replaceText = (function () {
-		var textStore = [];
-	
-		return function (index, replacement) {
-			textStore[index] = replacement;
-			return textStore.filter(Boolean).join('\n');
-		};
-	})();
-	
-	function applyToSingletonTag(styleElement, index, remove, obj) {
-		var css = remove ? "" : obj.css;
-	
-		if (styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = replaceText(index, css);
-		} else {
-			var cssNode = document.createTextNode(css);
-			var childNodes = styleElement.childNodes;
-			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
-			if (childNodes.length) {
-				styleElement.insertBefore(cssNode, childNodes[index]);
-			} else {
-				styleElement.appendChild(cssNode);
-			}
-		}
-	}
-	
-	function applyToTag(styleElement, obj) {
-		var css = obj.css;
-		var media = obj.media;
-	
-		if(media) {
-			styleElement.setAttribute("media", media)
-		}
-	
-		if(styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = css;
-		} else {
-			while(styleElement.firstChild) {
-				styleElement.removeChild(styleElement.firstChild);
-			}
-			styleElement.appendChild(document.createTextNode(css));
-		}
-	}
-	
-	function updateLink(linkElement, obj) {
-		var css = obj.css;
-		var sourceMap = obj.sourceMap;
-	
-		if(sourceMap) {
-			// http://stackoverflow.com/a/26603875
-			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
-		}
-	
-		var blob = new Blob([css], { type: "text/css" });
-	
-		var oldSrc = linkElement.href;
-	
-		linkElement.href = URL.createObjectURL(blob);
-	
-		if(oldSrc)
-			URL.revokeObjectURL(oldSrc);
-	}
-
-
-/***/ },
-/* 187 */
+/* 192 */
 /*!****************************************!*\
   !*** ./src/sh-input-select/complex.js ***!
   \****************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 	
 	'use strict';
 	
@@ -41911,11 +42384,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _shInputSelect = __webpack_require__(/*! sh-input-select */ 177);
+	var _shInputSelect = __webpack_require__(/*! sh-input-select */ 189);
 	
 	var _shInputSelect2 = _interopRequireDefault(_shInputSelect);
 	
-	var _code = __webpack_require__(/*! ../util/code */ 180);
+	var _code = __webpack_require__(/*! ../util/code */ 177);
 	
 	var _code2 = _interopRequireDefault(_code);
 	
@@ -42055,16 +42528,16 @@
 	
 	exports.default = Complex;
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "complex.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "complex.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 188 */
+/* 193 */
 /*!*************************************!*\
   !*** ./src/sh-input-select/tree.js ***!
   \*************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 	
 	'use strict';
 	
@@ -42078,11 +42551,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _shInputSelect = __webpack_require__(/*! sh-input-select */ 177);
+	var _shInputSelect = __webpack_require__(/*! sh-input-select */ 189);
 	
 	var _shInputSelect2 = _interopRequireDefault(_shInputSelect);
 	
-	var _code = __webpack_require__(/*! ../util/code */ 180);
+	var _code = __webpack_require__(/*! ../util/code */ 177);
 	
 	var _code2 = _interopRequireDefault(_code);
 	
@@ -42218,16 +42691,16 @@
 	
 	exports.default = Tree;
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "tree.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "tree.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 189 */
+/* 194 */
 /*!************************************!*\
   !*** ./src/sh-input-text/index.js ***!
   \************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 	
 	'use strict';
 	
@@ -42241,7 +42714,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _basic = __webpack_require__(/*! ./basic */ 190);
+	var _basic = __webpack_require__(/*! ./basic */ 195);
 	
 	var _basic2 = _interopRequireDefault(_basic);
 	
@@ -42459,16 +42932,16 @@
 	
 	exports.default = ShInputSelectExamples;
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 190 */
+/* 195 */
 /*!************************************!*\
   !*** ./src/sh-input-text/basic.js ***!
   \************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
 	
 	'use strict';
 	
@@ -42482,11 +42955,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _shInputText = __webpack_require__(/*! sh-input-text */ 191);
+	var _shInputText = __webpack_require__(/*! sh-input-text */ 196);
 	
 	var _shInputText2 = _interopRequireDefault(_shInputText);
 	
-	var _code = __webpack_require__(/*! ../util/code */ 180);
+	var _code = __webpack_require__(/*! ../util/code */ 177);
 	
 	var _code2 = _interopRequireDefault(_code);
 	
@@ -42593,10 +43066,10 @@
 	
 	exports.default = Basic;
 	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "basic.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("C:\\ux\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "basic.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 
 /***/ },
-/* 191 */
+/* 196 */
 /*!**********************************************!*\
   !*** ./~/sh-input-text/bin/sh-input-text.js ***!
   \**********************************************/
@@ -42604,7 +43077,7 @@
 
 	(function webpackUniversalModuleDefinition(root, factory) {
 		if(true)
-			module.exports = factory(__webpack_require__(/*! react */ 1), __webpack_require__(/*! lodash */ 178));
+			module.exports = factory(__webpack_require__(/*! react */ 1), __webpack_require__(/*! lodash */ 190));
 		else if(typeof define === 'function' && define.amd)
 			define(["react", "lodash"], factory);
 		else if(typeof exports === 'object')
@@ -42835,7 +43308,7 @@
 		
 		
 		// module
-		exports.push([module.id, ".sh-input-text {\n  display: inline-block;\n  height: 50px;\n  width: 100%; }\n  .sh-input-text label {\n    position: relative;\n    display: block;\n    height: 25px;\n    width: 100%; }\n  .sh-input-text .label {\n    position: absolute;\n    top: 5px;\n    left: 5px;\n    right: 5px;\n    font-size: 12px;\n    color: rgba(255, 255, 255, 0.4);\n    text-transform: uppercase;\n    z-index: 1;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n  .sh-input-text.empty input {\n    background: rgba(255, 255, 255, 0.1); }\n  .sh-input-text input {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 100%;\n    padding: 25px 5px 5px 5px;\n    color: white;\n    border: 0;\n    border-radius: 2px;\n    background: transparent;\n    transition: background 0.25s ease-in-out;\n    outline: 0; }\n    .sh-input-text input:focus {\n      -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6);\n      box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6); }\n    .sh-input-text input:hover {\n      background: rgba(255, 255, 255, 0.1); }\n    .sh-input-text input::-moz-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-text input:-ms-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-text input::-webkit-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n", ""]);
+		exports.push([module.id, ".sh-input-text {\n  display: inline-block;\n  height: 50px;\n  width: 100%; }\n  .sh-input-text label {\n    position: relative;\n    display: block;\n    height: 25px;\n    width: 100%; }\n  .sh-input-text .label {\n    position: absolute;\n    top: 5px;\n    left: 5px;\n    right: 5px;\n    font-size: 12px;\n    color: rgba(255, 255, 255, 0.4);\n    text-transform: uppercase;\n    z-index: 1;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n  .sh-input-text.empty input {\n    background: rgba(255, 255, 255, 0.1); }\n  .sh-input-text input {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: calc(100% - 10px);\n    padding: 25px 5px 5px 5px;\n    color: white;\n    border: 0;\n    border-radius: 2px;\n    background: transparent;\n    transition: background 0.25s ease-in-out;\n    outline: 0; }\n    .sh-input-text input:focus {\n      -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6);\n      box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6); }\n    .sh-input-text input:hover {\n      background: rgba(255, 255, 255, 0.1); }\n    .sh-input-text input::-moz-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-text input:-ms-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-text input::-webkit-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n", ""]);
 		
 		// exports
 	
@@ -43161,53 +43634,7 @@
 	//# sourceMappingURL=sh-input-text.js.map
 
 /***/ },
-/* 192 */
-/*!***********************!*\
-  !*** ./src/main.scss ***!
-  \***********************/
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(/*! !./../~/css-loader!./../~/sass-loader!./main.scss */ 193);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(/*! ./../~/style-loader/addStyles.js */ 186)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./main.scss", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./main.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 193 */
-/*!******************************************************!*\
-  !*** ./~/css-loader!./~/sass-loader!./src/main.scss ***!
-  \******************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(/*! ./../~/css-loader/lib/css-base.js */ 185)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".navSelect {\n  position: absolute;\n  overflow: hidden;\n  transition: height .5s ease; }\n  .navSelect.close {\n    height: 0; }\n  .navSelect.open {\n    height: 800px; }\n  .navSelect .navSelectList {\n    top: 5px;\n    position: relative;\n    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }\n    .navSelect .navSelectList .navSelectItem {\n      min-width: 250px;\n      text-align: center;\n      border-bottom: 1px solid rgba(0, 0, 0, 0.4);\n      background-color: #284D51;\n      position: relative;\n      transition: height 1s ease; }\n      .navSelect .navSelectList .navSelectItem:last-child {\n        border-top: 3px transparent rgba(0, 0, 0, 0.4); }\n      .navSelect .navSelectList .navSelectItem a {\n        border-right: 0; }\n\nbody {\n  color: white;\n  top: 53px; }\n  body #app {\n    height: 100%;\n    width: 100%;\n    overflow-y: auto; }\n  body .nav {\n    position: fixed;\n    height: 53px;\n    top: 0;\n    width: 100%;\n    z-index: 1001;\n    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);\n    background-color: #284D51; }\n    body .nav .navItem {\n      width: auto;\n      display: inline-block; }\n      body .nav .navItem a {\n        border-right: 1px solid rgba(0, 0, 0, 0.4);\n        padding: 20px 50px;\n        display: block; }\n        body .nav .navItem a:hover {\n          background-color: #3ab676; }\n  body .header {\n    position: relative;\n    height: 500px;\n    margin-bottom: 40px;\n    background-color: rgba(0, 0, 0, 0.4); }\n    body .header .subHeader {\n      position: absolute;\n      top: calc(50% - 87.5px);\n      left: calc(50% - 325px);\n      height: 175px;\n      width: 650px; }\n      body .header .subHeader .logo {\n        position: absolute;\n        top: 0;\n        left: 0;\n        height: 175px;\n        max-width: 150px; }\n      body .header .subHeader .name {\n        position: absolute;\n        top: 20px;\n        left: 140px;\n        font-family: \"Roboto Condensed\", \"Open Sans\";\n        font-size: 100px;\n        font-weight: 700;\n        font-style: italic; }\n        body .header .subHeader .name .sub {\n          text-transform: uppercase;\n          color: #00d8ff; }\n      body .header .subHeader .subText {\n        position: absolute;\n        top: 116px;\n        left: 270px;\n        font-size: 16.5px;\n        font-weight: 300; }\n  body .description {\n    margin-bottom: 30px;\n    padding: 20px;\n    font-size: 18px;\n    background-color: rgba(255, 255, 255, 0.1); }\n    body .description .title {\n      font-size: 24px;\n      color: white; }\n    body .description .details {\n      margin-top: 15px;\n      font-weight: 300;\n      color: rgba(255, 255, 255, 0.8);\n      line-height: 1.3; }\n    body .description li {\n      display: list-item;\n      margin-left: 25px; }\n    body .description .depName {\n      font-weight: 400;\n      color: white; }\n  body .example {\n    color: rgba(255, 255, 255, 0.4);\n    margin-bottom: 30px;\n    padding: 20px;\n    background-color: rgba(255, 255, 255, 0.1); }\n    body .example pre {\n      margin: 0;\n      padding: 10px;\n      background-color: rgba(255, 255, 255, 0.1);\n      border-radius: 4px; }\n    body .example .title {\n      margin-bottom: 5px;\n      color: #3ab676; }\n    body .example > .title {\n      color: white;\n      font-size: 24px;\n      margin-bottom: 10px; }\n      body .example > .title a {\n        margin-left: 10px;\n        vertical-align: middle; }\n        body .example > .title a img {\n          max-height: 25px;\n          max-width: 25px;\n          fill: blue; }\n    body .example .section:not(:first-child) {\n      margin-top: 20px; }\n    body .example .options {\n      width: 100%;\n      color: rgba(255, 255, 255, 0.6);\n      border-collapse: collapse;\n      line-height: 1.5; }\n      body .example .options thead th {\n        padding: 10px;\n        border-top: solid 2px rgba(255, 255, 255, 0.1);\n        border-bottom: solid 2px rgba(255, 255, 255, 0.1); }\n        body .example .options thead th.colName {\n          width: 150px; }\n        body .example .options thead th.colType {\n          width: 75px; }\n        body .example .options thead th.colDefault {\n          width: 150px; }\n      body .example .options tbody td {\n        padding: 10px;\n        border-bottom: solid 1px rgba(255, 255, 255, 0.1);\n        vertical-align: top; }\n    body .example .subExampleWrapper:not(:first-child) {\n      margin-top: 30px; }\n  body .subExample > div {\n    display: flex;\n    align-items: stretch;\n    justify-content: space-between; }\n  body .subExample .title:not(:first-child) {\n    margin-top: 20px; }\n  body .subExample .col {\n    width: calc(50% - 30px);\n    padding: 10px;\n    background: rgba(255, 255, 255, 0.1); }\n  body .subExample .details {\n    margin: 5px 0;\n    color: rgba(255, 255, 255, 0.6);\n    line-height: 1.3; }\n  body .subExample .code pre {\n    overflow: auto; }\n  body .subExample .code code {\n    display: inline-block;\n    margin-top: -10px;\n    overflow-x: auto;\n    overflow-y: hidden;\n    line-height: 1; }\n  body .subExample .code .token.attr-name {\n    color: #76c696; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 194 */
+/* 197 */
 /*!********************************!*\
   !*** ./~/sh-core/bin/main.css ***!
   \********************************/
@@ -43216,10 +43643,10 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !./../../css-loader!./../../sass-loader!./main.css */ 195);
+	var content = __webpack_require__(/*! !./../../css-loader!./../../sass-loader!./main.css */ 198);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(/*! ./../../style-loader/addStyles.js */ 186)(content, {});
+	var update = __webpack_require__(/*! ./../../style-loader/addStyles.js */ 184)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -43236,24 +43663,24 @@
 	}
 
 /***/ },
-/* 195 */
+/* 198 */
 /*!***************************************************************!*\
   !*** ./~/css-loader!./~/sass-loader!./~/sh-core/bin/main.css ***!
   \***************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(/*! ./../../css-loader/lib/css-base.js */ 185)();
+	exports = module.exports = __webpack_require__(/*! ./../../css-loader/lib/css-base.js */ 183)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, "html {\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%; }\n\nbody {\n  margin: 0;\n  font: 16px/1 sans-serif;\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-font-smoothing: antialiased; }\n\nh1, h2, h3, h4, p, blockquote, figure, ol, ul {\n  margin: 0;\n  padding: 0; }\n\nmain, li {\n  display: block; }\n\nh1, h2, h3, h4 {\n  font-size: inherit; }\n\nstrong {\n  font-weight: bold; }\n\na, button {\n  color: inherit;\n  transition: .3s;\n  cursor: pointer; }\n\na {\n  text-decoration: none; }\n\nbutton {\n  overflow: visible;\n  border: 0;\n  font: inherit;\n  -webkit-font-smoothing: inherit;\n  letter-spacing: inherit;\n  background: none; }\n\n::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\n:focus {\n  outline: 0; }\n\nimg {\n  max-width: 100%;\n  height: auto;\n  border: 0; }\n\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 300;\n  src: local(\"Roboto Light\"), local(\"Roboto-Light\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/regular/Roboto-Light.ttf */ 196) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: local(\"Roboto\"), local(\"Roboto-Regular\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/regular/Roboto-Regular.ttf */ 197) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 700;\n  src: local(\"Roboto Bold\"), local(\"Roboto-Bold\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/regular/Roboto-Bold.ttf */ 198) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto Condensed';\n  font-style: normal;\n  font-weight: 300;\n  src: local(\"Roboto Condensed Light\"), local(\"Roboto-Light\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/condensed/RobotoCondensed-Light.ttf */ 199) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto Condensed';\n  font-style: normal;\n  font-weight: 400;\n  src: local(\"Roboto Condensed\"), local(\"Roboto-Regular\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/condensed/RobotoCondensed-Regular.ttf */ 200) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto Condensed';\n  font-style: normal;\n  font-weight: 700;\n  src: local(\"Roboto Condensed Bold\"), local(\"Roboto-Bold\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/condensed/RobotoCondensed-Bold.ttf */ 201) + ") format(\"truetype\"); }\n\nbody {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  font-family: \"Roboto\",\"Open Sans\";\n  font-size: 14px;\n  background: linear-gradient(#284D51, #304853) fixed; }\n", ""]);
+	exports.push([module.id, "html {\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%; }\n\nbody {\n  margin: 0;\n  font: 16px/1 sans-serif;\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-font-smoothing: antialiased; }\n\nh1, h2, h3, h4, p, blockquote, figure, ol, ul {\n  margin: 0;\n  padding: 0; }\n\nmain, li {\n  display: block; }\n\nh1, h2, h3, h4 {\n  font-size: inherit; }\n\nstrong {\n  font-weight: bold; }\n\na, button {\n  color: inherit;\n  transition: .3s;\n  cursor: pointer; }\n\na {\n  text-decoration: none; }\n\nbutton {\n  overflow: visible;\n  border: 0;\n  font: inherit;\n  -webkit-font-smoothing: inherit;\n  letter-spacing: inherit;\n  background: none; }\n\n::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\n:focus {\n  outline: 0; }\n\nimg {\n  max-width: 100%;\n  height: auto;\n  border: 0; }\n\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 300;\n  src: local(\"Roboto Light\"), local(\"Roboto-Light\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/regular/Roboto-Light.ttf */ 199) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: local(\"Roboto\"), local(\"Roboto-Regular\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/regular/Roboto-Regular.ttf */ 200) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 700;\n  src: local(\"Roboto Bold\"), local(\"Roboto-Bold\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/regular/Roboto-Bold.ttf */ 201) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto Condensed';\n  font-style: normal;\n  font-weight: 300;\n  src: local(\"Roboto Condensed Light\"), local(\"Roboto-Light\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/condensed/RobotoCondensed-Light.ttf */ 202) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto Condensed';\n  font-style: normal;\n  font-weight: 400;\n  src: local(\"Roboto Condensed\"), local(\"Roboto-Regular\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/condensed/RobotoCondensed-Regular.ttf */ 203) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto Condensed';\n  font-style: normal;\n  font-weight: 700;\n  src: local(\"Roboto Condensed Bold\"), local(\"Roboto-Bold\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/condensed/RobotoCondensed-Bold.ttf */ 204) + ") format(\"truetype\"); }\n\nbody {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  font-family: \"Roboto\",\"Open Sans\";\n  font-size: 14px;\n  background: linear-gradient(#284D51, #304853) fixed; }\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 196 */
+/* 199 */
 /*!*************************************************************!*\
   !*** ./~/sh-core/src/fonts/roboto/regular/Roboto-Light.ttf ***!
   \*************************************************************/
@@ -43262,7 +43689,7 @@
 	module.exports = __webpack_require__.p + "7b5fb88f12bec8143f00e21bc3222124.ttf";
 
 /***/ },
-/* 197 */
+/* 200 */
 /*!***************************************************************!*\
   !*** ./~/sh-core/src/fonts/roboto/regular/Roboto-Regular.ttf ***!
   \***************************************************************/
@@ -43271,7 +43698,7 @@
 	module.exports = __webpack_require__.p + "ac3f799d5bbaf5196fab15ab8de8431c.ttf";
 
 /***/ },
-/* 198 */
+/* 201 */
 /*!************************************************************!*\
   !*** ./~/sh-core/src/fonts/roboto/regular/Roboto-Bold.ttf ***!
   \************************************************************/
@@ -43280,7 +43707,7 @@
 	module.exports = __webpack_require__.p + "d329cc8b34667f114a95422aaad1b063.ttf";
 
 /***/ },
-/* 199 */
+/* 202 */
 /*!************************************************************************!*\
   !*** ./~/sh-core/src/fonts/roboto/condensed/RobotoCondensed-Light.ttf ***!
   \************************************************************************/
@@ -43289,7 +43716,7 @@
 	module.exports = __webpack_require__.p + "10de31607e2027fd1ccce9c6fcbec5f2.ttf";
 
 /***/ },
-/* 200 */
+/* 203 */
 /*!**************************************************************************!*\
   !*** ./~/sh-core/src/fonts/roboto/condensed/RobotoCondensed-Regular.ttf ***!
   \**************************************************************************/
@@ -43298,7 +43725,7 @@
 	module.exports = __webpack_require__.p + "b0b1845ecce8ab6a503971e808a8409c.ttf";
 
 /***/ },
-/* 201 */
+/* 204 */
 /*!***********************************************************************!*\
   !*** ./~/sh-core/src/fonts/roboto/condensed/RobotoCondensed-Bold.ttf ***!
   \***********************************************************************/
@@ -43307,426 +43734,26 @@
 	module.exports = __webpack_require__.p + "4b8b4b377e8cb358cf886d13c7bb287c.ttf";
 
 /***/ },
-/* 202 */
-/*!******************************!*\
-  !*** ./src/sh-core/index.js ***!
-  \******************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-	
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _usage = __webpack_require__(/*! ./usage */ 204);
-	
-	var _usage2 = _interopRequireDefault(_usage);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var ShCoreExamples = function (_React$Component) {
-	    _inherits(ShCoreExamples, _React$Component);
-	
-	    function ShCoreExamples() {
-	        _classCallCheck(this, ShCoreExamples);
-	
-	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(ShCoreExamples).call(this));
-	
-	        _this.state = {
-	            examples: [{ name: 'Usage', code: _react2.default.createElement(_usage2.default, null) }]
-	        };
-	        return _this;
-	    }
-	
-	    _createClass(ShCoreExamples, [{
-	        key: 'render',
-	        value: function render() {
-	            var examples = this.state.examples.map(function (example, index) {
-	                return _react2.default.createElement(
-	                    'div',
-	                    { key: index, className: 'subExampleWrapper' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        example.name
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'subExample' },
-	                        example.code
-	                    )
-	                );
-	            });
-	
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'section' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Installation'
-	                    ),
-	                    _react2.default.createElement(
-	                        'pre',
-	                        { className: 'instructions' },
-	                        'npm install sh-core --save'
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'section' },
-	                    examples
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return ShCoreExamples;
-	}(_react2.default.Component);
-	
-	exports.default = ShCoreExamples;
-	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ },
-/* 203 */,
-/* 204 */
-/*!******************************!*\
-  !*** ./src/sh-core/usage.js ***!
-  \******************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\node_modules\\react-hot-api\\modules\\index.js"), RootInstanceProvider = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
-	
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _code = __webpack_require__(/*! ../util/code */ 180);
-	
-	var _code2 = _interopRequireDefault(_code);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	__webpack_require__(/*! ./example.scss */ 206);
-	
-	var codeText = {};
-	
-	codeText.cssMain = '\nrequire(\'../node_modules/sh-core/bin/main.css\');\n';
-	codeText.cssMain2 = '\n{\n    test: /\\.(ttf|eot|svg|jpg|png)(\\?v=[0-9]\\.[0-9]\\.[0-9])?$/,\n    loader: "file-loader"\n},\n';
-	
-	codeText.scssBase = '\n@import \'../node_modules/sh-core/src/base\';\n';
-	
-	codeText.scssColor = '\n.background1 {\n    padding: 20px;\n    color: $color-font;\n    background: $color-primary;\n    border-radius: $size-border-radius;\n}\n';
-	
-	codeText.scssEllipse = '\n.ellipse1 {\n    width: 200px;\n    @include ellipsis;\n}\n';
-	
-	codeText.scssFont = '\n.font1 {\n    font-family: $font-family-condensed;\n    font-size: $size-font4;\n    font-weight: $font-weight-light;\n    color: $color-font;\n}\n';
-	
-	codeText.scssTransition = '\n.transition1 {\n    width: 100px;\n    padding: 20px;\n    background: $color-box-background4;\n    transition: width $transition, background $transition-hover;\n\n    &:hover {\n        background: $color-box-background2;\n    }\n\n    &.wide {\n        width: 200px;\n    }\n}\n';
-	
-	var Usage = function (_React$Component) {
-	    _inherits(Usage, _React$Component);
-	
-	    function Usage() {
-	        _classCallCheck(this, Usage);
-	
-	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Usage).call(this));
-	
-	        _this.state = {
-	            clickMe: 'wide'
-	        };
-	
-	        _this.clickMe = _this.clickMe.bind(_this);
-	        return _this;
-	    }
-	
-	    _createClass(Usage, [{
-	        key: 'clickMe',
-	        value: function clickMe() {
-	            this.setState({
-	                clickMe: this.state.clickMe === 'wide' ? 'small' : 'wide'
-	            });
-	        }
-	    }, {
-	        key: 'render',
-	        value: function render() {
-	            return _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'col code' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Include Main CSS'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'details' },
-	                        'This CSS file includes a minimal CSS reset for browsers. It also has a standard <body> style. This includes the fonts.'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'details' },
-	                        'Install a new loader to handle the font files.'
-	                    ),
-	                    _react2.default.createElement(
-	                        'pre',
-	                        { className: 'instructions' },
-	                        'npm install file-loader --save-dev'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'details' },
-	                        'Add the new loader to your list of loaders in webpack.config.js'
-	                    ),
-	                    (0, _code2.default)(codeText.cssMain2, 'javascript'),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'details' },
-	                        'Add this line to your entry JS file.'
-	                    ),
-	                    (0, _code2.default)(codeText.cssMain, 'javascript'),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Include Base SCSS'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'details' },
-	                        'This SCSS file can be included on your SCSS files to provide mixins for standard processes and variables for colors.'
-	                    ),
-	                    (0, _code2.default)(codeText.scssBase, 'scss'),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Set Color'
-	                    ),
-	                    (0, _code2.default)(codeText.scssColor, 'scss'),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Add Ellipse'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'details' },
-	                        'For ellipse to work they need to have a width, either a % or static.'
-	                    ),
-	                    (0, _code2.default)(codeText.scssEllipse, 'scss'),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Change Font'
-	                    ),
-	                    (0, _code2.default)(codeText.scssFont, 'scss'),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Using Transitions'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'details' },
-	                        'We have some defaults for transitions for hover and standard, specifically time and ease.'
-	                    ),
-	                    (0, _code2.default)(codeText.scssTransition, 'scss')
-	                ),
-	                _react2.default.createElement(
-	                    'div',
-	                    { className: 'col component specialScssUsage' },
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Set Color'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'details' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'background1' },
-	                            'Using color variables'
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Add Ellipse'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'details' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'ellipse1' },
-	                            'This is some really long text. See how long it is.'
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Font Changes'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'details' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'font1' },
-	                            'This font has standard changes.'
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'Using Transitions'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'details' },
-	                        _react2.default.createElement(
-	                            'div',
-	                            { className: 'transition1 ' + this.state.clickMe, onClick: this.clickMe },
-	                            'Click Me'
-	                        )
-	                    )
-	                )
-	            );
-	        }
-	    }]);
-	
-	    return Usage;
-	}(_react2.default.Component);
-	
-	exports.default = Usage;
-	
-	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("d:\\projects\\SuperheroUI\\superheroui.github.io\\node_modules\\react-hot-loader\\makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "usage.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
-
-/***/ },
 /* 205 */
-/*!********************************************!*\
-  !*** ./~/prismjs/components/prism-scss.js ***!
-  \********************************************/
-/***/ function(module, exports) {
-
-	Prism.languages.scss = Prism.languages.extend('css', {
-		'comment': {
-			pattern: /(^|[^\\])(?:\/\*[\w\W]*?\*\/|\/\/.*)/,
-			lookbehind: true
-		},
-		'atrule': {
-			pattern: /@[\w-]+(?:\([^()]+\)|[^(])*?(?=\s+[{;])/,
-			inside: {
-				'rule': /@[\w-]+/
-				// See rest below
-			}
-		},
-		// url, compassified
-		'url': /(?:[-a-z]+-)*url(?=\()/i,
-		// CSS selector regex is not appropriate for Sass
-		// since there can be lot more things (var, @ directive, nesting..)
-		// a selector must start at the end of a property or after a brace (end of other rules or nesting)
-		// it can contain some characters that aren't used for defining rules or end of selector, & (parent selector), or interpolated variable
-		// the end of a selector is found when there is no rules in it ( {} or {\s}) or if there is a property (because an interpolated var
-		// can "pass" as a selector- e.g: proper#{$erty})
-		// this one was hard to do, so please be careful if you edit this one :)
-		'selector': {
-			// Initial look-ahead is used to prevent matching of blank selectors
-			pattern: /(?=\S)[^@;\{\}\(\)]?([^@;\{\}\(\)]|&|#\{\$[-_\w]+\})+(?=\s*\{(\}|\s|[^\}]+(:|\{)[^\}]+))/m,
-			inside: {
-				'placeholder': /%[-_\w]+/
-			}
-		}
-	});
-	
-	Prism.languages.insertBefore('scss', 'atrule', {
-		'keyword': [
-			/@(?:if|else(?: if)?|for|each|while|import|extend|debug|warn|mixin|include|function|return|content)/i,
-			{
-				pattern: /( +)(?:from|through)(?= )/,
-				lookbehind: true
-			}
-		]
-	});
-	
-	Prism.languages.insertBefore('scss', 'property', {
-		// var and interpolated vars
-		'variable': /\$[-_\w]+|#\{\$[-_\w]+\}/
-	});
-	
-	Prism.languages.insertBefore('scss', 'function', {
-		'placeholder': {
-			pattern: /%[-_\w]+/,
-			alias: 'selector'
-		},
-		'statement': /\B!(?:default|optional)\b/i,
-		'boolean': /\b(?:true|false)\b/,
-		'null': /\bnull\b/,
-		'operator': {
-			pattern: /(\s)(?:[-+*\/%]|[=!]=|<=?|>=?|and|or|not)(?=\s)/,
-			lookbehind: true
-		}
-	});
-	
-	Prism.languages.scss['atrule'].inside.rest = Prism.util.clone(Prism.languages.scss);
-
-/***/ },
-/* 206 */
-/*!**********************************!*\
-  !*** ./src/sh-core/example.scss ***!
-  \**********************************/
+/*!***********************!*\
+  !*** ./src/main.scss ***!
+  \***********************/
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !./../../~/css-loader!./../../~/sass-loader!./example.scss */ 207);
+	var content = __webpack_require__(/*! !./../~/css-loader!./../~/sass-loader!./main.scss */ 206);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(/*! ./../../~/style-loader/addStyles.js */ 186)(content, {});
+	var update = __webpack_require__(/*! ./../~/style-loader/addStyles.js */ 184)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./example.scss", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./example.scss");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./main.scss", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/sass-loader/index.js!./main.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -43736,18 +43763,18 @@
 	}
 
 /***/ },
-/* 207 */
-/*!*****************************************************************!*\
-  !*** ./~/css-loader!./~/sass-loader!./src/sh-core/example.scss ***!
-  \*****************************************************************/
+/* 206 */
+/*!******************************************************!*\
+  !*** ./~/css-loader!./~/sass-loader!./src/main.scss ***!
+  \******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(/*! ./../../~/css-loader/lib/css-base.js */ 185)();
+	exports = module.exports = __webpack_require__(/*! ./../~/css-loader/lib/css-base.js */ 183)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, ".specialScssUsage .background1 {\n  padding: 20px;\n  color: rgba(255, 255, 255, 0.6);\n  background: #3ab676;\n  border-radius: 4px; }\n\n.specialScssUsage .ellipse1 {\n  width: 200px;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis; }\n\n.specialScssUsage .font1 {\n  font-family: \"Roboto Condensed\", \"Open Sans\";\n  font-size: 20px;\n  font-weight: 300;\n  color: white; }\n\n.specialScssUsage .transition1 {\n  width: 100px;\n  padding: 20px;\n  background: rgba(255, 255, 255, 0.2);\n  transition: width 0.5s ease-in-out, background 0.25s ease-in-out; }\n  .specialScssUsage .transition1:hover {\n    background: rgba(255, 255, 255, 0.6); }\n  .specialScssUsage .transition1.wide {\n    width: 200px; }\n", ""]);
+	exports.push([module.id, ".navSelect {\n  position: absolute;\n  overflow: hidden;\n  transition: height .5s ease; }\n  .navSelect.close {\n    height: 0; }\n  .navSelect.open {\n    height: 800px; }\n  .navSelect .navSelectList {\n    top: 5px;\n    position: relative;\n    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }\n    .navSelect .navSelectList .navSelectItem {\n      min-width: 250px;\n      text-align: center;\n      border-bottom: 1px solid rgba(0, 0, 0, 0.4);\n      background-color: #284D51;\n      position: relative;\n      transition: height 1s ease; }\n      .navSelect .navSelectList .navSelectItem:last-child {\n        border-top: 3px transparent rgba(0, 0, 0, 0.4); }\n      .navSelect .navSelectList .navSelectItem a {\n        border-right: 0; }\n\nbody {\n  color: white;\n  top: 53px; }\n  body #app {\n    height: 100%;\n    width: 100%;\n    overflow-y: auto; }\n  body .nav {\n    position: fixed;\n    height: 53px;\n    top: 0;\n    width: 100%;\n    z-index: 1001;\n    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);\n    background-color: #284D51; }\n    body .nav .navItem {\n      width: auto;\n      display: inline-block; }\n      body .nav .navItem a {\n        border-right: 1px solid rgba(0, 0, 0, 0.4);\n        padding: 20px 50px;\n        display: block; }\n        body .nav .navItem a:hover {\n          background-color: #3ab676; }\n  body .header {\n    position: relative;\n    height: 500px;\n    margin-bottom: 40px;\n    background-color: rgba(0, 0, 0, 0.4); }\n    body .header .subHeader {\n      position: absolute;\n      top: calc(50% - 87.5px);\n      left: calc(50% - 325px);\n      height: 175px;\n      width: 650px; }\n      body .header .subHeader .logo {\n        position: absolute;\n        top: 0;\n        left: 0;\n        height: 175px;\n        max-width: 150px; }\n      body .header .subHeader .name {\n        position: absolute;\n        top: 20px;\n        left: 140px;\n        font-family: \"Roboto Condensed\", \"Open Sans\";\n        font-size: 100px;\n        font-weight: 700;\n        font-style: italic; }\n        body .header .subHeader .name .sub {\n          text-transform: uppercase;\n          color: #00d8ff; }\n      body .header .subHeader .subText {\n        position: absolute;\n        top: 116px;\n        left: 270px;\n        font-size: 16.5px;\n        font-weight: 300; }\n  body .description {\n    margin-bottom: 30px;\n    padding: 20px;\n    font-size: 18px;\n    background-color: rgba(255, 255, 255, 0.1); }\n    body .description .title {\n      font-size: 24px;\n      color: white; }\n    body .description .details {\n      margin-top: 15px;\n      font-weight: 300;\n      color: rgba(255, 255, 255, 0.8);\n      line-height: 1.3; }\n    body .description li {\n      display: list-item;\n      margin-left: 25px; }\n    body .description .depName {\n      font-weight: 400;\n      color: white; }\n  body .example {\n    color: rgba(255, 255, 255, 0.4);\n    margin-bottom: 30px;\n    padding: 20px;\n    background-color: rgba(255, 255, 255, 0.1); }\n    body .example pre {\n      margin: 0;\n      padding: 10px;\n      background-color: rgba(255, 255, 255, 0.1);\n      border-radius: 4px; }\n    body .example .title {\n      margin-bottom: 5px;\n      color: #3ab676; }\n    body .example > .title {\n      color: white;\n      font-size: 24px;\n      margin-bottom: 10px; }\n      body .example > .title a {\n        margin-left: 10px;\n        vertical-align: middle; }\n        body .example > .title a img {\n          max-height: 25px;\n          max-width: 25px;\n          fill: blue; }\n    body .example .section:not(:first-child) {\n      margin-top: 20px; }\n    body .example .options {\n      width: 100%;\n      color: rgba(255, 255, 255, 0.6);\n      border-collapse: collapse;\n      line-height: 1.5; }\n      body .example .options thead th {\n        padding: 10px;\n        border-top: solid 2px rgba(255, 255, 255, 0.1);\n        border-bottom: solid 2px rgba(255, 255, 255, 0.1); }\n        body .example .options thead th.colName {\n          width: 150px; }\n        body .example .options thead th.colType {\n          width: 75px; }\n        body .example .options thead th.colDefault {\n          width: 150px; }\n      body .example .options tbody td {\n        padding: 10px;\n        border-bottom: solid 1px rgba(255, 255, 255, 0.1);\n        vertical-align: top; }\n    body .example .subExampleWrapper:not(:first-child) {\n      margin-top: 30px; }\n  body .subExample > div {\n    display: flex;\n    align-items: stretch;\n    justify-content: space-between; }\n  body .subExample .title {\n    color: white; }\n  body .subExample .title:not(:first-child) {\n    margin-top: 20px; }\n  body .subExample .col {\n    width: calc(50% - 30px);\n    padding: 10px;\n    background: rgba(255, 255, 255, 0.1); }\n  body .subExample .details {\n    margin: 5px 0;\n    color: rgba(255, 255, 255, 0.6);\n    line-height: 1.3; }\n  body .subExample .code pre {\n    overflow: auto; }\n  body .subExample .code code {\n    display: inline-block;\n    margin-top: -10px;\n    overflow-x: auto;\n    overflow-y: hidden;\n    line-height: 1; }\n  body .subExample .code .token.attr-name {\n    color: #76c696; }\n", ""]);
 	
 	// exports
 

@@ -34,4 +34,22 @@
             width: 200px;
         }
     }
+
+    .primary-block {
+        width: 100%;
+        height: 50px;
+        background-color: $color-primary;
+    }
+
+    .secondary-block {
+        width: 100%;
+        height: 50px;
+        background-color: $color-secondary;
+    }
+
+    .thirdary-block {
+        width: 100%;
+        height: 50px;
+        background-color: $color-thirdary;
+    }
 }
