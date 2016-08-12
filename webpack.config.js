@@ -16,8 +16,8 @@ module.exports = {
                 loaders: ['style', 'css', 'sass']
             },
             {
-                test: /\.(ttf|eot|svg|jpg|png)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: "file-loader"
+                test: /\.(ttf)$/,
+                loader: "url-loader"
             },
         ],
 
