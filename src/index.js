@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import ShCoreExamples from './sh-core';
 import ShInputSelectExamples from './sh-input-select';
 import ShInputTextExamples from './sh-input-text';
 
+require('../node_modules/sh-core/bin/main.css');
 require('./main.scss');
 
 class Homepage extends React.Component {
@@ -12,6 +14,7 @@ class Homepage extends React.Component {
 
         this.state = {
             examples:  [
+                {name: 'ShCore', code: <ShCoreExamples />, github: 'https://github.com/SuperheroUI/shCore'},
                 {name: 'ShInputSelect', code: <ShInputSelectExamples />, github: 'https://github.com/SuperheroUI/shInputSelect'},
                 {name: 'ShInputText', code: <ShInputTextExamples />, github: 'https://github.com/SuperheroUI/shInputText'}
             ],

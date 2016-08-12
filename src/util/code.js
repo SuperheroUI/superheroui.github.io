@@ -1,6 +1,9 @@
 import React from 'react';
 import Prism from 'prismjs';
+
+// Include additional language formatting
 import PrismJSX from 'prismjs/components/prism-jsx';
+import PrismSCSS from 'prismjs/components/prism-scss';
 
 require('../../node_modules/prismjs/themes/prism-tomorrow.css');
 

@@ -15,6 +15,10 @@ module.exports = {
                 test: /\.s?css$/,
                 loaders: ['style', 'css', 'sass']
             },
+            {
+                test: /\.(ttf|eot|svg|jpg|png)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: "file-loader"
+            },
         ],
 
     }
