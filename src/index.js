@@ -6,6 +6,7 @@ import ShInputSelectExamples from './sh-input-select';
 import ShInputTextExamples from './sh-input-text';
 
 require('../node_modules/sh-core/bin/main.css');
+require('../node_modules/sh-icons/bin/main.css');
 require('./main.scss');
 
 class Homepage extends React.Component {
