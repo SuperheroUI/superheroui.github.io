@@ -65,6 +65,12 @@ class ShInputSelectExamples extends React.Component {
                             <td>false</td>
                             <td>Set the html required flag on the input field.</td>
                         </tr>
+                        <tr>
+                            <td>properties</td>
+                            <td>attribute</td>
+                            <td></td>
+                            <td>All other attributes and listeners are passed down.</td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>
