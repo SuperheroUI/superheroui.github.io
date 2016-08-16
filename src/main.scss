@@ -182,12 +182,17 @@ body {
             a {
                 margin-left: 10px;
                 vertical-align: middle;
+            }
 
+            .repo {
                 img {
                     max-height: 25px;
-                    max-width: 25px;
+                }
+            }
 
-                    fill: blue;
+            .build {
+                img {
+                    max-height: 25px;
                 }
             }
         }
