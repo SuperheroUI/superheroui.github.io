@@ -170,7 +170,7 @@ body {
         }
 
         .title {
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             color: $color-primary;
         }
 
@@ -251,12 +251,12 @@ body {
         }
 
         .title:not(:first-child) {
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         .col {
-            width: calc(50% - 30px);
-            padding: 10px;
+            width: calc(50% - 50px);
+            padding: 20px;
 
             background: $color-box-background5;
         }

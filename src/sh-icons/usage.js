@@ -69,8 +69,8 @@ class Usage extends React.Component {
                 </div>
                 <div className="col component">
                     <div className="title">About</div>
-                    <p>The images are now included as a font. Also CSS classes for each images can now be used to add
-                        images to your page. Simply reference the CSS class in your html.</p>
+                    <div className="details">The images are now included as a font. Also CSS classes for each images can now be used to add
+                        images to your page. Simply reference the CSS class in your html.</div>
                     <div className="title">List of Icons</div>
                     <div className="details">
                         <table className="icon-table">
