@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import ShCoreExamples from './sh-core';
 import ShInputSelectExamples from './sh-input-select';
 import ShInputTextExamples from './sh-input-text';
+import ShIconsExamples from './sh-icons';
 
 require('../node_modules/sh-core/bin/main.css');
 require('../node_modules/sh-icons/bin/main.css');
@@ -17,7 +18,8 @@ class Homepage extends React.Component {
             examples:  [
                 {name: 'ShCore', code: <ShCoreExamples />, github: 'https://github.com/SuperheroUI/shCore'},
                 {name: 'ShInputSelect', code: <ShInputSelectExamples />, github: 'https://github.com/SuperheroUI/shInputSelect'},
-                {name: 'ShInputText', code: <ShInputTextExamples />, github: 'https://github.com/SuperheroUI/shInputText'}
+                {name: 'ShInputText', code: <ShInputTextExamples />, github: 'https://github.com/SuperheroUI/shInputText'},
+                {name: 'ShIcons', code: <ShIconsExamples />, github: 'https://github.com/SuperheroUI/shIcons'}
             ],
             menuState:'close'
         };

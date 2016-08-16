@@ -33,12 +33,12 @@
     "webpack": "^1.13.1"
   },
   "dependencies": {
-    "lodash": "^4.14.1",
+    "lodash": "^4.15.0",
     "prismjs": "^1.5.1",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "sh-core": "0.1.6",
-    "sh-icons":"0.1.6",
+    "sh-icons": "0.2.3",
     "sh-input-select": "0.1.4",
     "sh-input-text": "0.1.8"
   }
