@@ -2,6 +2,8 @@ import React from 'react';
 
 import Usage from './usage';
 
+require('../../node_modules/sh-buttons/bin/main.css');
+
 class ShIconsExamples extends React.Component {
     constructor() {
         super();

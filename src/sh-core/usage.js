@@ -129,10 +129,10 @@ class Usage extends React.Component {
                     </div>
 
                     <div className="title">Default Colors</div>
-                    <p>isCore comes with several default colors. Stick to this color pallet and keep your app
+                    <div className="details">isCore comes with several default colors. Stick to this color pallet and keep your app
                         consistent with design standards. Use color variables, do not hard code any colors into your app.
                         Explore the _bases.scss file for a full list of sass variables. (node_modules/sh-core/src/_base.scss)
-                    </p>
+                    </div>
 
                     <div className="title">$color-primary</div>
                     <div className="primary-block"></div>

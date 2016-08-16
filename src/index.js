@@ -8,8 +8,6 @@ import ShIconsExamples from './sh-icons';
 import ShButtonsExamples from './sh-buttons';
 
 require('../node_modules/sh-core/bin/main.css');
-require('../node_modules/sh-icons/bin/main.css');
-require('../node_modules/sh-buttons/bin/main.css');
 require('./main.scss');
 
 class Homepage extends React.Component {
