@@ -17,7 +17,7 @@ class Homepage extends React.Component {
         this.state = {
             examples:  [
                 {name: 'ShCore', code: <ShCoreExamples />, github: 'https://github.com/SuperheroUI/shCore'},
-                {name: 'ShInputSelect', code: <ShInputSelectExamples />, github: 'https://github.com/SuperheroUI/shInputSelect'},
+                {name: 'ShInputSelect', code: <ShInputSelectExamples />, repo: 'SuperheroUI/shInputSelect'},
                 {name: 'ShInputText', code: <ShInputTextExamples />, github: 'https://github.com/SuperheroUI/shInputText'},
                 {name: 'ShIcons', code: <ShIconsExamples />, github: 'https://github.com/SuperheroUI/shIcons'}
             ],
@@ -35,14 +35,25 @@ class Homepage extends React.Component {
 
     render() {
         let examples = this.state.examples.map((example, index) => {
-            let githubLink = null;
+            let metaData = null;
             if (example.github) {
-                githubLink = <a href={example.github} target="_blank"><img src="images/github.svg" /></a>;
+                metaData = (
+                    <span className="meta">
+                        <a className="repo" href={example.github} target="_blank"><img src="images/github.svg" /></a>
+                    </span>
+                );
+            } else if (example.repo) {
+                metaData = (
+                    <span className="meta">
+                        <a className="repo" href={'https://github.com/' + example.repo} target="_blank"><img src="images/github.svg" /></a>
+                        <a className="build" href={'https://travis-ci.org/' + example.repo} target="_blank"><img src={'https://travis-ci.org/' + example.repo + '.svg?branch=master'} /></a>
+                    </span>
+                );
             }
 
             return (
                 <div key={index} className="example" id={example.name}>
-                    <div className="title">{example.name}{githubLink}</div>
+                    <div className="title">{example.name}{metaData}</div>
                     <div className="code">{example.code}</div>
                 </div>
             )
