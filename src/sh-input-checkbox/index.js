@@ -1,8 +1,7 @@
 import React from 'react';
-
 import Basic from './basic';
 
-class ShInputTextExamples extends React.Component {
+class ShInputCheckboxExamples extends React.Component {
     constructor() {
         super();
 
@@ -27,7 +26,7 @@ class ShInputTextExamples extends React.Component {
             <div>
                 <div className="section">
                     <div className="title">Installation</div>
-                    <pre className="instructions">npm install sh-input-text</pre>
+                    <pre className="instructions">npm install sh-input-checkbox</pre>
                 </div>
                 <div className="section">
                     <div className="title">Options</div>
@@ -43,9 +42,9 @@ class ShInputTextExamples extends React.Component {
                         <tbody>
                         <tr>
                             <td>value</td>
-                            <td>any</td>
+                            <td>boolean</td>
                             <td> </td>
-                            <td>Default value to set text to. Also will update when value changes.</td>
+                            <td>Default value to set checkbox to.</td>
                         </tr>
                         <tr>
                             <td>onChange</td>
@@ -76,4 +75,4 @@ class ShInputTextExamples extends React.Component {
     }
 }
 
-export default ShInputTextExamples;
+export default ShInputCheckboxExamples;
