@@ -47,7 +47,7 @@ class ShInputSelectExamples extends React.Component {
                                 <td>tabs</td>
                                 <td>array</td>
                                 <td>[ ]</td>
-                                <td>Default value to set select to. Also will update when value changes.</td>
+                                <td>List of tabs to show to user.</td>
                             </tr>
                             <tr>
                                 <td>tabs[0].header</td>

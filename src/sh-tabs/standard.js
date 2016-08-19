@@ -64,8 +64,6 @@ class Standard extends React.Component {
                     <div style={{height: '200px'}}>
                         <ShTabs tabs={this.tabs} onChange={this.handleChange} />
                     </div>
-                    <div className="title">State</div>
-                    <div className="details">{JSON.stringify(this.state)}</div>
                 </div>
             </div>
         )

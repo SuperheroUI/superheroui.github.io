@@ -25090,7 +25090,7 @@
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
-	                                    'Default value to set select to. Also will update when value changes.'
+	                                    'List of tabs to show to user.'
 	                                )
 	                            ),
 	                            _react2.default.createElement(
@@ -25341,16 +25341,6 @@
 	                        'div',
 	                        { style: { height: '200px' } },
 	                        _react2.default.createElement(_shTabs2.default, { tabs: this.tabs, onChange: this.handleChange })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'State'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'details' },
-	                        JSON.stringify(this.state)
 	                    )
 	                )
 	            );
@@ -43074,16 +43064,6 @@
 	                        'div',
 	                        { style: { height: '200px' } },
 	                        _react2.default.createElement(_shTabs2.default, { tabs: this.tabs, type: 'card', onChange: this.handleChange })
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'title' },
-	                        'State'
-	                    ),
-	                    _react2.default.createElement(
-	                        'div',
-	                        { className: 'details' },
-	                        JSON.stringify(this.state)
 	                    )
 	                )
 	            );
