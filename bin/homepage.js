@@ -42972,7 +42972,7 @@
 	
 	codeText.jsImport = '\nimport ShTabs from \'sh-tabs\';\n';
 	
-	codeText.jsState = '\nthis.state = {\n    tabs: [\n        {header: \'User Info\', content: <div><h1>User info here!</h1><p>Hello user info</p></div>},\n        {header: \'Company Info\', content: <div>Company info here</div>},\n        {header: \'Settings\', content: <div>All Settings are listed here</div>},\n    ]\n};\n';
+	codeText.jsState = '\nthis.state = {\n    tabs: [\n        {header: <div><i className="icon-person"></i> User Info</div>, content: <div><h1>User info here!</h1><p>Hello user info</p></div>},\n        {header: \'Company Info\', content: <div>Company info here</div>},\n        {header: \'Settings\', content: <div>All Settings are listed here</div>},\n    ]\n};\n';
 	
 	codeText.jsHandle = '\nhandleChange(oldIndex, newIndex) {\n    console.log(\'Changes\', oldIndex, newIndex);\n}\n';
 	
@@ -42986,7 +42986,12 @@
 	
 	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Card).call(this));
 	
-	        _this.tabs = [{ header: 'User Info', content: _react2.default.createElement(
+	        _this.tabs = [{ header: _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement('i', { className: 'icon-person' }),
+	                ' User Info'
+	            ), content: _react2.default.createElement(
 	                'div',
 	                null,
 	                _react2.default.createElement(
