@@ -19,6 +19,27 @@ codeText.cssMain2 = `
 codeText.html = `
 <i className="icon-phone"></i>
 `;
+codeText.htmlCircle = `
+<div className="circle">
+    <i className="icon-people"></i>
+</div>
+
+<div className="circle-simple">
+    <i className="icon-people"></i>
+</div>
+
+<div className="circle sm">
+    <i className="icon-people"></i>
+</div>
+
+<div className="circle dark">
+    <i className="icon-people"></i>
+</div>
+
+<div className="circle active">
+    <i className="icon-people"></i>
+</div>
+`;
 
 var groupedList = _.chunk(iconList, 4);
 
@@ -64,21 +85,98 @@ class Usage extends React.Component {
                     <pre className="instructions">npm install url-loader --save-dev</pre>
                     <div className="details">Add the new loader to your list of loaders in webpack.config.js</div>
                     {Code(codeText.cssMain2, 'javascript')}
-                    <div className="title">HTML</div>
+                    <div className="title">HTML for Icons</div>
                     {Code(codeText.html, 'jsx')}
+                    <div className="title">HTML for Circles</div>
+                    {Code(codeText.htmlCircle, 'jsx')}
                 </div>
                 <div className="col component">
                     <div className="title">About</div>
-                    <div className="details">The images are now included as a font. Also CSS classes for each images can now be used to add
-                        images to your page. Simply reference the CSS class in your html.</div>
+                    <div className="details">The images are now included as a font. Also CSS classes for each images can
+                        now be used to add
+                        images to your page. Simply reference the CSS class in your html.
+                    </div>
                     <div className="title">List of Icons</div>
                     <div className="details">
                         <table className="icon-table">
                             <tbody>
-                                {icons}
+                            {icons}
                             </tbody>
                         </table>
+                    </div>
+                    <div className="title">Icons with Circles</div>
+                    <div className="details">
+                        <table className="icon-table">
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <div className="circle">
+                                        <i className="icon-people"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div className="circle active">
+                                        <i className="icon-people"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div className="circle dark">
+                                        <i className="icon-people"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div className="circle disabled">
+                                        <i className="icon-people"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div className="circle-simple">
+                                        <i className="icon-people"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div className="circle-simple active">
+                                        <i className="icon-people"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div className="circle-simple dark">
+                                        <i className="icon-people"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div className="circle-simple disabled" disabled>
+                                        <i className="icon-people"></i>
+                                    </div>
+                                </td>
+                            </tr>
 
+                            <tr>
+                                <td>
+                                    <div className="circle sm">
+                                        <i className="icon-people"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div className="circle sm active">
+                                        <i className="icon-people"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div className="circle sm dark">
+                                        <i className="icon-people"></i>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div className="circle sm selected">
+                                        <i className="icon-people"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
