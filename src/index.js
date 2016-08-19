@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import ShInputCheckboxExamples from './sh-input-checkbox';
 import ShCoreExamples from './sh-core';
+import ShTabsExamples from './sh-tabs';
 import ShInputSelectExamples from './sh-input-select';
 import ShInputTextExamples from './sh-input-text';
 import ShIconsExamples from './sh-icons';
@@ -18,6 +19,7 @@ class Homepage extends React.Component {
         this.state = {
             examples:  [
                 {name: 'ShCore', code: <ShCoreExamples />, github: 'https://github.com/SuperheroUI/shCore'},
+                {name: 'ShTabs', code: <ShTabsExamples />, repo: 'SuperheroUI/shTabs'},
                 {name: 'ShInputSelect', code: <ShInputSelectExamples />, repo: 'SuperheroUI/shInputSelect'},
                 {name: 'ShInputText', code: <ShInputTextExamples />, github: 'https://github.com/SuperheroUI/shInputText'},
                 {name: 'ShInputCheckbox', code: <ShInputCheckboxExamples />, github: 'https://github.com/SuperheroUI/shInputCheckbox'},
