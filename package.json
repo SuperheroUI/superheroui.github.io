@@ -42,6 +42,7 @@
     "sh-icons": "0.2.4",
     "sh-input-select": "0.1.6",
     "sh-input-text": "0.1.9",
+    "sh-input-currency": "0.1.0",
     "sh-input-checkbox":"0.1.3",
     "sh-tabs": "^0.1.0"
   }
