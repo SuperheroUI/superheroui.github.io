@@ -43,7 +43,7 @@ class ShInputCurrencyExamples extends React.Component {
                         <tbody>
                         <tr>
                             <td>value</td>
-                            <td>any</td>
+                            <td>number</td>
                             <td> </td>
                             <td>Default value to set number to. Also will update when value changes.</td>
                         </tr>
