@@ -54,6 +54,7 @@ class Homepage extends React.Component {
                     <span className="meta">
                         <a className="repo" href={'https://github.com/' + example.repo} target="_blank"><img src="images/github.svg" /></a>
                         <a className="build" href={'https://travis-ci.org/' + example.repo} target="_blank"><img src={'https://travis-ci.org/' + example.repo + '.svg?branch=master'} /></a>
+                        <a className="coverage" href={'https://coveralls.io/github/' + example.repo + '?branch=master'} target="_blank"><img src={'https://coveralls.io/repos/github/' + example.repo + '/badge.svg?branch=master'} /></a>
                     </span>
                 );
             }
