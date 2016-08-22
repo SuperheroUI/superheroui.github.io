@@ -6,6 +6,7 @@ import ShCoreExamples from './sh-core';
 import ShTabsExamples from './sh-tabs';
 import ShInputSelectExamples from './sh-input-select';
 import ShInputTextExamples from './sh-input-text';
+import ShInputCurrencyExamples from './sh-input-currency';
 import ShIconsExamples from './sh-icons';
 import ShButtonsExamples from './sh-buttons';
 
@@ -22,6 +23,7 @@ class Homepage extends React.Component {
                 {name: 'ShTabs', code: <ShTabsExamples />, repo: 'SuperheroUI/shTabs'},
                 {name: 'ShInputSelect', code: <ShInputSelectExamples />, repo: 'SuperheroUI/shInputSelect'},
                 {name: 'ShInputText', code: <ShInputTextExamples />, github: 'https://github.com/SuperheroUI/shInputText'},
+                {name: 'ShInputCurrency', code: <ShInputCurrencyExamples />, github: 'https://github.com/SuperheroUI/shInputCurrency'},
                 {name: 'ShInputCheckbox', code: <ShInputCheckboxExamples />, github: 'https://github.com/SuperheroUI/shInputCheckbox'},
                 {name: 'ShIcons', code: <ShIconsExamples />, github: 'https://github.com/SuperheroUI/shIcons'},
                 {name: 'ShButtons', code: <ShButtonsExamples />, github: 'https://github.com/SuperheroUI/shButtons'}
