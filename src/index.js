@@ -19,7 +19,7 @@ class Homepage extends React.Component {
 
         this.state = {
             examples:  [
-                {name: 'ShCore', code: <ShCoreExamples />, github: 'https://github.com/SuperheroUI/shCore'},
+                {name: 'ShCore', code: <ShCoreExamples />, repo: 'SuperheroUI/shCore'},
                 {name: 'ShTabs', code: <ShTabsExamples />, repo: 'SuperheroUI/shTabs'},
                 {name: 'ShInputSelect', code: <ShInputSelectExamples />, repo: 'SuperheroUI/shInputSelect'},
                 {name: 'ShInputText', code: <ShInputTextExamples />, repo: 'SuperheroUI/shInputText'},
