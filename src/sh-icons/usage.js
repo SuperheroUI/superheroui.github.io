@@ -41,6 +41,10 @@ codeText.htmlCircle = `
 </div>
 `;
 
+codeText.cssMain = `
+require('../node_modules/sh-icons/bin/main.css');
+`;
+
 var groupedList = _.chunk(iconList, 4);
 
 class Usage extends React.Component {
@@ -85,6 +89,8 @@ class Usage extends React.Component {
                     <pre className="instructions">npm install url-loader --save-dev</pre>
                     <div className="details">Add the new loader to your list of loaders in webpack.config.js</div>
                     {Code(codeText.cssMain2, 'javascript')}
+                    <div className="details">Add this line to your entry JS file.</div>
+                    {Code(codeText.cssMain, 'javascript')}
                     <div className="title">HTML for Icons</div>
                     {Code(codeText.html, 'jsx')}
                     <div className="title">HTML for Circles</div>
