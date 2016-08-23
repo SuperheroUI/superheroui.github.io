@@ -11,6 +11,9 @@ codeText.html = `
 <button class="btn btn-default btn-sm">A small button</button>
 <button class="btn btn-default disabled">A disabled button</button>
 `;
+codeText.cssMain = `
+require('../node_modules/sh-buttons/bin/main.css');
+`;
 
 
 class Usage extends React.Component {
@@ -36,6 +39,8 @@ class Usage extends React.Component {
                 <div className="col code">
                     <div className="title">HTML</div>
                     {Code(codeText.html, 'jsx')}
+                    <div className="details">Add this line to your entry JS file.</div>
+                    {Code(codeText.cssMain, 'javascript')}
                 </div>
                 <div className="col component">
                     <div className="title">About</div>
