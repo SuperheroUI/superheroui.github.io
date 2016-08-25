@@ -9,6 +9,7 @@ import ShInputTextExamples from './sh-input-text';
 import ShInputCurrencyExamples from './sh-input-currency';
 import ShIconsExamples from './sh-icons';
 import ShButtonsExamples from './sh-buttons';
+import ShFormExamples from './sh-form';
 
 require('../node_modules/sh-core/bin/main.css');
 require('./main.scss');
@@ -25,6 +26,7 @@ class Homepage extends React.Component {
                 {name: 'ShInputText', code: <ShInputTextExamples />, repo: 'SuperheroUI/shInputText'},
                 {name: 'ShInputCurrency', code: <ShInputCurrencyExamples />, repo: 'SuperheroUI/shInputCurrency'},
                 {name: 'ShInputCheckbox', code: <ShInputCheckboxExamples />, github: 'https://github.com/SuperheroUI/shInputCheckbox'},
+                {name: 'ShForm', code: <ShFormExamples />, repo: 'SuperheroUI/shForm'},
                 {name: 'ShIcons', code: <ShIconsExamples />, github: 'https://github.com/SuperheroUI/shIcons'},
                 {name: 'ShButtons', code: <ShButtonsExamples />, github: 'https://github.com/SuperheroUI/shButtons'}
             ],
