@@ -12,7 +12,7 @@ codeText.html = `
 <button class="btn btn-default disabled">A disabled button</button>
 `;
 codeText.cssMain = `
-require('../node_modules/sh-buttons/bin/main.css');
+require('sh-buttons/bin/main.css');
 `;
 
 

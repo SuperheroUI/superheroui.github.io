@@ -8,41 +8,40 @@ require('./example.scss');
 let codeText = {};
 
 codeText.cssMain = `
-require('../node_modules/sh-icons/bin/main.css');
+require('sh-icons/bin/main.css');
 `;
+
 codeText.cssMain2 = `
 {
     test: /\\.(ttf|eot|svg|woff)$/,
     loader: "url-loader"
 },
 `;
+
 codeText.html = `
-<i className="icon-phone"></i>
+<i className="sh-icon icon-phone" />
 `;
+
 codeText.htmlCircle = `
 <div className="circle">
-    <i className="icon-people"></i>
+    <i className="sh-icon icon-people" />
 </div>
 
 <div className="circle-simple">
-    <i className="icon-people"></i>
+    <i className="sh-icon icon-people" />
 </div>
 
 <div className="circle sm">
-    <i className="icon-people"></i>
+    <i className="sh-icon icon-people" />
 </div>
 
 <div className="circle dark">
-    <i className="icon-people"></i>
+    <i className="sh-icon icon-people" />
 </div>
 
 <div className="circle active">
-    <i className="icon-people"></i>
+    <i className="sh-icon icon-people" />
 </div>
-`;
-
-codeText.cssMain = `
-require('../node_modules/sh-icons/bin/main.css');
 `;
 
 var groupedList = _.chunk(iconList, 4);
@@ -69,7 +68,7 @@ class Usage extends React.Component {
             var iconRows = iconGroup.map((icons, iconIndex) => {
                 return (
                     <td key={iconIndex}>
-                        <i className={"icon-"+icons.name}></i>
+                        <i className={"sh-icon icon-"+icons.name}></i>
                         <div className="table-label">{icons.name}</div>
                     </td>
                 )
@@ -85,6 +84,7 @@ class Usage extends React.Component {
         return (
             <div>
                 <div className="col code">
+                    <div className="title">Setup</div>
                     <div className="details">Install a new loader to handle the font files.</div>
                     <pre className="instructions">npm install url-loader --save-dev</pre>
                     <div className="details">Add the new loader to your list of loaders in webpack.config.js</div>
@@ -117,44 +117,44 @@ class Usage extends React.Component {
                             <tr>
                                 <td>
                                     <div className="circle">
-                                        <i className="icon-people"></i>
+                                        <i className="sh-icon icon-people" />
                                     </div>
                                 </td>
                                 <td>
                                     <div className="circle active">
-                                        <i className="icon-people"></i>
+                                        <i className="sh-icon icon-people" />
                                     </div>
                                 </td>
                                 <td>
                                     <div className="circle dark">
-                                        <i className="icon-people"></i>
+                                        <i className="sh-icon icon-people" />
                                     </div>
                                 </td>
                                 <td>
                                     <div className="circle disabled">
-                                        <i className="icon-people"></i>
+                                        <i className="sh-icon icon-people" />
                                     </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <div className="circle-simple">
-                                        <i className="icon-people"></i>
+                                        <i className="sh-icon icon-people" />
                                     </div>
                                 </td>
                                 <td>
                                     <div className="circle-simple active">
-                                        <i className="icon-people"></i>
+                                        <i className="sh-icon icon-people" />
                                     </div>
                                 </td>
                                 <td>
                                     <div className="circle-simple dark">
-                                        <i className="icon-people"></i>
+                                        <i className="sh-icon icon-people" />
                                     </div>
                                 </td>
                                 <td>
                                     <div className="circle-simple disabled" disabled>
-                                        <i className="icon-people"></i>
+                                        <i className="sh-icon icon-people" />
                                     </div>
                                 </td>
                             </tr>
@@ -162,22 +162,22 @@ class Usage extends React.Component {
                             <tr>
                                 <td>
                                     <div className="circle sm">
-                                        <i className="icon-people"></i>
+                                        <i className="sh-icon icon-people" />
                                     </div>
                                 </td>
                                 <td>
                                     <div className="circle sm active">
-                                        <i className="icon-people"></i>
+                                        <i className="sh-icon icon-people" />
                                     </div>
                                 </td>
                                 <td>
                                     <div className="circle sm dark">
-                                        <i className="icon-people"></i>
+                                        <i className="sh-icon icon-people" />
                                     </div>
                                 </td>
                                 <td>
                                     <div className="circle sm selected">
-                                        <i className="icon-people"></i>
+                                        <i className="sh-icon icon-people" />
                                     </div>
                                 </td>
                             </tr>

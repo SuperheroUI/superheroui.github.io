@@ -7,7 +7,7 @@ require('./example.scss');
 let codeText = {};
 
 codeText.cssMain = `
-require('../node_modules/sh-core/bin/main.css');
+require('sh-core/bin/main.css');
 `;
 codeText.cssMain2 = `
 {

@@ -39,8 +39,10 @@ $nav-height: 53px;
 }
 
 body {
+    top: $nav-height;
+
     color: $color-font;
-    top:$nav-height;
+    background: linear-gradient($color-secondary, $color-thirdary) fixed;
 
     #app {
         height: 100%;
