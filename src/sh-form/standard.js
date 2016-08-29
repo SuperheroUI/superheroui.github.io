@@ -25,7 +25,11 @@ onSubmit() {
 `;
 
 codeText.html = `
-<ShForm onSubmit={this.onSubmit} />
+<ShForm onSubmit={this.onSubmit}>
+    <ShInputSelct ... />
+    <ShInputSelct ... />
+    <button className="btn btn-primary">Submit</button>
+</ShForm>
 `;
 
 class Standard extends React.Component {

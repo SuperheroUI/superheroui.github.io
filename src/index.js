@@ -20,15 +20,15 @@ class Homepage extends React.Component {
 
         this.state = {
             examples:  [
-                {name: 'ShCore', code: <ShCoreExamples />, repo: 'SuperheroUI/shCore'},
-                {name: 'ShTabs', code: <ShTabsExamples />, repo: 'SuperheroUI/shTabs'},
-                {name: 'ShInputSelect', code: <ShInputSelectExamples />, repo: 'SuperheroUI/shInputSelect'},
-                {name: 'ShInputText', code: <ShInputTextExamples />, repo: 'SuperheroUI/shInputText'},
-                {name: 'ShInputCurrency', code: <ShInputCurrencyExamples />, repo: 'SuperheroUI/shInputCurrency'},
-                {name: 'ShInputCheckbox', code: <ShInputCheckboxExamples />, github: 'https://github.com/SuperheroUI/shInputCheckbox'},
-                {name: 'ShForm', code: <ShFormExamples />, repo: 'SuperheroUI/shForm'},
-                {name: 'ShIcons', code: <ShIconsExamples />, github: 'https://github.com/SuperheroUI/shIcons'},
-                {name: 'ShButtons', code: <ShButtonsExamples />, github: 'https://github.com/SuperheroUI/shButtons'}
+                {name: 'ShCore', code: <ShCoreExamples />, repo: 'SuperheroUI/shCore', npm: 'sh-core'},
+                {name: 'ShTabs', code: <ShTabsExamples />, repo: 'SuperheroUI/shTabs', npm: 'sh-tabs'},
+                {name: 'ShInputSelect', code: <ShInputSelectExamples />, repo: 'SuperheroUI/shInputSelect', npm: 'sh-input-select'},
+                {name: 'ShInputText', code: <ShInputTextExamples />, repo: 'SuperheroUI/shInputText', npm: 'sh-input-text'},
+                {name: 'ShInputCurrency', code: <ShInputCurrencyExamples />, repo: 'SuperheroUI/shInputCurrency', npm: 'sh-input-currency'},
+                {name: 'ShInputCheckbox', code: <ShInputCheckboxExamples />, github: 'https://github.com/SuperheroUI/shInputCheckbox', npm: 'sh-input-checkbox'},
+                {name: 'ShForm', code: <ShFormExamples />, repo: 'SuperheroUI/shForm', npm: 'sh-form'},
+                {name: 'ShIcons', code: <ShIconsExamples />, github: 'https://github.com/SuperheroUI/shIcons', npm: 'sh-icons'},
+                {name: 'ShButtons', code: <ShButtonsExamples />, github: 'https://github.com/SuperheroUI/shButtons', npm: 'sh-buttons'}
             ],
             menuState:'close'
         };
@@ -52,11 +52,17 @@ class Homepage extends React.Component {
                     </span>
                 );
             } else if (example.repo) {
+                let npmLink = null;
+                if (example.npm) {
+                    npmLink =
+                        <a href={'https://badge.fury.io/js/' + example.npm}><img src={'https://badge.fury.io/js/' + example.npm + '.svg'} alt="npm version" height="18" /></a>;
+                }
                 metaData = (
                     <span className="meta">
                         <a className="repo" href={'https://github.com/' + example.repo} target="_blank"><img src="images/github.svg" /></a>
                         <a className="build" href={'https://travis-ci.org/' + example.repo} target="_blank"><img src={'https://travis-ci.org/' + example.repo + '.svg?branch=master'} /></a>
                         <a className="coverage" href={'https://coveralls.io/github/' + example.repo + '?branch=master'} target="_blank"><img src={'https://coveralls.io/repos/github/' + example.repo + '/badge.svg?branch=master'} /></a>
+                        {npmLink}
                     </span>
                 );
             }
