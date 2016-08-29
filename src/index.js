@@ -11,7 +11,7 @@ import ShIconsExamples from './sh-icons';
 import ShButtonsExamples from './sh-buttons';
 import ShFormExamples from './sh-form';
 
-require('../node_modules/sh-core/bin/main.css');
+require('sh-core/bin/main.css');
 require('./main.scss');
 
 class Homepage extends React.Component {
@@ -27,7 +27,7 @@ class Homepage extends React.Component {
                 {name: 'ShInputCurrency', code: <ShInputCurrencyExamples />, repo: 'SuperheroUI/shInputCurrency', npm: 'sh-input-currency'},
                 {name: 'ShInputCheckbox', code: <ShInputCheckboxExamples />, github: 'https://github.com/SuperheroUI/shInputCheckbox', npm: 'sh-input-checkbox'},
                 {name: 'ShForm', code: <ShFormExamples />, repo: 'SuperheroUI/shForm', npm: 'sh-form'},
-                {name: 'ShIcons', code: <ShIconsExamples />, github: 'https://github.com/SuperheroUI/shIcons', npm: 'sh-icons'},
+                {name: 'ShIcons', code: <ShIconsExamples />, repo: 'SuperheroUI/shIcons', npm: 'sh-icons', hideCoverage: true},
                 {name: 'ShButtons', code: <ShButtonsExamples />, github: 'https://github.com/SuperheroUI/shButtons', npm: 'sh-buttons'}
             ],
             menuState:'close'
@@ -54,14 +54,18 @@ class Homepage extends React.Component {
             } else if (example.repo) {
                 let npmLink = null;
                 if (example.npm) {
-                    npmLink =
-                        <a href={'https://badge.fury.io/js/' + example.npm}><img src={'https://badge.fury.io/js/' + example.npm + '.svg'} alt="npm version" height="18" /></a>;
+                    npmLink = <a href={'https://badge.fury.io/js/' + example.npm}><img src={'https://badge.fury.io/js/' + example.npm + '.svg'} alt="npm version" height="18" /></a>;
+                }
+
+                let coverageLink = null;
+                if (!example.hideCoverage) {
+                    coverageLink = <a className="coverage" href={'https://coveralls.io/github/' + example.repo + '?branch=master'} target="_blank"><img src={'https://coveralls.io/repos/github/' + example.repo + '/badge.svg?branch=master'} /></a>;
                 }
                 metaData = (
                     <span className="meta">
                         <a className="repo" href={'https://github.com/' + example.repo} target="_blank"><img src="images/github.svg" /></a>
                         <a className="build" href={'https://travis-ci.org/' + example.repo} target="_blank"><img src={'https://travis-ci.org/' + example.repo + '.svg?branch=master'} /></a>
-                        <a className="coverage" href={'https://coveralls.io/github/' + example.repo + '?branch=master'} target="_blank"><img src={'https://coveralls.io/repos/github/' + example.repo + '/badge.svg?branch=master'} /></a>
+                        {coverageLink}
                         {npmLink}
                     </span>
                 );

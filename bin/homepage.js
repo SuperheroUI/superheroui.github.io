@@ -105,7 +105,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(/*! ../~/sh-core/bin/main.css */ 227);
+	__webpack_require__(/*! sh-core/bin/main.css */ 227);
 	__webpack_require__(/*! ./main.scss */ 235);
 	
 	var Homepage = function (_React$Component) {
@@ -117,7 +117,7 @@
 	        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Homepage).call(this));
 	
 	        _this.state = {
-	            examples: [{ name: 'ShCore', code: _react2.default.createElement(_shCore2.default, null), repo: 'SuperheroUI/shCore', npm: 'sh-core' }, { name: 'ShTabs', code: _react2.default.createElement(_shTabs2.default, null), repo: 'SuperheroUI/shTabs', npm: 'sh-tabs' }, { name: 'ShInputSelect', code: _react2.default.createElement(_shInputSelect2.default, null), repo: 'SuperheroUI/shInputSelect', npm: 'sh-input-select' }, { name: 'ShInputText', code: _react2.default.createElement(_shInputText2.default, null), repo: 'SuperheroUI/shInputText', npm: 'sh-input-text' }, { name: 'ShInputCurrency', code: _react2.default.createElement(_shInputCurrency2.default, null), repo: 'SuperheroUI/shInputCurrency', npm: 'sh-input-currency' }, { name: 'ShInputCheckbox', code: _react2.default.createElement(_shInputCheckbox2.default, null), github: 'https://github.com/SuperheroUI/shInputCheckbox', npm: 'sh-input-checkbox' }, { name: 'ShForm', code: _react2.default.createElement(_shForm2.default, null), repo: 'SuperheroUI/shForm', npm: 'sh-form' }, { name: 'ShIcons', code: _react2.default.createElement(_shIcons2.default, null), github: 'https://github.com/SuperheroUI/shIcons', npm: 'sh-icons' }, { name: 'ShButtons', code: _react2.default.createElement(_shButtons2.default, null), github: 'https://github.com/SuperheroUI/shButtons', npm: 'sh-buttons' }],
+	            examples: [{ name: 'ShCore', code: _react2.default.createElement(_shCore2.default, null), repo: 'SuperheroUI/shCore', npm: 'sh-core' }, { name: 'ShTabs', code: _react2.default.createElement(_shTabs2.default, null), repo: 'SuperheroUI/shTabs', npm: 'sh-tabs' }, { name: 'ShInputSelect', code: _react2.default.createElement(_shInputSelect2.default, null), repo: 'SuperheroUI/shInputSelect', npm: 'sh-input-select' }, { name: 'ShInputText', code: _react2.default.createElement(_shInputText2.default, null), repo: 'SuperheroUI/shInputText', npm: 'sh-input-text' }, { name: 'ShInputCurrency', code: _react2.default.createElement(_shInputCurrency2.default, null), repo: 'SuperheroUI/shInputCurrency', npm: 'sh-input-currency' }, { name: 'ShInputCheckbox', code: _react2.default.createElement(_shInputCheckbox2.default, null), github: 'https://github.com/SuperheroUI/shInputCheckbox', npm: 'sh-input-checkbox' }, { name: 'ShForm', code: _react2.default.createElement(_shForm2.default, null), repo: 'SuperheroUI/shForm', npm: 'sh-form' }, { name: 'ShIcons', code: _react2.default.createElement(_shIcons2.default, null), repo: 'SuperheroUI/shIcons', npm: 'sh-icons', hideCoverage: true }, { name: 'ShButtons', code: _react2.default.createElement(_shButtons2.default, null), github: 'https://github.com/SuperheroUI/shButtons', npm: 'sh-buttons' }],
 	            menuState: 'close'
 	        };
 	
@@ -156,6 +156,15 @@
 	                            _react2.default.createElement('img', { src: 'https://badge.fury.io/js/' + example.npm + '.svg', alt: 'npm version', height: '18' })
 	                        );
 	                    }
+	
+	                    var coverageLink = null;
+	                    if (!example.hideCoverage) {
+	                        coverageLink = _react2.default.createElement(
+	                            'a',
+	                            { className: 'coverage', href: 'https://coveralls.io/github/' + example.repo + '?branch=master', target: '_blank' },
+	                            _react2.default.createElement('img', { src: 'https://coveralls.io/repos/github/' + example.repo + '/badge.svg?branch=master' })
+	                        );
+	                    }
 	                    metaData = _react2.default.createElement(
 	                        'span',
 	                        { className: 'meta' },
@@ -169,11 +178,7 @@
 	                            { className: 'build', href: 'https://travis-ci.org/' + example.repo, target: '_blank' },
 	                            _react2.default.createElement('img', { src: 'https://travis-ci.org/' + example.repo + '.svg?branch=master' })
 	                        ),
-	                        _react2.default.createElement(
-	                            'a',
-	                            { className: 'coverage', href: 'https://coveralls.io/github/' + example.repo + '?branch=master', target: '_blank' },
-	                            _react2.default.createElement('img', { src: 'https://coveralls.io/repos/github/' + example.repo + '/badge.svg?branch=master' })
-	                        ),
+	                        coverageLink,
 	                        npmLink
 	                    );
 	                }
@@ -23274,7 +23279,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	// Include additional language formatting
-	__webpack_require__(/*! ../../~/prismjs/themes/prism-tomorrow.css */ 182);
+	__webpack_require__(/*! prismjs/themes/prism-tomorrow.css */ 182);
 	
 	var CodeService = function CodeService(codeString, languageName) {
 	    var codeHighlighted = _prismjs2.default.highlight(codeString, _prismjs2.default.languages[languageName]);
@@ -24681,7 +24686,7 @@
 	
 	var codeText = {};
 	
-	codeText.cssMain = '\nrequire(\'../node_modules/sh-core/bin/main.css\');\n';
+	codeText.cssMain = '\nrequire(\'sh-core/bin/main.css\');\n';
 	codeText.cssMain2 = '\n{\n    test: /\\.(ttf)$/,\n    loader: "url-loader"\n},\n';
 	
 	codeText.scssBase = '\n@import \'../node_modules/sh-core/src/base\';\n';
@@ -47469,7 +47474,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(/*! ../../~/sh-icons/bin/main.css */ 212);
+	__webpack_require__(/*! sh-icons/bin/main.css */ 212);
 	
 	var ShIconsExamples = function (_React$Component) {
 	    _inherits(ShIconsExamples, _React$Component);
@@ -47585,12 +47590,13 @@
 	
 	var codeText = {};
 	
-	codeText.cssMain = '\nrequire(\'../node_modules/sh-icons/bin/main.css\');\n';
-	codeText.cssMain2 = '\n{\n    test: /\\.(ttf|eot|svg|woff)$/,\n    loader: "url-loader"\n},\n';
-	codeText.html = '\n<i className="icon-phone"></i>\n';
-	codeText.htmlCircle = '\n<div className="circle">\n    <i className="icon-people"></i>\n</div>\n\n<div className="circle-simple">\n    <i className="icon-people"></i>\n</div>\n\n<div className="circle sm">\n    <i className="icon-people"></i>\n</div>\n\n<div className="circle dark">\n    <i className="icon-people"></i>\n</div>\n\n<div className="circle active">\n    <i className="icon-people"></i>\n</div>\n';
+	codeText.cssMain = '\nrequire(\'sh-icons/bin/main.css\');\n';
 	
-	codeText.cssMain = '\nrequire(\'../node_modules/sh-icons/bin/main.css\');\n';
+	codeText.cssMain2 = '\n{\n    test: /\\.(ttf|eot|svg|woff)$/,\n    loader: "url-loader"\n},\n';
+	
+	codeText.html = '\n<i className="sh-icon icon-phone" />\n';
+	
+	codeText.htmlCircle = '\n<div className="circle">\n    <i className="sh-icon icon-people" />\n</div>\n\n<div className="circle-simple">\n    <i className="sh-icon icon-people" />\n</div>\n\n<div className="circle sm">\n    <i className="sh-icon icon-people" />\n</div>\n\n<div className="circle dark">\n    <i className="sh-icon icon-people" />\n</div>\n\n<div className="circle active">\n    <i className="sh-icon icon-people" />\n</div>\n';
 	
 	var groupedList = _.chunk(_iconData2.default, 4);
 	
@@ -47625,7 +47631,7 @@
 	                    return _react2.default.createElement(
 	                        'td',
 	                        { key: iconIndex },
-	                        _react2.default.createElement('i', { className: "icon-" + icons.name }),
+	                        _react2.default.createElement('i', { className: "sh-icon icon-" + icons.name }),
 	                        _react2.default.createElement(
 	                            'div',
 	                            { className: 'table-label' },
@@ -47647,6 +47653,11 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'col code' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'title' },
+	                        'Setup'
+	                    ),
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'details' },
@@ -47736,7 +47747,7 @@
 	                                        _react2.default.createElement(
 	                                            'div',
 	                                            { className: 'circle' },
-	                                            _react2.default.createElement('i', { className: 'icon-people' })
+	                                            _react2.default.createElement('i', { className: 'sh-icon icon-people' })
 	                                        )
 	                                    ),
 	                                    _react2.default.createElement(
@@ -47745,7 +47756,7 @@
 	                                        _react2.default.createElement(
 	                                            'div',
 	                                            { className: 'circle active' },
-	                                            _react2.default.createElement('i', { className: 'icon-people' })
+	                                            _react2.default.createElement('i', { className: 'sh-icon icon-people' })
 	                                        )
 	                                    ),
 	                                    _react2.default.createElement(
@@ -47754,7 +47765,7 @@
 	                                        _react2.default.createElement(
 	                                            'div',
 	                                            { className: 'circle dark' },
-	                                            _react2.default.createElement('i', { className: 'icon-people' })
+	                                            _react2.default.createElement('i', { className: 'sh-icon icon-people' })
 	                                        )
 	                                    ),
 	                                    _react2.default.createElement(
@@ -47763,7 +47774,7 @@
 	                                        _react2.default.createElement(
 	                                            'div',
 	                                            { className: 'circle disabled' },
-	                                            _react2.default.createElement('i', { className: 'icon-people' })
+	                                            _react2.default.createElement('i', { className: 'sh-icon icon-people' })
 	                                        )
 	                                    )
 	                                ),
@@ -47776,7 +47787,7 @@
 	                                        _react2.default.createElement(
 	                                            'div',
 	                                            { className: 'circle-simple' },
-	                                            _react2.default.createElement('i', { className: 'icon-people' })
+	                                            _react2.default.createElement('i', { className: 'sh-icon icon-people' })
 	                                        )
 	                                    ),
 	                                    _react2.default.createElement(
@@ -47785,7 +47796,7 @@
 	                                        _react2.default.createElement(
 	                                            'div',
 	                                            { className: 'circle-simple active' },
-	                                            _react2.default.createElement('i', { className: 'icon-people' })
+	                                            _react2.default.createElement('i', { className: 'sh-icon icon-people' })
 	                                        )
 	                                    ),
 	                                    _react2.default.createElement(
@@ -47794,7 +47805,7 @@
 	                                        _react2.default.createElement(
 	                                            'div',
 	                                            { className: 'circle-simple dark' },
-	                                            _react2.default.createElement('i', { className: 'icon-people' })
+	                                            _react2.default.createElement('i', { className: 'sh-icon icon-people' })
 	                                        )
 	                                    ),
 	                                    _react2.default.createElement(
@@ -47803,7 +47814,7 @@
 	                                        _react2.default.createElement(
 	                                            'div',
 	                                            { className: 'circle-simple disabled', disabled: true },
-	                                            _react2.default.createElement('i', { className: 'icon-people' })
+	                                            _react2.default.createElement('i', { className: 'sh-icon icon-people' })
 	                                        )
 	                                    )
 	                                ),
@@ -47816,7 +47827,7 @@
 	                                        _react2.default.createElement(
 	                                            'div',
 	                                            { className: 'circle sm' },
-	                                            _react2.default.createElement('i', { className: 'icon-people' })
+	                                            _react2.default.createElement('i', { className: 'sh-icon icon-people' })
 	                                        )
 	                                    ),
 	                                    _react2.default.createElement(
@@ -47825,7 +47836,7 @@
 	                                        _react2.default.createElement(
 	                                            'div',
 	                                            { className: 'circle sm active' },
-	                                            _react2.default.createElement('i', { className: 'icon-people' })
+	                                            _react2.default.createElement('i', { className: 'sh-icon icon-people' })
 	                                        )
 	                                    ),
 	                                    _react2.default.createElement(
@@ -47834,7 +47845,7 @@
 	                                        _react2.default.createElement(
 	                                            'div',
 	                                            { className: 'circle sm dark' },
-	                                            _react2.default.createElement('i', { className: 'icon-people' })
+	                                            _react2.default.createElement('i', { className: 'sh-icon icon-people' })
 	                                        )
 	                                    ),
 	                                    _react2.default.createElement(
@@ -47843,7 +47854,7 @@
 	                                        _react2.default.createElement(
 	                                            'div',
 	                                            { className: 'circle sm selected' },
-	                                            _react2.default.createElement('i', { className: 'icon-people' })
+	                                            _react2.default.createElement('i', { className: 'sh-icon icon-people' })
 	                                        )
 	                                    )
 	                                )
@@ -48212,7 +48223,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'superhero';\n  src: url(" + __webpack_require__(/*! ../src/fonts/icons/superhero.eot */ 214) + ");\n  src: url(" + __webpack_require__(/*! ../src/fonts/icons/superhero.eot */ 214) + ") format(\"embedded-opentype\"), url(" + __webpack_require__(/*! ../src/fonts/icons/superhero.ttf */ 215) + ") format(\"truetype\"), url(" + __webpack_require__(/*! ../src/fonts/icons/superhero.woff */ 216) + ") format(\"woff\"), url(" + __webpack_require__(/*! ../src/fonts/icons/superhero.svg */ 217) + ") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  font-family: 'superhero' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-record:before {\n  content: \"\\E901\"; }\n\n.icon-text-bubble:before {\n  content: \"\\E902\"; }\n\n.icon-people-three:before {\n  content: \"\\E903\"; }\n\n.icon-dial-pad:before {\n  content: \"\\E904\"; }\n\n.icon-envelope:before {\n  content: \"\\E905\"; }\n\n.icon-end-call:before {\n  content: \"\\E906\"; }\n\n.icon-right-arrow:before {\n  content: \"\\E907\"; }\n\n.icon-linkedin:before {\n  content: \"\\E908\"; }\n\n.icon-neuralytics:before {\n  content: \"\\E900\"; }\n\n.icon-phone:before {\n  content: \"\\E909\"; }\n\n.icon-clock:before {\n  content: \"\\E90A\"; }\n\n.icon-phone-volume:before {\n  content: \"\\E90B\"; }\n\n.icon-calendar:before {\n  content: \"\\E910\"; }\n\n.icon-radio-button:before {\n  content: \"\\E911\"; }\n\n.icon-radio-button-empty:before {\n  content: \"\\E912\"; }\n\n.icon-check-box-empty:before {\n  content: \"\\E913\"; }\n\n.icon-text-bubbles:before {\n  content: \"\\E917\"; }\n\n.icon-check-box:before {\n  content: \"\\E918\"; }\n\n.icon-check:before {\n  content: \"\\E919\"; }\n\n.icon-buildings:before {\n  content: \"\\E91A\"; }\n\n.icon-download:before {\n  content: \"\\E914\"; }\n\n.icon-check-outline:before {\n  content: \"\\E915\"; }\n\n.icon-bolt:before {\n  content: \"\\E916\"; }\n\n.icon-chevron-up:before {\n  content: \"\\E90C\"; }\n\n.icon-chevron-down:before {\n  content: \"\\E90D\"; }\n\n.icon-chevron-left:before {\n  content: \"\\E90E\"; }\n\n.icon-chevron-right:before {\n  content: \"\\E90F\"; }\n\n.icon-insidesales-logo:before {\n  content: \"\\E91B\"; }\n\n.icon-paperclip:before {\n  content: \"\\E91C\"; }\n\n.icon-x:before {\n  content: \"\\E91D\"; }\n\n.icon-cursor:before {\n  content: \"\\E91E\"; }\n\n.icon-font:before {\n  content: \"\\E91F\"; }\n\n.icon-gear:before {\n  content: \"\\E920\"; }\n\n.icon-phone-arrow:before {\n  content: \"\\E921\"; }\n\n.icon-info:before {\n  content: \"\\E922\"; }\n\n.icon-face-neutral:before {\n  content: \"\\E923\"; }\n\n.icon-medal:before {\n  content: \"\\E924\"; }\n\n.icon-minus:before {\n  content: \"\\E925\"; }\n\n.icon-icosahedron:before {\n  content: \"\\E926\"; }\n\n.icon-face-sad:before {\n  content: \"\\E927\"; }\n\n.icon-plus:before {\n  content: \"\\E928\"; }\n\n.icon-search:before {\n  content: \"\\E929\"; }\n\n.icon-face-happy:before {\n  content: \"\\E92A\"; }\n\n.icon-trophy:before {\n  content: \"\\E92B\"; }\n\n.icon-vision:before {\n  content: \"\\E92C\"; }\n\n.icon-hourglass:before {\n  content: \"\\E92D\"; }\n\n.icon-flag:before {\n  content: \"\\E92E\"; }\n\n.icon-ban:before {\n  content: \"\\E92F\"; }\n\n.icon-flow-chart:before {\n  content: \"\\E930\"; }\n\n.icon-heart:before {\n  content: \"\\E931\"; }\n\n.icon-people:before {\n  content: \"\\E932\"; }\n\n.icon-glove:before {\n  content: \"\\E933\"; }\n\n.icon-twitter:before {\n  content: \"\\E934\"; }\n\n.icon-play:before {\n  content: \"\\E935\"; }\n\n.icon-expand:before {\n  content: \"\\E936\"; }\n\n.icon-collapse:before {\n  content: \"\\E937\"; }\n\n.icon-facebook:before {\n  content: \"\\E938\"; }\n\n.icon-facebook-negative:before {\n  content: \"\\E939\"; }\n\n.icon-laurels:before {\n  content: \"\\E93A\"; }\n\n.icon-trash:before {\n  content: \"\\E93B\"; }\n\n.icon-person:before {\n  content: \"\\E93C\"; }\n\n.circle, .circle-simple {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  position: relative;\n  display: inline-block;\n  margin: 5px;\n  width: 66px;\n  height: 66px;\n  border-radius: 300px;\n  font-size: 35px;\n  color: #fff;\n  line-height: 53px;\n  padding: 6px;\n  border: 3px solid #fff;\n  text-align: center;\n  vertical-align: middle;\n  transition: background .25s ease-in-out,border .25s ease-in-out; }\n\n.circle.active, .active.circle-simple {\n  color: rgba(255, 255, 255, 0.9); }\n\n.circle.active:before, .active.circle-simple:before {\n  background: #3ab676; }\n\n.circle.dark, .dark.circle-simple {\n  border-color: rgba(255, 255, 255, 0.4); }\n\n.circle.dark:before, .dark.circle-simple:before {\n  margin: 0;\n  background: rgba(0, 0, 0, 0.2); }\n\n.circle.selected, .selected.circle-simple {\n  border: 2px solid rgba(58, 182, 118, 0.8); }\n\n.circle.selected:before, .selected.circle-simple:before {\n  margin: 0;\n  background: rgba(58, 182, 118, 0.2); }\n\n.circle i, .circle-simple i {\n  position: relative; }\n\n.circle:before, .circle-simple:before {\n  position: absolute;\n  display: block;\n  content: '';\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(255, 255, 255, 0.2);\n  border-radius: 300px;\n  margin: 1px;\n  transition: margin .25s ease-in-out,background .25s ease-in-out; }\n\n.circle.disabled, .disabled.circle-simple, .circle:disabled, .circle-simple:disabled {\n  color: rgba(255, 255, 255, 0.4);\n  border-color: rgba(255, 255, 255, 0.4); }\n\n.circle.power:after, .power.circle-simple:after {\n  font-family: \"Roboto\",\"Open Sans\";\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  -webkit-font-smoothing: antialiased;\n  content: '\\E916';\n  position: absolute;\n  top: -15%;\n  right: -13%;\n  font-size: 80%; }\n\n.circle.sm, .sm.circle-simple {\n  height: 31px;\n  width: 31px;\n  padding: 5px;\n  font-size: 16px;\n  line-height: 18px;\n  border: 2px solid rgba(255, 255, 255, 0.4); }\n\n.circle.sm i, .sm.circle-simple i {\n  padding-top: 3px;\n  top: 2px;\n  left: 5px;\n  position: absolute; }\n\n.circle.sm:before, .sm.circle-simple:before {\n  background: none; }\n\n.circle.sm.active, .sm.active.circle-simple {\n  color: rgba(255, 255, 255, 0.9); }\n\n.circle.sm.active:before, .sm.active.circle-simple:before {\n  background: #3ab676; }\n\n.circle.sm.dark, .sm.dark.circle-simple {\n  border-color: rgba(255, 255, 255, 0.4); }\n\n.circle.sm.dark:before, .sm.dark.circle-simple:before {\n  margin: 0;\n  background: rgba(0, 0, 0, 0.2); }\n\n.circle.sm.selected, .sm.selected.circle-simple {\n  border: 2px solid rgba(58, 182, 118, 0.8); }\n\n.circle.sm.selected:before, .sm.selected.circle-simple:before {\n  margin: 0;\n  background: rgba(58, 182, 118, 0.2); }\n\n.dot {\n  display: inline-block;\n  height: 6px;\n  width: 6px;\n  background: rgba(255, 255, 255, 0.2);\n  border-radius: 300px;\n  margin: 0 2px;\n  vertical-align: middle; }\n\n.circle-simple {\n  border: none; }\n\n.circle-simple i {\n  line-height: 1.5; }\n\n.circle-simple.sm {\n  border: 2px solid rgba(255, 255, 255, 0.4); }\n\n.circle-simple.sm i {\n  line-height: 1; }\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: 'superhero';\n  src: url(" + __webpack_require__(/*! ../src/fonts/icons/superhero.eot */ 214) + ");\n  src: url(" + __webpack_require__(/*! ../src/fonts/icons/superhero.eot */ 214) + ") format(\"embedded-opentype\"), url(" + __webpack_require__(/*! ../src/fonts/icons/superhero.ttf */ 215) + ") format(\"truetype\"), url(" + __webpack_require__(/*! ../src/fonts/icons/superhero.woff */ 216) + ") format(\"woff\"), url(" + __webpack_require__(/*! ../src/fonts/icons/superhero.svg */ 217) + ") format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n.sh-icon {\n  font-family: 'superhero' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-record:before {\n  content: \"\\E901\"; }\n\n.icon-text-bubble:before {\n  content: \"\\E902\"; }\n\n.icon-people-three:before {\n  content: \"\\E903\"; }\n\n.icon-dial-pad:before {\n  content: \"\\E904\"; }\n\n.icon-envelope:before {\n  content: \"\\E905\"; }\n\n.icon-end-call:before {\n  content: \"\\E906\"; }\n\n.icon-right-arrow:before {\n  content: \"\\E907\"; }\n\n.icon-linkedin:before {\n  content: \"\\E908\"; }\n\n.icon-neuralytics:before {\n  content: \"\\E900\"; }\n\n.icon-phone:before {\n  content: \"\\E909\"; }\n\n.icon-clock:before {\n  content: \"\\E90A\"; }\n\n.icon-phone-volume:before {\n  content: \"\\E90B\"; }\n\n.icon-calendar:before {\n  content: \"\\E910\"; }\n\n.icon-radio-button:before {\n  content: \"\\E911\"; }\n\n.icon-radio-button-empty:before {\n  content: \"\\E912\"; }\n\n.icon-check-box-empty:before {\n  content: \"\\E913\"; }\n\n.icon-text-bubbles:before {\n  content: \"\\E917\"; }\n\n.icon-check-box:before {\n  content: \"\\E918\"; }\n\n.icon-check:before {\n  content: \"\\E919\"; }\n\n.icon-buildings:before {\n  content: \"\\E91A\"; }\n\n.icon-download:before {\n  content: \"\\E914\"; }\n\n.icon-check-outline:before {\n  content: \"\\E915\"; }\n\n.icon-bolt:before {\n  content: \"\\E916\"; }\n\n.icon-chevron-up:before {\n  content: \"\\E90C\"; }\n\n.icon-chevron-down:before {\n  content: \"\\E90D\"; }\n\n.icon-chevron-left:before {\n  content: \"\\E90E\"; }\n\n.icon-chevron-right:before {\n  content: \"\\E90F\"; }\n\n.icon-insidesales-logo:before {\n  content: \"\\E91B\"; }\n\n.icon-paperclip:before {\n  content: \"\\E91C\"; }\n\n.icon-x:before {\n  content: \"\\E91D\"; }\n\n.icon-cursor:before {\n  content: \"\\E91E\"; }\n\n.icon-font:before {\n  content: \"\\E91F\"; }\n\n.icon-gear:before {\n  content: \"\\E920\"; }\n\n.icon-phone-arrow:before {\n  content: \"\\E921\"; }\n\n.icon-info:before {\n  content: \"\\E922\"; }\n\n.icon-face-neutral:before {\n  content: \"\\E923\"; }\n\n.icon-medal:before {\n  content: \"\\E924\"; }\n\n.icon-minus:before {\n  content: \"\\E925\"; }\n\n.icon-icosahedron:before {\n  content: \"\\E926\"; }\n\n.icon-face-sad:before {\n  content: \"\\E927\"; }\n\n.icon-plus:before {\n  content: \"\\E928\"; }\n\n.icon-search:before {\n  content: \"\\E929\"; }\n\n.icon-face-happy:before {\n  content: \"\\E92A\"; }\n\n.icon-trophy:before {\n  content: \"\\E92B\"; }\n\n.icon-vision:before {\n  content: \"\\E92C\"; }\n\n.icon-hourglass:before {\n  content: \"\\E92D\"; }\n\n.icon-flag:before {\n  content: \"\\E92E\"; }\n\n.icon-ban:before {\n  content: \"\\E92F\"; }\n\n.icon-flow-chart:before {\n  content: \"\\E930\"; }\n\n.icon-heart:before {\n  content: \"\\E931\"; }\n\n.icon-people:before {\n  content: \"\\E932\"; }\n\n.icon-glove:before {\n  content: \"\\E933\"; }\n\n.icon-twitter:before {\n  content: \"\\E934\"; }\n\n.icon-play:before {\n  content: \"\\E935\"; }\n\n.icon-expand:before {\n  content: \"\\E936\"; }\n\n.icon-collapse:before {\n  content: \"\\E937\"; }\n\n.icon-facebook:before {\n  content: \"\\E938\"; }\n\n.icon-facebook-negative:before {\n  content: \"\\E939\"; }\n\n.icon-laurels:before {\n  content: \"\\E93A\"; }\n\n.icon-trash:before {\n  content: \"\\E93B\"; }\n\n.icon-person:before {\n  content: \"\\E93C\"; }\n\n.circle, .circle-simple {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  position: relative;\n  display: inline-block;\n  margin: 5px;\n  width: 66px;\n  height: 66px;\n  border-radius: 300px;\n  font-size: 35px;\n  color: #fff;\n  line-height: 53px;\n  padding: 6px;\n  border: 3px solid #fff;\n  text-align: center;\n  vertical-align: middle;\n  transition: background .25s ease-in-out,border .25s ease-in-out; }\n\n.circle.active, .active.circle-simple {\n  color: rgba(255, 255, 255, 0.9); }\n\n.circle.active:before, .active.circle-simple:before {\n  background: #3ab676; }\n\n.circle.dark, .dark.circle-simple {\n  border-color: rgba(255, 255, 255, 0.4); }\n\n.circle.dark:before, .dark.circle-simple:before {\n  margin: 0;\n  background: rgba(0, 0, 0, 0.2); }\n\n.circle.selected, .selected.circle-simple {\n  border: 2px solid rgba(58, 182, 118, 0.8); }\n\n.circle.selected:before, .selected.circle-simple:before {\n  margin: 0;\n  background: rgba(58, 182, 118, 0.2); }\n\n.circle i, .circle-simple i {\n  position: relative; }\n\n.circle:before, .circle-simple:before {\n  position: absolute;\n  display: block;\n  content: '';\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(255, 255, 255, 0.2);\n  border-radius: 300px;\n  margin: 1px;\n  transition: margin .25s ease-in-out,background .25s ease-in-out; }\n\n.circle.disabled, .disabled.circle-simple, .circle:disabled, .circle-simple:disabled {\n  color: rgba(255, 255, 255, 0.4);\n  border-color: rgba(255, 255, 255, 0.4); }\n\n.circle.power:after, .power.circle-simple:after {\n  font-family: \"Roboto\",\"Open Sans\";\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  -webkit-font-smoothing: antialiased;\n  content: '\\E916';\n  position: absolute;\n  top: -15%;\n  right: -13%;\n  font-size: 80%; }\n\n.circle.sm, .sm.circle-simple {\n  height: 31px;\n  width: 31px;\n  padding: 5px;\n  font-size: 16px;\n  line-height: 18px;\n  border: 2px solid rgba(255, 255, 255, 0.4); }\n\n.circle.sm i, .sm.circle-simple i {\n  padding-top: 3px;\n  top: 2px;\n  left: 5px;\n  position: absolute; }\n\n.circle.sm:before, .sm.circle-simple:before {\n  background: none; }\n\n.circle.sm.active, .sm.active.circle-simple {\n  color: rgba(255, 255, 255, 0.9); }\n\n.circle.sm.active:before, .sm.active.circle-simple:before {\n  background: #3ab676; }\n\n.circle.sm.dark, .sm.dark.circle-simple {\n  border-color: rgba(255, 255, 255, 0.4); }\n\n.circle.sm.dark:before, .sm.dark.circle-simple:before {\n  margin: 0;\n  background: rgba(0, 0, 0, 0.2); }\n\n.circle.sm.selected, .sm.selected.circle-simple {\n  border: 2px solid rgba(58, 182, 118, 0.8); }\n\n.circle.sm.selected:before, .sm.selected.circle-simple:before {\n  margin: 0;\n  background: rgba(58, 182, 118, 0.2); }\n\n.dot {\n  display: inline-block;\n  height: 6px;\n  width: 6px;\n  background: rgba(255, 255, 255, 0.2);\n  border-radius: 300px;\n  margin: 0 2px;\n  vertical-align: middle; }\n\n.circle-simple {\n  border: none; }\n\n.circle-simple i {\n  line-height: 1.5; }\n\n.circle-simple.sm {\n  border: 2px solid rgba(255, 255, 255, 0.4); }\n\n.circle-simple.sm i {\n  line-height: 1; }\n", ""]);
 	
 	// exports
 
@@ -48286,7 +48297,7 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	__webpack_require__(/*! ../../~/sh-buttons/bin/main.css */ 222);
+	__webpack_require__(/*! sh-buttons/bin/main.css */ 222);
 	
 	var ShIconsExamples = function (_React$Component) {
 	    _inherits(ShIconsExamples, _React$Component);
@@ -48399,7 +48410,7 @@
 	var codeText = {};
 	
 	codeText.html = '\n<button class="btn btn-default">A default button</button>\n<button class="btn btn-default btn-sm">A small button</button>\n<button class="btn btn-default disabled">A disabled button</button>\n';
-	codeText.cssMain = '\nrequire(\'../node_modules/sh-buttons/bin/main.css\');\n';
+	codeText.cssMain = '\nrequire(\'sh-buttons/bin/main.css\');\n';
 	
 	var Usage = function (_React$Component) {
 	    _inherits(Usage, _React$Component);
@@ -49658,7 +49669,7 @@
 	
 	
 	// module
-	exports.push([module.id, "html {\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%; }\n\nbody {\n  margin: 0;\n  font: 16px/1 sans-serif;\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-font-smoothing: antialiased; }\n\nh1, h2, h3, h4, p, blockquote, figure, ol, ul {\n  margin: 0;\n  padding: 0; }\n\nmain, li {\n  display: block; }\n\nh1, h2, h3, h4 {\n  font-size: inherit; }\n\nstrong {\n  font-weight: bold; }\n\na, button {\n  color: inherit;\n  transition: .3s;\n  cursor: pointer; }\n\na {\n  text-decoration: none; }\n\nbutton {\n  overflow: visible;\n  border: 0;\n  font: inherit;\n  -webkit-font-smoothing: inherit;\n  letter-spacing: inherit;\n  background: none; }\n\n::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\n:focus {\n  outline: 0; }\n\nimg {\n  max-width: 100%;\n  height: auto;\n  border: 0; }\n\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 300;\n  src: local(\"Roboto Light\"), local(\"Roboto-Light\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/regular/Roboto-Light.ttf */ 229) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: local(\"Roboto\"), local(\"Roboto-Regular\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/regular/Roboto-Regular.ttf */ 230) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 700;\n  src: local(\"Roboto Bold\"), local(\"Roboto-Bold\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/regular/Roboto-Bold.ttf */ 231) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto Condensed';\n  font-style: normal;\n  font-weight: 300;\n  src: local(\"Roboto Condensed Light\"), local(\"Roboto-Light\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/condensed/RobotoCondensed-Light.ttf */ 232) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto Condensed';\n  font-style: normal;\n  font-weight: 400;\n  src: local(\"Roboto Condensed\"), local(\"Roboto-Regular\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/condensed/RobotoCondensed-Regular.ttf */ 233) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto Condensed';\n  font-style: normal;\n  font-weight: 700;\n  src: local(\"Roboto Condensed Bold\"), local(\"Roboto-Bold\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/condensed/RobotoCondensed-Bold.ttf */ 234) + ") format(\"truetype\"); }\n\nbody {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  font-family: \"Roboto\",\"Open Sans\";\n  font-size: 14px;\n  background: linear-gradient(#284D51, #304853) fixed; }\n", ""]);
+	exports.push([module.id, "html {\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%; }\n\nbody {\n  margin: 0;\n  font: 16px/1 sans-serif;\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-font-smoothing: antialiased; }\n\nh1, h2, h3, h4, p, blockquote, figure, ol, ul {\n  margin: 0;\n  padding: 0; }\n\nmain, li {\n  display: block; }\n\nh1, h2, h3, h4 {\n  font-size: inherit; }\n\nstrong {\n  font-weight: bold; }\n\na, button {\n  color: inherit;\n  transition: .3s;\n  cursor: pointer; }\n\na {\n  text-decoration: none; }\n\nbutton {\n  overflow: visible;\n  border: 0;\n  font: inherit;\n  -webkit-font-smoothing: inherit;\n  letter-spacing: inherit;\n  background: none; }\n\n::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\n:focus {\n  outline: 0; }\n\nimg {\n  max-width: 100%;\n  height: auto;\n  border: 0; }\n\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 300;\n  src: local(\"Roboto Light\"), local(\"Roboto-Light\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/regular/Roboto-Light.ttf */ 229) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 400;\n  src: local(\"Roboto\"), local(\"Roboto-Regular\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/regular/Roboto-Regular.ttf */ 230) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto';\n  font-style: normal;\n  font-weight: 700;\n  src: local(\"Roboto Bold\"), local(\"Roboto-Bold\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/regular/Roboto-Bold.ttf */ 231) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto Condensed';\n  font-style: normal;\n  font-weight: 300;\n  src: local(\"Roboto Condensed Light\"), local(\"Roboto-Light\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/condensed/RobotoCondensed-Light.ttf */ 232) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto Condensed';\n  font-style: normal;\n  font-weight: 400;\n  src: local(\"Roboto Condensed\"), local(\"Roboto-Regular\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/condensed/RobotoCondensed-Regular.ttf */ 233) + ") format(\"truetype\"); }\n\n@font-face {\n  font-family: 'Roboto Condensed';\n  font-style: normal;\n  font-weight: 700;\n  src: local(\"Roboto Condensed Bold\"), local(\"Roboto-Bold\"), url(" + __webpack_require__(/*! ../src/fonts/roboto/condensed/RobotoCondensed-Bold.ttf */ 234) + ") format(\"truetype\"); }\n\nbody {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  font-family: \"Roboto\",\"Open Sans\";\n  font-size: 14px;\n  background: rgba(51, 51, 51, 0.7); }\n", ""]);
 	
 	// exports
 
@@ -49758,7 +49769,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".navSelect {\n  position: absolute;\n  overflow: hidden;\n  transition: height .5s ease; }\n  .navSelect.close {\n    height: 0; }\n  .navSelect.open {\n    height: 800px; }\n  .navSelect .navSelectList {\n    top: 5px;\n    position: relative;\n    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }\n    .navSelect .navSelectList .navSelectItem {\n      min-width: 250px;\n      text-align: center;\n      border-bottom: 1px solid rgba(0, 0, 0, 0.4);\n      background-color: #284D51;\n      position: relative;\n      transition: height 1s ease; }\n      .navSelect .navSelectList .navSelectItem:last-child {\n        border-top: 3px transparent rgba(0, 0, 0, 0.4); }\n      .navSelect .navSelectList .navSelectItem a {\n        border-right: 0; }\n\nbody {\n  color: white;\n  top: 53px; }\n  body #app {\n    height: 100%;\n    width: 100%;\n    overflow-y: auto; }\n  body .nav {\n    position: fixed;\n    height: 53px;\n    top: 0;\n    width: 100%;\n    z-index: 1001;\n    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);\n    background-color: #284D51; }\n    body .nav .navItem {\n      width: auto;\n      display: inline-block; }\n      body .nav .navItem a {\n        border-right: 1px solid rgba(0, 0, 0, 0.4);\n        padding: 20px 50px;\n        display: block; }\n        body .nav .navItem a:hover {\n          background-color: #3ab676; }\n  body .header {\n    position: relative;\n    height: 500px;\n    margin-bottom: 40px;\n    background-color: rgba(0, 0, 0, 0.4); }\n    body .header .subHeader {\n      position: absolute;\n      top: calc(50% - 87.5px);\n      left: calc(50% - 325px);\n      height: 175px;\n      width: 650px; }\n      body .header .subHeader .logo {\n        position: absolute;\n        top: 0;\n        left: 0;\n        height: 175px;\n        max-width: 150px; }\n      body .header .subHeader .name {\n        position: absolute;\n        top: 20px;\n        left: 140px;\n        font-family: \"Roboto Condensed\", \"Open Sans\";\n        font-size: 100px;\n        font-weight: 700;\n        font-style: italic; }\n        body .header .subHeader .name .sub {\n          text-transform: uppercase;\n          color: #00d8ff; }\n      body .header .subHeader .subText {\n        position: absolute;\n        top: 116px;\n        left: 270px;\n        font-size: 16.5px;\n        font-weight: 300; }\n  body .description {\n    margin-bottom: 30px;\n    padding: 20px;\n    font-size: 18px;\n    background-color: rgba(255, 255, 255, 0.1); }\n    body .description .title {\n      font-size: 24px;\n      color: white; }\n    body .description .details {\n      margin-top: 15px;\n      font-weight: 300;\n      color: rgba(255, 255, 255, 0.8);\n      line-height: 1.3; }\n    body .description li {\n      display: list-item;\n      margin-left: 25px; }\n    body .description .depName {\n      font-weight: 400;\n      color: white; }\n  body .example {\n    color: rgba(255, 255, 255, 0.4);\n    margin-bottom: 30px;\n    padding: 20px;\n    background-color: rgba(255, 255, 255, 0.1); }\n    body .example pre {\n      margin: 0;\n      padding: 10px;\n      background-color: rgba(255, 255, 255, 0.1);\n      border-radius: 4px; }\n    body .example .title {\n      margin-bottom: 10px;\n      color: #3ab676; }\n    body .example > .title {\n      color: white;\n      font-size: 24px;\n      margin-bottom: 10px; }\n      body .example > .title a {\n        margin-left: 10px;\n        vertical-align: middle; }\n      body .example > .title .repo img {\n        max-height: 25px; }\n      body .example > .title .build img {\n        max-height: 25px; }\n    body .example .section:not(:first-child) {\n      margin-top: 20px; }\n    body .example .options {\n      width: 100%;\n      color: rgba(255, 255, 255, 0.6);\n      border-collapse: collapse;\n      line-height: 1.5; }\n      body .example .options thead th {\n        padding: 10px;\n        border-top: solid 2px rgba(255, 255, 255, 0.1);\n        border-bottom: solid 2px rgba(255, 255, 255, 0.1);\n        text-align: left; }\n        body .example .options thead th.colName {\n          width: 150px; }\n        body .example .options thead th.colType {\n          width: 75px; }\n        body .example .options thead th.colDefault {\n          width: 150px; }\n      body .example .options tbody td {\n        padding: 10px;\n        border-bottom: solid 1px rgba(255, 255, 255, 0.1);\n        vertical-align: top; }\n    body .example .subExampleWrapper:not(:first-child) {\n      margin-top: 30px; }\n  body .subExample > div {\n    display: flex;\n    align-items: stretch;\n    justify-content: space-between; }\n  body .subExample .title {\n    color: white; }\n  body .subExample .title:not(:first-child) {\n    margin-top: 30px; }\n  body .subExample .col {\n    width: calc(50% - 50px);\n    padding: 20px;\n    background: rgba(255, 255, 255, 0.1); }\n  body .subExample .details {\n    margin: 5px 0;\n    color: rgba(255, 255, 255, 0.6);\n    line-height: 1.3; }\n  body .subExample .code pre {\n    overflow: auto; }\n  body .subExample .code code {\n    display: inline-block;\n    margin-top: -10px;\n    overflow-x: auto;\n    overflow-y: hidden;\n    line-height: 1; }\n  body .subExample .code .token.attr-name {\n    color: #76c696; }\n", ""]);
+	exports.push([module.id, ".navSelect {\n  position: absolute;\n  overflow: hidden;\n  transition: height .5s ease; }\n  .navSelect.close {\n    height: 0; }\n  .navSelect.open {\n    height: 800px; }\n  .navSelect .navSelectList {\n    top: 5px;\n    position: relative;\n    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }\n    .navSelect .navSelectList .navSelectItem {\n      min-width: 250px;\n      text-align: center;\n      border-bottom: 1px solid rgba(0, 0, 0, 0.4);\n      background-color: #284D51;\n      position: relative;\n      transition: height 1s ease; }\n      .navSelect .navSelectList .navSelectItem:last-child {\n        border-top: 3px transparent rgba(0, 0, 0, 0.4); }\n      .navSelect .navSelectList .navSelectItem a {\n        border-right: 0; }\n\nbody {\n  top: 53px;\n  color: white;\n  background: linear-gradient(#284D51, #304853) fixed; }\n  body #app {\n    height: 100%;\n    width: 100%;\n    overflow-y: auto; }\n  body .nav {\n    position: fixed;\n    height: 53px;\n    top: 0;\n    width: 100%;\n    z-index: 1001;\n    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);\n    background-color: #284D51; }\n    body .nav .navItem {\n      width: auto;\n      display: inline-block; }\n      body .nav .navItem a {\n        border-right: 1px solid rgba(0, 0, 0, 0.4);\n        padding: 20px 50px;\n        display: block; }\n        body .nav .navItem a:hover {\n          background-color: #3ab676; }\n  body .header {\n    position: relative;\n    height: 500px;\n    margin-bottom: 40px;\n    background-color: rgba(0, 0, 0, 0.4); }\n    body .header .subHeader {\n      position: absolute;\n      top: calc(50% - 87.5px);\n      left: calc(50% - 325px);\n      height: 175px;\n      width: 650px; }\n      body .header .subHeader .logo {\n        position: absolute;\n        top: 0;\n        left: 0;\n        height: 175px;\n        max-width: 150px; }\n      body .header .subHeader .name {\n        position: absolute;\n        top: 20px;\n        left: 140px;\n        font-family: \"Roboto Condensed\", \"Open Sans\";\n        font-size: 100px;\n        font-weight: 700;\n        font-style: italic; }\n        body .header .subHeader .name .sub {\n          text-transform: uppercase;\n          color: #00d8ff; }\n      body .header .subHeader .subText {\n        position: absolute;\n        top: 116px;\n        left: 270px;\n        font-size: 16.5px;\n        font-weight: 300; }\n  body .description {\n    margin-bottom: 30px;\n    padding: 20px;\n    font-size: 18px;\n    background-color: rgba(255, 255, 255, 0.1); }\n    body .description .title {\n      font-size: 24px;\n      color: white; }\n    body .description .details {\n      margin-top: 15px;\n      font-weight: 300;\n      color: rgba(255, 255, 255, 0.8);\n      line-height: 1.3; }\n    body .description li {\n      display: list-item;\n      margin-left: 25px; }\n    body .description .depName {\n      font-weight: 400;\n      color: white; }\n  body .example {\n    color: rgba(255, 255, 255, 0.4);\n    margin-bottom: 30px;\n    padding: 20px;\n    background-color: rgba(255, 255, 255, 0.1); }\n    body .example pre {\n      margin: 0;\n      padding: 10px;\n      background-color: rgba(255, 255, 255, 0.1);\n      border-radius: 4px; }\n    body .example .title {\n      margin-bottom: 10px;\n      color: #3ab676; }\n    body .example > .title {\n      color: white;\n      font-size: 24px;\n      margin-bottom: 10px; }\n      body .example > .title a {\n        margin-left: 10px;\n        vertical-align: middle; }\n      body .example > .title .repo img {\n        max-height: 25px; }\n      body .example > .title .build img {\n        max-height: 25px; }\n    body .example .section:not(:first-child) {\n      margin-top: 20px; }\n    body .example .options {\n      width: 100%;\n      color: rgba(255, 255, 255, 0.6);\n      border-collapse: collapse;\n      line-height: 1.5; }\n      body .example .options thead th {\n        padding: 10px;\n        border-top: solid 2px rgba(255, 255, 255, 0.1);\n        border-bottom: solid 2px rgba(255, 255, 255, 0.1);\n        text-align: left; }\n        body .example .options thead th.colName {\n          width: 150px; }\n        body .example .options thead th.colType {\n          width: 75px; }\n        body .example .options thead th.colDefault {\n          width: 150px; }\n      body .example .options tbody td {\n        padding: 10px;\n        border-bottom: solid 1px rgba(255, 255, 255, 0.1);\n        vertical-align: top; }\n    body .example .subExampleWrapper:not(:first-child) {\n      margin-top: 30px; }\n  body .subExample > div {\n    display: flex;\n    align-items: stretch;\n    justify-content: space-between; }\n  body .subExample .title {\n    color: white; }\n  body .subExample .title:not(:first-child) {\n    margin-top: 30px; }\n  body .subExample .col {\n    width: calc(50% - 50px);\n    padding: 20px;\n    background: rgba(255, 255, 255, 0.1); }\n  body .subExample .details {\n    margin: 5px 0;\n    color: rgba(255, 255, 255, 0.6);\n    line-height: 1.3; }\n  body .subExample .code pre {\n    overflow: auto; }\n  body .subExample .code code {\n    display: inline-block;\n    margin-top: -10px;\n    overflow-x: auto;\n    overflow-y: hidden;\n    line-height: 1; }\n  body .subExample .code .token.attr-name {\n    color: #76c696; }\n", ""]);
 	
 	// exports
 

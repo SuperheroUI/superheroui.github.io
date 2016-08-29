@@ -5,7 +5,7 @@ import Prism from 'prismjs';
 import PrismJSX from 'prismjs/components/prism-jsx';
 import PrismSCSS from 'prismjs/components/prism-scss';
 
-require('../../node_modules/prismjs/themes/prism-tomorrow.css');
+require('prismjs/themes/prism-tomorrow.css');
 
 let CodeService = (codeString, languageName) => {
     let codeHighlighted = Prism.highlight(codeString, Prism.languages[languageName]);
