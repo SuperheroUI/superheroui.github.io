@@ -28,7 +28,7 @@ class Homepage extends React.Component {
                 {name: 'ShInputCheckbox', code: <ShInputCheckboxExamples />, github: 'https://github.com/SuperheroUI/shInputCheckbox', npm: 'sh-input-checkbox'},
                 {name: 'ShForm', code: <ShFormExamples />, repo: 'SuperheroUI/shForm', npm: 'sh-form'},
                 {name: 'ShIcons', code: <ShIconsExamples />, repo: 'SuperheroUI/shIcons', npm: 'sh-icons', hideCoverage: true},
-                {name: 'ShButtons', code: <ShButtonsExamples />, github: 'https://github.com/SuperheroUI/shButtons', npm: 'sh-buttons'}
+                {name: 'ShButtons', code: <ShButtonsExamples />, repo: 'SuperheroUI/shButtons', npm: 'sh-buttons', hideCoverage: true}
             ],
             menuState:'close'
         };
