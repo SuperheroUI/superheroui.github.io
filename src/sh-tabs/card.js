@@ -12,7 +12,7 @@ import ShTabs from 'sh-tabs';
 codeText.jsState = `
 this.state = {
     tabs: [
-        {header: <div><i className="icon-person"></i> User Info</div>, content: <div><h1>User info here!</h1><p>Hello user info</p></div>},
+        {header: <div><i className="sh-icon icon-person"></i> User Info</div>, content: <div><h1>User info here!</h1><p>Hello user info</p></div>},
         {header: 'Company Info', content: <div>Company info here</div>},
         {header: 'Settings', content: <div>All Settings are listed here</div>},
     ]
@@ -34,7 +34,7 @@ class Card extends React.Component {
         super();
 
         this.tabs = [
-            {header: <div><i className="icon-person"></i> User Info</div>, content: <div><h1>User info here!</h1><p>Hello user info</p></div>},
+            {header: <div><i className="sh-icon icon-person"></i> User Info</div>, content: <div><h1>User info here!</h1><p>Hello user info</p></div>},
             {header: 'Company Info', content: <div>Company info here</div>},
             {header: 'Settings', content: <div>All Settings are listed here</div>},
         ];
