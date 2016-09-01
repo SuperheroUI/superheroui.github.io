@@ -3,6 +3,8 @@ import React from 'react';
 import Code from '../util/code';
 import ShForm from 'sh-form';
 import ShInputSelect from 'sh-input-select';
+import ShInputText from 'sh-input-text';
+import ShInputEmail from 'sh-input-email';
 
 let codeText = {};
 
@@ -26,8 +28,9 @@ onSubmit() {
 
 codeText.html = `
 <ShForm onSubmit={this.onSubmit}>
-    <ShInputSelct ... />
-    <ShInputSelct ... />
+    <ShInputText ... />
+    <ShInputEmail ... />
+    <ShInputSelect ... />
     <button className="btn btn-primary">Submit</button>
 </ShForm>
 `;
@@ -37,11 +40,12 @@ class Standard extends React.Component {
         super();
         this.state = {
             submitted: 0,
-            option1: null,
-            option2: null,
+            username: '',
+            email: '',
+            location: null,
         };
 
-        this.options = [
+        this.locations = [
             {name: 'Utah'},
             {name: 'Nevada'},
             {name: 'Washington'},
@@ -52,8 +56,9 @@ class Standard extends React.Component {
         };
 
         this.onSubmit = this.onSubmit.bind(this);
-        this.change1 = this.change1.bind(this);
-        this.change2 = this.change2.bind(this);
+        this.changeUsername = this.changeUsername.bind(this);
+        this.changeEmail = this.changeEmail.bind(this);
+        this.changeLocation = this.changeLocation.bind(this);
     }
 
     onSubmit() {
@@ -62,15 +67,21 @@ class Standard extends React.Component {
         });
     }
 
-    change1(newValue) {
+    changeUsername(event) {
         this.setState({
-            option1: newValue
+            username: event.target.value
         });
     }
 
-    change2(newValue) {
+    changeEmail(event) {
         this.setState({
-            option2: newValue
+            email: event.target.value
+        });
+    }
+
+    changeLocation(newValue) {
+        this.setState({
+            location: newValue
         });
     }
 
@@ -91,9 +102,12 @@ class Standard extends React.Component {
                     <div className="title">Component</div>
                     <ShForm onSubmit={this.onSubmit}>
                         <div>
-                            <ShInputSelect value={this.state.option1} options={this.options} onChange={this.change1} config={this.config} />
+                            <ShInputText label="Username" value={this.state.username} onChange={this.changeUsername} required />
                         </div>
-                        <ShInputSelect value={this.state.option2} options={this.options} onChange={this.change2} config={this.config} />
+                        <div>
+                            <ShInputEmail label="Email" value={this.state.email} onChange={this.changeEmail} required />
+                        </div>
+                        <ShInputSelect value={this.state.location} options={this.locations} onChange={this.changeLocation} config={this.config} />
                         <button className="btn btn-primary">Submit</button>
                     </ShForm>
                     <div>
