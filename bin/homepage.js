@@ -43617,6 +43617,14 @@
 		
 		__webpack_require__(/*! ./sh-input-email.scss */ 5);
 		
+		var getPlaceholder = function getPlaceholder(required) {
+		    if (required) {
+		        return 'Required Field';
+		    } else {
+		        return '+';
+		    }
+		};
+		
 		var ShInputEmail = function (_React$Component) {
 		    _inherits(ShInputEmail, _React$Component);
 		
@@ -43626,10 +43634,10 @@
 		        var _this = _possibleConstructorReturn(this, (ShInputEmail.__proto__ || Object.getPrototypeOf(ShInputEmail)).call(this, props));
 		
 		        _this.state = {
-		            value: props.value || '',
+		            value: props.value,
 		            statusValid: false,
 		            statusTouched: false,
-		            placeholder: '+'
+		            placeholder: getPlaceholder(props.required)
 		        };
 		
 		        _this.handleChange = _this.handleChange.bind(_this);
@@ -43653,7 +43661,7 @@
 		    }, {
 		        key: 'componentWillReceiveProps',
 		        value: function componentWillReceiveProps(props) {
-		            if (!_.isUndefined(props.value) && !_.isEqual(props.value, this.state.value)) {
+		            if (!_.isEqual(props.value, this.state.value)) {
 		                this.setState({
 		                    value: props.value
 		                }, this.validateAll);
@@ -43696,7 +43704,7 @@
 		        key: 'handleBlur',
 		        value: function handleBlur() {
 		            this.setState({
-		                placeholder: '+'
+		                placeholder: getPlaceholder(this.props.required)
 		            });
 		
 		            if (this.props.onBlur) {
@@ -43788,20 +43796,6 @@
 		                other: classNames
 		            };
 		
-		            var requiredElement = null;
-		            if (this.props.required) {
-		                var requiredClasses = {
-		                    requiredLabel: true,
-		                    display: _.isEmpty(this.state.value)
-		                };
-		
-		                requiredElement = _react2.default.createElement(
-		                    'div',
-		                    { className: _shCore2.default.getClassNames(requiredClasses) },
-		                    'required'
-		                );
-		            }
-		
 		            return _react2.default.createElement(
 		                'div',
 		                { className: _shCore2.default.getClassNames(classes) },
@@ -43813,7 +43807,6 @@
 		                        { className: 'label' },
 		                        this.props.label
 		                    ),
-		                    requiredElement,
 		                    _react2.default.createElement('input', _extends({ ref: 'input',
 		                        className: 'sh-text-input',
 		                        type: 'text',
@@ -43841,6 +43834,7 @@
 		
 		ShInputEmail.defaultProps = {
 		    label: '',
+		    value: '',
 		    onChange: null,
 		    required: false,
 		    validator: null
@@ -44061,7 +44055,7 @@
 		
 		
 		// module
-		exports.push([module.id, ".sh-input-email {\n  display: inline-block;\n  height: 50px;\n  width: 100%; }\n  .sh-input-email.empty input {\n    background: rgba(255, 255, 255, 0.1); }\n  .sh-input-email.sh-invalid.sh-touched input {\n    border: 1px solid #b25245; }\n  .sh-input-email label {\n    position: relative;\n    display: block;\n    height: 25px;\n    width: 100%; }\n  .sh-input-email .label {\n    position: absolute;\n    top: 5px;\n    left: 5px;\n    right: 5px;\n    font-size: 12px;\n    color: rgba(255, 255, 255, 0.4);\n    text-transform: uppercase;\n    z-index: 1;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n  .sh-input-email .required-label {\n    position: absolute;\n    top: 5px;\n    right: 5px;\n    font-size: 12px;\n    color: rgba(255, 255, 255, 0.2);\n    text-transform: uppercase;\n    z-index: 1;\n    opacity: 0;\n    transition: opacity 0.5s ease-in-out; }\n    .sh-input-email .required-label.display {\n      opacity: 1; }\n  .sh-input-email input {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: calc(100% - 10px);\n    padding: 25px 5px 5px 5px;\n    color: white;\n    border: 1px solid transparent;\n    border-radius: 2px;\n    background: transparent;\n    transition: background 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.25s ease-in-out;\n    outline: 0; }\n    .sh-input-email input:focus {\n      -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6);\n      box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6); }\n    .sh-input-email input:hover {\n      background: rgba(255, 255, 255, 0.1); }\n    .sh-input-email input::-moz-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-email input:-ms-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-email input::-webkit-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n", ""]);
+		exports.push([module.id, ".sh-input-email {\n  display: inline-block;\n  height: 50px;\n  width: 100%; }\n  .sh-input-email.empty input {\n    background: rgba(255, 255, 255, 0.1); }\n  .sh-input-email.sh-invalid.sh-touched input {\n    border: 1px solid #b25245; }\n  .sh-input-email label {\n    position: relative;\n    display: block;\n    height: 25px;\n    width: 100%; }\n  .sh-input-email .label {\n    position: absolute;\n    top: 5px;\n    left: 5px;\n    right: 5px;\n    font-size: 12px;\n    color: rgba(255, 255, 255, 0.4);\n    text-transform: uppercase;\n    z-index: 1;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n  .sh-input-email input {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: calc(100% - 10px);\n    padding: 25px 5px 5px 5px;\n    color: white;\n    border: 1px solid transparent;\n    border-radius: 2px;\n    background: transparent;\n    transition: background 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.25s ease-in-out;\n    outline: 0; }\n    .sh-input-email input:focus {\n      -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6);\n      box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6); }\n    .sh-input-email input:hover {\n      background: rgba(255, 255, 255, 0.1); }\n    .sh-input-email input::-moz-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-email input:-ms-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-email input::-webkit-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n", ""]);
 		
 		// exports
 	
