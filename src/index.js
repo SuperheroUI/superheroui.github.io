@@ -7,6 +7,7 @@ import ShTabsExamples from './sh-tabs';
 import ShInputEmailExamples from './sh-input-email';
 import ShInputSelectExamples from './sh-input-select';
 import ShInputTextExamples from './sh-input-text';
+import ShInputPasswordExamples from './sh-input-password';
 import ShInputCurrencyExamples from './sh-input-currency';
 import ShIconsExamples from './sh-icons';
 import ShButtonsExamples from './sh-buttons';
@@ -26,6 +27,7 @@ class Homepage extends React.Component {
                 {name: 'ShInputEmail', code: <ShInputEmailExamples />, repo: 'SuperheroUI/shInputEmail', npm: 'sh-input-email'},
                 {name: 'ShInputSelect', code: <ShInputSelectExamples />, repo: 'SuperheroUI/shInputSelect', npm: 'sh-input-select'},
                 {name: 'ShInputText', code: <ShInputTextExamples />, repo: 'SuperheroUI/shInputText', npm: 'sh-input-text'},
+                {name: 'ShInputPassword', code: <ShInputPasswordExamples />, repo: 'SuperheroUI/shInputPassword', npm: 'sh-input-password'},
                 {name: 'ShInputCurrency', code: <ShInputCurrencyExamples />, repo: 'SuperheroUI/shInputCurrency', npm: 'sh-input-currency'},
                 {name: 'ShInputCheckbox', code: <ShInputCheckboxExamples />, github: 'https://github.com/SuperheroUI/shInputCheckbox', npm: 'sh-input-checkbox'},
                 {name: 'ShForm', code: <ShFormExamples />, repo: 'SuperheroUI/shForm', npm: 'sh-form'},

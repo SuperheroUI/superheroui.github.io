@@ -101,14 +101,20 @@ class Standard extends React.Component {
                 <div className="col component">
                     <div className="title">Component</div>
                     <ShForm onSubmit={this.onSubmit}>
-                        <div>
-                            <ShInputText label="Username" value={this.state.username} onChange={this.changeUsername} required />
+                        <div style={{marginBottom: "20px"}}>
+                            <ShInputText label="Username" value={this.state.username} onChange={this.changeUsername}
+                                         required/>
                         </div>
-                        <div>
-                            <ShInputEmail label="Email" value={this.state.email} onChange={this.changeEmail} required />
+                        <div style={{marginBottom: "20px"}}>
+                            <ShInputEmail label="Email" value={this.state.email} onChange={this.changeEmail} required/>
                         </div>
-                        <ShInputSelect value={this.state.location} options={this.locations} onChange={this.changeLocation} config={this.config} />
-                        <button className="btn btn-primary">Submit</button>
+                        <div style={{marginBottom: "20px"}}>
+                            <ShInputSelect value={this.state.location} options={this.locations}
+                                           onChange={this.changeLocation} config={this.config}/>
+                        </div>
+                        <div style={{marginBottom: "20px"}}>
+                            <button className="btn btn-primary">Submit</button>
+                        </div>
                     </ShForm>
                     <div>
                         {JSON.stringify(this.state)}
