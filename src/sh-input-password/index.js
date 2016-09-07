@@ -68,7 +68,7 @@ class ShInputPasswordExamples extends React.Component {
                         <tr>
                             <td>checkPassword</td>
                             <td>function</td>
-                            <td>A password should have at least 9 characters</td>
+                            <td>A password should have at least 8 characters</td>
                             <td>A validation function that will be executed by the password field is passed the password as a parameter. If it returns true then the password field will be marked as invalid.</td>
                         </tr>
                         </tbody>
