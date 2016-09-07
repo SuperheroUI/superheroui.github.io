@@ -237,7 +237,7 @@
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 'navItem' },
+	                        { className: 'navItem', tabIndex: '0', onBlur: this.toggleMenu },
 	                        _react2.default.createElement(
 	                            'a',
 	                            { onClick: this.toggleMenu },
