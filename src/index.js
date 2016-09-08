@@ -29,7 +29,7 @@ class Homepage extends React.Component {
                 {name: 'ShInputText', code: <ShInputTextExamples />, repo: 'SuperheroUI/shInputText', npm: 'sh-input-text'},
                 {name: 'ShInputPassword', code: <ShInputPasswordExamples />, repo: 'SuperheroUI/shInputPassword', npm: 'sh-input-password'},
                 {name: 'ShInputCurrency', code: <ShInputCurrencyExamples />, repo: 'SuperheroUI/shInputCurrency', npm: 'sh-input-currency'},
-                {name: 'ShInputCheckbox', code: <ShInputCheckboxExamples />, github: 'https://github.com/SuperheroUI/shInputCheckbox', npm: 'sh-input-checkbox'},
+                {name: 'ShInputCheckbox', code: <ShInputCheckboxExamples />, repo: 'SuperheroUI/shInputCheckbox', npm: 'sh-input-checkbox'},
                 {name: 'ShForm', code: <ShFormExamples />, repo: 'SuperheroUI/shForm', npm: 'sh-form'},
                 {name: 'ShIcons', code: <ShIconsExamples />, repo: 'SuperheroUI/shIcons', npm: 'sh-icons', hideCoverage: true},
                 {name: 'ShButtons', code: <ShButtonsExamples />, repo: 'SuperheroUI/shButtons', npm: 'sh-buttons', hideCoverage: true}
