@@ -99,7 +99,7 @@ class Homepage extends React.Component {
                     <div className="navItem">
                         <a href="#home">Home</a>
                     </div>
-                    <div className="navItem">
+                    <div className="navItem" tabIndex="0" onBlur={this.toggleMenu}>
                         <a onClick={this.toggleMenu}>Components</a>
                         <div className={'navSelect '+this.state.menuState} >
                             <div className="navSelectList" onClick={this.toggleMenu}>

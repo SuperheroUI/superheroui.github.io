@@ -237,7 +237,7 @@
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 'navItem' },
+	                        { className: 'navItem', tabIndex: '0', onBlur: this.toggleMenu },
 	                        _react2.default.createElement(
 	                            'a',
 	                            { onClick: this.toggleMenu },
@@ -51190,7 +51190,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".icon-table {\n  text-align: center;\n  width: 100%;\n  font-size: 36px; }\n  .icon-table td {\n    padding-bottom: 20px; }\n    .icon-table td .circle {\n      padding: 2px; }\n  .icon-table .table-label {\n    margin-top: 15px;\n    color: white;\n    font-size: 14px;\n    font-family: \"Roboto\", \"Open Sans\"; }\n", ""]);
+	exports.push([module.id, ".icon-table {\n  text-align: center;\n  width: 100%;\n  font-size: 36px; }\n  .icon-table td {\n    padding-bottom: 20px; }\n  .icon-table .table-label {\n    margin-top: 15px;\n    color: white;\n    font-size: 14px;\n    font-family: \"Roboto\", \"Open Sans\"; }\n", ""]);
 	
 	// exports
 
