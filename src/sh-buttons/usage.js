@@ -7,9 +7,9 @@ require('./example.scss');
 let codeText = {};
 
 codeText.html = `
-<button class="btn btn-default">A default button</button>
-<button class="btn btn-default btn-sm">A small button</button>
-<button class="btn btn-default disabled">A disabled button</button>
+<button className="btn btn-default">A default button</button>
+<button className="btn btn-default btn-sm">A small button</button>
+<button className="btn btn-default disabled">A disabled button</button>
 `;
 codeText.cssMain = `
 require('sh-buttons/bin/main.css');
