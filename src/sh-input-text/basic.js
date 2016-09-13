@@ -23,7 +23,7 @@ handleChange(newValue) {
 `;
 
 codeText.html = `
-<ShInputText label="A Text Field" value={this.state.value} onChange={this.handleChange} />
+<ShInputText label="A Text Field" value={this.state.value} onChange={this.handleChange} required/>
 `;
 
 class Basic extends React.Component {
@@ -57,7 +57,7 @@ class Basic extends React.Component {
                 </div>
                 <div className="col component">
                     <div className="title">Component</div>
-                    <ShInputText label="A Text Field" value={this.state.value} onChange={this.handleOneChange}/>
+                    <ShInputText label="A Text Field" value={this.state.value} onChange={this.handleOneChange} required/>
                     <div className="title">State</div>
                     <div className="details">{JSON.stringify(this.state)}</div>
                 </div>
