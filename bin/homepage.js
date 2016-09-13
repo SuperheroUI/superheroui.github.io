@@ -51422,7 +51422,7 @@
 	
 	var codeText = {};
 	
-	codeText.html = '\n<button class="btn btn-default">A default button</button>\n<button class="btn btn-default btn-sm">A small button</button>\n<button class="btn btn-default disabled">A disabled button</button>\n';
+	codeText.html = '\n<button className="btn btn-default">A default button</button>\n<button className="btn btn-default btn-sm">A small button</button>\n<button className="btn btn-default disabled">A disabled button</button>\n';
 	codeText.cssMain = '\nrequire(\'sh-buttons/bin/main.css\');\n';
 	
 	var Usage = function (_React$Component) {
