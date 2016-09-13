@@ -46995,7 +46995,7 @@
 	
 	codeText.jsHandle = '\nhandleChange(newValue) {\n    this.setState({\n        value: newValue\n    });\n}\n';
 	
-	codeText.html = '\n<ShInputText label="A Text Field" value={this.state.value} onChange={this.handleChange} />\n';
+	codeText.html = '\n<ShInputText label="A Text Field" value={this.state.value} onChange={this.handleChange} required/>\n';
 	
 	var Basic = function (_React$Component) {
 	    _inherits(Basic, _React$Component);
@@ -47061,7 +47061,7 @@
 	                        { className: 'title' },
 	                        'Component'
 	                    ),
-	                    _react2.default.createElement(_shInputText2.default, { label: 'A Text Field', value: this.state.value, onChange: this.handleOneChange }),
+	                    _react2.default.createElement(_shInputText2.default, { label: 'A Text Field', value: this.state.value, onChange: this.handleOneChange, required: true }),
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'title' },
