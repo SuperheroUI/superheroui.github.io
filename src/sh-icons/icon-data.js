@@ -35,6 +35,21 @@ export default [
         "name": "right-arrow"
     },
     {
+        "order": 238,
+        "prevSize": 32,
+        "name": "left-arrow"
+    },
+    {
+        "order": 239,
+        "prevSize": 32,
+        "name": "up-arrow"
+    },
+    {
+        "order": 240,
+        "prevSize": 32,
+        "name": "down-arrow"
+    },
+    {
         "order": 184,
         "prevSize": 32,
         "name": "linkedin"
