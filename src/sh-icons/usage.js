@@ -166,7 +166,7 @@ class Usage extends React.Component {
                                     </div>
                                 </td>
                                 <td>
-                                    <div className="circle sm active">
+                                    <div className="circle sm selected">
                                         <i className="sh-icon icon-people" />
                                     </div>
                                 </td>
@@ -176,7 +176,7 @@ class Usage extends React.Component {
                                     </div>
                                 </td>
                                 <td>
-                                    <div className="circle sm selected">
+                                    <div className="circle sm past">
                                         <i className="sh-icon icon-people" />
                                     </div>
                                 </td>
