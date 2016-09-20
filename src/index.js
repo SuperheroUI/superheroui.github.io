@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ShInputCheckboxExamples from './sh-input-checkbox';
 import ShCoreExamples from './sh-core';
-import ShTabsExamples from './sh-tabs';
+import ShButtonsExamples from './sh-buttons';
+import ShIconsExamples from './sh-icons';
+import ShInputCheckboxExamples from './sh-input-checkbox';
+import ShInputCurrencyExamples from './sh-input-currency';
 import ShInputEmailExamples from './sh-input-email';
+import ShInputPasswordExamples from './sh-input-password';
 import ShInputSelectExamples from './sh-input-select';
 import ShInputTextExamples from './sh-input-text';
-import ShInputPasswordExamples from './sh-input-password';
-import ShInputCurrencyExamples from './sh-input-currency';
-import ShIconsExamples from './sh-icons';
-import ShButtonsExamples from './sh-buttons';
 import ShFormExamples from './sh-form';
+import ShTabsExamples from './sh-tabs';
 
 require('sh-core/bin/main.css');
 require('./main.scss');
@@ -49,13 +49,7 @@ class Homepage extends React.Component {
     render() {
         let examples = this.state.examples.map((example, index) => {
             let metaData = null;
-            if (example.github) {
-                metaData = (
-                    <span className="meta">
-                        <a className="repo" href={example.github} target="_blank"><img src="images/github.svg" /></a>
-                    </span>
-                );
-            } else if (example.repo) {
+            if (example.repo) {
                 let npmLink = null;
                 if (example.npm) {
                     npmLink = <a href={'https://badge.fury.io/js/' + example.npm}><img src={'https://badge.fury.io/js/' + example.npm + '.svg'} alt="npm version" height="18" /></a>;
