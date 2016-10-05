@@ -47,6 +47,7 @@
     "sh-input-password": "^0.1.1",
     "sh-input-select": "0.2.6",
     "sh-input-text": "0.1.22",
-    "sh-tabs": "0.1.2"
+    "sh-tabs": "0.1.2",
+    "sh-gauge-chart": "0.1.0"
   }
 }
