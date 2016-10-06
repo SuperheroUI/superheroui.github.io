@@ -1,18 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ShInputCheckboxExamples from './sh-input-checkbox';
-import ShCoreExamples from './sh-core';
-import ShTabsExamples from './sh-tabs';
-import ShInputEmailExamples from './sh-input-email';
-import ShInputSelectExamples from './sh-input-select';
-import ShInputTextExamples from './sh-input-text';
-import ShInputPasswordExamples from './sh-input-password';
-import ShInputCurrencyExamples from './sh-input-currency';
-import ShIconsExamples from './sh-icons';
 import ShButtonsExamples from './sh-buttons';
+import ShCoreExamples from './sh-core';
 import ShFormExamples from './sh-form';
 import ShGaugeChart from './sh-gauge-chart';
+import ShIconsExamples from './sh-icons';
+import ShInputCheckboxExamples from './sh-input-checkbox';
+import ShInputCurrencyExamples from './sh-input-currency';
+import ShInputEmailExamples from './sh-input-email';
+import ShInputPasswordExamples from './sh-input-password';
+import ShInputSelectExamples from './sh-input-select';
+import ShInputTextExamples from './sh-input-text';
+import ShTabsExamples from './sh-tabs';
+
 
 require('sh-core/bin/main.css');
 require('./main.scss');
@@ -25,6 +26,7 @@ class Homepage extends React.Component {
             examples:  [
                 {name: 'ShCore', code: <ShCoreExamples />, repo: 'SuperheroUI/shCore', npm: 'sh-core'},
                 {name: 'ShTabs', code: <ShTabsExamples />, repo: 'SuperheroUI/shTabs', npm: 'sh-tabs'},
+                {name: 'ShGaugeChart', code: <ShGaugeChart />, repo: 'SuperheroUI/shGaugeChart', npm: 'sh-gauge-chart', hideCoverage: true},
                 {name: 'ShInputEmail', code: <ShInputEmailExamples />, repo: 'SuperheroUI/shInputEmail', npm: 'sh-input-email'},
                 {name: 'ShInputSelect', code: <ShInputSelectExamples />, repo: 'SuperheroUI/shInputSelect', npm: 'sh-input-select'},
                 {name: 'ShInputText', code: <ShInputTextExamples />, repo: 'SuperheroUI/shInputText', npm: 'sh-input-text'},
@@ -33,8 +35,7 @@ class Homepage extends React.Component {
                 {name: 'ShInputCheckbox', code: <ShInputCheckboxExamples />, repo: 'SuperheroUI/shInputCheckbox', npm: 'sh-input-checkbox'},
                 {name: 'ShForm', code: <ShFormExamples />, repo: 'SuperheroUI/shForm', npm: 'sh-form'},
                 {name: 'ShIcons', code: <ShIconsExamples />, repo: 'SuperheroUI/shIcons', npm: 'sh-icons', hideCoverage: true},
-                {name: 'ShButtons', code: <ShButtonsExamples />, repo: 'SuperheroUI/shButtons', npm: 'sh-buttons', hideCoverage: true},
-                {name: 'ShGaugeChart', code: <ShGaugeChart />, repo: 'SuperheroUI/shGaugeChart', npm: 'sh-gauge-chart', hideCoverage: true}
+                {name: 'ShButtons', code: <ShButtonsExamples />, repo: 'SuperheroUI/shButtons', npm: 'sh-buttons', hideCoverage: true}
             ],
             menuState:'close'
         };
@@ -51,13 +52,7 @@ class Homepage extends React.Component {
     render() {
         let examples = this.state.examples.map((example, index) => {
             let metaData = null;
-            if (example.github) {
-                metaData = (
-                    <span className="meta">
-                        <a className="repo" href={example.github} target="_blank"><img src="images/github.svg" /></a>
-                    </span>
-                );
-            } else if (example.repo) {
+            if (example.repo) {
                 let npmLink = null;
                 if (example.npm) {
                     npmLink = <a href={'https://badge.fury.io/js/' + example.npm}><img src={'https://badge.fury.io/js/' + example.npm + '.svg'} alt="npm version" height="18" /></a>;
