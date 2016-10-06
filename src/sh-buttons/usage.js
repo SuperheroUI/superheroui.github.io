@@ -7,9 +7,9 @@ require('./example.scss');
 let codeText = {};
 
 codeText.html = `
-<button className="btn btn-default">A default button</button>
-<button className="btn btn-default btn-sm">A small button</button>
-<button className="btn btn-default disabled">A disabled button</button>
+<button className="sh-btn sh-btn-default">A default button</button>
+<button className="sh-btn sh-btn-default sh-btn-sm">A small button</button>
+<button className="sh-btn sh-btn-default disabled">A disabled button</button>
 `;
 codeText.cssMain = `
 require('sh-buttons/bin/main.css');
@@ -52,47 +52,47 @@ class Usage extends React.Component {
                         <tbody>
                         <tr>
                             <td>
-                                <button className="btn btn-primary">primary</button>
+                                <button className="sh-btn sh-btn-primary">primary</button>
                             </td>
                             <td>
-                                <button className="btn btn-primary disabled">disabled</button>
+                                <button className="sh-btn sh-btn-primary disabled">disabled</button>
                             </td>
                             <td>
-                                <button className="btn btn-primary btn-sm">small</button>
+                                <button className="sh-btn sh-btn-primary sh-btn-sm">small</button>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <button className="btn btn-default">default</button>
+                                <button className="sh-btn sh-btn-default">default</button>
 
                             </td>
                             <td>
-                                <button className="btn btn-default disabled">disabled</button>
+                                <button className="sh-btn sh-btn-default disabled">disabled</button>
                             </td>
                             <td>
-                                <button className="btn btn-default btn-sm">small</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button className="btn btn-error">error</button>
-                            </td>
-                            <td>
-                                <button className="btn btn-error disabled">disabled</button>
-                            </td>
-                            <td>
-                                <button className="btn btn-error btn-sm">small</button>
+                                <button className="sh-btn sh-btn-default btn-sm">small</button>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <button className="btn btn-neural">neural</button>
+                                <button className="sh-btn sh-btn-error">error</button>
                             </td>
                             <td>
-                                <button className="btn btn-neural disabled">disabled</button>
+                                <button className="sh-btn sh-btn-error disabled">disabled</button>
                             </td>
                             <td>
-                                <button className="btn btn-neural btn-sm">small</button>
+                                <button className="sh-btn sh-btn-error sh-btn-sm">small</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button className="sh-btn sh-btn-neural">neural</button>
+                            </td>
+                            <td>
+                                <button className="sh-btn sh-btn-neural disabled">disabled</button>
+                            </td>
+                            <td>
+                                <button className="sh-btn sh-btn-neural btn-sm">small</button>
                             </td>
                         </tr>
 
