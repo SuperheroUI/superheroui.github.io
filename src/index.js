@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ShCoreExamples from './sh-core';
 import ShButtonsExamples from './sh-buttons';
+import ShCoreExamples from './sh-core';
+import ShFormExamples from './sh-form';
+import ShGaugeChart from './sh-gauge-chart';
 import ShIconsExamples from './sh-icons';
 import ShInputCheckboxExamples from './sh-input-checkbox';
 import ShInputCurrencyExamples from './sh-input-currency';
@@ -10,8 +12,8 @@ import ShInputEmailExamples from './sh-input-email';
 import ShInputPasswordExamples from './sh-input-password';
 import ShInputSelectExamples from './sh-input-select';
 import ShInputTextExamples from './sh-input-text';
-import ShFormExamples from './sh-form';
 import ShTabsExamples from './sh-tabs';
+
 
 require('sh-core/bin/main.css');
 require('./main.scss');
@@ -24,6 +26,7 @@ class Homepage extends React.Component {
             examples:  [
                 {name: 'ShCore', code: <ShCoreExamples />, repo: 'SuperheroUI/shCore', npm: 'sh-core'},
                 {name: 'ShTabs', code: <ShTabsExamples />, repo: 'SuperheroUI/shTabs', npm: 'sh-tabs'},
+                {name: 'ShGaugeChart', code: <ShGaugeChart />, repo: 'SuperheroUI/shGaugeChart', npm: 'sh-gauge-chart', hideCoverage: true},
                 {name: 'ShInputEmail', code: <ShInputEmailExamples />, repo: 'SuperheroUI/shInputEmail', npm: 'sh-input-email'},
                 {name: 'ShInputSelect', code: <ShInputSelectExamples />, repo: 'SuperheroUI/shInputSelect', npm: 'sh-input-select'},
                 {name: 'ShInputText', code: <ShInputTextExamples />, repo: 'SuperheroUI/shInputText', npm: 'sh-input-text'},
