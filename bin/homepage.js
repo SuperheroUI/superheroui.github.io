@@ -41596,7 +41596,7 @@
 	
 	codeText.jsHandle = '\nonSubmit() {\n    this.setState({\n        submitted: this.state.submitted + 1\n    });\n}\n';
 	
-	codeText.html = '\n<ShForm onSubmit={this.onSubmit}>\n    <ShInputText ... />\n    <ShInputEmail ... />\n    <ShInputSelect ... />\n    <button className="btn btn-primary">Submit</button>\n</ShForm>\n';
+	codeText.html = '\n<ShForm onSubmit={this.onSubmit}>\n    <ShInputText ... />\n    <ShInputEmail ... />\n    <ShInputSelect ... />\n    <button className="sh-btn sh-btn-primary">Submit</button>\n</ShForm>\n';
 	
 	var Standard = function (_React$Component) {
 	    _inherits(Standard, _React$Component);
@@ -41721,7 +41721,7 @@
 	                            { style: { marginBottom: "20px" } },
 	                            _react2.default.createElement(
 	                                'button',
-	                                { className: 'btn btn-primary' },
+	                                { className: 'sh-btn sh-btn-primary' },
 	                                'Submit'
 	                            )
 	                        )
@@ -46176,7 +46176,7 @@
 	                        { style: { textAlign: 'center' } },
 	                        _react2.default.createElement(
 	                            'button',
-	                            { className: 'btn btn-primary', onClick: this.update },
+	                            { className: 'sh-btn sh-btn-primary', onClick: this.update },
 	                            'Random Number'
 	                        ),
 	                        _react2.default.createElement('br', null),
