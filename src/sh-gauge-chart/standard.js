@@ -49,7 +49,7 @@ class Standard extends React.Component {
                 <div className="col component">
                     <div className="title">Component</div>
                     <div style={{textAlign: 'center'}}>
-                        <button className="btn btn-primary" onClick={this.update}>Random Number</button>
+                        <button className="sh-btn sh-btn-primary" onClick={this.update}>Random Number</button>
                         <br/><br/>
                         <div style={{width: 100, margin: '0 auto'}}>
                             <div style={{width: 100, height: 100, fontSize: 40}}>

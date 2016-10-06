@@ -31,7 +31,7 @@ codeText.html = `
     <ShInputText ... />
     <ShInputEmail ... />
     <ShInputSelect ... />
-    <button className="btn btn-primary">Submit</button>
+    <button className="sh-btn sh-btn-primary">Submit</button>
 </ShForm>
 `;
 
@@ -113,7 +113,7 @@ class Standard extends React.Component {
                                            onChange={this.changeLocation} config={this.config}/>
                         </div>
                         <div style={{marginBottom: "20px"}}>
-                            <button className="btn btn-primary">Submit</button>
+                            <button className="sh-btn sh-btn-primary">Submit</button>
                         </div>
                     </ShForm>
                     <div>
