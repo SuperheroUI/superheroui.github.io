@@ -69652,6 +69652,15 @@
 		    }
 		
 		    _createClass(ShTabs, [{
+		        key: 'componentDidMount',
+		        value: function componentDidMount() {
+		            var afterFirstRender = this.props.afterFirstRender;
+		
+		            if (afterFirstRender) {
+		                afterFirstRender();
+		            }
+		        }
+		    }, {
 		        key: 'selectTab',
 		        value: function selectTab(index) {
 		            var _this2 = this;
@@ -69721,7 +69730,8 @@
 		
 		                return _react2.default.createElement(
 		                    'div',
-		                    { key: index, className: _shCore2.default.getClassNames(classNames), onClick: _this4.selectTab(index) },
+		                    { key: index, className: _shCore2.default.getClassNames(classNames),
+		                        onClick: _this4.selectTab(index) },
 		                    tabDetails.header
 		                );
 		            });
@@ -69740,7 +69750,8 @@
 		
 		                return _react2.default.createElement(
 		                    'div',
-		                    { key: index, className: _shCore2.default.getClassNames(classNames), onClick: _this4.selectTab(index) },
+		                    { key: index, className: _shCore2.default.getClassNames(classNames),
+		                        onClick: _this4.selectTab(index) },
 		                    tabDetails.content
 		                );
 		            });
@@ -69766,8 +69777,9 @@
 		            var tabs = _props.tabs;
 		            var type = _props.type;
 		            var onChange = _props.onChange;
+		            var afterFirstRender = _props.afterFirstRender;
 		
-		            var other = _objectWithoutProperties(_props, ['tabs', 'type', 'onChange']);
+		            var other = _objectWithoutProperties(_props, ['tabs', 'type', 'onChange', 'afterFirstRender']);
 		
 		            var tabElements = void 0;
 		            if (type === 'card') {
@@ -69790,13 +69802,15 @@
 		ShTabs.propTypes = {
 		    tabs: _react2.default.PropTypes.array.isRequired,
 		    type: _react2.default.PropTypes.oneOf(['standard', 'card']),
-		    onChange: _react2.default.PropTypes.func
+		    onChange: _react2.default.PropTypes.func,
+		    afterFirstRender: _react2.default.PropTypes.func
 		};
 		
 		ShTabs.defaultProps = {
 		    tabs: [],
 		    type: 'standard',
-		    onChange: _.noop
+		    onChange: _.noop,
+		    afterFirstRender: _.noop
 		};
 		
 		exports.default = ShTabs;
@@ -69890,23 +69904,17 @@
 			Object.defineProperty(exports, "__esModule", {
 			    value: true
 			});
-			exports.getDecimal = exports.getClassNames = undefined;
+			exports.getClassNames = undefined;
 			
 			var _getClassNames = __webpack_require__(/*! ./util/get-class-names */ 1);
 			
 			var _getClassNames2 = _interopRequireDefault(_getClassNames);
 			
-			var _getDecimal = __webpack_require__(/*! ./util/get-decimal */ 3);
-			
-			var _getDecimal2 = _interopRequireDefault(_getDecimal);
-			
 			function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 			
 			exports.getClassNames = _getClassNames2.default;
-			exports.getDecimal = _getDecimal2.default;
 			exports.default = {
-			    getClassNames: _getClassNames2.default,
-			    getDecimal: _getDecimal2.default
+			    getClassNames: _getClassNames2.default
 			};
 		
 		/***/ },
@@ -69941,23 +69949,15 @@
 			        if (classObject.hasOwnProperty(key)) {
 			            var check = classObject[key];
 			            var className = _.kebabCase(key);
-			            if (_.isFunction(check)) {
-			                if (check()) {
-			                    classNames.push(className);
-			                }
-			            } else if (_.isString(check)) {
-			                if (className === 'include' || _.includes(check, ' ')) {
-			                    classNames = _.concat(classNames, check.split(' '));
-			                } else {
-			                    classNames.push(className + '-' + _.kebabCase(check));
-			                }
-			            } else if (check) {
+			            if (_.isBoolean(check) && check) {
 			                classNames.push(className);
+			            } else if (_.isFunction(check) && check()) {
+			                classNames.push(className);
+			            } else if (_.isString(check)) {
+			                classNames.push(className + '-' + _.kebabCase(check));
 			            }
 			        }
 			    }
-			
-			    classNames = _.uniq(classNames);
 			
 			    return classNames.join(' ');
 			}
@@ -69972,63 +69972,6 @@
 		/***/ function(module, exports) {
 		
 			module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
-		
-		/***/ },
-		/* 3 */
-		/*!*********************************!*\
-		  !*** ./src/util/get-decimal.js ***!
-		  \*********************************/
-		/***/ function(module, exports, __webpack_require__) {
-		
-			'use strict';
-			
-			Object.defineProperty(exports, "__esModule", {
-			    value: true
-			});
-			
-			var _lodash = __webpack_require__(/*! lodash */ 2);
-			
-			var _ = _interopRequireWildcard(_lodash);
-			
-			function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-			
-			/**
-			 * Get a decimal value from a string or number, remove any unnecessary characters.
-			 *
-			 * @param {string} value Alpha characters will be removed and a decimal will be returned. For example if you give it 'b.123' 0.123 will be returned.
-			 * @returns {number}
-			 */
-			
-			function getDecimal(value) {
-			    if (!value) {
-			        return 0;
-			    }
-			
-			    var num = value;
-			    if (!_.isNumber(value)) {
-			        var isNeg = '-' && _.includes(value, '-');
-			
-			        var regExp = '[^0-9.]';
-			        var numString = value.toString().replace(new RegExp(regExp, 'g'), '');
-			
-			        var numList = numString.split('.');
-			
-			        // numList will always have at least one value in array because we checked for an empty string earlier.
-			        numList[0] += '.';
-			        numString = numList.join('');
-			        num = parseFloat(numString);
-			
-			        if (!num) {
-			            num = 0;
-			        } else if (isNeg) {
-			            num *= -1;
-			        }
-			    }
-			
-			    return num;
-			}
-			
-			exports.default = getDecimal;
 		
 		/***/ }
 		/******/ ])
