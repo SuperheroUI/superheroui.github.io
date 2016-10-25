@@ -12,6 +12,7 @@ import ShInputEmailExamples from './sh-input-email';
 import ShInputPasswordExamples from './sh-input-password';
 import ShInputSelectExamples from './sh-input-select';
 import ShInputTextExamples from './sh-input-text';
+import ShModalDialog from './sh-modal-dialog';
 import ShTabsExamples from './sh-tabs';
 
 
@@ -26,6 +27,7 @@ class Homepage extends React.Component {
             examples:  [
                 {name: 'ShCore', code: <ShCoreExamples />, repo: 'SuperheroUI/shCore', npm: 'sh-core'},
                 {name: 'ShTabs', code: <ShTabsExamples />, repo: 'SuperheroUI/shTabs', npm: 'sh-tabs'},
+                {name: 'ShModalDialog', code: <ShModalDialog />, repo: 'SuperheroUI/shModalDialog', npm: 'sh-modal-dialog'},
                 {name: 'ShGaugeChart', code: <ShGaugeChart />, repo: 'SuperheroUI/shGaugeChart', npm: 'sh-gauge-chart', hideCoverage: true},
                 {name: 'ShInputEmail', code: <ShInputEmailExamples />, repo: 'SuperheroUI/shInputEmail', npm: 'sh-input-email'},
                 {name: 'ShInputSelect', code: <ShInputSelectExamples />, repo: 'SuperheroUI/shInputSelect', npm: 'sh-input-select'},
