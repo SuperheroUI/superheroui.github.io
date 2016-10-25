@@ -40,14 +40,15 @@
     "sh-buttons": "0.2.1",
     "sh-core": "0.3.0",
     "sh-form": "0.1.6",
+    "sh-gauge-chart": "0.1.0",
     "sh-icons": "0.3.4",
-    "sh-input-text": "0.2.0",
     "sh-input-checkbox": "0.1.4",
     "sh-input-currency": "0.2.2",
     "sh-input-email": "0.2.0",
     "sh-input-password": "0.2.0",
     "sh-input-select": "0.2.6",
-    "sh-tabs": "0.1.5",
-    "sh-gauge-chart": "0.1.0"
+    "sh-input-text": "0.2.0",
+    "sh-modal-dialog": "0.1.2",
+    "sh-tabs": "0.1.5"
   }
 }
