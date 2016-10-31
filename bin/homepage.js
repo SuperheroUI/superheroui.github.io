@@ -42595,7 +42595,6 @@
 		        _this.optionKeyUp = _this.optionKeyUp.bind(_this);
 		        _this.optionSelect = _this.optionSelect.bind(_this);
 		        _this.navigateTab = _this.navigateTab.bind(_this);
-		        _this.onFocus = _this.onFocus.bind(_this);
 		
 		        _this.validate = _this.validate.bind(_this);
 		        _this.validateAll = _this.validateAll.bind(_this);
@@ -42707,35 +42706,28 @@
 		            }
 		        }
 		    }, {
-		        key: 'onFocus',
-		        value: function onFocus() {
-		            this.setState({
-		                statusTouched: true
-		            });
-		        }
-		    }, {
 		        key: 'inputKeyUp',
 		        value: function inputKeyUp(event) {
 		            if (_.includes(hotKeys, event.keyCode)) {
 		                event.preventDefault();
 		                event.stopPropagation();
-		            }
 		
-		            switch (event.keyCode) {
-		                case hotKeys.space:
-		                    {
-		                        this.toggleDropdown();
-		                        break;
-		                    }
-		                case hotKeys.esc:
-		                    {
-		                        this.closeDropdown();
-		                        break;
-		                    }
-		                case hotKeys.down:
-		                    {
-		                        this.navigateTab(-1, -2);
-		                    }
+		                switch (event.keyCode) {
+		                    case hotKeys.space:
+		                        {
+		                            this.toggleDropdown();
+		                            break;
+		                        }
+		                    case hotKeys.esc:
+		                        {
+		                            this.closeDropdown();
+		                            break;
+		                        }
+		                    case hotKeys.down:
+		                        {
+		                            this.navigateTab(-1, -2);
+		                        }
+		                }
 		            }
 		        }
 		    }, {
@@ -42758,6 +42750,7 @@
 		    }, {
 		        key: 'closeDropdown',
 		        value: function closeDropdown() {
+		            this.validate(true);
 		            this.setState({
 		                dropdownOpen: false
 		            });
@@ -42781,34 +42774,36 @@
 		            var _this3 = this;
 		
 		            return function (event) {
-		                event.stopPropagation();
-		                event.preventDefault();
+		                if (_.includes(hotKeys, event.keyCode)) {
+		                    event.preventDefault();
+		                    event.stopPropagation();
 		
-		                switch (event.keyCode) {
-		                    case 32:
-		                        {
-		                            // Space
-		                            _this3.optionSelect(option)();
-		                            break;
-		                        }
-		                    case 27:
-		                        {
-		                            // Esc
-		                            _this3.closeDropdown();
-		                            break;
-		                        }
-		                    case 38:
-		                        {
-		                            // Up Arrow
-		                            _this3.navigateTab(1, index);
-		                            break;
-		                        }
-		                    case 40:
-		                        {
-		                            // Down Arrow
-		                            _this3.navigateTab(-1, index);
-		                            break;
-		                        }
+		                    switch (event.keyCode) {
+		                        case hotKeys.space:
+		                            {
+		                                // Space
+		                                _this3.optionSelect(option)();
+		                                break;
+		                            }
+		                        case hotKeys.esc:
+		                            {
+		                                // Esc
+		                                _this3.closeDropdown();
+		                                break;
+		                            }
+		                        case hotKeys.up:
+		                            {
+		                                // Up Arrow
+		                                _this3.navigateTab(1, index);
+		                                break;
+		                            }
+		                        case hotKeys.down:
+		                            {
+		                                // Down Arrow
+		                                _this3.navigateTab(-1, index);
+		                                break;
+		                            }
+		                    }
 		                }
 		            };
 		        }
@@ -42827,7 +42822,10 @@
 		                this.openDropdown();
 		            }
 		
-		            var minIndex = this.state.treePath.length > 0 ? -1 : 0;
+		            var minIndex = 0;
+		            if (this.state.treePath.length > 0) {
+		                minIndex = -1;
+		            }
 		
 		            var currentElement = null;
 		            if (index < minIndex) {
@@ -43260,23 +43258,17 @@
 			Object.defineProperty(exports, "__esModule", {
 			    value: true
 			});
-			exports.getDecimal = exports.getClassNames = undefined;
+			exports.getClassNames = undefined;
 			
 			var _getClassNames = __webpack_require__(/*! ./util/get-class-names */ 1);
 			
 			var _getClassNames2 = _interopRequireDefault(_getClassNames);
 			
-			var _getDecimal = __webpack_require__(/*! ./util/get-decimal */ 3);
-			
-			var _getDecimal2 = _interopRequireDefault(_getDecimal);
-			
 			function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 			
 			exports.getClassNames = _getClassNames2.default;
-			exports.getDecimal = _getDecimal2.default;
 			exports.default = {
-			    getClassNames: _getClassNames2.default,
-			    getDecimal: _getDecimal2.default
+			    getClassNames: _getClassNames2.default
 			};
 		
 		/***/ },
@@ -43342,63 +43334,6 @@
 		/***/ function(module, exports) {
 		
 			module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
-		
-		/***/ },
-		/* 3 */
-		/*!*********************************!*\
-		  !*** ./src/util/get-decimal.js ***!
-		  \*********************************/
-		/***/ function(module, exports, __webpack_require__) {
-		
-			'use strict';
-			
-			Object.defineProperty(exports, "__esModule", {
-			    value: true
-			});
-			
-			var _lodash = __webpack_require__(/*! lodash */ 2);
-			
-			var _ = _interopRequireWildcard(_lodash);
-			
-			function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-			
-			/**
-			 * Get a decimal value from a string or number, remove any unnecessary characters.
-			 *
-			 * @param {string} value Alpha characters will be removed and a decimal will be returned. For example if you give it 'b.123' 0.123 will be returned.
-			 * @returns {number}
-			 */
-			
-			function getDecimal(value) {
-			    if (!value) {
-			        return 0;
-			    }
-			
-			    var num = value;
-			    if (!_.isNumber(value)) {
-			        var isNeg = '-' && _.includes(value, '-');
-			
-			        var regExp = '[^0-9.]';
-			        var numString = value.toString().replace(new RegExp(regExp, 'g'), '');
-			
-			        var numList = numString.split('.');
-			
-			        // numList will always have at least one value in array because we checked for an empty string earlier.
-			        numList[0] += '.';
-			        numString = numList.join('');
-			        num = parseFloat(numString);
-			
-			        if (!num) {
-			            num = 0;
-			        } else if (isNeg) {
-			            num *= -1;
-			        }
-			    }
-			
-			    return num;
-			}
-			
-			exports.default = getDecimal;
 		
 		/***/ }
 		/******/ ])
@@ -43613,7 +43548,7 @@
 		
 		
 		// module
-		exports.push([module.id, ".sh-input-select {\n  position: relative;\n  display: inline-block;\n  width: 100%;\n  height: 40px;\n  font-size: 16px;\n  color: rgba(255, 255, 255, 0.8); }\n  .sh-input-select:hover .input {\n    background: rgba(255, 255, 255, 0.2); }\n  .sh-input-select.open-up .dropdown-wrapper {\n    bottom: calc(100% + 1px); }\n  .sh-input-select.open-up .dropdown {\n    bottom: 0; }\n  .sh-input-select.open-down .dropdown-wrapper {\n    top: calc(100% + 1px); }\n  .sh-input-select.open-down .dropdown {\n    top: 0; }\n  .sh-input-select.opened.open-up .input {\n    border-top-left-radius: 0;\n    border-top-right-radius: 0; }\n  .sh-input-select.opened.open-up .dropdown {\n    border-top-left-radius: 2px;\n    border-top-right-radius: 2px; }\n  .sh-input-select.opened.open-down .input {\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0; }\n  .sh-input-select.opened.open-down .dropdown {\n    border-bottom-left-radius: 2px;\n    border-bottom-right-radius: 2px; }\n  .sh-input-select.opened .dropdown-wrapper {\n    height: 200px; }\n  .sh-input-select .input {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    background: rgba(255, 255, 255, 0.1);\n    border-radius: 2px;\n    line-height: 1;\n    cursor: pointer;\n    z-index: 1;\n    transition: border-radius 0.25s ease-in-out, background 0.25s ease-in-out;\n    outline: 0; }\n    .sh-input-select .input:focus {\n      -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6);\n      box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6); }\n    .sh-input-select .input .input-selected {\n      height: 100%;\n      line-height: 2.4;\n      padding: 0 28px 0 15px;\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis; }\n    .sh-input-select .input .icon-svg {\n      position: absolute;\n      top: 8px;\n      right: 8px; }\n  .sh-input-select .dropdown-wrapper {\n    position: absolute;\n    right: 0;\n    left: 0;\n    height: 0;\n    overflow: hidden;\n    transition: height 0.25s ease-in-out; }\n    .sh-input-select .dropdown-wrapper .dropdown {\n      position: absolute;\n      left: 100%;\n      width: 100%;\n      max-height: 200px;\n      color: rgba(0, 0, 0, 0.6);\n      background: white;\n      overflow-x: hidden;\n      overflow-y: auto;\n      z-index: 2;\n      transition: left 0.5s ease-in-out; }\n      .sh-input-select .dropdown-wrapper .dropdown.current {\n        left: 0; }\n      .sh-input-select .dropdown-wrapper .dropdown.left {\n        left: -100%; }\n      .sh-input-select .dropdown-wrapper .dropdown .icon-svg {\n        fill: rgba(0, 0, 0, 0.6); }\n  .sh-input-select .option {\n    position: relative;\n    padding: 10px 15px;\n    background: transparent;\n    line-height: 1;\n    cursor: pointer;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    transition: background 0.25s ease-in-out, color 0.25s ease-in-out; }\n    .sh-input-select .option:focus, .sh-input-select .option:hover {\n      color: white;\n      background: #3ab676;\n      outline: 0; }\n      .sh-input-select .option:focus .icon-svg, .sh-input-select .option:hover .icon-svg {\n        fill: rgba(255, 255, 255, 0.8); }\n    .sh-input-select .option.back {\n      text-align: center; }\n    .sh-input-select .option .option-details {\n      display: inline-block;\n      width: 100%;\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis; }\n    .sh-input-select .option .tree-forward-icon {\n      position: absolute;\n      top: 7px;\n      right: 0; }\n    .sh-input-select .option .tree-back-icon {\n      position: absolute;\n      top: 7px;\n      left: 5px; }\n  .sh-input-select .icon-svg {\n    fill: rgba(255, 255, 255, 0.8);\n    vertical-align: bottom;\n    transition: fill 0.25s ease-in-out; }\n", ""]);
+		exports.push([module.id, ".sh-input-select {\n  position: relative;\n  display: inline-block;\n  width: 100%;\n  height: 40px;\n  font-size: 16px;\n  color: rgba(255, 255, 255, 0.8); }\n  .sh-input-select:hover .input {\n    background: rgba(255, 255, 255, 0.2); }\n  .sh-input-select.open-up .dropdown-wrapper {\n    bottom: calc(100% + 1px); }\n  .sh-input-select.open-up .dropdown {\n    bottom: 0; }\n  .sh-input-select.open-down .dropdown-wrapper {\n    top: calc(100% + 1px); }\n  .sh-input-select.open-down .dropdown {\n    top: 0; }\n  .sh-input-select.sh-invalid.sh-touched .input {\n    border: 1px solid #b25245; }\n  .sh-input-select.opened.open-up .input {\n    border-top-left-radius: 0;\n    border-top-right-radius: 0; }\n  .sh-input-select.opened.open-up .dropdown {\n    border-top-left-radius: 2px;\n    border-top-right-radius: 2px; }\n  .sh-input-select.opened.open-down .input {\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0; }\n  .sh-input-select.opened.open-down .dropdown {\n    border-bottom-left-radius: 2px;\n    border-bottom-right-radius: 2px; }\n  .sh-input-select.opened .dropdown-wrapper {\n    height: 200px; }\n  .sh-input-select .input {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    background: rgba(255, 255, 255, 0.1);\n    border-radius: 2px;\n    line-height: 1;\n    cursor: pointer;\n    z-index: 1;\n    transition: border-radius 0.25s ease-in-out, background 0.25s ease-in-out;\n    outline: 0; }\n    .sh-input-select .input:focus {\n      -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6);\n      box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6); }\n    .sh-input-select .input .input-selected {\n      height: 100%;\n      line-height: 2.4;\n      padding: 0 28px 0 15px;\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis; }\n    .sh-input-select .input .icon-svg {\n      position: absolute;\n      top: 8px;\n      right: 8px; }\n  .sh-input-select .dropdown-wrapper {\n    position: absolute;\n    right: 0;\n    left: 0;\n    height: 0;\n    overflow: hidden;\n    transition: height 0.25s ease-in-out; }\n    .sh-input-select .dropdown-wrapper .dropdown {\n      position: absolute;\n      left: 100%;\n      width: 100%;\n      max-height: 200px;\n      color: rgba(0, 0, 0, 0.6);\n      background: white;\n      overflow-x: hidden;\n      overflow-y: auto;\n      z-index: 2;\n      transition: left 0.5s ease-in-out; }\n      .sh-input-select .dropdown-wrapper .dropdown.current {\n        left: 0; }\n      .sh-input-select .dropdown-wrapper .dropdown.left {\n        left: -100%; }\n      .sh-input-select .dropdown-wrapper .dropdown .icon-svg {\n        fill: rgba(0, 0, 0, 0.6); }\n  .sh-input-select .option {\n    position: relative;\n    padding: 10px 15px;\n    background: transparent;\n    line-height: 1;\n    cursor: pointer;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    transition: background 0.25s ease-in-out, color 0.25s ease-in-out; }\n    .sh-input-select .option:focus, .sh-input-select .option:hover {\n      color: white;\n      background: #3ab676;\n      outline: 0; }\n      .sh-input-select .option:focus .icon-svg, .sh-input-select .option:hover .icon-svg {\n        fill: rgba(255, 255, 255, 0.8); }\n    .sh-input-select .option.back {\n      text-align: center; }\n    .sh-input-select .option .option-details {\n      display: inline-block;\n      width: 100%;\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis; }\n    .sh-input-select .option .tree-forward-icon {\n      position: absolute;\n      top: 7px;\n      right: 0; }\n    .sh-input-select .option .tree-back-icon {\n      position: absolute;\n      top: 7px;\n      left: 5px; }\n  .sh-input-select .icon-svg {\n    fill: rgba(255, 255, 255, 0.8);\n    vertical-align: bottom;\n    transition: fill 0.25s ease-in-out; }\n", ""]);
 		
 		// exports
 	
