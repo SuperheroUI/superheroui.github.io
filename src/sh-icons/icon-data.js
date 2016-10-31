@@ -30,24 +30,9 @@ export default [
         "name": "end-call"
     },
     {
-        "order": 183,
-        "prevSize": 32,
-        "name": "right-arrow"
-    },
-    {
-        "order": 238,
-        "prevSize": 32,
-        "name": "left-arrow"
-    },
-    {
         "order": 239,
         "prevSize": 32,
-        "name": "up-arrow"
-    },
-    {
-        "order": 240,
-        "prevSize": 32,
-        "name": "down-arrow"
+        "name": "right-arrow"
     },
     {
         "order": 184,
@@ -309,10 +294,10 @@ export default [
     {
         "order": 234,
         "prevSize": 32,
-        "name": "facebook-negative"
+        "name": "facebook-negitive"
     },
     {
-        "order": 235,
+        "order": 240,
         "prevSize": 32,
         "name": "laurels"
     },
@@ -325,5 +310,30 @@ export default [
         "order": 237,
         "prevSize": 32,
         "name": "person"
+    },
+    {
+        "order": 241,
+        "prevSize": 32,
+        "name": "left-arrow"
+    },
+    {
+        "order": 242,
+        "prevSize": 32,
+        "name": "down-arrow"
+    },
+    {
+        "order": 243,
+        "prevSize": 32,
+        "name": "up-arrow"
+    },
+    {
+        "order": 244,
+        "name": "chain",
+        "prevSize": 32
+    },
+    {
+        "order": 245,
+        "name": "edit",
+        "prevSize": 32
     }
 ];
