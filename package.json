@@ -46,7 +46,7 @@
     "sh-input-currency": "0.2.2",
     "sh-input-email": "0.2.0",
     "sh-input-password": "0.2.0",
-    "sh-input-select": "0.2.6",
+    "sh-input-select": "0.2.7",
     "sh-input-text": "0.2.0",
     "sh-modal-dialog": "0.1.2",
     "sh-tabs": "0.1.5"
