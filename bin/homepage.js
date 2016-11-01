@@ -135,15 +135,23 @@
 	            menuState: 'close'
 	        };
 	
-	        _this.toggleMenu = _this.toggleMenu.bind(_this);
+	        _this.openMenu = _this.openMenu.bind(_this);
+	        _this.closeMenu = _this.closeMenu.bind(_this);
 	        return _this;
 	    }
 	
 	    _createClass(Homepage, [{
-	        key: 'toggleMenu',
-	        value: function toggleMenu() {
+	        key: 'closeMenu',
+	        value: function closeMenu() {
 	            this.setState({
-	                menuState: this.state.menuState === 'close' ? 'open' : 'close'
+	                menuState: 'close'
+	            });
+	        }
+	    }, {
+	        key: 'openMenu',
+	        value: function openMenu() {
+	            this.setState({
+	                menuState: 'open'
 	            });
 	        }
 	    }, {
@@ -233,10 +241,10 @@
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { className: 'navItem', tabIndex: '0', onBlur: this.toggleMenu },
+	                        { className: 'navItem', tabIndex: '0', onBlur: this.closeMenu },
 	                        _react2.default.createElement(
 	                            'a',
-	                            { onClick: this.toggleMenu },
+	                            { onClick: this.openMenu },
 	                            'Components'
 	                        ),
 	                        _react2.default.createElement(
@@ -244,7 +252,7 @@
 	                            { className: 'navSelect ' + this.state.menuState },
 	                            _react2.default.createElement(
 	                                'div',
-	                                { className: 'navSelectList', onClick: this.toggleMenu },
+	                                { className: 'navSelectList', onClick: this.closeMenu },
 	                                navLinks
 	                            )
 	                        )
@@ -44096,9 +44104,7 @@
 		            var newState = _.clone(this.state);
 		            newState.placeholderText = newState.placeholderHolder;
 		            newState.classList.empty = !this.state.value;
-		            if (this.state.value && this.props.required) {
-		                newState.requiredField.showRequired = false;
-		            }
+		            newState.requiredField.showRequired = this.state.value.length < 1 && this.props.required;
 		            this.setState(newState);
 		        }
 		    }, {
@@ -44441,7 +44447,7 @@
 		
 		
 		// module
-		exports.push([module.id, ".sh-input-text {\n  display: inline-block;\n  height: 50px;\n  width: 100%; }\n  .sh-input-text label {\n    position: relative;\n    display: block;\n    height: 50px;\n    width: 100%; }\n  .sh-input-text .label {\n    position: absolute;\n    top: 5px;\n    left: 5px;\n    right: 5px;\n    font-size: 12px;\n    color: rgba(255, 255, 255, 0.4);\n    text-transform: uppercase;\n    z-index: 1;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n  .sh-input-text.empty input {\n    background: rgba(255, 255, 255, 0.1); }\n  .sh-input-text.sh-invalid.sh-touched input {\n    border: 1px solid #b25245; }\n  .sh-input-text input {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 100%;\n    padding: 25px 5px 5px 5px;\n    color: white;\n    border-radius: 2px;\n    background: transparent;\n    transition: background 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.25s ease-in-out;\n    border: 1px solid transparent;\n    outline: 0; }\n    .sh-input-text input:focus {\n      -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6);\n      box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6); }\n    .sh-input-text input:hover {\n      background: rgba(255, 255, 255, 0.1); }\n    .sh-input-text input::-moz-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-text input:-ms-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-text input::-webkit-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n  .sh-input-text .required-label {\n    font-size: 12px;\n    text-transform: uppercase;\n    opacity: 0;\n    position: absolute;\n    right: 4px;\n    top: 4px;\n    color: rgba(255, 255, 255, 0.2); }\n    .sh-input-text .required-label.show-required {\n      opacity: 1; }\n", ""]);
+		exports.push([module.id, ".sh-input-text {\n  display: inline-block;\n  height: 50px;\n  width: 100%; }\n  .sh-input-text label {\n    position: relative;\n    display: block;\n    height: 50px;\n    width: 100%; }\n  .sh-input-text .label {\n    position: absolute;\n    top: 5px;\n    left: 5px;\n    right: 5px;\n    font-size: 12px;\n    color: rgba(255, 255, 255, 0.4);\n    text-transform: uppercase;\n    z-index: 1;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n  .sh-input-text.empty input {\n    background: rgba(255, 255, 255, 0.1); }\n  .sh-input-text.sh-invalid.sh-touched input {\n    border: 1px solid #b25245; }\n  .sh-input-text input {\n    position: absolute;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 100%;\n    padding: 25px 5px 5px 5px;\n    color: white;\n    border-radius: 2px;\n    background: transparent;\n    transition: background 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.25s ease-in-out;\n    border: 1px solid transparent;\n    outline: 0; }\n    .sh-input-text input:focus {\n      -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6);\n      box-shadow: inset 0 1px 1px transparent, 0 0 5px rgba(255, 255, 255, 0.6); }\n    .sh-input-text input:hover {\n      background: rgba(255, 255, 255, 0.1); }\n    .sh-input-text input::-moz-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-text input:-ms-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n    .sh-input-text input::-webkit-input-placeholder {\n      color: #3ab676;\n      font-weight: 700;\n      opacity: 1; }\n  .sh-input-text .required-label {\n    font-size: 12px;\n    text-transform: uppercase;\n    opacity: 0;\n    position: absolute;\n    right: 4px;\n    top: 4px;\n    color: rgba(255, 255, 255, 0.2);\n    transition: opacity 0.5s ease-in-out; }\n    .sh-input-text .required-label.show-required {\n      opacity: 1;\n      transition: opacity 0.5s ease-in-out; }\n", ""]);
 		
 		// exports
 	
@@ -45800,7 +45806,7 @@
 	                    _react2.default.createElement(
 	                        'pre',
 	                        { className: 'instructions' },
-	                        'npm install sh-form --save'
+	                        'npm install sh-gauge-chart --save'
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -66432,7 +66438,7 @@
 	
 	codeText.jsHandle = '\nonChange(event) {\n    this.setState({\n        value: event.target.value\n    });\n}\n';
 	
-	codeText.html = '\n<ShInputEmail label="Input 1" value={this.state.value} onChange={this.onChange} />\n<ShInputEmail label="Input 1" value={this.state.value} onChange={this.onChange} required />\n';
+	codeText.html = '\n<ShInputEmail label="email address" value={this.state.value} onChange={this.onChange} />\n<ShInputEmail label="email address" value={this.state.value} onChange={this.onChange} required />\n';
 	
 	var Standard = function (_React$Component) {
 	    _inherits(Standard, _React$Component);
@@ -66508,13 +66514,13 @@
 	                        { className: 'title' },
 	                        'Component'
 	                    ),
-	                    _react2.default.createElement(_shInputEmail2.default, { label: 'Input 1', value: this.state.value1, onChange: this.onChange1 }),
+	                    _react2.default.createElement(_shInputEmail2.default, { label: 'email address', value: this.state.value1, onChange: this.onChange1 }),
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'title' },
 	                        'Component Required'
 	                    ),
-	                    _react2.default.createElement(_shInputEmail2.default, { label: 'Input 2', value: this.state.value2, onChange: this.onChange2, required: true })
+	                    _react2.default.createElement(_shInputEmail2.default, { label: 'email address', value: this.state.value2, onChange: this.onChange2, required: true })
 	                )
 	            );
 	        }

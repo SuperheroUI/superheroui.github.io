@@ -42,12 +42,19 @@ class Homepage extends React.Component {
             menuState:'close'
         };
 
-        this.toggleMenu = this.toggleMenu.bind(this);
+        this.openMenu = this.openMenu.bind(this);
+        this.closeMenu = this.closeMenu.bind(this);
     }
 
-    toggleMenu(){
+    closeMenu(){
         this.setState({
-            menuState: this.state.menuState === 'close' ? 'open' : 'close'
+            menuState: 'close'
+        });
+    }
+
+    openMenu(){
+        this.setState({
+            menuState: 'open'
         });
     }
 
@@ -98,10 +105,10 @@ class Homepage extends React.Component {
                     <div className="navItem">
                         <a href="#home">Home</a>
                     </div>
-                    <div className="navItem" tabIndex="0" onBlur={this.toggleMenu}>
-                        <a onClick={this.toggleMenu}>Components</a>
+                    <div className="navItem" tabIndex="0" onBlur={this.closeMenu}>
+                        <a onClick={this.openMenu}>Components</a>
                         <div className={'navSelect '+this.state.menuState} >
-                            <div className="navSelectList" onClick={this.toggleMenu}>
+                            <div className="navSelectList" onClick={this.closeMenu}>
                                 {navLinks}
                             </div>
                         </div>
