@@ -17,7 +17,7 @@ this.state = {
 
 codeText.jsHandle = `
 openDialog() {
-        const dialog = new ShModalDialog(<MyModalContent />, 'Service Modal', 'OK');
+        const dialog = new ShModalDialog(<MyModalContent />, 'Service Modal', 'OK', 'sh-small');
         dialog.open().then(()=> {
             return this.MyFunctionThatReturnsAPromise();
         }).then(()=> {
@@ -44,7 +44,7 @@ class Basic extends React.Component {
     }
 
     openMe() {
-        const dialog = new ShModalDialog(<ModalContent />, 'Service Modal', 'OK');
+        const dialog = new ShModalDialog(<ModalContent />, 'Service Modal', 'OK', 'sh-small');
         console.log(dialog)
         dialog.open().then(()=> {
             return this.simulate();

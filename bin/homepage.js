@@ -69260,6 +69260,30 @@
 	                                _react2.default.createElement(
 	                                    'td',
 	                                    null,
+	                                    'Css Class'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    'string'
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    '\'\''
+	                                ),
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
+	                                    'Add a CSS class sto the dialog content. For a small dialog pass sh-small for a prebuilt small dialog'
+	                                )
+	                            ),
+	                            _react2.default.createElement(
+	                                'tr',
+	                                null,
+	                                _react2.default.createElement(
+	                                    'td',
+	                                    null,
 	                                    'open'
 	                                ),
 	                                _react2.default.createElement(
@@ -69356,7 +69380,7 @@
 	
 	codeText.jsState = '\nthis.state = {\n    value: \'\'\n};\n';
 	
-	codeText.jsHandle = '\nopenDialog() {\n        const dialog = new ShModalDialog(<MyModalContent />, \'Service Modal\', \'OK\');\n        dialog.open().then(()=> {\n            return this.MyFunctionThatReturnsAPromise();\n        }).then(()=> {\n            return dialog.close();\n        }).catch((e)=>{\n            console.log(e)\n        });\n    }\n';
+	codeText.jsHandle = '\nopenDialog() {\n        const dialog = new ShModalDialog(<MyModalContent />, \'Service Modal\', \'OK\', \'sh-small\');\n        dialog.open().then(()=> {\n            return this.MyFunctionThatReturnsAPromise();\n        }).then(()=> {\n            return dialog.close();\n        }).catch((e)=>{\n            console.log(e)\n        });\n    }\n';
 	
 	codeText.html = '\n<button className="sh-btn sh-btn-default" onClick={this.openDialog}>Open Dialog</button>\n';
 	
@@ -69381,7 +69405,7 @@
 	        value: function openMe() {
 	            var _this2 = this;
 	
-	            var dialog = new _shModalDialog2.default(_react2.default.createElement(_modalContent2.default, null), 'Service Modal', 'OK');
+	            var dialog = new _shModalDialog2.default(_react2.default.createElement(_modalContent2.default, null), 'Service Modal', 'OK', 'sh-small');
 	            console.log(dialog);
 	            dialog.open().then(function () {
 	                return _this2.simulate();
