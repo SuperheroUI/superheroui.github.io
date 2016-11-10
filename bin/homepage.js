@@ -69589,12 +69589,13 @@
 		document.body.appendChild(rootElement);
 		
 		var ShModalService = function () {
-		    function ShModalService(contentElement, title, saveButton) {
+		    function ShModalService(contentElement, title, saveButton, cssClass) {
 		        _classCallCheck(this, ShModalService);
 		
 		        this.contentElement = contentElement;
 		        this.title = title;
 		        this.saveButton = saveButton;
+		        this.cssClass = cssClass || '';
 		    }
 		
 		    _createClass(ShModalService, [{
@@ -69610,7 +69611,7 @@
 		
 		                _reactDom2.default.render(_react2.default.createElement(
 		                    _shModalDialog2.default,
-		                    { shModalTitle: _this.title, shModalSaveButton: _this.saveButton, shSuccess: resolve, shCancel: cancel },
+		                    { callBackFunction: true, shModalTitle: _this.title, shModalSaveButton: _this.saveButton, shSuccess: resolve, shCancel: cancel, shClass: _this.cssClass },
 		                    _this.contentElement
 		                ), rootElement);
 		            });
@@ -69627,6 +69628,16 @@
 		        key: 'fadeOut',
 		        value: function fadeOut() {
 		            document.getElementById('sh-modal').classList.remove('fade-in');
+		        }
+		    }, {
+		        key: 'setValid',
+		        value: function setValid() {
+		            document.getElementById('sh-modal').classList.add('sh-valid');
+		        }
+		    }, {
+		        key: 'removeValid',
+		        value: function removeValid() {
+		            document.getElementById('sh-modal').classList.remove('sh-valid');
 		        }
 		    }]);
 		
@@ -69737,23 +69748,17 @@
 		    }, {
 		        key: 'componentDidMount',
 		        value: function componentDidMount() {
-		            if (this.state.classList.displayModal === false) {
-		                this.showModal();
-		            }
+		            this.showModal();
 		        }
 		    }, {
 		        key: 'handleSuccess',
 		        value: function handleSuccess() {
-		            if (this.props.shSuccess) {
-		                this.props.shSuccess();
-		            }
+		            this.props.shSuccess();
 		        }
 		    }, {
 		        key: 'handleCancel',
 		        value: function handleCancel() {
-		            if (this.props.shCancel) {
-		                this.props.shCancel();
-		            }
+		            this.props.shCancel();
 		        }
 		    }, {
 		        key: 'getSaveButton',
@@ -69766,11 +69771,12 @@
 		
 		                return _react2.default.createElement(
 		                    'button',
-		                    { className: 'sh-btn sh-btn-primary', onClick: this.handleSuccess },
+		                    { id: 'sh-save-button', className: 'sh-btn sh-btn-primary',
+		                        onClick: this.handleSuccess },
 		                    buttonText
 		                );
 		            } else {
-		                return this.props.shSaveButton;
+		                return this.props.shModalSaveButton;
 		            }
 		        }
 		    }, {
@@ -69778,10 +69784,11 @@
 		        value: function render() {
 		            return _react2.default.createElement(
 		                'div',
-		                { className: 'sh-modal-dialog ' + _shCore2.default.getClassNames(this.state.classList), id: 'sh-modal' },
+		                { className: 'sh-modal-dialog ' + _shCore2.default.getClassNames(this.state.classList),
+		                    id: 'sh-modal' },
 		                _react2.default.createElement(
 		                    'div',
-		                    { className: 'sh-modal-content ' },
+		                    { className: "sh-modal-content " + this.props.shClass },
 		                    _react2.default.createElement('i', { className: 'sh-icon icon-x sh-close', onClick: this.handleCancel }),
 		                    _react2.default.createElement(
 		                        'div',
@@ -70088,7 +70095,7 @@
 		
 		
 		// module
-		exports.push([module.id, ".sh-modal-dialog {\n  color: white;\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.8);\n  display: none;\n  transition: opacity 0.5s ease-in-out;\n  opacity: 0; }\n  .sh-modal-dialog.fade-in {\n    opacity: 1;\n    transition: opacity 0.5s ease-in-out; }\n  .sh-modal-dialog.display-modal {\n    display: block;\n    z-index: 10000000; }\n  .sh-modal-dialog .sh-modal-content {\n    position: absolute;\n    left: calc(50% - 300px);\n    right: calc(50% - 300px);\n    top: calc(50% - 300px);\n    bottom: calc(50% - 300px);\n    background-color: #304853;\n    border-radius: 4px;\n    padding: 40px 50px; }\n    .sh-modal-dialog .sh-modal-content .sh-close {\n      position: absolute;\n      top: 20px;\n      right: 20px;\n      font-size: 20px;\n      color: rgba(255, 255, 255, 0.4);\n      cursor: pointer; }\n    .sh-modal-dialog .sh-modal-content .sh-modal-title {\n      line-height: 1.1;\n      color: white;\n      font-size: 45px;\n      font-family: \"Roboto Condensed\", \"Open Sans\";\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis; }\n    .sh-modal-dialog .sh-modal-content .sh-dynamic-content {\n      position: absolute;\n      left: 50px;\n      right: 50px;\n      top: 115px;\n      bottom: 100px;\n      overflow-y: auto;\n      color: rgba(255, 255, 255, 0.4); }\n    .sh-modal-dialog .sh-modal-content .sh-button-divider {\n      position: absolute;\n      bottom: 100px;\n      width: 100%;\n      border-top: 1px solid #1b2126;\n      left: 0; }\n    .sh-modal-dialog .sh-modal-content .sh-button-group {\n      position: absolute;\n      right: 70px;\n      bottom: 30px; }\n      .sh-modal-dialog .sh-modal-content .sh-button-group .sh-cancel {\n        margin-right: 20px;\n        background-color: transparent;\n        color: #3ab676; }\n", ""]);
+		exports.push([module.id, ".sh-modal-dialog {\n  color: white;\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.8);\n  display: none;\n  transition: opacity 0.5s ease-in-out;\n  opacity: 0; }\n  .sh-modal-dialog.fade-in {\n    opacity: 1;\n    transition: opacity 0.5s ease-in-out; }\n  .sh-modal-dialog.display-modal {\n    display: block;\n    z-index: 10000000; }\n  .sh-modal-dialog:not(.sh-valid) .sh-button-group .sh-btn.sh-btn-primary {\n    transition: opacity .5s;\n    cursor: not-allowed;\n    opacity: .4; }\n  .sh-modal-dialog.sh-valid .sh-button-group .sh-btn.sh-btn-primary {\n    opacity: 1;\n    transition: opacity .5s; }\n  .sh-modal-dialog .sh-modal-content {\n    position: absolute;\n    left: calc(50% - 300px);\n    right: calc(50% - 300px);\n    top: calc(50% - 300px);\n    bottom: calc(50% - 300px);\n    background-color: #304853;\n    border-radius: 4px;\n    padding: 40px 50px; }\n    .sh-modal-dialog .sh-modal-content.sh-small {\n      left: calc(50% - 300px);\n      right: calc(50% - 300px);\n      top: calc(50% - 150px);\n      bottom: calc(50% - 150px); }\n      .sh-modal-dialog .sh-modal-content.sh-small .sh-modal-title {\n        font-size: 32px; }\n    .sh-modal-dialog .sh-modal-content .sh-close {\n      position: absolute;\n      top: 20px;\n      right: 20px;\n      font-size: 20px;\n      color: rgba(255, 255, 255, 0.4);\n      cursor: pointer; }\n    .sh-modal-dialog .sh-modal-content .sh-modal-title {\n      line-height: 1.1;\n      color: white;\n      font-size: 45px;\n      font-family: \"Roboto Condensed\", \"Open Sans\";\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis; }\n    .sh-modal-dialog .sh-modal-content .sh-dynamic-content {\n      position: absolute;\n      left: 50px;\n      right: 50px;\n      top: 115px;\n      bottom: 100px;\n      overflow-y: auto;\n      color: rgba(255, 255, 255, 0.4); }\n    .sh-modal-dialog .sh-modal-content .sh-button-divider {\n      position: absolute;\n      bottom: 100px;\n      width: 100%;\n      border-top: 1px solid #1b2126;\n      left: 0; }\n    .sh-modal-dialog .sh-modal-content .sh-button-group {\n      position: absolute;\n      right: 70px;\n      bottom: 30px; }\n      .sh-modal-dialog .sh-modal-content .sh-button-group .sh-cancel {\n        margin-right: 20px;\n        background-color: transparent;\n        color: #3ab676; }\n", ""]);
 		
 		// exports
 	
