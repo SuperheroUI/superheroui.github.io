@@ -24,8 +24,8 @@ onChange(event) {
 `;
 
 codeText.html = `
-<ShInputEmail label="Input 1" value={this.state.value} onChange={this.onChange} />
-<ShInputEmail label="Input 1" value={this.state.value} onChange={this.onChange} required />
+<ShInputEmail label="email address" value={this.state.value} onChange={this.onChange} />
+<ShInputEmail label="email address" value={this.state.value} onChange={this.onChange} required />
 `;
 
 class Standard extends React.Component {
@@ -67,9 +67,9 @@ class Standard extends React.Component {
                 </div>
                 <div className="col component">
                     <div className="title">Component</div>
-                    <ShInputEmail label="Input 1" value={this.state.value1} onChange={this.onChange1} />
+                    <ShInputEmail label="email address" value={this.state.value1} onChange={this.onChange1} />
                     <div className="title">Component Required</div>
-                    <ShInputEmail label="Input 2" value={this.state.value2} onChange={this.onChange2} required />
+                    <ShInputEmail label="email address" value={this.state.value2} onChange={this.onChange2} required />
                 </div>
             </div>
         )

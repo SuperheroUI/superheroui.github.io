@@ -60,6 +60,12 @@ class ShModalDialogExamples extends React.Component {
                             <td>Pass in a react component, jsx or a string.</td>
                         </tr>
                         <tr>
+                            <td>Css Class</td>
+                            <td>string</td>
+                            <td>''</td>
+                            <td>Add a CSS class sto the dialog content. For a small dialog pass sh-small for a prebuilt small dialog</td>
+                        </tr>
+                        <tr>
                             <td>open</td>
                             <td>promise</td>
                             <td></td>

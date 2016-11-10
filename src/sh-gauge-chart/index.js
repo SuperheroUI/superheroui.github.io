@@ -27,7 +27,7 @@ class ShFormExamples extends React.Component {
             <div>
                 <div className="section">
                     <div className="title">Installation</div>
-                    <pre className="instructions">npm install sh-form --save</pre>
+                    <pre className="instructions">npm install sh-gauge-chart --save</pre>
                 </div>
                 <div className="section">
                     <div className="title">Options</div>
