@@ -118,17 +118,17 @@ class Homepage extends React.Component {
                     <div className="subHeader">
                         <img className="logo" src="images/logo.svg" />
                         <div className="name">Superhero<span className="sub">UI</span></div>
-                        <div className="subText">React components that are really super awesome</div>
+                        <div className="subText">React components that are super awesome</div>
                     </div>
                 </div>
                 <div className="description">
                     <div className="title">Description</div>
-                    <div className="details">SuperheroUI is a set of UI components built using React. The goal is to make independent components that do not rely on each other for versions. This makes updating one component easy to update.</div>
+                    <div className="details">SuperheroUI is a set of UI components built using React.</div>
                     <div className="details">Dependencies:
                         <ul>
-                            <li><span className="depName">react</span> - core for any react component</li>
-                            <li><span className="depName">react-dom</span> - needed for some of the dom manipulation we do</li>
-                            <li><span className="depName">lodash</span> - we use this has a great base for more functional programming</li>
+                            <li><span className="depName">react</span> - Core for any react component</li>
+                            <li><span className="depName">react-dom</span> - Needed for some of the dom manipulation</li>
+                            <li><span className="depName">lodash</span> - A great base for more functional programming</li>
                         </ul>
                     </div>
                 </div>
