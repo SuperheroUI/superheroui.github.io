@@ -13,6 +13,7 @@ import ShInputPasswordExamples from './sh-input-password';
 import ShInputSelectExamples from './sh-input-select';
 import ShInputTextExamples from './sh-input-text';
 import ShModalDialog from './sh-modal-dialog';
+import ShRichTextEditorExamples from './sh-rich-text-editor';
 import ShTabsExamples from './sh-tabs';
 
 
@@ -36,6 +37,7 @@ class Homepage extends React.Component {
                 {name: 'ShInputCurrency', code: <ShInputCurrencyExamples />, repo: 'SuperheroUI/shInputCurrency', npm: 'sh-input-currency'},
                 {name: 'ShInputCheckbox', code: <ShInputCheckboxExamples />, repo: 'SuperheroUI/shInputCheckbox', npm: 'sh-input-checkbox'},
                 {name: 'ShForm', code: <ShFormExamples />, repo: 'SuperheroUI/shForm', npm: 'sh-form'},
+                {name: 'ShRichTextEditor', code: <ShRichTextEditorExamples />, repo: 'SuperheroUI/shRichTextEditor', npm: 'sh-rich-text-editor'},
                 {name: 'ShIcons', code: <ShIconsExamples />, repo: 'SuperheroUI/shIcons', npm: 'sh-icons', hideCoverage: true},
                 {name: 'ShButtons', code: <ShButtonsExamples />, repo: 'SuperheroUI/shButtons', npm: 'sh-buttons', hideCoverage: true}
             ],
