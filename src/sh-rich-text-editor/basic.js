@@ -2,6 +2,9 @@ import React from 'react';
 
 import ShRichTextEditor from 'sh-rich-text-editor';
 import Code from '../util/code';
+
+require('./example.scss');
+
 let codeText = {};
 
 codeText.jsImport = `
