@@ -56,7 +56,13 @@ class ShInputCheckboxExamples extends React.Component {
                             <td>required</td>
                             <td>boolean</td>
                             <td>false</td>
-                            <td>Set the html required flag on the input field.</td>
+                            <td>Set the required for sh-form and make itself red if required</td>
+                        </tr>
+                        <tr>
+                            <td>disabled</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Disable the component from clicking, and add disabled styles</td>
                         </tr>
                         <tr>
                             <td>properties</td>
