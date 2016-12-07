@@ -36,10 +36,11 @@ class Basic extends React.Component {
     }
 
     openMe() {
-        ShToast.open().then(() => {
+        let toast = new ShToast('Your content has been saved and is now available to be seen on the interwebbs, how does that make you feel?', 'success', 'icon-envelope', 100,'custom')
+        toast.open().then(() => {
             return this.simulate();
         }).then(() => {
-            return ShToast.close();
+            return toast.close();
         })
     }
 
