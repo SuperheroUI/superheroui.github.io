@@ -15,6 +15,7 @@ import ShInputTextExamples from './sh-input-text';
 import ShModalDialog from './sh-modal-dialog';
 import ShRichTextEditorExamples from './sh-rich-text-editor';
 import ShTabsExamples from './sh-tabs';
+import ShToast from './sh-toast';
 
 
 require('sh-core/bin/main.css');
@@ -29,6 +30,7 @@ class Homepage extends React.Component {
                 {name: 'ShCore', code: <ShCoreExamples />, repo: 'SuperheroUI/shCore', npm: 'sh-core'},
                 {name: 'ShTabs', code: <ShTabsExamples />, repo: 'SuperheroUI/shTabs', npm: 'sh-tabs'},
                 {name: 'ShModalDialog', code: <ShModalDialog />, repo: 'SuperheroUI/shModalDialog', npm: 'sh-modal-dialog'},
+                {name: 'ShToast', code: <ShToast />, repo: 'SuperheroUI/shToast', npm: 'sh-toast'},
                 {name: 'ShGaugeChart', code: <ShGaugeChart />, repo: 'SuperheroUI/shGaugeChart', npm: 'sh-gauge-chart', hideCoverage: true},
                 {name: 'ShInputEmail', code: <ShInputEmailExamples />, repo: 'SuperheroUI/shInputEmail', npm: 'sh-input-email'},
                 {name: 'ShInputSelect', code: <ShInputSelectExamples />, repo: 'SuperheroUI/shInputSelect', npm: 'sh-input-select'},

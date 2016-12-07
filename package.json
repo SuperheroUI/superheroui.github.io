@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "./node_modules/.bin/webpack -d --watch --config webpack.config.js",
     "build": "./node_modules/.bin/webpack -d --config webpack.config.js",
-    "server":"webpack-dev-server"
+    "server": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -46,7 +46,7 @@
     "sh-form": "0.1.6",
     "sh-gauge-chart": "0.1.0",
     "sh-icons": "0.3.6",
-    "sh-input-checkbox": "0.1.5",
+    "sh-input-checkbox": "0.1.7",
     "sh-input-currency": "0.2.2",
     "sh-input-email": "0.2.0",
     "sh-input-password": "0.2.0",
@@ -54,6 +54,7 @@
     "sh-input-text": "0.2.3",
     "sh-modal-dialog": "0.1.5",
     "sh-rich-text-editor": "0.0.1",
-    "sh-tabs": "0.1.5"
+    "sh-tabs": "0.1.5",
+    "sh-toast": "0.0.1"
   }
 }
