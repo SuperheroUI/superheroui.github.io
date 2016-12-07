@@ -55,6 +55,6 @@
     "sh-modal-dialog": "0.1.5",
     "sh-rich-text-editor": "0.0.1",
     "sh-tabs": "0.1.5",
-    "sh-toast": "0.0.1"
+    "sh-toast": "0.0.2"
   }
 }

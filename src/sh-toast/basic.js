@@ -36,10 +36,10 @@ class Basic extends React.Component {
     }
 
     openMe() {
-        this.state.toast.open().then(() => {
+        ShToast.open().then(() => {
             return this.simulate();
         }).then(() => {
-            return this.state.toast.close();
+            return ShToast.close();
         })
     }
 
