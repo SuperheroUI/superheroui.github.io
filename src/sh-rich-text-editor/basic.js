@@ -34,7 +34,7 @@ class Basic extends React.Component {
         super();
 
         this.state = {
-            text: ""
+            text: "This is a test"
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -60,7 +60,8 @@ class Basic extends React.Component {
                 </div>
                 <div className="col component">
                     <div className="title">Component</div>
-                    <ShRichTextEditor value={this.state.text} required={false} onChange={this.handleChange} label="Text" />
+                    <ShRichTextEditor value={this.state.text} required={false} onChange={this.handleChange} 
+                    label="Text" defaultFont="Serif" defaultFontSize="Medium" />
                     <div className="title">State</div>
                     <div className="details">{JSON.stringify(this.state)}</div>
                 </div>
