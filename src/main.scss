@@ -40,9 +40,8 @@ $nav-height: 53px;
 
 body {
     top: $nav-height;
-
     color: $color-font;
-    background: linear-gradient($color-secondary, $color-thirdary) fixed;
+    background-color: $color-secondary;
 
     #app {
         height: 100%;
