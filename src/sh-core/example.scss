@@ -41,6 +41,7 @@
         background-color: $color-primary;
     }
 
+
     .secondary-block {
         width: 100%;
         height: 50px;
@@ -52,6 +53,30 @@
         height: 50px;
         background-color: $color-thirdary;
     }
+
+    .dark-block{
+        width: 100%;
+        height: 50px;
+        background-color: $color-box-dark-background;
+
+
+    }
+    .transparent-block{
+        width: 100%;
+        height: 50px;
+        background-color: $color-transparent;
+    }
+    .tool-tip{
+        width: 100%;
+        height: 50px;
+        background-color: $colorToolTipBackground;
+    }
+    .background-ex{
+        width: 100%;
+        height: 50px;
+        background-color: $colorBackground;
+    }
+
     .neural-block {
         width: 100%;
         height: 50px;

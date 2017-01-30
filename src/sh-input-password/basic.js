@@ -10,20 +10,24 @@ import ShInputPassword from 'sh-input-password';
 
 codeText.jsState = `
 this.state = {
-    value: ''
+    PasswordValue: ''
 };
+this.handlePasswordChange = this.handlePasswordChange.bind(this);
 `;
 
 codeText.jsHandle = `
-handleChange(newValue) {
+handlePasswordChange(event) {
     this.setState({
-        value: newValue
+        PasswordValue: event.target.value;
     });
 }
+/*
+* Takes in an event as default
+*/
 `;
 
 codeText.html = `
-<ShInputPassword label="A Password Field" value={this.state.value} onChange={this.handleChange} />
+<ShInputPassword label="A Password Field" value={this.state.PasswordValue} onChange={this.handlePasswordChange} />
 `;
 
 class Basic extends React.Component {
@@ -47,6 +51,7 @@ class Basic extends React.Component {
             <div>
                 <div className="col code">
                     <div className="title">Import component</div>
+                    <div className="details">Add this line to your entry JS file.</div>
                     {Code(codeText.jsImport, 'javascript')}
                     <div className="title">Setup state</div>
                     {Code(codeText.jsState, 'javascript')}

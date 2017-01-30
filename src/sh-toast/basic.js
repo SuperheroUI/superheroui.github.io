@@ -19,6 +19,12 @@ openToast() {
         })
     }
 `;
+codeText.jsState = `
+this.state = {
+    value: ''
+};
+this.openToast = this.openToast.bind(this);
+`;
 
 codeText.html = `
 <button className="sh-btn sh-btn-default" onClick={this.openToast}>Open Toast</button>
@@ -58,7 +64,10 @@ class Basic extends React.Component {
             <div>
                 <div className="col code">
                     <div className="title">Import service</div>
+                    <div className="details">Add this line to your entry JS file.</div>
                     {Code(codeText.jsImport, 'javascript')}
+                    <div className="title">Setup state</div>
+                    {Code(codeText.jsState, 'javascript')}
                     <div className="title">Construct Toast</div>
                     {Code(codeText.jsHandle, 'javascript')}
                 </div>

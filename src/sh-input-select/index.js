@@ -58,10 +58,10 @@ class ShInputSelectExamples extends React.Component {
                                 <td>List of options for the user to choose between.</td>
                             </tr>
                             <tr>
-                                <td>onChange</td>
+                                <td>handleChange</td>
                                 <td>function</td>
                                 <td>noop</td>
-                                <td>Callback function called whenever value changes.</td>
+                                <td>handleChange function called whenever value changes.</td>
                             </tr>
                             <tr>
                                 <td>config</td>

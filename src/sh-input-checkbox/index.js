@@ -47,7 +47,7 @@ class ShInputCheckboxExamples extends React.Component {
                             <td>Default value to set checkbox to.</td>
                         </tr>
                         <tr>
-                            <td>onChange</td>
+                            <td>handleChange</td>
                             <td>function</td>
                             <td>noop</td>
                             <td>Callback function called whenever value changes.</td>

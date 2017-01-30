@@ -42,16 +42,16 @@ class ShInputPasswordExamples extends React.Component {
                         </thead>
                         <tbody>
                         <tr>
-                            <td>value</td>
+                            <td>PasswordValue</td>
                             <td>any</td>
                             <td> </td>
                             <td>Default value to set password to. Also will update when value changes.</td>
                         </tr>
                         <tr>
-                            <td>onChange</td>
+                            <td>handlePasswordChange</td>
                             <td>function</td>
                             <td>noop</td>
-                            <td>Callback function called whenever value changes.</td>
+                            <td>handlePasswordChange function called whenever value changes. DOM event is passed in. Get value with event.target.value.</td>
                         </tr>
                         <tr>
                             <td>required</td>

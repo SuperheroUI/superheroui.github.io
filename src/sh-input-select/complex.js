@@ -25,6 +25,7 @@ this.state = {
         multiselect: true
     }
 };
+this.handleChange = this.handleChange.bind(this);
 `;
 
 codeText.jsHandle = `
@@ -82,6 +83,7 @@ class Complex extends React.Component {
             <div>
                 <div className="col code">
                     <div className="title">Import component</div>
+                    <div className="details">Add this line to your entry JS file.</div>
                     {Code(codeText.jsImport, 'javascript')}
                     <div className="title">Setup state</div>
                     {Code(codeText.jsState, 'javascript')}

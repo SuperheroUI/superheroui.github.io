@@ -8,7 +8,7 @@ require('./example.scss');
 let codeText = {};
 
 codeText.cssMain = `
-require('sh-icons/bin/main.css');
+import 'sh-icons/bin/main.css';
 `;
 
 codeText.cssMain2 = `

@@ -13,6 +13,7 @@ codeText.jsState = `
 this.state = {
     value: ''
 };
+this.openDialog = this.openDialog.bind(this);
 `;
 
 codeText.jsHandle = `
@@ -75,6 +76,7 @@ class Basic extends React.Component {
             <div>
                 <div className="col code">
                     <div className="title">Import service</div>
+                    <div className="details">Add this line to your entry JS file.</div>
                     {Code(codeText.jsImport, 'javascript')}
                     <div className="title">Setup state</div>
                     {Code(codeText.jsState, 'javascript')}

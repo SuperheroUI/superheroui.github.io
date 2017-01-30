@@ -42,16 +42,16 @@ class ShInputTextExamples extends React.Component {
                         </thead>
                         <tbody>
                         <tr>
-                            <td>value</td>
+                            <td>Textvalue</td>
                             <td>any</td>
                             <td> </td>
                             <td>Default value to set text to. Also will update when value changes.</td>
                         </tr>
                         <tr>
-                            <td>onChange</td>
+                            <td>handleTextChange</td>
                             <td>function</td>
                             <td>noop</td>
-                            <td>Callback function called whenever value changes.</td>
+                            <td>handleTextChange function called whenever value changes. DOM event is passed in. Get value with event.target.value.</td>
                         </tr>
                         <tr>
                             <td>required</td>

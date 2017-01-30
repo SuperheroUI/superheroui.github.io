@@ -42,16 +42,16 @@ class ShInputCurrencyExamples extends React.Component {
                         </thead>
                         <tbody>
                         <tr>
-                            <td>value</td>
+                            <td>CurrencyValue</td>
                             <td>number</td>
                             <td> </td>
                             <td>Default value to set number to. Also will update when value changes.</td>
                         </tr>
                         <tr>
-                            <td>onChange</td>
+                            <td>handleCurrencyChange</td>
                             <td>function</td>
                             <td>noop</td>
-                            <td>Callback function called whenever value changes.</td>
+                            <td>handleCurrencyChange function called whenever value changes. DOM event is passed in. Get value with event.target.value.</td>
                         </tr>
                         <tr>
                             <td>required</td>

@@ -11,21 +11,22 @@ import ShInputEmail from 'sh-input-email';
 
 codeText.jsState = `
 this.state = {
-    value: ''
+    EmailValue: ''
 };
+this.onEmailChange = this.onEmailChange.bind(this);
 `;
 
 codeText.jsHandle = `
-onChange(event) {
+onEmailChange(event) {
     this.setState({
-        value: event.target.value
+        EmailValue: event.target.value
     });
 }
 `;
 
 codeText.html = `
-<ShInputEmail label="email address" value={this.state.value} onChange={this.onChange} />
-<ShInputEmail label="email address" value={this.state.value} onChange={this.onChange} required />
+<ShInputEmail label="email address" value={this.state.EmailValue} onChange={this.onEmailChange} />
+<ShInputEmail label="email address" value={this.state.EmailValue} onChange={this.onEmailChange} required />
 `;
 
 class Standard extends React.Component {
@@ -57,6 +58,7 @@ class Standard extends React.Component {
             <div>
                 <div className="col code">
                     <div className="title">Import component</div>
+                    <div className="details">Add this line to your entry JS file.</div>
                     {Code(codeText.jsImport, 'javascript')}
                     <div className="title">Setup state</div>
                     {Code(codeText.jsState, 'javascript')}
