@@ -10,7 +10,7 @@ let codeText = {};
 codeText.cssMain = `
 import 'sh-icons/bin/main.css';
 `;
-//require('sh-icons/bin/main.css');
+
 codeText.cssMain2 = `
 {
     test: /\\.(ttf|eot|svg|woff)$/,

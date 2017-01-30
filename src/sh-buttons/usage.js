@@ -14,7 +14,7 @@ codeText.html = `
 codeText.cssMain = `
 import 'sh-buttons/bin/main.css';
 `;
-//*require('sh-buttons/bin/main.css');*/
+
 
 class Usage extends React.Component {
 

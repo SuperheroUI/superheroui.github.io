@@ -9,7 +9,7 @@ let codeText = {};
 codeText.cssMain = `
 import 'sh-core/bin/main.css';
 `;
-//require('sh-core/bin/main.css');
+
 codeText.cssMain2 = `
 {
     test: /\\.(ttf)$/,
@@ -92,15 +92,16 @@ class Usage extends React.Component {
                     <pre className="instructions">npm install url-loader --save-dev</pre>
                     <div className="details">Add the new loader to your list of loaders in webpack.config.js</div>
                     {Code(codeText.cssMain2, 'javascript')}
-                    <div className="details">Add this line to your entry JS file.</div>
+                    <div className="details">Add this line to your entry JS file. Not required but the other components of ShUI do have dependancies on ShCore. </div>
                     {Code(codeText.cssMain, 'javascript')}
                     <div className="title">Include Base SCSS</div>
-                    <div className="details">This SCSS file can be included on your SCSS files to provide mixins for
-                        standard processes and variables for colors.
+                    <div className="details">This SCSS file should be included on your base SCSS files to provide mixins for
+                        standard processes and variables for colors. Required if your using other ShUI components, includes a basic reset that sets the box size and
+                        border box for the other components.
                     </div>
                     {Code(codeText.scssBase, 'scss')}
                     <div className="title">Set Color</div>
-                    <div className="details">In the project SCSS file edit the defaults and set the color to what you want for your background and text</div>
+                    <div className="details">In your project SCSS file edit the defaults to set the color to what you want for your background and text</div>
                     {Code(codeText.scssColor, 'scss')}
                     <div className="title">Add Ellipse</div>
                     <div className="details">For ellipse to work they need to have a width, either a % or static.</div>

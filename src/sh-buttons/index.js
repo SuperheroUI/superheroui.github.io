@@ -2,7 +2,7 @@ import React from 'react';
 
 import Usage from './usage';
 
-require('sh-buttons/bin/main.css');//require('sh-buttons/bin/main.css');
+require('sh-buttons/bin/main.css');
 
 class ShIconsExamples extends React.Component {
     constructor() {
