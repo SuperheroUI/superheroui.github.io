@@ -16,6 +16,7 @@ codeText.jsState = `
 this.state = {
     submitted: 0
 };
+this.onSubmit = this.onSubmit.bind(this);
 `;
 
 codeText.jsHandle = `
@@ -90,6 +91,7 @@ class Standard extends React.Component {
             <div>
                 <div className="col code">
                     <div className="title">Import component</div>
+                    <div className="details">Add this line to your entry JS file.</div>
                     {Code(codeText.jsImport, 'javascript')}
                     <div className="title">Setup state</div>
                     {Code(codeText.jsState, 'javascript')}

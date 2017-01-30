@@ -12,9 +12,9 @@ codeText.html = `
 <button className="sh-btn sh-btn-default disabled">A disabled button</button>
 `;
 codeText.cssMain = `
-require('sh-buttons/bin/main.css');
+import 'sh-buttons/bin/main.css';
 `;
-
+//*require('sh-buttons/bin/main.css');*/
 
 class Usage extends React.Component {
 

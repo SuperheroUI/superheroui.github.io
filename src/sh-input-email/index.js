@@ -48,16 +48,16 @@ class ShInputEmailExamples extends React.Component {
                                 <td>Label to display with input</td>
                             </tr>
                             <tr>
-                                <td>value</td>
+                                <td>EmailValue</td>
                                 <td>string</td>
                                 <td> </td>
                                 <td>Default value to be assigned to input</td>
                             </tr>
                             <tr>
-                                <td>onChange</td>
+                                <td>onEmailChange</td>
                                 <td>function</td>
                                 <td> </td>
-                                <td>Standard input onChange, DOM event is passed in. Get value with event.target.value.</td>
+                                <td>Standard input onEmailChange, DOM event is passed in. Get value with event.target.value.</td>
                             </tr>
                             <tr>
                                 <td>required</td>

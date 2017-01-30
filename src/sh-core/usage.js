@@ -7,8 +7,9 @@ require('./example.scss');
 let codeText = {};
 
 codeText.cssMain = `
-require('sh-core/bin/main.css');
+import 'sh-core/bin/main.css';
 `;
+//require('sh-core/bin/main.css');
 codeText.cssMain2 = `
 {
     test: /\\.(ttf)$/,
@@ -75,6 +76,7 @@ class Usage extends React.Component {
     clickMe() {
         this.setState({
             clickMe: this.state.clickMe === 'wide' ? 'small' : 'wide'
+
         });
     }
 
@@ -98,6 +100,7 @@ class Usage extends React.Component {
                     </div>
                     {Code(codeText.scssBase, 'scss')}
                     <div className="title">Set Color</div>
+                    <div className="details">In the project SCSS file edit the defaults and set the color to what you want for your background and text</div>
                     {Code(codeText.scssColor, 'scss')}
                     <div className="title">Add Ellipse</div>
                     <div className="details">For ellipse to work they need to have a width, either a % or static.</div>
@@ -129,7 +132,7 @@ class Usage extends React.Component {
                     </div>
 
                     <div className="title">Default Colors</div>
-                    <div className="details">isCore comes with several default colors. Stick to this color pallet and keep your app
+                    <div className="details">ShCore comes with several default colors. Stick to this color pallet and keep your app
                         consistent with design standards. Use color variables, do not hard code any colors into your app.
                         Explore the _bases.scss file for a full list of sass variables. (node_modules/sh-core/src/_base.scss)
                     </div>
@@ -138,12 +141,22 @@ class Usage extends React.Component {
                     <div className="primary-block"></div>
                     <div className="title">$color-secondary</div>
                     <div className="secondary-block"></div>
-                    <div className="title">$color-thrirdary</div>
+                    <div className="title">$color-thirdary</div>
                     <div className="thirdary-block"></div>
                     <div className="title">$color-neural</div>
                     <div className="neural-block"></div>
                     <div className="title">$color-error</div>
                     <div className="error-block"></div>
+
+                    <div className="title">$color-box-dark-background</div>
+                    <div className='dark-block'></div>
+
+                    <div className="title">$color-transparent</div>
+                    <div className="transparent-block"></div>
+                    <div className="title">$colorToolTipBackground</div>
+                    <div className="tool-tip"></div>
+                    <div className="title">$colorBackground</div>
+                    <div className="background-ex"></div>
 
                 </div>
             </div>

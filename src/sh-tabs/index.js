@@ -68,10 +68,10 @@ class ShInputSelectExamples extends React.Component {
                                 <td>What type of tabs to show.</td>
                             </tr>
                             <tr>
-                                <td>onChange</td>
+                                <td>handleChange</td>
                                 <td>function</td>
                                 <td>{'(oldIndex, newIndex) => {...}'}</td>
-                                <td>Callback function called whenever the tab changes. </td>
+                                <td>handleChange function called whenever the tab changes. </td>
                             </tr>
                         </tbody>
                     </table>

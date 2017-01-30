@@ -18,6 +18,7 @@ this.state = {
         {name: 'Customer', desc: 'Bought Already', id: 3},
     ]
 };
+this.handleChange = this.handleChange.bind(this);
 `;
 
 codeText.jsHandle = `
@@ -26,6 +27,7 @@ handleChange(newValue) {
         value: newValue
     });
 }
+
 `;
 
 codeText.html = `
@@ -67,6 +69,7 @@ class Basic extends React.Component {
             <div>
                 <div className="col code">
                     <div className="title">Import component</div>
+                    <div className="details">Add this line to your entry JS file.</div>
                     {Code(codeText.jsImport, 'javascript')}
                     <div className="title">Setup state</div>
                     {Code(codeText.jsState, 'javascript')}

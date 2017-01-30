@@ -10,20 +10,24 @@ import ShInputText from 'sh-input-text';
 
 codeText.jsState = `
 this.state = {
-    value: ''
+    Textvalue: ''
 };
+this.handleTextChange = this.handleTextChange.bind(this);
 `;
 
 codeText.jsHandle = `
-handleChange(newValue) {
+handleTextChange(event) {
     this.setState({
-        value: newValue
+        Textvalue: event.target.value;
     });
 }
+/*
+* Takes in an event as default
+*/
 `;
 
 codeText.html = `
-<ShInputText label="A Text Field" value={this.state.value} onChange={this.handleChange} required/>
+<ShInputText label="A Text Field" value={this.state.Textvalue} onChange={this.handleTextChange} required/>
 `;
 
 class Basic extends React.Component {
@@ -47,6 +51,7 @@ class Basic extends React.Component {
             <div>
                 <div className="col code">
                     <div className="title">Import component</div>
+                    <div className="details">Add this line to your entry JS file.</div>
                     {Code(codeText.jsImport, 'javascript')}
                     <div className="title">Setup state</div>
                     {Code(codeText.jsState, 'javascript')}
