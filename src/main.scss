@@ -15,7 +15,6 @@ $nav-height: 53px;
     }
     &.open {
         height: 500px;
-
     }
 
 
@@ -44,7 +43,16 @@ $nav-height: 53px;
         }
     }
 }
-
+#scroll-style-1::-webkit-scrollbar-thumb{
+    border-radius: 3px;
+    background-color: rgb(58,182,118);
+}
+#scroll-style-1::-webkit-scrollbar-track{
+    display:flex ;
+    box-shadow: inset 0 0 6px rgb(178,194,195);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
 
 body {
     top: $nav-height;
