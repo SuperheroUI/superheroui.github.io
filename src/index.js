@@ -167,7 +167,7 @@ class Homepage extends React.Component {
                     </div>
                     <div className="navItem" tabIndex="0" onBlur={this.closeMenu}>
                         <a onClick={this.openMenu}>Components</a>
-                        <div className={'navSelect ' + this.state.menuState} >
+                        <div className={'navSelect ' + this.state.menuState} id="scroll-style-1">
                             <div className="navSelectList" onClick={this.closeMenu}>
                                 {navLinks}
                             </div>
