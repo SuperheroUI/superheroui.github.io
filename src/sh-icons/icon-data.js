@@ -335,5 +335,10 @@ export default [
         "order": 245,
         "name": "edit",
         "prevSize": 32
+    },
+    {
+        "order": 246,
+        "name": "playbooks",
+        "prevSize": 32
     }
 ];
