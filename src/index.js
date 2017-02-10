@@ -14,6 +14,7 @@ import ShInputTextExamples from './sh-input-text';
 import ShModalDialog from './sh-modal-dialog';
 import ShTabsExamples from './sh-tabs';
 import ShToast from './sh-toast';
+import ShSpinner from './sh-spinner';
 require('sh-core/bin/main.css');
 require('./main.scss');
 
@@ -38,6 +39,12 @@ class Homepage extends React.Component {
                     repo: 'SuperheroUI/shGaugeChart',
                     npm: 'sh-gauge-chart',
                     hideCoverage: true
+                },
+                {
+                    name:'ShSpinner',
+                   code: <ShSpinner />,
+                    repo: 'SuperheroUI/shSpinner',
+                    npm: 'sh-spinner'
                 },
                 {
                     name: 'ShInputEmail',
