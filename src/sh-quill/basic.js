@@ -66,7 +66,7 @@ class Basic extends React.Component {
                 <div className="col component">
 
 
-                    <ShQuill/>
+                    <ShQuill className="sm"/>
 
                 </div>
             </div>

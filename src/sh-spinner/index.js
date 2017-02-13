@@ -47,17 +47,12 @@ class ShFormExamples extends React.Component {
                             <td>False</td>
                             <td>Toggles the start of shSpinner </td>
                         </tr>
-                        <tr>
-                            <td>shComponentName</td>
-                            <td>String </td>
-                            <td></td>
-                            <td>Name identifier for the component</td>
-                        </tr>
+
                         <tr>
                             <td>shLabel</td>
                             <td>String</td>
                             <td></td>
-                            <td>The Text that goes inside the center of the Spinner</td>
+                            <td>The text that goes inside the center of the Spinner</td>
                         </tr>
                         <tr>
                             <td>shkey</td>
