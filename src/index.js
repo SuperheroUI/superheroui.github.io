@@ -15,6 +15,7 @@ import ShModalDialog from './sh-modal-dialog';
 import ShTabsExamples from './sh-tabs';
 import ShToast from './sh-toast';
 import ShSpinner from './sh-spinner';
+import ShQuill from './sh-quill';
 require('sh-core/bin/main.css');
 require('./main.scss');
 
@@ -96,6 +97,12 @@ class Homepage extends React.Component {
                     repo: 'SuperheroUI/shButtons',
                     npm: 'sh-buttons',
                     hideCoverage: true
+                },
+                {
+                    name:'ShQuill',
+                    code: <ShQuill />,
+                    repo: 'SuperheroUI/shQuill',
+                    npm: 'sh-Quill'
                 }
             ],
             menuState: 'close'
