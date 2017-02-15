@@ -14,10 +14,13 @@ import ShInputTextExamples from './sh-input-text';
 import ShModalDialog from './sh-modal-dialog';
 import ShTabsExamples from './sh-tabs';
 import ShToast from './sh-toast';
+import ShSpinner from './sh-spinner';
+import ShQuill from './sh-quill';
 
 import 'sh-core/bin/main.css';
 import './main.scss';
 import 'sh-icons/bin/main.css';
+
 
 class Homepage extends React.Component {
     constructor() {
@@ -40,6 +43,12 @@ class Homepage extends React.Component {
                     repo: 'SuperheroUI/shGaugeChart',
                     npm: 'sh-gauge-chart',
                     hideCoverage: true
+                },
+                {
+                    name:'ShSpinner',
+                   code: <ShSpinner />,
+                    repo: 'SuperheroUI/shSpinner',
+                    npm: 'sh-spinner'
                 },
                 {
                     name: 'ShInputEmail',
@@ -91,6 +100,12 @@ class Homepage extends React.Component {
                     repo: 'SuperheroUI/shButtons',
                     npm: 'sh-buttons',
                     hideCoverage: true
+                },
+                {
+                    name:'ShQuill',
+                    code: <ShQuill />,
+                    repo: 'SuperheroUI/shQuill',
+                    npm: 'sh-Quill'
                 }
             ],
             menuState: 'close'
