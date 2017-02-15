@@ -2,8 +2,7 @@ import React from 'react';
 import * as _ from 'lodash';
 import Code from '../util/code';
 import iconList from './icon-data'
-
-require('./example.scss');
+import './example.scss';
 
 let codeText = {};
 

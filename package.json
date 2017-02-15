@@ -45,7 +45,7 @@
     "sh-core": "0.3.3",
     "sh-form": "0.1.6",
     "sh-gauge-chart": "0.1.0",
-    "sh-icons": "0.3.8",
+    "sh-icons": "0.4.1",
     "sh-input-checkbox": "0.3.1",
     "sh-input-currency": "0.3.0",
     "sh-input-email": "0.3.0",
@@ -55,6 +55,6 @@
     "sh-modal-dialog": "0.1.6",
     "sh-rich-text-editor": "0.0.5",
     "sh-tabs": "0.1.5",
-    "sh-toast": "0.0.3"
+    "sh-toast": "0.0.4"
   }
 }

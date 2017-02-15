@@ -14,8 +14,10 @@ import ShInputTextExamples from './sh-input-text';
 import ShModalDialog from './sh-modal-dialog';
 import ShTabsExamples from './sh-tabs';
 import ShToast from './sh-toast';
-require('sh-core/bin/main.css');
-require('./main.scss');
+
+import 'sh-core/bin/main.css';
+import './main.scss';
+import 'sh-icons/bin/main.css';
 
 class Homepage extends React.Component {
     constructor() {
