@@ -105,7 +105,7 @@ class Homepage extends React.Component {
                     name:'ShQuill',
                     code: <ShQuill />,
                     repo: 'SuperheroUI/shQuill',
-                    npm: 'sh-Quill'
+                    npm: 'sh-quill'
                 }
             ],
             menuState: 'close'
