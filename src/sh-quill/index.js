@@ -31,12 +31,9 @@ class ShInputTextExamples extends React.Component {
                 </div>
                 <div className="section">
                     <div className="title">JS Quill</div>
-                    <div>ShQuill is a fork of JS Quill version 1.1.7. For the full documentation for JS Quill please go to <a href="http://quilljs.com/docs/api/">http://quilljs.com/docs/api/</a> </div>
+                    <div>ShQuill is a has a dependency on JS Quill version 1.1.7. For the full documentation for JS Quill please go to <a href="http://quilljs.com/docs/api/">http://quilljs.com/docs/api/</a> </div>
                    <br/>
-                    <div>Or for a quick start guide go to <a href="https://quilljs.com/docs/quickstart/">https://quilljs.com/docs/quickstart/</a> </div>
-                    <br/>
-                    <div className="title">Documentation</div>
-                    <div>Full Documentation for ShQuill has been moved to the ShQuill GitHub page <a href="https://github.com/SuperheroUI/shQuill">https://github.com/SuperheroUI/shQuill</a></div>
+                    <div>ShQuill is a copy/fork of React-Quill. Docs at the time of copy: <a href="https://github.com/SuperheroUI/shQuill">https://github.com/SuperheroUI/shQuill</a> </div>
 
                     <div></div>
                     <br/>
