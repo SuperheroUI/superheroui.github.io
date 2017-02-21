@@ -29,7 +29,7 @@
     "babel-preset-react": "^6.11.1",
     "css-loader": "^0.26.0",
     "node-sass": "^4.5.0",
-    "sass-loader": "^5.0.0",
+    "sass-loader": "^6.0.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.1",
@@ -45,8 +45,8 @@
     "sh-core": "0.3.3",
     "sh-form": "0.1.6",
     "sh-gauge-chart": "0.1.0",
-    "sh-icons": "0.4.1",
-    "sh-input-checkbox": "0.3.1",
+    "sh-icons": "0.4.2",
+    "sh-input-checkbox": "0.3.2",
     "sh-input-currency": "0.3.0",
     "sh-input-email": "0.3.0",
     "sh-input-password": "0.2.0",
@@ -55,7 +55,7 @@
     "sh-modal-dialog": "0.1.6",
     "sh-rich-text-editor": "0.0.5",
     "sh-tabs": "0.1.5",
-    "sh-spinner":"0.1.0",
-    "sh-quill":"0.0.70"
+    "sh-spinner":"0.1.7",
+    "sh-quill":"0.0.71"
   }
 }

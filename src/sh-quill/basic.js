@@ -1,7 +1,9 @@
 import React from 'react';
 import ShQuill from 'sh-quill';
-import ShInputText from 'sh-input-text';
+import ReactDOM from 'react-dom';
 import Code from '../util/code';
+
+import 'sh-buttons/bin/main.css';
 let codeText = {};
 
 codeText.jsImport = `
@@ -10,16 +12,18 @@ import ShQuill from 'sh-quill';
 
 codeText.jsState = `
 this.state = {
-            reason: '<div>beginning text</div>'
+            value: '<div>beginning text</div>'
         };
 
         this.handleChange = this.handleChange.bind(this);
+        this.updateValue = this.updateValue.bind(this);
 `;
 
 codeText.jsHandle = `
-handleChange() {
+updateValue() {
         this.setState({
-            reason: <ul>
+            reason:
+<ul>
     <li>one</li>
     <li>two</li>
     <li>three</li>
@@ -27,10 +31,16 @@ handleChange() {
 </ul>
         })
     }
+    
+    handleOneChange(value) {
+        this.setState({
+            value: value
+        })
+    }
 `;
 
 codeText.html = `
- <ShQuill className="sm" value={this.state.reason}/>
+ <ShQuill className="sm" value={this.state.reason} onChange={this.handleOneChange}/>
 `;
 
 class Basic extends React.Component {
@@ -38,15 +48,27 @@ class Basic extends React.Component {
         super();
 
         this.state = {
-            value: ""
+            value: "Welcome to Sh-Quill"
         };
 
         this.handleOneChange = this.handleOneChange.bind(this);
+        this.updateValue = this.updateValue.bind(this);
     }
 
-    handleOneChange(event) {
-        this.state.value = event.target.value;
-        this.setState(this.state);
+    handleOneChange(value) {
+        this.setState({
+            value: value
+        })
+    }
+    updateValue() {
+        this.setState({
+            value: `<ul>
+                        <li>one</li>
+                        <li>two</li>
+                        <li>three</li>
+                        <li>four</li>
+                      </ul>`
+        })
     }
 
     render() {
@@ -58,15 +80,17 @@ class Basic extends React.Component {
                     {Code(codeText.jsImport, 'javascript')}
                     <div className="title">Setup state</div>
                     {Code(codeText.jsState, 'javascript')}
-                    <div className="title">Handle changes</div>
+                    <div className="title">Update values</div>
                     {Code(codeText.jsHandle, 'javascript')}
                     <div className="title">HTML</div>
                     {Code(codeText.html, 'jsx')}
                 </div>
                 <div className="col component">
 
-
-                    <ShQuill className="sm"/>
+                    <button className="sh-btn sh-btn-default sh-btn-sm" onClick={this.updateValue}>Update Value</button>
+                    <br/>
+                    <ShQuill className="sm" value={this.state.value}  onChange={this.handleOneChange} />
+                    <div className="details">{JSON.stringify(this.state)}</div>
 
                 </div>
             </div>
