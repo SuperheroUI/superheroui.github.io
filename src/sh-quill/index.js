@@ -32,6 +32,7 @@ class ShInputTextExamples extends React.Component {
                 <div className="section">
                     <div className="title">JS Quill</div>
                     <div>ShQuill is a has a dependency on JS Quill version 1.1.7. For the full documentation for JS Quill please go to <a href="http://quilljs.com/docs/api/">http://quilljs.com/docs/api/</a> </div>
+                    <div>For a quick example of the code and live component test, see below.</div>
                    <br/>
                     <div>ShQuill is a copy/fork of React-Quill. Docs at the time of copy: <a href="https://github.com/SuperheroUI/shQuill">https://github.com/SuperheroUI/shQuill</a> </div>
 
@@ -53,6 +54,23 @@ class ShInputTextExamples extends React.Component {
                             <td>String</td>
                             <td> </td>
                             <td>Adding the className of 'sm' will make it size better</td>
+                        </tr>
+                        <tr>
+                            <td>readOnly</td>
+                            <td>boolean</td>
+                            <td>false</td>
+                            <td>Setting to true will make it so the editor wont allow changes to its contents.</td>
+                        </tr>
+                        <tr>
+                            <td>theme</td>
+                            <td>String</td>
+                            <td>"snow"</td>
+                            <td>The default theme for Sh-Quill is set to Snow.</td>
+                        </tr><tr>
+                            <td>toolbar</td>
+                            <td>boolean</td>
+                            <td></td>
+                            <td>Setting to false will disable the toolbar.</td>
                         </tr>
                         </tbody>
                     </table>
