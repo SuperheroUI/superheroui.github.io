@@ -85,12 +85,23 @@ class Basic extends React.Component {
                     <div className="title">HTML</div>
                     {Code(codeText.html, 'jsx')}
                 </div>
-                <div className="col component">
-
-                    <button className="sh-btn sh-btn-default sh-btn-sm" onClick={this.updateValue}>Update Value</button>
-                    <br/>
+                <div className="col component"  >
+                    <div id="squareBox-2">
                     <ShQuill className="sm" value={this.state.value}  onChange={this.handleOneChange} />
+
+                    </div>
+                    <div>
+                    <div>
+
+                    </div>
                     <div className="details">{JSON.stringify(this.state)}</div>
+
+
+                    <button className="sh-btn sh-btn-default sh-btn-sm"  onClick={this.updateValue}>Update Value</button>
+                    </div>
+                    <div>
+
+                    </div>
 
                 </div>
             </div>
