@@ -76,6 +76,12 @@ class ShInputSelectExamples extends React.Component {
                                 <td>How to display the options to the user.</td>
                             </tr>
                             <tr>
+                                <td>config.getLabelDisplay</td>
+                                <td>function</td>
+                                <td>option.name || option</td>
+                                <td>How to display the what is selected to the user. This function gets passed the selected option, what is returned becomes the selected label</td>
+                            </tr>
+                            <tr>
                                 <td>config.multiselect</td>
                                 <td>boolean</td>
                                 <td>false</td>
