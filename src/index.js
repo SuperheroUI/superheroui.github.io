@@ -16,6 +16,7 @@ import ShTabsExamples from './sh-tabs';
 import ShToast from './sh-toast';
 import ShSpinner from './sh-spinner';
 import ShQuill from './sh-quill';
+import ShInputPhone from './sh-input-phone';
 
 import 'sh-core/bin/main.css';
 import './main.scss';
@@ -73,6 +74,12 @@ class Homepage extends React.Component {
                     code: <ShInputPasswordExamples />,
                     repo: 'SuperheroUI/shInputPassword',
                     npm: 'sh-input-password'
+                },
+                {
+                    name: 'ShInputPhone',
+                    code: <ShInputPhone />,
+                    repo: 'SuperheroUI/shInputPhone',
+                    npm: 'sh-input-phone'
                 },
                 {
                     name: 'ShInputCurrency',
