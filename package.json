@@ -56,6 +56,7 @@
     "sh-rich-text-editor": "0.0.5",
     "sh-tabs": "0.1.5",
     "sh-spinner":"0.1.7",
-    "sh-quill":"0.0.71"
+    "sh-quill":"0.0.71",
+    "sh-input-phone":"0.1.0"
   }
 }
