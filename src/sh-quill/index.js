@@ -2,7 +2,7 @@ import React from 'react';
 
 import Basic from './basic';
 
-class ShInputTextExamples extends React.Component {
+class ShQuill extends React.Component {
     constructor() {
         super();
 
@@ -66,11 +66,36 @@ class ShInputTextExamples extends React.Component {
                             <td>String</td>
                             <td>"snow"</td>
                             <td>The default theme for Sh-Quill is set to Snow.</td>
-                        </tr><tr>
+                        </tr>
+                        <tr>
                             <td>toolbar</td>
                             <td>boolean</td>
                             <td></td>
                             <td>Setting to false will disable the toolbar.</td>
+                        </tr>
+                        <tr>
+                            <td>config</td>
+                            <td></td>
+                            <td></td>
+                            <td>Using config you can insert a image with URl.</td>
+                        </tr>
+                        <tr>
+                            <td>onChange</td>
+                            <td></td>
+                            <td></td>
+                            <td>Takes the value of what has been typed in to the text of ShQuill and saves it to the value param.</td>
+                        </tr>
+                        <tr>
+                            <td>defaultFont</td>
+                            <td></td>
+                            <td></td>
+                            <td>Using this you can set the default font for the editor.</td>
+                        </tr>
+                        <tr>
+                            <td>deaultFontSize</td>
+                            <td></td>
+                            <td></td>
+                            <td>Using this you can set the default font size for the editor.</td>
                         </tr>
                         </tbody>
                     </table>
@@ -83,4 +108,4 @@ class ShInputTextExamples extends React.Component {
     }
 }
 
-export default ShInputTextExamples;
+export default ShQuill;
