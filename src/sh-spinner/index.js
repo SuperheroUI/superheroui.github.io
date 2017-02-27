@@ -2,7 +2,7 @@ import React from 'react';
 
 import Standard from './standard';
 
-class ShFormExamples extends React.Component {
+class ShSpinner extends React.Component {
     constructor() {
         super();
 
@@ -83,4 +83,4 @@ class ShFormExamples extends React.Component {
     }
 }
 
-export default ShFormExamples;
+export default ShSpinner;

@@ -12,7 +12,7 @@ import ShQuill from 'sh-quill';
 
 codeText.jsState = `
 this.state = {
-            value: '<div>beginning text</div>'
+            value: '<div>Welcome to Sh-Quill</div>'
         };
 
         this.handleChange = this.handleChange.bind(this);
