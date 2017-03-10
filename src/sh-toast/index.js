@@ -81,13 +81,19 @@ class ShModalDialogExamples extends React.Component {
                             <td>custom class</td>
                             <td>string</td>
                             <td></td>
-                            <td>a custom css class will be added to the toast so you can alter styles, adding a from-top class here will make the toast drop down from the top</td>
+                            <td>a custom css class will be added to the toast so you can alter styles, adding a from-top or right added here will change to position of the toast</td>
                         </tr>
                         <tr>
                             <td>from top</td>
                             <td>string</td>
                             <td></td>
-                            <td>add from-top to make the sh-toast drop down from the top</td>
+                            <td>add from-top to make the sh-toast drop down from the top, added to forth argument</td>
+                        </tr>
+                        <tr>
+                            <td>right</td>
+                            <td>string</td>
+                            <td></td>
+                            <td>add right class to css to make the sh-toast drop down from the right corner, added to forth argument</td>
                         </tr>
                         </tbody>
                     </table>
